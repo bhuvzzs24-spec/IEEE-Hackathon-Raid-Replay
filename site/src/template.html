@@ -20,7 +20,7 @@
       <span>Raid Replay</span>
     </a>
     <nav class="links" aria-label="Sections">
-      <a href="#gap">The gap</a><a href="#how">How it works</a><a href="#demo">Live demo</a><a href="#proof">Proof</a><a href="#bugs">Bugs we found</a><a href="#team">Team</a>
+      <a href="#how">How it works</a><a href="#demo">Live demo</a>
     </nav>
     <a class="btn btn-sm btn-dark" href="#demo">Watch the replay <span class="arr">→</span></a>
   </div>
@@ -42,7 +42,7 @@
       <p class="sub">230 million people watch Pro Kabaddi, yet no open sports-data standard could describe a single raid. We built the first kabaddi plugin for <strong>IPTC Sport Schema</strong> and a converter that goes there and back without losing a single value.</p>
       <div class="cta">
         <a class="btn btn-light" href="#demo">Watch the replay <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#proof">See the proof</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
@@ -59,35 +59,6 @@
     </div>
   </div>
   <div class="wrap stats" id="stats"></div>
-</section>
-
-<!-- ============================== THE GAP ============================== -->
-<section class="sec" id="gap">
-  <div class="wrap">
-    <p class="eyebrow">The gap</p>
-    <h2>Ten sports have a data plugin. Kabaddi had a news label.</h2>
-    <p class="intro">IPTC Sport Schema is the open, RDF-based sports-data standard from the news-standards body IPTC. Its ontology ships statistics plugins for ten sports. In every IPTC standard, kabaddi existed only as a topic tag for news stories — <code>medtop:20000978</code> — with no way to say who raided, who tackled, or how a point was scored.</p>
-    <div class="sports reveal">
-      <div class="sport"><span class="ic">⚽</span>Soccer<small>plugin</small></div>
-      <div class="sport"><span class="ic">🎾</span>Tennis<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏉</span>Rugby<small>plugin</small></div>
-      <div class="sport"><span class="ic">⛳</span>Golf<small>plugin</small></div>
-      <div class="sport"><span class="ic">🎮</span>Esports<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏀</span>Basketball<small>plugin</small></div>
-      <div class="sport"><span class="ic">⚾</span>Baseball<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏈</span>American football<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏐</span>Volleyball<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏎️</span>Motor racing<small>plugin</small></div>
-      <div class="sport kabaddi"><span class="ic kab-ic">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v18" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="12" r="2.6" fill="currentColor"/><circle cx="17" cy="8" r="1.8" fill="currentColor" opacity=".7"/><circle cx="17" cy="16" r="1.8" fill="currentColor" opacity=".7"/></svg>
-      </span>Kabaddi<small class="was">was: news label only</small><small class="now">now: Raid Replay plugin</small></div>
-    </div>
-    <div class="gap-grid">
-      <div class="gcard reveal"><h3>Closed by design</h3><p>Sport Schema only accepts pre-approved properties on a play. Golf got in by being added to that list. So a kabaddi plugin has to extend the allowed list — not just invent new words.</p></div>
-      <div class="gcard reveal"><h3>Our plugin</h3><p>A small Turtle ontology (raid, card, review, substitution + 40 properties + 4 code lists) and SHACL shapes that extend IPTC's closed shapes and encode the rules of the game.</p></div>
-      <div class="gcard reveal"><h3>Lossless, provably</h3><p>Five simulated matches go JSON → Turtle / JSON-LD → JSON with zero differences, pass IPTC's own validator, and fail it without our plugin.</p></div>
-    </div>
-  </div>
 </section>
 
 <!-- ============================== HOW IT WORKS ============================== -->
@@ -225,118 +196,6 @@
       <div class="legend">
         <span><i class="lg-raid"></i>Raider</span><span><i class="lg-touch"></i>Touched → out</span><span><i class="lg-tackle"></i>Tackle</span><span><i class="lg-bonus"></i>Bonus line</span><span><i class="lg-out"></i>Out / waiting for revival</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== PROOF ============================== -->
-<section class="sec" id="proof">
-  <div class="wrap">
-    <p class="eyebrow">Proof</p>
-    <h2>Zero differences. Every file valid. And it isn't a fake pass.</h2>
-    <p class="intro">All numbers below are computed by our test suite (<code>pytest</code>) and proof script from the files in <code>data/</code>.</p>
-    <div class="kpis reveal" id="kpis"></div>
-    <div class="table-card reveal">
-      <div class="table-scroll">
-        <table class="results" id="resultsTable"></table>
-      </div>
-    </div>
-    <div class="neg-grid">
-      <div class="neg reveal">
-        <h3><span class="neg-ic">≠</span> The diff catches every corruption</h3>
-        <p>We break the converted final on purpose and convert it back. DeepDiff must report a difference.</p>
-        <ul id="negDiff"></ul>
-      </div>
-      <div class="neg reveal">
-        <h3><span class="neg-ic">✕</span> The validator rejects bad kabaddi</h3>
-        <p>Each corruption must fail SHACL validation, with a message saying why.</p>
-        <ul id="negVal"></ul>
-      </div>
-      <div class="neg neg-wide reveal">
-        <h3><span class="neg-ic">🔒</span> Without our plugin, IPTC's own checker rejects every file</h3>
-        <p id="strictText">IPTC's shapes are closed. Remove the kabaddi plugin and every one of the 10 files fails.</p>
-        <div class="bars" id="strictBars"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== BUGS ============================== -->
-<section class="sec sec-tint slant" id="bugs">
-  <div class="wrap">
-    <p class="eyebrow">Bugs we found in the standard</p>
-    <h2>IPTC's files didn't load as shipped. We patched them in a few lines — in memory, never on disk.</h2>
-    <p class="intro">We use the official files from IPTC's GitHub repository (Sport Schema 1.1). These are the problems we hit, and our workaround for each (<code>iptc/loader.py</code>).</p>
-    <div class="bug-grid">
-      <article class="bug reveal">
-        <div class="bug-n">01</div>
-        <h3>Missing full stop in vocabulary files</h3>
-        <p><b id="bugVocab">15 of 17</b> NewsCodes vocabulary files end an <code>@prefix</code> line without the terminating “.”, so no strict Turtle parser can read them.</p>
-        <pre class="code sm"><code><span class="kw">@prefix</span> <span class="q">spct:</span>	<span class="iri">&lt;…/newscodes/spct/&gt;</span><span class="miss">.</span> <span class="c">&larr; this full stop is missing</span></code></pre>
-        <p class="fix"><b>Fix:</b> one regex adds the “ .” on load.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">02</div>
-        <h3>Shapes only Apache Jena tolerates</h3>
-        <p><b id="bugLenient">6</b> shapes use <code>sh:ignoredProperties</code> without <code>sh:closed true</code>. The SHACL spec forbids that; Jena ignores it, pySHACL refuses to load the shapes at all.</p>
-        <pre class="code sm"><code><span class="q">sport:CompetitionShape</span>
-  <span class="c"># sh:closed true;</span>
-  <span class="k">sh:ignoredProperties</span> ( rdf:type rdfs:label ) ;</code></pre>
-        <p class="fix"><b>Fix:</b> drop <code>sh:ignoredProperties</code> on non-closed shapes (it has no effect there).</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">03</div>
-        <h3>Shapes that are referenced but never defined</h3>
-        <p><code>sh:node</code> points at <b id="bugUndef">4</b> shapes that don't exist, e.g. <code id="bugUndefList">NewsCodesSportEventStatusShape</code>. Any event with a status fails to validate.</p>
-        <p class="fix"><b>Fix:</b> define the four missing shapes, modelled on their siblings.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">04</div>
-        <h3>A one-letter SKOS typo</h3>
-        <p>The vocabularies use <code>skos:HasTopConcept</code> (<b id="bugTop">228</b> times). The SKOS property is <code>skos:hasTopConcept</code>, so tools never see the top concepts.</p>
-        <p class="fix"><b>Fix:</b> add the correctly-cased triple alongside each one.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">05</div>
-        <h3>A validator built around one data file</h3>
-        <p>IPTC's script <code>cat</code>s the ontology, all vocabularies and the data into one temporary file, because Jena's <code>shacl</code> tool accepts a single data file.</p>
-        <p class="fix"><b>Fix:</b> merge the graphs in Python and call pySHACL directly.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">06</div>
-        <h3>Numbers typed as strings</h3>
-        <p>IPTC's shapes require <code>xsd:string</code> for <code>sport:score</code>, <code>sport:sequenceNumber</code> and <code>sport:uniformNumberEvent</code> — the exact 2 vs “2” trap.</p>
-        <p class="fix"><b>Fix:</b> we obey IPTC's shapes and convert those three back to integers through an explicit table; every kabaddi number is a real <code>xsd:integer</code>.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== WHO USES IT ============================== -->
-<section class="sec" id="users">
-  <div class="wrap">
-    <p class="eyebrow">Who uses it</p>
-    <h2>One open format, many kabaddi products.</h2>
-    <div class="use-grid">
-      <div class="use reveal"><div class="use-ic ic1">📰</div><h3>Sports news sites</h3><p>Newsrooms already speak IPTC. Live raid-by-raid feeds can drop straight into their existing Sport Schema pipelines.</p></div>
-      <div class="use reveal"><div class="use-ic ic2">🏆</div><h3>Fantasy apps</h3><p>Touch points, bonuses, tackles and super raids per player — the exact numbers fantasy scoring needs, in a typed, validated format.</p></div>
-      <div class="use reveal"><div class="use-ic ic3">📊</div><h3>Analysts &amp; coaches</h3><p>Query every do-or-die raid or every super tackle across seasons with SPARQL instead of scraping scorecards.</p></div>
-      <div class="use reveal"><div class="use-ic ic4">🌍</div><h3>Other leagues</h3><p>British Kabaddi League, the Kabaddi World Cup and grassroots leagues can publish in the same open format — no vendor lock-in.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== TEAM ============================== -->
-<section class="sec sec-tint slant" id="team">
-  <div class="wrap">
-    <p class="eyebrow">Team Byte Tackle</p>
-    <h2>Built in a day at PES University.</h2>
-    <p class="intro">IEEE CS Confluence Buildathon · Sunday 25 October 2026 · Track: <b>Lossless – Bridging systems and formats</b></p>
-    <div class="team-grid">
-      <div class="member reveal"><div class="av av1">PM</div><b>P Manas Siddhardha</b><span>PES1UG24AM186</span></div>
-      <div class="member reveal"><div class="av av2">RK</div><b>Rohith Karning</b><span>PES1UG24AM229</span></div>
-      <div class="member reveal"><div class="av av3">SB</div><b>S Bhuvanashree</b><span>PES1UG24AM235</span></div>
-      <div class="member reveal"><div class="av av4">PH</div><b>Pabbisetty Harshitha Sai</b><span>PES1UG24AM182</span></div>
     </div>
   </div>
 </section>

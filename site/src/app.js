@@ -146,7 +146,7 @@
   var SC_LD = runningScores(EV, HOME.id);
 
   /* =====================================================================
-     2. Page furniture: nav, reveal, tabs, stats, proof, bugs
+     2. Page furniture: nav, reveal, tabs, hero stats
      ===================================================================== */
   var nav = $('#nav');
   var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 40); };
@@ -172,58 +172,11 @@
   var sum = function (k) { return MS.reduce(function (s, m) { return s + m[k]; }, 0); };
   var totalDiff = sum('diff_turtle') + sum('diff_jsonld');
   var validFiles = MS.reduce(function (s, m) { return s + (m.valid_turtle ? 1 : 0) + (m.valid_jsonld ? 1 : 0); }, 0);
-  var negAll = R.negative_diff.length + R.negative_validator.length;
-  var negCaught = R.negative_diff.filter(function (x) { return x.caught; }).length + R.negative_validator.filter(function (x) { return x.rejected; }).length;
-  var pt = R.pytest || {};
 
   $('#stats').innerHTML = [
     [MS.length, 'matches simulated'], [fmt(sum('events')), 'raid-by-raid events'], [fmt(sum('triples')), 'RDF triples'],
     [totalDiff, 'differences after round trip'], [validFiles + ' / ' + MS.length * 2, 'files pass SHACL']
   ].map(function (s) { return '<div class="stat"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>'; }).join('');
-
-  $('#kpis').innerHTML = [
-    ['<b class="good">' + totalDiff + '</b>', 'DeepDiff differences (5 matches × 2 formats)'],
-    ['<b class="good">' + validFiles + '/' + MS.length * 2 + '</b>', 'files conform to IPTC + kabaddi shapes'],
-    ['<b class="good">' + (pt.tests ? pt.passed + '/' + pt.tests : '—') + '</b>', 'pytest tests passing'],
-    ['<b class="good">' + negCaught + '/' + negAll + '</b>', 'deliberate corruptions caught']
-  ].map(function (k) { return '<div class="kpi">' + k[0] + '<span>' + k[1] + '</span></div>'; }).join('');
-
-  var pill = function (ok, y, n) { return '<span class="pill ' + (ok ? 'ok' : 'bad') + '">' + (ok ? y : n) + '</span>'; };
-  var head = ['Match', 'Score', 'Events', 'Raids', 'Do-or-die', 'Super tackles', 'Super raids', 'All-outs', 'Bonus', 'Cards', 'Reviews', 'Subs', 'Triples', 'Diff (TTL)', 'Diff (JSON-LD)', 'Validation'];
-  $('#resultsTable').innerHTML = '<thead><tr>' + head.map(function (h, i) { return '<th class="' + (i > 1 && i < 15 ? 'num' : '') + '">' + h + '</th>'; }).join('') + '</tr></thead><tbody>' +
-    MS.map(function (m) {
-      return '<tr><td class="m"><b>' + esc(m.title) + '</b><span>' + esc(m.purpose) + '</span></td><td>' + m.score + '</td>' +
-        ['events', 'raids', 'do_or_die', 'super_tackles', 'super_raids', 'all_outs', 'bonus', 'cards', 'reviews', 'substitutions'].map(function (k) { return '<td class="num">' + m[k] + '</td>'; }).join('') +
-        '<td class="num">' + fmt(m.triples) + '</td><td class="num">' + pill(m.diff_turtle === 0, '0', m.diff_turtle) + '</td><td class="num">' + pill(m.diff_jsonld === 0, '0', m.diff_jsonld) + '</td>' +
-        '<td>' + pill(m.valid_turtle && m.valid_jsonld, 'pass ✓', 'fail') + '</td></tr>';
-    }).join('') + '</tbody>';
-
-  $('#negDiff').innerHTML = R.negative_diff.map(function (x) {
-    return '<li><span class="chk">' + (x.caught ? '✓' : '!') + '</span><div>' + esc(x.name) + '<small>caught as: ' + esc(x.diff.join(', ')) + '</small></div></li>';
-  }).join('');
-  $('#negVal').innerHTML = R.negative_validator.map(function (x) {
-    return '<li><span class="chk">' + (x.rejected ? '✓' : '!') + '</span><div>' + esc(x.name) + '<small>' + esc(x.message) + '</small></div></li>';
-  }).join('');
-  var maxV = Math.max.apply(null, MS.map(function (m) { return m.no_plugin_violations; }));
-  var minV = Math.min.apply(null, MS.map(function (m) { return m.no_plugin_violations; }));
-  $('#strictText').textContent = 'IPTC’s Action, Event, Team and Athlete shapes are closed. Remove the kabaddi plugin and every file fails with ' +
-    fmt(minV) + '–' + fmt(maxV) + ' violations ("Node is closed. It cannot have value …"). With the plugin: 0.';
-  $('#strictBars').innerHTML = MS.map(function (m) {
-    return '<div class="bar"><span>' + esc(m.file.replace(/^match\d_/, '').replace(/_/g, ' ')) + '</span><div class="track"><div class="fill" data-w="' + (100 * m.no_plugin_violations / maxV) + '"></div></div><span class="v">' + fmt(m.no_plugin_violations) + '</span></div>';
-  }).join('');
-  var bars = $('#strictBars');
-  var fillBars = function () { bars.querySelectorAll('.fill').forEach(function (f) { f.style.width = f.dataset.w + '%'; }); };
-  if ('IntersectionObserver' in window) {
-    var bo = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { fillBars(); bo.disconnect(); } }, { threshold: 0.3 });
-    bo.observe(bars);
-  } else fillBars();
-
-  var B = R.iptc_bugs;
-  $('#bugVocab').textContent = B.vocab_files_unparseable.length + ' of ' + B.vocab_files;
-  $('#bugLenient').textContent = B.ignored_properties_on_open_shapes.length;
-  $('#bugUndef').textContent = B.undefined_shapes.length;
-  $('#bugUndefList').textContent = B.undefined_shapes.indexOf('NewsCodesSportEventStatusShape') >= 0 ? 'NewsCodesSportEventStatusShape' : B.undefined_shapes[0];
-  $('#bugTop').textContent = fmt(B.has_top_concept_miscased);
 
   /* hero score card counts up to the final score read from JSON-LD */
   (function () {

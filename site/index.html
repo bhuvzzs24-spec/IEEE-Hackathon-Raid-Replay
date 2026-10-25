@@ -107,8 +107,6 @@ a:hover .arr{transform:translateX(3px)}
 .code code{background:none;padding:0;color:inherit;font-size:inherit}
 .code .k{color:#ffb35c}.code .s{color:#8ee6c0}.code .n{color:#ff8fcf}.code .b{color:#9fb4ff}.code .p{color:#6f78ad}
 .code .iri{color:#7fc8ff}.code .kw{color:#ff79c6;font-weight:700}.code .q{color:#c3a6ff}.code .dt{color:#6f78ad}.code .c{color:#6f78ad;font-style:italic}
-.code .miss{background:#ff3b5c;color:#fff;border-radius:4px;padding:0 4px;margin-left:4px;font-weight:700}
-.code.sm{font-size:12.5px;padding:14px 16px;border-radius:12px;margin:14px 0;white-space:pre-wrap;word-break:break-all}
 
 /* ---------- sections ---------- */
 .sec{padding:110px 0;position:relative}
@@ -116,23 +114,6 @@ a:hover .arr{transform:translateX(3px)}
 .slant{clip-path:polygon(0 60px,100% 0,100% calc(100% - 60px),0 100%);padding:150px 0;margin:-30px 0}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
-
-/* gap */
-.sports{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:34px}
-.sport{display:flex;flex-direction:column;gap:2px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-weight:650;box-shadow:0 1px 2px rgba(16,24,64,.04)}
-.sport .ic{font-size:22px;line-height:1;margin-bottom:6px}
-.sport small{font-size:12.5px;color:var(--ok);font-weight:650}
-.sport small::before{content:"✓ "}
-.sport.kabaddi{grid-column:span 2;background:linear-gradient(135deg,#fff7ef,#fff0f7);border:2px dashed var(--magenta);position:relative}
-.sport.kabaddi .kab-ic{color:var(--magenta)}
-.sport.kabaddi .was{color:var(--bad);text-decoration:line-through}
-.sport.kabaddi .was::before{content:"✕ "}
-.sport.kabaddi .now{color:var(--indigo);font-weight:750}
-.sport.kabaddi .now::before{content:"→ "}
-.gap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.gcard{background:#fff;border-radius:var(--r);padding:26px;box-shadow:var(--shadow);border:1px solid var(--line)}
-.gcard h3{margin-bottom:10px}
-.gcard p{margin:0;color:var(--muted);font-size:16px}
 
 /* how */
 .flow{display:grid;grid-template-columns:1fr 1.1fr 1fr .9fr 1fr;align-items:center;gap:10px;margin-bottom:34px}
@@ -251,64 +232,7 @@ a:hover .arr{transform:translateX(3px)}
 .lg-bonus{border-radius:2px!important;height:4px!important;background:#FFB347}
 .lg-out{background:rgba(255,255,255,.35)}
 
-/* ---------- proof ---------- */
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:26px}
-.kpi{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;box-shadow:var(--shadow)}
-.kpi b{display:block;font-size:34px;font-weight:850;letter-spacing:-.03em;color:var(--ink)}
-.kpi b.good{color:var(--ok)}
-.kpi span{color:var(--muted);font-size:14.5px;font-weight:600}
-.table-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;margin-bottom:26px}
-.table-scroll{overflow-x:auto}
-table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900px}
-.results th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:750;padding:12px 8px;background:#fafbfe;border-bottom:1px solid var(--line);vertical-align:bottom;line-height:1.25}
-.results td{padding:12px 8px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;white-space:nowrap}
-.results tr:last-child td{border-bottom:0}
-.results td.num{text-align:right}.results th.num{text-align:right}
-.results .m{white-space:normal;min-width:220px}.results .m b{display:block}.results .m span{font-size:12.5px;color:var(--muted)}
-.pill{display:inline-block;border-radius:999px;padding:3px 10px;font-weight:750;font-size:12.5px}
-.pill.ok{background:#e3f8ee;color:#0b7a4f}.pill.bad{background:#fde8e8;color:#b4233a}
-.neg-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.neg{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow)}
-.neg-wide{grid-column:1/-1}
-.neg h3{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.neg-ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#e5484d,#e0218a);font-size:15px;flex:none}
-.neg p{color:var(--muted);margin:0 0 14px;font-size:15.5px}
-.neg ul{list-style:none;margin:0;padding:0}
-.neg li{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:15px;align-items:flex-start}
-.neg li .chk{flex:none;width:22px;height:22px;border-radius:50%;background:var(--ok);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:900;margin-top:1px}
-.neg li small{display:block;color:var(--muted);font-size:13px;font-family:var(--mono);margin-top:2px;white-space:normal;word-break:break-word}
-.bars{display:grid;gap:8px}
-.bar{display:grid;grid-template-columns:170px 1fr 70px;align-items:center;gap:12px;font-size:14px}
-.bar .track{height:12px;background:#f0f2f8;border-radius:9px;overflow:hidden}
-.bar .fill{height:100%;background:linear-gradient(90deg,#e5484d,#e0218a);border-radius:9px;width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
-.bar .v{font-weight:750;text-align:right;font-variant-numeric:tabular-nums}
-
-/* ---------- bugs ---------- */
-.bug-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.bug{background:#fff;border-radius:var(--r);padding:26px;box-shadow:var(--shadow);border:1px solid var(--line);position:relative;overflow:hidden}
-.bug-n{font:800 13px var(--mono);color:#fff;background:linear-gradient(135deg,#ff8a00,#e0218a);display:inline-block;padding:4px 9px;border-radius:8px;margin-bottom:14px}
-.bug h3{margin-bottom:10px}
-.bug p{color:var(--muted);font-size:15.5px;margin:0 0 10px}
-.bug p b{color:var(--ink)}
-.bug .fix{color:var(--ink2);background:#f2fbf6;border-radius:10px;padding:10px 12px;font-size:14.5px;margin:12px 0 0}
-.bug .fix b{color:var(--ok)}
-
-/* ---------- users / team ---------- */
-.use-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.use{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
-.use:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.use-ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;font-size:24px;margin-bottom:16px}
-.ic1{background:#fff1e3}.ic2{background:#ffe7f3}.ic3{background:#ece9ff}.ic4{background:#e2f7f6}
-.use h3{margin-bottom:8px}
-.use p{color:var(--muted);font-size:15.5px;margin:0}
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.member{background:#fff;border-radius:var(--r);padding:26px 22px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--line)}
-.av{width:72px;height:72px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:22px;letter-spacing:.02em}
-.av1{background:linear-gradient(135deg,#ff9a1f,#ff5f3a)}.av2{background:linear-gradient(135deg,#e0218a,#ff6a9a)}
-.av3{background:linear-gradient(135deg,#4f3bd9,#9b6bff)}.av4{background:linear-gradient(135deg,#0f9f9a,#3bd1a0)}
-.member b{display:block;font-size:17px}
-.member span{font:600 13.5px var(--mono);color:var(--muted)}
-.foot{background:#0c1035;color:#c9cdf5;padding:120px 0 50px;margin-top:-60px}
+.foot{background:#070a24;color:#c9cdf5;padding:120px 0 50px;margin-top:-80px}   /* tucks under the demo's 70px bottom slant */
 .foot-in{display:grid;gap:18px}
 .foot-brand{display:flex;gap:14px;align-items:center}
 .foot-brand b{display:block;color:#fff;font-size:18px}
@@ -325,9 +249,7 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
   .flow{grid-template-columns:1fr;gap:6px}
   .pipe{height:56px}.pipe svg{transform:rotate(90deg);width:56px;margin:0 auto}
   .pipe-l{display:none}
-  .rules,.kpis{grid-template-columns:repeat(2,1fr)}
-  .gap-grid,.bug-grid{grid-template-columns:1fr 1fr}
-  .use-grid,.team-grid{grid-template-columns:1fr 1fr}
+  .rules{grid-template-columns:repeat(2,1fr)}
   .stats{grid-template-columns:repeat(3,1fr)}
   .stat:nth-child(3){border-right:0}
   .stat:nth-child(n+4){border-top:1px solid var(--line)}
@@ -340,8 +262,6 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
   .hero-visual{height:250px}
   .score-card{width:min(300px,92%);right:auto;left:4%;top:20px;padding:14px 16px}
   .code-card{display:none}
-  .team-grid{grid-template-columns:1fr 1fr!important}
-  .member{padding:20px 12px}.member b{font-size:15px}.av{width:58px;height:58px;font-size:18px}
   .code{font-size:12px;padding:14px}
   .stats{grid-template-columns:1fr 1fr;margin-top:34px}
   .stat{padding:16px;border-right:1px solid var(--line)!important;border-top:1px solid var(--line)}
@@ -353,10 +273,7 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
   .slant{padding:110px 0;clip-path:polygon(0 30px,100% 0,100% calc(100% - 30px),0 100%)}
   .demo{padding:110px 0;clip-path:polygon(0 36px,100% 0,100% calc(100% - 36px),0 100%)}
   .intro{font-size:17px}
-  .gap-grid,.bug-grid,.use-grid,.team-grid,.neg-grid,.rules{grid-template-columns:1fr}
-  .kpis{grid-template-columns:1fr 1fr}
-  .sport.kabaddi{grid-column:1/-1}
-  .sports{grid-template-columns:1fr 1fr}
+  .rules{grid-template-columns:1fr}
   .tab-note{display:none}
   .tab-bar button{padding:7px 10px;font-size:13px}
   .mat-wrap{padding:10px;border-radius:18px}
@@ -373,7 +290,6 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
   .evcount{margin-left:auto}
   .boards{grid-template-columns:1fr}
   .diff-badge{min-width:0}
-  .bar{grid-template-columns:110px 1fr 54px;font-size:12.5px}
   .legend{gap:12px;font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -394,7 +310,7 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
       <span>Raid Replay</span>
     </a>
     <nav class="links" aria-label="Sections">
-      <a href="#gap">The gap</a><a href="#how">How it works</a><a href="#demo">Live demo</a><a href="#proof">Proof</a><a href="#bugs">Bugs we found</a><a href="#team">Team</a>
+      <a href="#how">How it works</a><a href="#demo">Live demo</a>
     </nav>
     <a class="btn btn-sm btn-dark" href="#demo">Watch the replay <span class="arr">→</span></a>
   </div>
@@ -416,7 +332,7 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
       <p class="sub">230 million people watch Pro Kabaddi, yet no open sports-data standard could describe a single raid. We built the first kabaddi plugin for <strong>IPTC Sport Schema</strong> and a converter that goes there and back without losing a single value.</p>
       <div class="cta">
         <a class="btn btn-light" href="#demo">Watch the replay <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#proof">See the proof</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
@@ -447,35 +363,6 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
     </div>
   </div>
   <div class="wrap stats" id="stats"></div>
-</section>
-
-<!-- ============================== THE GAP ============================== -->
-<section class="sec" id="gap">
-  <div class="wrap">
-    <p class="eyebrow">The gap</p>
-    <h2>Ten sports have a data plugin. Kabaddi had a news label.</h2>
-    <p class="intro">IPTC Sport Schema is the open, RDF-based sports-data standard from the news-standards body IPTC. Its ontology ships statistics plugins for ten sports. In every IPTC standard, kabaddi existed only as a topic tag for news stories — <code>medtop:20000978</code> — with no way to say who raided, who tackled, or how a point was scored.</p>
-    <div class="sports reveal">
-      <div class="sport"><span class="ic">⚽</span>Soccer<small>plugin</small></div>
-      <div class="sport"><span class="ic">🎾</span>Tennis<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏉</span>Rugby<small>plugin</small></div>
-      <div class="sport"><span class="ic">⛳</span>Golf<small>plugin</small></div>
-      <div class="sport"><span class="ic">🎮</span>Esports<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏀</span>Basketball<small>plugin</small></div>
-      <div class="sport"><span class="ic">⚾</span>Baseball<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏈</span>American football<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏐</span>Volleyball<small>plugin</small></div>
-      <div class="sport"><span class="ic">🏎️</span>Motor racing<small>plugin</small></div>
-      <div class="sport kabaddi"><span class="ic kab-ic">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v18" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="12" r="2.6" fill="currentColor"/><circle cx="17" cy="8" r="1.8" fill="currentColor" opacity=".7"/><circle cx="17" cy="16" r="1.8" fill="currentColor" opacity=".7"/></svg>
-      </span>Kabaddi<small class="was">was: news label only</small><small class="now">now: Raid Replay plugin</small></div>
-    </div>
-    <div class="gap-grid">
-      <div class="gcard reveal"><h3>Closed by design</h3><p>Sport Schema only accepts pre-approved properties on a play. Golf got in by being added to that list. So a kabaddi plugin has to extend the allowed list — not just invent new words.</p></div>
-      <div class="gcard reveal"><h3>Our plugin</h3><p>A small Turtle ontology (raid, card, review, substitution + 40 properties + 4 code lists) and SHACL shapes that extend IPTC's closed shapes and encode the rules of the game.</p></div>
-      <div class="gcard reveal"><h3>Lossless, provably</h3><p>Five simulated matches go JSON → Turtle / JSON-LD → JSON with zero differences, pass IPTC's own validator, and fail it without our plugin.</p></div>
-    </div>
-  </div>
 </section>
 
 <!-- ============================== HOW IT WORKS ============================== -->
@@ -744,118 +631,6 @@ table.results{border-collapse:collapse;width:100%;font-size:13.5px;min-width:900
   </div>
 </section>
 
-<!-- ============================== PROOF ============================== -->
-<section class="sec" id="proof">
-  <div class="wrap">
-    <p class="eyebrow">Proof</p>
-    <h2>Zero differences. Every file valid. And it isn't a fake pass.</h2>
-    <p class="intro">All numbers below are computed by our test suite (<code>pytest</code>) and proof script from the files in <code>data/</code>.</p>
-    <div class="kpis reveal" id="kpis"></div>
-    <div class="table-card reveal">
-      <div class="table-scroll">
-        <table class="results" id="resultsTable"></table>
-      </div>
-    </div>
-    <div class="neg-grid">
-      <div class="neg reveal">
-        <h3><span class="neg-ic">≠</span> The diff catches every corruption</h3>
-        <p>We break the converted final on purpose and convert it back. DeepDiff must report a difference.</p>
-        <ul id="negDiff"></ul>
-      </div>
-      <div class="neg reveal">
-        <h3><span class="neg-ic">✕</span> The validator rejects bad kabaddi</h3>
-        <p>Each corruption must fail SHACL validation, with a message saying why.</p>
-        <ul id="negVal"></ul>
-      </div>
-      <div class="neg neg-wide reveal">
-        <h3><span class="neg-ic">🔒</span> Without our plugin, IPTC's own checker rejects every file</h3>
-        <p id="strictText">IPTC's shapes are closed. Remove the kabaddi plugin and every one of the 10 files fails.</p>
-        <div class="bars" id="strictBars"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== BUGS ============================== -->
-<section class="sec sec-tint slant" id="bugs">
-  <div class="wrap">
-    <p class="eyebrow">Bugs we found in the standard</p>
-    <h2>IPTC's files didn't load as shipped. We patched them in a few lines — in memory, never on disk.</h2>
-    <p class="intro">We use the official files from IPTC's GitHub repository (Sport Schema 1.1). These are the problems we hit, and our workaround for each (<code>iptc/loader.py</code>).</p>
-    <div class="bug-grid">
-      <article class="bug reveal">
-        <div class="bug-n">01</div>
-        <h3>Missing full stop in vocabulary files</h3>
-        <p><b id="bugVocab">15 of 17</b> NewsCodes vocabulary files end an <code>@prefix</code> line without the terminating “.”, so no strict Turtle parser can read them.</p>
-        <pre class="code sm"><code><span class="kw">@prefix</span> <span class="q">spct:</span>	<span class="iri">&lt;…/newscodes/spct/&gt;</span><span class="miss">.</span> <span class="c">&larr; this full stop is missing</span></code></pre>
-        <p class="fix"><b>Fix:</b> one regex adds the “ .” on load.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">02</div>
-        <h3>Shapes only Apache Jena tolerates</h3>
-        <p><b id="bugLenient">6</b> shapes use <code>sh:ignoredProperties</code> without <code>sh:closed true</code>. The SHACL spec forbids that; Jena ignores it, pySHACL refuses to load the shapes at all.</p>
-        <pre class="code sm"><code><span class="q">sport:CompetitionShape</span>
-  <span class="c"># sh:closed true;</span>
-  <span class="k">sh:ignoredProperties</span> ( rdf:type rdfs:label ) ;</code></pre>
-        <p class="fix"><b>Fix:</b> drop <code>sh:ignoredProperties</code> on non-closed shapes (it has no effect there).</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">03</div>
-        <h3>Shapes that are referenced but never defined</h3>
-        <p><code>sh:node</code> points at <b id="bugUndef">4</b> shapes that don't exist, e.g. <code id="bugUndefList">NewsCodesSportEventStatusShape</code>. Any event with a status fails to validate.</p>
-        <p class="fix"><b>Fix:</b> define the four missing shapes, modelled on their siblings.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">04</div>
-        <h3>A one-letter SKOS typo</h3>
-        <p>The vocabularies use <code>skos:HasTopConcept</code> (<b id="bugTop">228</b> times). The SKOS property is <code>skos:hasTopConcept</code>, so tools never see the top concepts.</p>
-        <p class="fix"><b>Fix:</b> add the correctly-cased triple alongside each one.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">05</div>
-        <h3>A validator built around one data file</h3>
-        <p>IPTC's script <code>cat</code>s the ontology, all vocabularies and the data into one temporary file, because Jena's <code>shacl</code> tool accepts a single data file.</p>
-        <p class="fix"><b>Fix:</b> merge the graphs in Python and call pySHACL directly.</p>
-      </article>
-      <article class="bug reveal">
-        <div class="bug-n">06</div>
-        <h3>Numbers typed as strings</h3>
-        <p>IPTC's shapes require <code>xsd:string</code> for <code>sport:score</code>, <code>sport:sequenceNumber</code> and <code>sport:uniformNumberEvent</code> — the exact 2 vs “2” trap.</p>
-        <p class="fix"><b>Fix:</b> we obey IPTC's shapes and convert those three back to integers through an explicit table; every kabaddi number is a real <code>xsd:integer</code>.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== WHO USES IT ============================== -->
-<section class="sec" id="users">
-  <div class="wrap">
-    <p class="eyebrow">Who uses it</p>
-    <h2>One open format, many kabaddi products.</h2>
-    <div class="use-grid">
-      <div class="use reveal"><div class="use-ic ic1">📰</div><h3>Sports news sites</h3><p>Newsrooms already speak IPTC. Live raid-by-raid feeds can drop straight into their existing Sport Schema pipelines.</p></div>
-      <div class="use reveal"><div class="use-ic ic2">🏆</div><h3>Fantasy apps</h3><p>Touch points, bonuses, tackles and super raids per player — the exact numbers fantasy scoring needs, in a typed, validated format.</p></div>
-      <div class="use reveal"><div class="use-ic ic3">📊</div><h3>Analysts &amp; coaches</h3><p>Query every do-or-die raid or every super tackle across seasons with SPARQL instead of scraping scorecards.</p></div>
-      <div class="use reveal"><div class="use-ic ic4">🌍</div><h3>Other leagues</h3><p>British Kabaddi League, the Kabaddi World Cup and grassroots leagues can publish in the same open format — no vendor lock-in.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== TEAM ============================== -->
-<section class="sec sec-tint slant" id="team">
-  <div class="wrap">
-    <p class="eyebrow">Team Byte Tackle</p>
-    <h2>Built in a day at PES University.</h2>
-    <p class="intro">IEEE CS Confluence Buildathon · Sunday 25 October 2026 · Track: <b>Lossless – Bridging systems and formats</b></p>
-    <div class="team-grid">
-      <div class="member reveal"><div class="av av1">PM</div><b>P Manas Siddhardha</b><span>PES1UG24AM186</span></div>
-      <div class="member reveal"><div class="av av2">RK</div><b>Rohith Karning</b><span>PES1UG24AM229</span></div>
-      <div class="member reveal"><div class="av av3">SB</div><b>S Bhuvanashree</b><span>PES1UG24AM235</span></div>
-      <div class="member reveal"><div class="av av4">PH</div><b>Pabbisetty Harshitha Sai</b><span>PES1UG24AM182</span></div>
-    </div>
-  </div>
-</section>
-
 </main>
 
 <footer class="foot">
@@ -1024,7 +799,7 @@ window.RR_RESULTS={"matches":[{"file":"match1_normal","purpose":"Normal league m
   var SC_LD = runningScores(EV, HOME.id);
 
   /* =====================================================================
-     2. Page furniture: nav, reveal, tabs, stats, proof, bugs
+     2. Page furniture: nav, reveal, tabs, hero stats
      ===================================================================== */
   var nav = $('#nav');
   var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 40); };
@@ -1050,58 +825,11 @@ window.RR_RESULTS={"matches":[{"file":"match1_normal","purpose":"Normal league m
   var sum = function (k) { return MS.reduce(function (s, m) { return s + m[k]; }, 0); };
   var totalDiff = sum('diff_turtle') + sum('diff_jsonld');
   var validFiles = MS.reduce(function (s, m) { return s + (m.valid_turtle ? 1 : 0) + (m.valid_jsonld ? 1 : 0); }, 0);
-  var negAll = R.negative_diff.length + R.negative_validator.length;
-  var negCaught = R.negative_diff.filter(function (x) { return x.caught; }).length + R.negative_validator.filter(function (x) { return x.rejected; }).length;
-  var pt = R.pytest || {};
 
   $('#stats').innerHTML = [
     [MS.length, 'matches simulated'], [fmt(sum('events')), 'raid-by-raid events'], [fmt(sum('triples')), 'RDF triples'],
     [totalDiff, 'differences after round trip'], [validFiles + ' / ' + MS.length * 2, 'files pass SHACL']
   ].map(function (s) { return '<div class="stat"><b>' + s[0] + '<\/b><span>' + s[1] + '<\/span><\/div>'; }).join('');
-
-  $('#kpis').innerHTML = [
-    ['<b class="good">' + totalDiff + '<\/b>', 'DeepDiff differences (5 matches × 2 formats)'],
-    ['<b class="good">' + validFiles + '/' + MS.length * 2 + '<\/b>', 'files conform to IPTC + kabaddi shapes'],
-    ['<b class="good">' + (pt.tests ? pt.passed + '/' + pt.tests : '—') + '<\/b>', 'pytest tests passing'],
-    ['<b class="good">' + negCaught + '/' + negAll + '<\/b>', 'deliberate corruptions caught']
-  ].map(function (k) { return '<div class="kpi">' + k[0] + '<span>' + k[1] + '<\/span><\/div>'; }).join('');
-
-  var pill = function (ok, y, n) { return '<span class="pill ' + (ok ? 'ok' : 'bad') + '">' + (ok ? y : n) + '<\/span>'; };
-  var head = ['Match', 'Score', 'Events', 'Raids', 'Do-or-die', 'Super tackles', 'Super raids', 'All-outs', 'Bonus', 'Cards', 'Reviews', 'Subs', 'Triples', 'Diff (TTL)', 'Diff (JSON-LD)', 'Validation'];
-  $('#resultsTable').innerHTML = '<thead><tr>' + head.map(function (h, i) { return '<th class="' + (i > 1 && i < 15 ? 'num' : '') + '">' + h + '<\/th>'; }).join('') + '<\/tr><\/thead><tbody>' +
-    MS.map(function (m) {
-      return '<tr><td class="m"><b>' + esc(m.title) + '<\/b><span>' + esc(m.purpose) + '<\/span><\/td><td>' + m.score + '<\/td>' +
-        ['events', 'raids', 'do_or_die', 'super_tackles', 'super_raids', 'all_outs', 'bonus', 'cards', 'reviews', 'substitutions'].map(function (k) { return '<td class="num">' + m[k] + '<\/td>'; }).join('') +
-        '<td class="num">' + fmt(m.triples) + '<\/td><td class="num">' + pill(m.diff_turtle === 0, '0', m.diff_turtle) + '<\/td><td class="num">' + pill(m.diff_jsonld === 0, '0', m.diff_jsonld) + '<\/td>' +
-        '<td>' + pill(m.valid_turtle && m.valid_jsonld, 'pass ✓', 'fail') + '<\/td><\/tr>';
-    }).join('') + '<\/tbody>';
-
-  $('#negDiff').innerHTML = R.negative_diff.map(function (x) {
-    return '<li><span class="chk">' + (x.caught ? '✓' : '!') + '<\/span><div>' + esc(x.name) + '<small>caught as: ' + esc(x.diff.join(', ')) + '<\/small><\/div><\/li>';
-  }).join('');
-  $('#negVal').innerHTML = R.negative_validator.map(function (x) {
-    return '<li><span class="chk">' + (x.rejected ? '✓' : '!') + '<\/span><div>' + esc(x.name) + '<small>' + esc(x.message) + '<\/small><\/div><\/li>';
-  }).join('');
-  var maxV = Math.max.apply(null, MS.map(function (m) { return m.no_plugin_violations; }));
-  var minV = Math.min.apply(null, MS.map(function (m) { return m.no_plugin_violations; }));
-  $('#strictText').textContent = 'IPTC’s Action, Event, Team and Athlete shapes are closed. Remove the kabaddi plugin and every file fails with ' +
-    fmt(minV) + '–' + fmt(maxV) + ' violations ("Node is closed. It cannot have value …"). With the plugin: 0.';
-  $('#strictBars').innerHTML = MS.map(function (m) {
-    return '<div class="bar"><span>' + esc(m.file.replace(/^match\d_/, '').replace(/_/g, ' ')) + '<\/span><div class="track"><div class="fill" data-w="' + (100 * m.no_plugin_violations / maxV) + '"><\/div><\/div><span class="v">' + fmt(m.no_plugin_violations) + '<\/span><\/div>';
-  }).join('');
-  var bars = $('#strictBars');
-  var fillBars = function () { bars.querySelectorAll('.fill').forEach(function (f) { f.style.width = f.dataset.w + '%'; }); };
-  if ('IntersectionObserver' in window) {
-    var bo = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { fillBars(); bo.disconnect(); } }, { threshold: 0.3 });
-    bo.observe(bars);
-  } else fillBars();
-
-  var B = R.iptc_bugs;
-  $('#bugVocab').textContent = B.vocab_files_unparseable.length + ' of ' + B.vocab_files;
-  $('#bugLenient').textContent = B.ignored_properties_on_open_shapes.length;
-  $('#bugUndef').textContent = B.undefined_shapes.length;
-  $('#bugUndefList').textContent = B.undefined_shapes.indexOf('NewsCodesSportEventStatusShape') >= 0 ? 'NewsCodesSportEventStatusShape' : B.undefined_shapes[0];
-  $('#bugTop').textContent = fmt(B.has_top_concept_miscased);
 
   /* hero score card counts up to the final score read from JSON-LD */
   (function () {

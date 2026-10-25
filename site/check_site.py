@@ -29,9 +29,19 @@ def main() -> int:
             page.on("requestfailed", lambda r, msgs=msgs: msgs.append(("requestfailed", r.url)))
             page.goto(URL)
             page.wait_for_timeout(1200)
+            # the page keeps only the hero, "How it works" and the live demo
+            for sel in ("#how", "#demo", "#stats"):
+                if page.locator(sel).count() != 1:
+                    problems.append(f"{name}: missing {sel}")
+            for sel in ("#gap", "#proof", "#bugs", "#users", "#team"):
+                if page.locator(sel).count():
+                    problems.append(f"{name}: removed section {sel} is still on the page")
+            dead = page.evaluate("[...document.querySelectorAll('a[href^=\"#\"]')].map(a=>a.getAttribute('href'))"
+                                 ".filter(h=>h.length>1&&!document.querySelector(h))")
+            if dead:
+                problems.append(f"{name}: links to missing sections {dead}")
             # reveal everything for the full-page shot
             page.evaluate("document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'))")
-            page.evaluate("document.querySelectorAll('.bars .fill').forEach(f=>f.style.width=f.dataset.w+'%')")
             # scroll through the page so lazy observers fire
             height = page.evaluate("document.body.scrollHeight")
             for y in range(0, height, 700):
