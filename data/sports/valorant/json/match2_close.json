@@ -1,0 +1,2941 @@
+{
+ "format": "raid-replay/valorant-match/1",
+ "match": {
+  "id": "BTI26-V02",
+  "name": "Glasshouse Vipers vs Tidal Lynx",
+  "map": "Bind",
+  "start": "2026-10-25T18:00:00+05:30",
+  "competition": {
+   "id": "BTI-2026",
+   "name": "Byte Tackle Invitational 2026 (fictional)"
+  },
+  "venue": {
+   "id": "ONLINE",
+   "name": "Online (fictional)"
+  },
+  "seed": 2012,
+  "purpose": "Close match (13-11)"
+ },
+ "teams": [
+  {
+   "id": "GLV",
+   "name": "Glasshouse Vipers",
+   "side": "home",
+   "first_side": "defence",
+   "players": [
+    {
+     "id": "GLV-1",
+     "handle": "ember",
+     "agent": "sova"
+    },
+    {
+     "id": "GLV-2",
+     "handle": "quill",
+     "agent": "brimstone"
+    },
+    {
+     "id": "GLV-3",
+     "handle": "jolt",
+     "agent": "killjoy"
+    },
+    {
+     "id": "GLV-4",
+     "handle": "haze",
+     "agent": "cypher"
+    },
+    {
+     "id": "GLV-5",
+     "handle": "lumen",
+     "agent": "sage"
+    }
+   ]
+  },
+  {
+   "id": "TDL",
+   "name": "Tidal Lynx",
+   "side": "away",
+   "first_side": "attack",
+   "players": [
+    {
+     "id": "TDL-1",
+     "handle": "frost",
+     "agent": "reyna"
+    },
+    {
+     "id": "TDL-2",
+     "handle": "rook",
+     "agent": "phoenix"
+    },
+    {
+     "id": "TDL-3",
+     "handle": "zeph",
+     "agent": "omen"
+    },
+    {
+     "id": "TDL-4",
+     "handle": "koa",
+     "agent": "brimstone"
+    },
+    {
+     "id": "TDL-5",
+     "handle": "blip",
+     "agent": "sage"
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "id": "BTI26-V02-E0001",
+   "seq": 1,
+   "type": "half_start",
+   "half": 1
+  },
+  {
+   "id": "BTI26-V02-E0002",
+   "seq": 2,
+   "type": "kill",
+   "round": 1,
+   "time": 16,
+   "killer": "GLV-5",
+   "victim": "TDL-4",
+   "weapon": "Sheriff",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0003",
+   "seq": 3,
+   "type": "kill",
+   "round": 1,
+   "time": 25,
+   "killer": "TDL-1",
+   "victim": "GLV-4",
+   "weapon": "Ghost",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0004",
+   "seq": 4,
+   "type": "kill",
+   "round": 1,
+   "time": 34,
+   "killer": "TDL-2",
+   "victim": "GLV-2",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "TDL-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0005",
+   "seq": 5,
+   "type": "plant",
+   "round": 1,
+   "time": 39,
+   "planter": "TDL-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0006",
+   "seq": 6,
+   "type": "kill",
+   "round": 1,
+   "time": 44,
+   "killer": "TDL-1",
+   "victim": "GLV-3",
+   "weapon": "Sheriff",
+   "headshot": true,
+   "assists": [
+    "TDL-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0007",
+   "seq": 7,
+   "type": "kill",
+   "round": 1,
+   "time": 59,
+   "killer": "TDL-1",
+   "victim": "GLV-1",
+   "weapon": "Shorty",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0008",
+   "seq": 8,
+   "type": "kill",
+   "round": 1,
+   "time": 63,
+   "killer": "TDL-2",
+   "victim": "GLV-5",
+   "weapon": "Ghost",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0009",
+   "seq": 9,
+   "type": "round",
+   "round": 1,
+   "attack": "TDL",
+   "winner": "TDL",
+   "win_condition": "elimination",
+   "home_credits": 800,
+   "away_credits": 800,
+   "home_buy": "eco",
+   "away_buy": "eco",
+   "home_score": 0,
+   "away_score": 1,
+   "duration": 63
+  },
+  {
+   "id": "BTI26-V02-E0010",
+   "seq": 10,
+   "type": "kill",
+   "round": 2,
+   "time": 9,
+   "killer": "GLV-2",
+   "victim": "TDL-3",
+   "weapon": "Spectre",
+   "headshot": false,
+   "assists": [
+    "GLV-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0011",
+   "seq": 11,
+   "type": "kill",
+   "round": 2,
+   "time": 17,
+   "killer": "GLV-4",
+   "victim": "TDL-1",
+   "weapon": "Bulldog",
+   "headshot": true,
+   "assists": [
+    "GLV-1",
+    "GLV-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0012",
+   "seq": 12,
+   "type": "kill",
+   "round": 2,
+   "time": 28,
+   "killer": "GLV-1",
+   "victim": "TDL-2",
+   "weapon": "Spectre",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0013",
+   "seq": 13,
+   "type": "plant",
+   "round": 2,
+   "time": 33,
+   "planter": "TDL-4",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0014",
+   "seq": 14,
+   "type": "kill",
+   "round": 2,
+   "time": 38,
+   "killer": "GLV-3",
+   "victim": "TDL-5",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0015",
+   "seq": 15,
+   "type": "kill",
+   "round": 2,
+   "time": 49,
+   "killer": "GLV-4",
+   "victim": "TDL-4",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0016",
+   "seq": 16,
+   "type": "defuse",
+   "round": 2,
+   "time": 60,
+   "defuser": "GLV-5",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0017",
+   "seq": 17,
+   "type": "round",
+   "round": 2,
+   "attack": "TDL",
+   "winner": "GLV",
+   "win_condition": "spike-defused",
+   "home_credits": 2500,
+   "away_credits": 4700,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 1,
+   "away_score": 1,
+   "duration": 60
+  },
+  {
+   "id": "BTI26-V02-E0018",
+   "seq": 18,
+   "type": "kill",
+   "round": 3,
+   "time": 12,
+   "killer": "TDL-5",
+   "victim": "GLV-5",
+   "weapon": "Marshal",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0019",
+   "seq": 19,
+   "type": "kill",
+   "round": 3,
+   "time": 20,
+   "killer": "GLV-2",
+   "victim": "TDL-3",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0020",
+   "seq": 20,
+   "type": "kill",
+   "round": 3,
+   "time": 36,
+   "killer": "GLV-3",
+   "victim": "TDL-1",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "GLV-1",
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0021",
+   "seq": 21,
+   "type": "kill",
+   "round": 3,
+   "time": 41,
+   "killer": "GLV-2",
+   "victim": "TDL-2",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0022",
+   "seq": 22,
+   "type": "kill",
+   "round": 3,
+   "time": 50,
+   "killer": "GLV-1",
+   "victim": "TDL-5",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0023",
+   "seq": 23,
+   "type": "plant",
+   "round": 3,
+   "time": 56,
+   "planter": "TDL-4",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0024",
+   "seq": 24,
+   "type": "kill",
+   "round": 3,
+   "time": 69,
+   "killer": "GLV-2",
+   "victim": "TDL-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0025",
+   "seq": 25,
+   "type": "defuse",
+   "round": 3,
+   "time": 80,
+   "defuser": "GLV-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0026",
+   "seq": 26,
+   "type": "round",
+   "round": 3,
+   "attack": "TDL",
+   "winner": "GLV",
+   "win_condition": "spike-defused",
+   "home_credits": 4500,
+   "away_credits": 3000,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 2,
+   "away_score": 1,
+   "duration": 80
+  },
+  {
+   "id": "BTI26-V02-E0027",
+   "seq": 27,
+   "type": "kill",
+   "round": 4,
+   "time": 14,
+   "killer": "GLV-4",
+   "victim": "TDL-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-1",
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0028",
+   "seq": 28,
+   "type": "kill",
+   "round": 4,
+   "time": 21,
+   "killer": "GLV-5",
+   "victim": "TDL-3",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0029",
+   "seq": 29,
+   "type": "kill",
+   "round": 4,
+   "time": 24,
+   "killer": "GLV-1",
+   "victim": "TDL-1",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0030",
+   "seq": 30,
+   "type": "kill",
+   "round": 4,
+   "time": 27,
+   "killer": "TDL-2",
+   "victim": "GLV-1",
+   "weapon": "Operator",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0031",
+   "seq": 31,
+   "type": "kill",
+   "round": 4,
+   "time": 37,
+   "killer": "GLV-3",
+   "victim": "TDL-2",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-4",
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0032",
+   "seq": 32,
+   "type": "plant",
+   "round": 4,
+   "time": 43,
+   "planter": "TDL-5",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0033",
+   "seq": 33,
+   "type": "kill",
+   "round": 4,
+   "time": 56,
+   "killer": "TDL-5",
+   "victim": "GLV-2",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0034",
+   "seq": 34,
+   "type": "kill",
+   "round": 4,
+   "time": 71,
+   "killer": "GLV-5",
+   "victim": "TDL-5",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0035",
+   "seq": 35,
+   "type": "defuse",
+   "round": 4,
+   "time": 80,
+   "defuser": "GLV-3",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0036",
+   "seq": 36,
+   "type": "round",
+   "round": 4,
+   "attack": "TDL",
+   "winner": "GLV",
+   "win_condition": "spike-defused",
+   "home_credits": 4600,
+   "away_credits": 3900,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 3,
+   "away_score": 1,
+   "duration": 80
+  },
+  {
+   "id": "BTI26-V02-E0037",
+   "seq": 37,
+   "type": "kill",
+   "round": 5,
+   "time": 6,
+   "killer": "GLV-2",
+   "victim": "TDL-3",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0038",
+   "seq": 38,
+   "type": "kill",
+   "round": 5,
+   "time": 12,
+   "killer": "GLV-2",
+   "victim": "TDL-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "GLV-3",
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0039",
+   "seq": 39,
+   "type": "kill",
+   "round": 5,
+   "time": 24,
+   "killer": "GLV-3",
+   "victim": "TDL-4",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "GLV-2",
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0040",
+   "seq": 40,
+   "type": "kill",
+   "round": 5,
+   "time": 37,
+   "killer": "TDL-1",
+   "victim": "GLV-5",
+   "weapon": "Bulldog",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0041",
+   "seq": 41,
+   "type": "plant",
+   "round": 5,
+   "time": 41,
+   "planter": "TDL-1",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0042",
+   "seq": 42,
+   "type": "kill",
+   "round": 5,
+   "time": 46,
+   "killer": "TDL-1",
+   "victim": "GLV-2",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0043",
+   "seq": 43,
+   "type": "kill",
+   "round": 5,
+   "time": 59,
+   "killer": "GLV-3",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": true,
+   "assists": [
+    "GLV-1",
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0044",
+   "seq": 44,
+   "type": "kill",
+   "round": 5,
+   "time": 72,
+   "killer": "GLV-4",
+   "victim": "TDL-5",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0045",
+   "seq": 45,
+   "type": "defuse",
+   "round": 5,
+   "time": 81,
+   "defuser": "GLV-3",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0046",
+   "seq": 46,
+   "type": "round",
+   "round": 5,
+   "attack": "TDL",
+   "winner": "GLV",
+   "win_condition": "spike-defused",
+   "home_credits": 4700,
+   "away_credits": 3600,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 4,
+   "away_score": 1,
+   "duration": 81
+  },
+  {
+   "id": "BTI26-V02-E0047",
+   "seq": 47,
+   "type": "kill",
+   "round": 6,
+   "time": 13,
+   "killer": "TDL-1",
+   "victim": "GLV-3",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0048",
+   "seq": 48,
+   "type": "kill",
+   "round": 6,
+   "time": 17,
+   "killer": "GLV-5",
+   "victim": "TDL-1",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0049",
+   "seq": 49,
+   "type": "kill",
+   "round": 6,
+   "time": 21,
+   "killer": "TDL-5",
+   "victim": "GLV-5",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "TDL-2",
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0050",
+   "seq": 50,
+   "type": "kill",
+   "round": 6,
+   "time": 28,
+   "killer": "GLV-1",
+   "victim": "TDL-4",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0051",
+   "seq": 51,
+   "type": "plant",
+   "round": 6,
+   "time": 33,
+   "planter": "TDL-2",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0052",
+   "seq": 52,
+   "type": "kill",
+   "round": 6,
+   "time": 48,
+   "killer": "GLV-1",
+   "victim": "TDL-5",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0053",
+   "seq": 53,
+   "type": "kill",
+   "round": 6,
+   "time": 62,
+   "killer": "GLV-1",
+   "victim": "TDL-3",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0054",
+   "seq": 54,
+   "type": "kill",
+   "round": 6,
+   "time": 66,
+   "killer": "TDL-2",
+   "victim": "GLV-4",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0055",
+   "seq": 55,
+   "type": "kill",
+   "round": 6,
+   "time": 76,
+   "killer": "GLV-1",
+   "victim": "TDL-2",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0056",
+   "seq": 56,
+   "type": "round",
+   "round": 6,
+   "attack": "TDL",
+   "winner": "TDL",
+   "win_condition": "spike-detonated",
+   "home_credits": 4800,
+   "away_credits": 5200,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 4,
+   "away_score": 2,
+   "duration": 78
+  },
+  {
+   "id": "BTI26-V02-E0057",
+   "seq": 57,
+   "type": "kill",
+   "round": 7,
+   "time": 4,
+   "killer": "TDL-1",
+   "victim": "GLV-3",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "TDL-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0058",
+   "seq": 58,
+   "type": "kill",
+   "round": 7,
+   "time": 7,
+   "killer": "GLV-1",
+   "victim": "TDL-3",
+   "weapon": "Marshal",
+   "headshot": true,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0059",
+   "seq": 59,
+   "type": "kill",
+   "round": 7,
+   "time": 11,
+   "killer": "TDL-2",
+   "victim": "GLV-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0060",
+   "seq": 60,
+   "type": "kill",
+   "round": 7,
+   "time": 20,
+   "killer": "GLV-2",
+   "victim": "TDL-5",
+   "weapon": "Spectre",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0061",
+   "seq": 61,
+   "type": "kill",
+   "round": 7,
+   "time": 29,
+   "killer": "GLV-2",
+   "victim": "TDL-2",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0062",
+   "seq": 62,
+   "type": "plant",
+   "round": 7,
+   "time": 35,
+   "planter": "TDL-4",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0063",
+   "seq": 63,
+   "type": "kill",
+   "round": 7,
+   "time": 40,
+   "killer": "TDL-1",
+   "victim": "GLV-4",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0064",
+   "seq": 64,
+   "type": "kill",
+   "round": 7,
+   "time": 55,
+   "killer": "TDL-1",
+   "victim": "GLV-1",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0065",
+   "seq": 65,
+   "type": "kill",
+   "round": 7,
+   "time": 65,
+   "killer": "TDL-1",
+   "victim": "GLV-2",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0066",
+   "seq": 66,
+   "type": "round",
+   "round": 7,
+   "attack": "TDL",
+   "winner": "TDL",
+   "win_condition": "elimination",
+   "home_credits": 3800,
+   "away_credits": 5200,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 4,
+   "away_score": 3,
+   "duration": 65
+  },
+  {
+   "id": "BTI26-V02-E0067",
+   "seq": 67,
+   "type": "kill",
+   "round": 8,
+   "time": 3,
+   "killer": "GLV-3",
+   "victim": "TDL-2",
+   "weapon": "Vandal",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0068",
+   "seq": 68,
+   "type": "kill",
+   "round": 8,
+   "time": 16,
+   "killer": "GLV-2",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-1",
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0069",
+   "seq": 69,
+   "type": "kill",
+   "round": 8,
+   "time": 30,
+   "killer": "GLV-3",
+   "victim": "TDL-3",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0070",
+   "seq": 70,
+   "type": "plant",
+   "round": 8,
+   "time": 32,
+   "planter": "TDL-5",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0071",
+   "seq": 71,
+   "type": "kill",
+   "round": 8,
+   "time": 45,
+   "killer": "GLV-4",
+   "victim": "TDL-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0072",
+   "seq": 72,
+   "type": "kill",
+   "round": 8,
+   "time": 56,
+   "killer": "TDL-4",
+   "victim": "GLV-1",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0073",
+   "seq": 73,
+   "type": "kill",
+   "round": 8,
+   "time": 66,
+   "killer": "TDL-4",
+   "victim": "GLV-5",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0074",
+   "seq": 74,
+   "type": "round",
+   "round": 8,
+   "attack": "TDL",
+   "winner": "TDL",
+   "win_condition": "spike-detonated",
+   "home_credits": 4800,
+   "away_credits": 5600,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 4,
+   "away_score": 4,
+   "duration": 77
+  },
+  {
+   "id": "BTI26-V02-E0075",
+   "seq": 75,
+   "type": "kill",
+   "round": 9,
+   "time": 3,
+   "killer": "TDL-3",
+   "victim": "GLV-1",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "TDL-4",
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0076",
+   "seq": 76,
+   "type": "kill",
+   "round": 9,
+   "time": 9,
+   "killer": "GLV-5",
+   "victim": "TDL-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "GLV-2",
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0077",
+   "seq": 77,
+   "type": "kill",
+   "round": 9,
+   "time": 17,
+   "killer": "TDL-1",
+   "victim": "GLV-3",
+   "weapon": "Operator",
+   "headshot": true,
+   "assists": [
+    "TDL-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0078",
+   "seq": 78,
+   "type": "kill",
+   "round": 9,
+   "time": 27,
+   "killer": "GLV-5",
+   "victim": "TDL-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0079",
+   "seq": 79,
+   "type": "plant",
+   "round": 9,
+   "time": 30,
+   "planter": "TDL-1",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0080",
+   "seq": 80,
+   "type": "kill",
+   "round": 9,
+   "time": 42,
+   "killer": "TDL-1",
+   "victim": "GLV-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0081",
+   "seq": 81,
+   "type": "kill",
+   "round": 9,
+   "time": 56,
+   "killer": "GLV-4",
+   "victim": "TDL-4",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0082",
+   "seq": 82,
+   "type": "kill",
+   "round": 9,
+   "time": 65,
+   "killer": "TDL-1",
+   "victim": "GLV-4",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "TDL-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0083",
+   "seq": 83,
+   "type": "kill",
+   "round": 9,
+   "time": 70,
+   "killer": "TDL-1",
+   "victim": "GLV-5",
+   "weapon": "Operator",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0084",
+   "seq": 84,
+   "type": "round",
+   "round": 9,
+   "attack": "TDL",
+   "winner": "TDL",
+   "win_condition": "elimination",
+   "home_credits": 4600,
+   "away_credits": 5400,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 4,
+   "away_score": 5,
+   "duration": 70
+  },
+  {
+   "id": "BTI26-V02-E0085",
+   "seq": 85,
+   "type": "kill",
+   "round": 10,
+   "time": 3,
+   "killer": "GLV-3",
+   "victim": "TDL-5",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0086",
+   "seq": 86,
+   "type": "kill",
+   "round": 10,
+   "time": 15,
+   "killer": "GLV-3",
+   "victim": "TDL-2",
+   "weapon": "Operator",
+   "headshot": true,
+   "assists": [
+    "GLV-1",
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0087",
+   "seq": 87,
+   "type": "kill",
+   "round": 10,
+   "time": 21,
+   "killer": "GLV-1",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0088",
+   "seq": 88,
+   "type": "kill",
+   "round": 10,
+   "time": 31,
+   "killer": "GLV-5",
+   "victim": "TDL-4",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-1",
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0089",
+   "seq": 89,
+   "type": "kill",
+   "round": 10,
+   "time": 43,
+   "killer": "GLV-2",
+   "victim": "TDL-3",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0090",
+   "seq": 90,
+   "type": "round",
+   "round": 10,
+   "attack": "TDL",
+   "winner": "GLV",
+   "win_condition": "elimination",
+   "home_credits": 4200,
+   "away_credits": 5800,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 5,
+   "away_score": 5,
+   "duration": 43
+  },
+  {
+   "id": "BTI26-V02-E0091",
+   "seq": 91,
+   "type": "kill",
+   "round": 11,
+   "time": 13,
+   "killer": "TDL-3",
+   "victim": "GLV-2",
+   "weapon": "Judge",
+   "headshot": true,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0092",
+   "seq": 92,
+   "type": "kill",
+   "round": 11,
+   "time": 23,
+   "killer": "TDL-2",
+   "victim": "GLV-1",
+   "weapon": "Judge",
+   "headshot": false,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0093",
+   "seq": 93,
+   "type": "kill",
+   "round": 11,
+   "time": 39,
+   "killer": "GLV-5",
+   "victim": "TDL-3",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0094",
+   "seq": 94,
+   "type": "plant",
+   "round": 11,
+   "time": 44,
+   "planter": "TDL-1",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0095",
+   "seq": 95,
+   "type": "kill",
+   "round": 11,
+   "time": 59,
+   "killer": "TDL-5",
+   "victim": "GLV-5",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0096",
+   "seq": 96,
+   "type": "kill",
+   "round": 11,
+   "time": 70,
+   "killer": "TDL-5",
+   "victim": "GLV-4",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "TDL-2",
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0097",
+   "seq": 97,
+   "type": "kill",
+   "round": 11,
+   "time": 74,
+   "killer": "TDL-2",
+   "victim": "GLV-3",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0098",
+   "seq": 98,
+   "type": "round",
+   "round": 11,
+   "attack": "TDL",
+   "winner": "TDL",
+   "win_condition": "elimination",
+   "home_credits": 4300,
+   "away_credits": 3800,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 5,
+   "away_score": 6,
+   "duration": 74
+  },
+  {
+   "id": "BTI26-V02-E0099",
+   "seq": 99,
+   "type": "kill",
+   "round": 12,
+   "time": 3,
+   "killer": "GLV-3",
+   "victim": "TDL-4",
+   "weapon": "Bulldog",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0100",
+   "seq": 100,
+   "type": "kill",
+   "round": 12,
+   "time": 14,
+   "killer": "TDL-2",
+   "victim": "GLV-3",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0101",
+   "seq": 101,
+   "type": "kill",
+   "round": 12,
+   "time": 18,
+   "killer": "GLV-5",
+   "victim": "TDL-1",
+   "weapon": "Judge",
+   "headshot": false,
+   "assists": [
+    "GLV-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0102",
+   "seq": 102,
+   "type": "kill",
+   "round": 12,
+   "time": 32,
+   "killer": "TDL-2",
+   "victim": "GLV-5",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0103",
+   "seq": 103,
+   "type": "kill",
+   "round": 12,
+   "time": 36,
+   "killer": "TDL-2",
+   "victim": "GLV-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0104",
+   "seq": 104,
+   "type": "kill",
+   "round": 12,
+   "time": 49,
+   "killer": "TDL-2",
+   "victim": "GLV-1",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0105",
+   "seq": 105,
+   "type": "kill",
+   "round": 12,
+   "time": 65,
+   "killer": "TDL-2",
+   "victim": "GLV-2",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0106",
+   "seq": 106,
+   "type": "round",
+   "round": 12,
+   "attack": "TDL",
+   "winner": "TDL",
+   "win_condition": "elimination",
+   "home_credits": 2500,
+   "away_credits": 6100,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 5,
+   "away_score": 7,
+   "duration": 65
+  },
+  {
+   "id": "BTI26-V02-E0107",
+   "seq": 107,
+   "type": "half_end",
+   "half": 1,
+   "home_score": 5,
+   "away_score": 7
+  },
+  {
+   "id": "BTI26-V02-E0108",
+   "seq": 108,
+   "type": "half_start",
+   "half": 2
+  },
+  {
+   "id": "BTI26-V02-E0109",
+   "seq": 109,
+   "type": "kill",
+   "round": 13,
+   "time": 12,
+   "killer": "TDL-3",
+   "victim": "GLV-1",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0110",
+   "seq": 110,
+   "type": "kill",
+   "round": 13,
+   "time": 25,
+   "killer": "GLV-5",
+   "victim": "TDL-2",
+   "weapon": "Shorty",
+   "headshot": false,
+   "assists": [
+    "GLV-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0111",
+   "seq": 111,
+   "type": "kill",
+   "round": 13,
+   "time": 31,
+   "killer": "TDL-5",
+   "victim": "GLV-2",
+   "weapon": "Sheriff",
+   "headshot": true,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0112",
+   "seq": 112,
+   "type": "kill",
+   "round": 13,
+   "time": 44,
+   "killer": "TDL-1",
+   "victim": "GLV-5",
+   "weapon": "Shorty",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0113",
+   "seq": 113,
+   "type": "plant",
+   "round": 13,
+   "time": 46,
+   "planter": "GLV-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0114",
+   "seq": 114,
+   "type": "kill",
+   "round": 13,
+   "time": 55,
+   "killer": "TDL-1",
+   "victim": "GLV-4",
+   "weapon": "Classic",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0115",
+   "seq": 115,
+   "type": "kill",
+   "round": 13,
+   "time": 61,
+   "killer": "TDL-3",
+   "victim": "GLV-3",
+   "weapon": "Classic",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0116",
+   "seq": 116,
+   "type": "defuse",
+   "round": 13,
+   "time": 70,
+   "defuser": "TDL-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0117",
+   "seq": 117,
+   "type": "round",
+   "round": 13,
+   "attack": "GLV",
+   "winner": "TDL",
+   "win_condition": "spike-defused",
+   "home_credits": 800,
+   "away_credits": 800,
+   "home_buy": "eco",
+   "away_buy": "eco",
+   "home_score": 5,
+   "away_score": 8,
+   "duration": 70
+  },
+  {
+   "id": "BTI26-V02-E0118",
+   "seq": 118,
+   "type": "kill",
+   "round": 14,
+   "time": 8,
+   "killer": "TDL-1",
+   "victim": "GLV-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "TDL-2",
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0119",
+   "seq": 119,
+   "type": "kill",
+   "round": 14,
+   "time": 13,
+   "killer": "TDL-2",
+   "victim": "GLV-2",
+   "weapon": "Phantom",
+   "headshot": true,
+   "assists": [
+    "TDL-4",
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0120",
+   "seq": 120,
+   "type": "kill",
+   "round": 14,
+   "time": 24,
+   "killer": "TDL-2",
+   "victim": "GLV-3",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0121",
+   "seq": 121,
+   "type": "kill",
+   "round": 14,
+   "time": 40,
+   "killer": "TDL-5",
+   "victim": "GLV-4",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0122",
+   "seq": 122,
+   "type": "plant",
+   "round": 14,
+   "time": 43,
+   "planter": "GLV-1",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0123",
+   "seq": 123,
+   "type": "kill",
+   "round": 14,
+   "time": 51,
+   "killer": "TDL-4",
+   "victim": "GLV-1",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0124",
+   "seq": 124,
+   "type": "defuse",
+   "round": 14,
+   "time": 62,
+   "defuser": "TDL-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0125",
+   "seq": 125,
+   "type": "round",
+   "round": 14,
+   "attack": "GLV",
+   "winner": "TDL",
+   "win_condition": "spike-defused",
+   "home_credits": 2800,
+   "away_credits": 4400,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 5,
+   "away_score": 9,
+   "duration": 62
+  },
+  {
+   "id": "BTI26-V02-E0126",
+   "seq": 126,
+   "type": "kill",
+   "round": 15,
+   "time": 5,
+   "killer": "GLV-1",
+   "victim": "TDL-3",
+   "weapon": "Sheriff",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0127",
+   "seq": 127,
+   "type": "kill",
+   "round": 15,
+   "time": 13,
+   "killer": "GLV-3",
+   "victim": "TDL-4",
+   "weapon": "Judge",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0128",
+   "seq": 128,
+   "type": "kill",
+   "round": 15,
+   "time": 19,
+   "killer": "GLV-5",
+   "victim": "TDL-5",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0129",
+   "seq": 129,
+   "type": "kill",
+   "round": 15,
+   "time": 26,
+   "killer": "GLV-3",
+   "victim": "TDL-1",
+   "weapon": "Bulldog",
+   "headshot": false,
+   "assists": [
+    "GLV-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0130",
+   "seq": 130,
+   "type": "kill",
+   "round": 15,
+   "time": 31,
+   "killer": "GLV-3",
+   "victim": "TDL-2",
+   "weapon": "Spectre",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0131",
+   "seq": 131,
+   "type": "round",
+   "round": 15,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "elimination",
+   "home_credits": 3500,
+   "away_credits": 4500,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 6,
+   "away_score": 9,
+   "duration": 31
+  },
+  {
+   "id": "BTI26-V02-E0132",
+   "seq": 132,
+   "type": "kill",
+   "round": 16,
+   "time": 4,
+   "killer": "GLV-3",
+   "victim": "TDL-3",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0133",
+   "seq": 133,
+   "type": "kill",
+   "round": 16,
+   "time": 17,
+   "killer": "TDL-2",
+   "victim": "GLV-2",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0134",
+   "seq": 134,
+   "type": "kill",
+   "round": 16,
+   "time": 21,
+   "killer": "GLV-3",
+   "victim": "TDL-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0135",
+   "seq": 135,
+   "type": "kill",
+   "round": 16,
+   "time": 36,
+   "killer": "TDL-4",
+   "victim": "GLV-4",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "TDL-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0136",
+   "seq": 136,
+   "type": "kill",
+   "round": 16,
+   "time": 42,
+   "killer": "TDL-2",
+   "victim": "GLV-5",
+   "weapon": "Spectre",
+   "headshot": false,
+   "assists": [
+    "TDL-1",
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0137",
+   "seq": 137,
+   "type": "plant",
+   "round": 16,
+   "time": 46,
+   "planter": "GLV-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0138",
+   "seq": 138,
+   "type": "kill",
+   "round": 16,
+   "time": 54,
+   "killer": "TDL-1",
+   "victim": "GLV-1",
+   "weapon": "Spectre",
+   "headshot": true,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0139",
+   "seq": 139,
+   "type": "kill",
+   "round": 16,
+   "time": 64,
+   "killer": "GLV-3",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0140",
+   "seq": 140,
+   "type": "kill",
+   "round": 16,
+   "time": 78,
+   "killer": "GLV-3",
+   "victim": "TDL-2",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0141",
+   "seq": 141,
+   "type": "kill",
+   "round": 16,
+   "time": 86,
+   "killer": "TDL-4",
+   "victim": "GLV-3",
+   "weapon": "Judge",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0142",
+   "seq": 142,
+   "type": "round",
+   "round": 16,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "spike-detonated",
+   "home_credits": 5500,
+   "away_credits": 2500,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 7,
+   "away_score": 9,
+   "duration": 91
+  },
+  {
+   "id": "BTI26-V02-E0143",
+   "seq": 143,
+   "type": "kill",
+   "round": 17,
+   "time": 11,
+   "killer": "GLV-1",
+   "victim": "TDL-5",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0144",
+   "seq": 144,
+   "type": "kill",
+   "round": 17,
+   "time": 17,
+   "killer": "TDL-3",
+   "victim": "GLV-3",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "TDL-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0145",
+   "seq": 145,
+   "type": "kill",
+   "round": 17,
+   "time": 33,
+   "killer": "TDL-3",
+   "victim": "GLV-5",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0146",
+   "seq": 146,
+   "type": "kill",
+   "round": 17,
+   "time": 47,
+   "killer": "TDL-4",
+   "victim": "GLV-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0147",
+   "seq": 147,
+   "type": "plant",
+   "round": 17,
+   "time": 51,
+   "planter": "GLV-1",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0148",
+   "seq": 148,
+   "type": "kill",
+   "round": 17,
+   "time": 64,
+   "killer": "GLV-4",
+   "victim": "TDL-3",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0149",
+   "seq": 149,
+   "type": "kill",
+   "round": 17,
+   "time": 72,
+   "killer": "GLV-1",
+   "victim": "TDL-4",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0150",
+   "seq": 150,
+   "type": "kill",
+   "round": 17,
+   "time": 86,
+   "killer": "GLV-4",
+   "victim": "TDL-1",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0151",
+   "seq": 151,
+   "type": "kill",
+   "round": 17,
+   "time": 94,
+   "killer": "TDL-2",
+   "victim": "GLV-4",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0152",
+   "seq": 152,
+   "type": "round",
+   "round": 17,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "spike-detonated",
+   "home_credits": 5700,
+   "away_credits": 3900,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 8,
+   "away_score": 9,
+   "duration": 96
+  },
+  {
+   "id": "BTI26-V02-E0153",
+   "seq": 153,
+   "type": "kill",
+   "round": 18,
+   "time": 7,
+   "killer": "GLV-2",
+   "victim": "TDL-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0154",
+   "seq": 154,
+   "type": "kill",
+   "round": 18,
+   "time": 12,
+   "killer": "TDL-1",
+   "victim": "GLV-1",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0155",
+   "seq": 155,
+   "type": "kill",
+   "round": 18,
+   "time": 27,
+   "killer": "GLV-3",
+   "victim": "TDL-3",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0156",
+   "seq": 156,
+   "type": "kill",
+   "round": 18,
+   "time": 39,
+   "killer": "TDL-2",
+   "victim": "GLV-3",
+   "weapon": "Marshal",
+   "headshot": true,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0157",
+   "seq": 157,
+   "type": "kill",
+   "round": 18,
+   "time": 51,
+   "killer": "TDL-4",
+   "victim": "GLV-5",
+   "weapon": "Spectre",
+   "headshot": false,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0158",
+   "seq": 158,
+   "type": "kill",
+   "round": 18,
+   "time": 65,
+   "killer": "TDL-2",
+   "victim": "GLV-2",
+   "weapon": "Judge",
+   "headshot": true,
+   "assists": [
+    "TDL-1",
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0159",
+   "seq": 159,
+   "type": "plant",
+   "round": 18,
+   "time": 70,
+   "planter": "GLV-4",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0160",
+   "seq": 160,
+   "type": "kill",
+   "round": 18,
+   "time": 84,
+   "killer": "TDL-4",
+   "victim": "GLV-4",
+   "weapon": "Sheriff",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0161",
+   "seq": 161,
+   "type": "defuse",
+   "round": 18,
+   "time": 94,
+   "defuser": "TDL-1",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0162",
+   "seq": 162,
+   "type": "round",
+   "round": 18,
+   "attack": "GLV",
+   "winner": "TDL",
+   "win_condition": "spike-defused",
+   "home_credits": 5900,
+   "away_credits": 3700,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 8,
+   "away_score": 10,
+   "duration": 94
+  },
+  {
+   "id": "BTI26-V02-E0163",
+   "seq": 163,
+   "type": "kill",
+   "round": 19,
+   "time": 15,
+   "killer": "TDL-1",
+   "victim": "GLV-3",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0164",
+   "seq": 164,
+   "type": "kill",
+   "round": 19,
+   "time": 18,
+   "killer": "GLV-2",
+   "victim": "TDL-2",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-4",
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0165",
+   "seq": 165,
+   "type": "kill",
+   "round": 19,
+   "time": 30,
+   "killer": "TDL-4",
+   "victim": "GLV-2",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0166",
+   "seq": 166,
+   "type": "kill",
+   "round": 19,
+   "time": 42,
+   "killer": "TDL-3",
+   "victim": "GLV-4",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "TDL-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0167",
+   "seq": 167,
+   "type": "plant",
+   "round": 19,
+   "time": 48,
+   "planter": "GLV-1",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0168",
+   "seq": 168,
+   "type": "kill",
+   "round": 19,
+   "time": 59,
+   "killer": "GLV-1",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0169",
+   "seq": 169,
+   "type": "kill",
+   "round": 19,
+   "time": 74,
+   "killer": "TDL-3",
+   "victim": "GLV-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0170",
+   "seq": 170,
+   "type": "kill",
+   "round": 19,
+   "time": 90,
+   "killer": "TDL-4",
+   "victim": "GLV-1",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0171",
+   "seq": 171,
+   "type": "round",
+   "round": 19,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "spike-detonated",
+   "home_credits": 4600,
+   "away_credits": 5700,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 9,
+   "away_score": 10,
+   "duration": 93
+  },
+  {
+   "id": "BTI26-V02-E0172",
+   "seq": 172,
+   "type": "kill",
+   "round": 20,
+   "time": 3,
+   "killer": "TDL-2",
+   "victim": "GLV-1",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0173",
+   "seq": 173,
+   "type": "kill",
+   "round": 20,
+   "time": 9,
+   "killer": "TDL-2",
+   "victim": "GLV-3",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "TDL-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0174",
+   "seq": 174,
+   "type": "kill",
+   "round": 20,
+   "time": 15,
+   "killer": "TDL-1",
+   "victim": "GLV-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0175",
+   "seq": 175,
+   "type": "kill",
+   "round": 20,
+   "time": 22,
+   "killer": "GLV-2",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0176",
+   "seq": 176,
+   "type": "kill",
+   "round": 20,
+   "time": 29,
+   "killer": "GLV-2",
+   "victim": "TDL-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0177",
+   "seq": 177,
+   "type": "kill",
+   "round": 20,
+   "time": 38,
+   "killer": "TDL-4",
+   "victim": "GLV-2",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0178",
+   "seq": 178,
+   "type": "plant",
+   "round": 20,
+   "time": 43,
+   "planter": "GLV-4",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0179",
+   "seq": 179,
+   "type": "kill",
+   "round": 20,
+   "time": 48,
+   "killer": "TDL-2",
+   "victim": "GLV-4",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "TDL-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0180",
+   "seq": 180,
+   "type": "defuse",
+   "round": 20,
+   "time": 58,
+   "defuser": "TDL-2",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V02-E0181",
+   "seq": 181,
+   "type": "round",
+   "round": 20,
+   "attack": "GLV",
+   "winner": "TDL",
+   "win_condition": "spike-defused",
+   "home_credits": 4400,
+   "away_credits": 4700,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 9,
+   "away_score": 11,
+   "duration": 58
+  },
+  {
+   "id": "BTI26-V02-E0182",
+   "seq": 182,
+   "type": "kill",
+   "round": 21,
+   "time": 14,
+   "killer": "GLV-3",
+   "victim": "TDL-2",
+   "weapon": "Judge",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0183",
+   "seq": 183,
+   "type": "kill",
+   "round": 21,
+   "time": 18,
+   "killer": "GLV-3",
+   "victim": "TDL-4",
+   "weapon": "Judge",
+   "headshot": true,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0184",
+   "seq": 184,
+   "type": "kill",
+   "round": 21,
+   "time": 22,
+   "killer": "GLV-2",
+   "victim": "TDL-5",
+   "weapon": "Judge",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0185",
+   "seq": 185,
+   "type": "kill",
+   "round": 21,
+   "time": 32,
+   "killer": "GLV-2",
+   "victim": "TDL-1",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0186",
+   "seq": 186,
+   "type": "kill",
+   "round": 21,
+   "time": 38,
+   "killer": "GLV-3",
+   "victim": "TDL-3",
+   "weapon": "Judge",
+   "headshot": true,
+   "assists": [
+    "GLV-4"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0187",
+   "seq": 187,
+   "type": "round",
+   "round": 21,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "elimination",
+   "home_credits": 3100,
+   "away_credits": 4800,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 10,
+   "away_score": 11,
+   "duration": 38
+  },
+  {
+   "id": "BTI26-V02-E0188",
+   "seq": 188,
+   "type": "kill",
+   "round": 22,
+   "time": 7,
+   "killer": "GLV-1",
+   "victim": "TDL-2",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "GLV-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0189",
+   "seq": 189,
+   "type": "kill",
+   "round": 22,
+   "time": 12,
+   "killer": "TDL-5",
+   "victim": "GLV-3",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0190",
+   "seq": 190,
+   "type": "kill",
+   "round": 22,
+   "time": 20,
+   "killer": "GLV-5",
+   "victim": "TDL-4",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0191",
+   "seq": 191,
+   "type": "kill",
+   "round": 22,
+   "time": 33,
+   "killer": "GLV-4",
+   "victim": "TDL-5",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0192",
+   "seq": 192,
+   "type": "kill",
+   "round": 22,
+   "time": 45,
+   "killer": "GLV-4",
+   "victim": "TDL-3",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0193",
+   "seq": 193,
+   "type": "plant",
+   "round": 22,
+   "time": 47,
+   "planter": "GLV-5",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0194",
+   "seq": 194,
+   "type": "kill",
+   "round": 22,
+   "time": 59,
+   "killer": "GLV-5",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": true,
+   "assists": [
+    "GLV-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0195",
+   "seq": 195,
+   "type": "round",
+   "round": 22,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "elimination",
+   "home_credits": 5100,
+   "away_credits": 2800,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 11,
+   "away_score": 11,
+   "duration": 59
+  },
+  {
+   "id": "BTI26-V02-E0196",
+   "seq": 196,
+   "type": "kill",
+   "round": 23,
+   "time": 13,
+   "killer": "GLV-2",
+   "victim": "TDL-2",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "GLV-1",
+    "GLV-5"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0197",
+   "seq": 197,
+   "type": "kill",
+   "round": 23,
+   "time": 29,
+   "killer": "GLV-3",
+   "victim": "TDL-5",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0198",
+   "seq": 198,
+   "type": "kill",
+   "round": 23,
+   "time": 33,
+   "killer": "GLV-3",
+   "victim": "TDL-4",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0199",
+   "seq": 199,
+   "type": "plant",
+   "round": 23,
+   "time": 38,
+   "planter": "GLV-1",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0200",
+   "seq": 200,
+   "type": "kill",
+   "round": 23,
+   "time": 47,
+   "killer": "TDL-1",
+   "victim": "GLV-1",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "TDL-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0201",
+   "seq": 201,
+   "type": "kill",
+   "round": 23,
+   "time": 61,
+   "killer": "TDL-3",
+   "victim": "GLV-5",
+   "weapon": "Bulldog",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0202",
+   "seq": 202,
+   "type": "kill",
+   "round": 23,
+   "time": 65,
+   "killer": "GLV-3",
+   "victim": "TDL-3",
+   "weapon": "Operator",
+   "headshot": true,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0203",
+   "seq": 203,
+   "type": "kill",
+   "round": 23,
+   "time": 81,
+   "killer": "GLV-4",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0204",
+   "seq": 204,
+   "type": "round",
+   "round": 23,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "elimination",
+   "home_credits": 5500,
+   "away_credits": 3400,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 12,
+   "away_score": 11,
+   "duration": 81
+  },
+  {
+   "id": "BTI26-V02-E0205",
+   "seq": 205,
+   "type": "kill",
+   "round": 24,
+   "time": 7,
+   "killer": "TDL-3",
+   "victim": "GLV-5",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0206",
+   "seq": 206,
+   "type": "kill",
+   "round": 24,
+   "time": 18,
+   "killer": "GLV-3",
+   "victim": "TDL-2",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0207",
+   "seq": 207,
+   "type": "kill",
+   "round": 24,
+   "time": 22,
+   "killer": "TDL-4",
+   "victim": "GLV-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "TDL-1"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0208",
+   "seq": 208,
+   "type": "kill",
+   "round": 24,
+   "time": 38,
+   "killer": "TDL-5",
+   "victim": "GLV-1",
+   "weapon": "Vandal",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0209",
+   "seq": 209,
+   "type": "kill",
+   "round": 24,
+   "time": 49,
+   "killer": "GLV-3",
+   "victim": "TDL-5",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "GLV-2"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0210",
+   "seq": 210,
+   "type": "plant",
+   "round": 24,
+   "time": 52,
+   "planter": "GLV-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V02-E0211",
+   "seq": 211,
+   "type": "kill",
+   "round": 24,
+   "time": 66,
+   "killer": "GLV-2",
+   "victim": "TDL-3",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "GLV-3"
+   ]
+  },
+  {
+   "id": "BTI26-V02-E0212",
+   "seq": 212,
+   "type": "kill",
+   "round": 24,
+   "time": 75,
+   "killer": "GLV-2",
+   "victim": "TDL-4",
+   "weapon": "Operator",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V02-E0213",
+   "seq": 213,
+   "type": "kill",
+   "round": 24,
+   "time": 78,
+   "killer": "GLV-3",
+   "victim": "TDL-1",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V02-E0214",
+   "seq": 214,
+   "type": "round",
+   "round": 24,
+   "attack": "GLV",
+   "winner": "GLV",
+   "win_condition": "elimination",
+   "home_credits": 5900,
+   "away_credits": 4700,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 13,
+   "away_score": 11,
+   "duration": 78
+  },
+  {
+   "id": "BTI26-V02-E0215",
+   "seq": 215,
+   "type": "half_end",
+   "half": 2,
+   "home_score": 13,
+   "away_score": 11
+  }
+ ],
+ "stats": [
+  {
+   "player": "GLV-1",
+   "kills": 14,
+   "deaths": 15,
+   "assists": 14,
+   "headshots": 2,
+   "first_kills": 3,
+   "first_deaths": 3,
+   "fk_diff": 0,
+   "adr": 95,
+   "kast": 62,
+   "acs": 156
+  },
+  {
+   "player": "GLV-2",
+   "kills": 19,
+   "deaths": 14,
+   "assists": 11,
+   "headshots": 3,
+   "first_kills": 4,
+   "first_deaths": 1,
+   "fk_diff": 3,
+   "adr": 110,
+   "kast": 71,
+   "acs": 185
+  },
+  {
+   "player": "GLV-3",
+   "kills": 27,
+   "deaths": 14,
+   "assists": 8,
+   "headshots": 8,
+   "first_kills": 5,
+   "first_deaths": 3,
+   "fk_diff": 2,
+   "adr": 144,
+   "kast": 67,
+   "acs": 242
+  },
+  {
+   "player": "GLV-4",
+   "kills": 11,
+   "deaths": 14,
+   "assists": 22,
+   "headshots": 1,
+   "first_kills": 1,
+   "first_deaths": 0,
+   "fk_diff": 1,
+   "adr": 95,
+   "kast": 75,
+   "acs": 152
+  },
+  {
+   "player": "GLV-5",
+   "kills": 13,
+   "deaths": 18,
+   "assists": 8,
+   "headshots": 2,
+   "first_kills": 1,
+   "first_deaths": 3,
+   "fk_diff": -2,
+   "adr": 78,
+   "kast": 67,
+   "acs": 126
+  },
+  {
+   "player": "TDL-1",
+   "kills": 22,
+   "deaths": 17,
+   "assists": 11,
+   "headshots": 6,
+   "first_kills": 4,
+   "first_deaths": 0,
+   "fk_diff": 4,
+   "adr": 129,
+   "kast": 71,
+   "acs": 213
+  },
+  {
+   "player": "TDL-2",
+   "kills": 22,
+   "deaths": 17,
+   "assists": 6,
+   "headshots": 5,
+   "first_kills": 1,
+   "first_deaths": 4,
+   "fk_diff": -3,
+   "adr": 115,
+   "kast": 46,
+   "acs": 188
+  },
+  {
+   "player": "TDL-3",
+   "kills": 10,
+   "deaths": 17,
+   "assists": 6,
+   "headshots": 3,
+   "first_kills": 4,
+   "first_deaths": 4,
+   "fk_diff": 0,
+   "adr": 60,
+   "kast": 50,
+   "acs": 103
+  },
+  {
+   "player": "TDL-4",
+   "kills": 12,
+   "deaths": 15,
+   "assists": 14,
+   "headshots": 1,
+   "first_kills": 0,
+   "first_deaths": 3,
+   "fk_diff": -3,
+   "adr": 83,
+   "kast": 54,
+   "acs": 132
+  },
+  {
+   "player": "TDL-5",
+   "kills": 9,
+   "deaths": 18,
+   "assists": 14,
+   "headshots": 3,
+   "first_kills": 1,
+   "first_deaths": 3,
+   "fk_diff": -2,
+   "adr": 70,
+   "kast": 58,
+   "acs": 113
+  }
+ ],
+ "result": {
+  "home_score": 13,
+  "away_score": 11,
+  "winner": "GLV"
+ }
+}

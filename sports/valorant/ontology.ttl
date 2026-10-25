@@ -1,0 +1,157 @@
+# =============================================================================
+#  Valorant plugin for IPTC Sport Schema - vocabulary (ontology + code lists)
+#  Raid Replay / team Byte Tackle
+#
+#  IPTC already ships a thin esports plugin (spespstat:, in the merged
+#  ontology) with eight player totals: kills, deaths, assist, flashassist,
+#  headshot, ADR, KAST, FKdiff. We REUSE those for the totals and EXTEND them
+#  with what a play-by-play needs: rounds, the kill feed, spike plant and
+#  defuse, the economy and agents.
+#
+#  Namespace https://sportschema.org/ontologies/valorant/ follows the pattern
+#  of the existing plugins (.../golf/, .../esports/). It is a PROPOSED
+#  namespace; it has not been endorsed by IPTC.
+#  The sport is IPTC Media Topic medtop:20001183 (eSports).
+# =============================================================================
+
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix sport:     <https://sportschema.org/ontologies/main/> .
+@prefix spespstat: <https://sportschema.org/ontologies/esports/> .
+@prefix val:       <https://sportschema.org/ontologies/valorant/> .
+@prefix valagent:  <https://sportschema.org/ontologies/valorant/agent/> .
+@prefix valwin:    <https://sportschema.org/ontologies/valorant/wincondition/> .
+@prefix valbuy:    <https://sportschema.org/ontologies/valorant/buytype/> .
+@prefix valsite:   <https://sportschema.org/ontologies/valorant/site/> .
+@prefix valside:   <https://sportschema.org/ontologies/valorant/side/> .
+
+<https://sportschema.org/ontologies/valorant>
+    a owl:Ontology ;
+    rdfs:label "IPTC Sport Schema - Valorant plugin (proposed)"@en ;
+    dcterms:creator "Byte Tackle" ;
+    owl:versionInfo "0.1" ;
+    owl:imports <https://sportschema.org/ontologies/main/>, <https://sportschema.org/ontologies/esports/> ;
+    rdfs:comment "Round-by-round vocabulary for Valorant. Every event is a sport:Action; player totals reuse IPTC's spespstat: properties."@en .
+
+# -----------------------------------------------------------------------------
+#  Classes - every Valorant event is a sport:Action
+# -----------------------------------------------------------------------------
+
+val:Round a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Round"@en ;
+    rdfs:comment "The result of one round: who attacked, who won, how (win condition), and each team's credits and buy at the start."@en .
+
+val:Kill a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Kill"@en ;
+    rdfs:comment "One line of the kill feed: killer, victim, weapon, headshot, assists, time into the round."@en .
+
+val:SpikePlant a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Spike plant"@en .
+
+val:SpikeDefuse a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Spike defuse"@en ;
+    rdfs:comment "Only possible after a plant in the same round."@en .
+
+val:HalfStart a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Start of half"@en ;
+    rdfs:comment "Half 1 = rounds 1-12, half 2 = rounds 13-24, half 3 = overtime."@en .
+
+val:HalfEnd a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "End of half"@en .
+
+# -----------------------------------------------------------------------------
+#  Properties - match, team and player
+# -----------------------------------------------------------------------------
+
+val:nativeId a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "native id"@en ;
+    rdfs:comment "The id of this match, team, player or event in the source data, so nothing is parsed back out of an IRI."@en .
+val:map a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:string ; rdfs:label "map"@en .
+val:simulatorSeed a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ; rdfs:label "simulator seed"@en .
+val:purpose a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:string ; rdfs:label "purpose of this test match"@en .
+val:startingSide a owl:ObjectProperty ; rdfs:domain sport:TeamParticipation ; rdfs:range skos:Concept ;
+    rdfs:label "starting side"@en ; rdfs:comment "The side (attack or defence) the team plays in rounds 1-12."@en .
+val:handle a owl:DatatypeProperty ; rdfs:domain sport:Athlete ; rdfs:range xsd:string ; rdfs:label "player handle"@en .
+val:agent a owl:ObjectProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range skos:Concept ;
+    rdfs:label "agent"@en ; rdfs:comment "The agent the player picked for this match."@en .
+val:acs a owl:DatatypeProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range xsd:integer ;
+    rdfs:label "average combat score"@en .
+val:firstKills a owl:DatatypeProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range xsd:integer ; rdfs:label "first kills"@en .
+val:firstDeaths a owl:DatatypeProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range xsd:integer ; rdfs:label "first deaths"@en .
+
+# -----------------------------------------------------------------------------
+#  Properties - events
+# -----------------------------------------------------------------------------
+
+val:roundNumber a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ; rdfs:label "round number"@en .
+val:half a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ; rdfs:label "half"@en ;
+    rdfs:comment "1, 2, or 3 for overtime."@en .
+val:roundTime a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "time into the round"@en ; rdfs:comment "Seconds since the round started."@en .
+val:attackingTeam a owl:ObjectProperty ; rdfs:domain val:Round ; rdfs:range sport:Team ; rdfs:label "attacking team (side)"@en .
+val:roundWinner a owl:ObjectProperty ; rdfs:domain val:Round ; rdfs:range sport:Team ; rdfs:label "round winner"@en .
+val:winCondition a owl:ObjectProperty ; rdfs:domain val:Round ; rdfs:range skos:Concept ; rdfs:label "win condition"@en .
+val:homeCredits a owl:DatatypeProperty ; rdfs:domain val:Round ; rdfs:range xsd:integer ; rdfs:label "home team credits at round start"@en .
+val:awayCredits a owl:DatatypeProperty ; rdfs:domain val:Round ; rdfs:range xsd:integer ; rdfs:label "away team credits at round start"@en .
+val:homeBuy a owl:ObjectProperty ; rdfs:domain val:Round ; rdfs:range skos:Concept ; rdfs:label "home team buy type"@en .
+val:awayBuy a owl:ObjectProperty ; rdfs:domain val:Round ; rdfs:range skos:Concept ; rdfs:label "away team buy type"@en .
+val:homeScore a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ; rdfs:label "home score after this event"@en .
+val:awayScore a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ; rdfs:label "away score after this event"@en .
+val:roundDuration a owl:DatatypeProperty ; rdfs:domain val:Round ; rdfs:range xsd:integer ; rdfs:label "round duration (s)"@en .
+val:killer a owl:ObjectProperty ; rdfs:domain val:Kill ; rdfs:range sport:Athlete ; rdfs:label "killer"@en .
+val:victim a owl:ObjectProperty ; rdfs:domain val:Kill ; rdfs:range sport:Athlete ; rdfs:label "victim"@en .
+val:assistedBy a owl:ObjectProperty ; rdfs:domain val:Kill ; rdfs:range sport:Athlete ; rdfs:label "assisted by"@en .
+val:weapon a owl:DatatypeProperty ; rdfs:domain val:Kill ; rdfs:range xsd:string ; rdfs:label "weapon"@en .
+val:headshot a owl:DatatypeProperty ; rdfs:domain val:Kill ; rdfs:range xsd:boolean ; rdfs:label "headshot"@en .
+val:planter a owl:ObjectProperty ; rdfs:domain val:SpikePlant ; rdfs:range sport:Athlete ; rdfs:label "planter"@en .
+val:defuser a owl:ObjectProperty ; rdfs:domain val:SpikeDefuse ; rdfs:range sport:Athlete ; rdfs:label "defuser"@en .
+val:site a owl:ObjectProperty ; rdfs:range skos:Concept ; rdfs:label "bomb site"@en .
+
+# -----------------------------------------------------------------------------
+#  Code lists (SKOS)
+# -----------------------------------------------------------------------------
+
+val:agents a skos:ConceptScheme ; skos:prefLabel "Valorant agents"@en ;
+    skos:hasTopConcept valagent:jett, valagent:sova, valagent:sage, valagent:omen, valagent:reyna,
+                       valagent:killjoy, valagent:phoenix, valagent:brimstone, valagent:viper, valagent:cypher .
+valagent:jett      a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Jett"@en ; skos:note "duelist"@en .
+valagent:sova      a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Sova"@en ; skos:note "initiator"@en .
+valagent:sage      a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Sage"@en ; skos:note "sentinel"@en .
+valagent:omen      a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Omen"@en ; skos:note "controller"@en .
+valagent:reyna     a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Reyna"@en ; skos:note "duelist"@en .
+valagent:killjoy   a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Killjoy"@en ; skos:note "sentinel"@en .
+valagent:phoenix   a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Phoenix"@en ; skos:note "duelist"@en .
+valagent:brimstone a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Brimstone"@en ; skos:note "controller"@en .
+valagent:viper     a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Viper"@en ; skos:note "controller"@en .
+valagent:cypher    a skos:Concept ; skos:inScheme val:agents ; skos:prefLabel "Cypher"@en ; skos:note "sentinel"@en .
+
+val:winConditions a skos:ConceptScheme ; skos:prefLabel "Round win conditions"@en ;
+    skos:hasTopConcept valwin:elimination, valwin:spike-detonated, valwin:spike-defused, valwin:time-expired .
+valwin:elimination     a skos:Concept ; skos:inScheme val:winConditions ; skos:prefLabel "elimination"@en ;
+    skos:definition "Every player of the other team is dead."@en .
+valwin:spike-detonated a skos:Concept ; skos:inScheme val:winConditions ; skos:prefLabel "spike detonated"@en ;
+    skos:definition "The attackers planted and the spike went off. Attackers win."@en .
+valwin:spike-defused   a skos:Concept ; skos:inScheme val:winConditions ; skos:prefLabel "spike defused"@en ;
+    skos:definition "The defenders defused a planted spike. Defenders win."@en .
+valwin:time-expired    a skos:Concept ; skos:inScheme val:winConditions ; skos:prefLabel "time expired"@en ;
+    skos:definition "The round clock ran out with no plant. Defenders win."@en .
+
+val:buyTypes a skos:ConceptScheme ; skos:prefLabel "Buy types"@en ;
+    skos:hasTopConcept valbuy:eco, valbuy:half-buy, valbuy:full-buy .
+valbuy:eco      a skos:Concept ; skos:inScheme val:buyTypes ; skos:prefLabel "eco"@en .
+valbuy:half-buy a skos:Concept ; skos:inScheme val:buyTypes ; skos:prefLabel "half-buy"@en .
+valbuy:full-buy a skos:Concept ; skos:inScheme val:buyTypes ; skos:prefLabel "full-buy"@en .
+
+val:sites a skos:ConceptScheme ; skos:prefLabel "Bomb sites"@en ;
+    skos:hasTopConcept valsite:A, valsite:B, valsite:C .
+valsite:A a skos:Concept ; skos:inScheme val:sites ; skos:prefLabel "A"@en .
+valsite:B a skos:Concept ; skos:inScheme val:sites ; skos:prefLabel "B"@en .
+valsite:C a skos:Concept ; skos:inScheme val:sites ; skos:prefLabel "C"@en .
+
+val:sides a skos:ConceptScheme ; skos:prefLabel "Sides"@en ;
+    skos:hasTopConcept valside:attack, valside:defence .
+valside:attack  a skos:Concept ; skos:inScheme val:sides ; skos:prefLabel "attack"@en .
+valside:defence a skos:Concept ; skos:inScheme val:sides ; skos:prefLabel "defence"@en .

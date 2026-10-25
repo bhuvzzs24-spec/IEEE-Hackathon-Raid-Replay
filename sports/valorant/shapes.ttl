@@ -1,0 +1,304 @@
+# =============================================================================
+#  Valorant plugin for IPTC Sport Schema - SHACL shapes
+#  Raid Replay / team Byte Tackle
+#
+#  Part 1 extends IPTC's *closed* shapes, exactly like kabaddi_plugin/kabaddi-shapes.ttl:
+#  IPTC only accepts pre-approved properties on an Action, Event, Team, ...; we add ours.
+#  The eight spespstat: player totals are already allowed on IndividualParticipation
+#  by IPTC itself (typed xsd:string there), so they need no extension.
+#  Part 2 adds Valorant rules: required fields, controlled vocabularies (sh:in) and
+#  rules of the game as SPARQL constraints.
+# =============================================================================
+
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:        <http://www.w3.org/ns/shacl#> .
+@prefix sport:     <https://sportschema.org/ontologies/main/> .
+@prefix spespstat: <https://sportschema.org/ontologies/esports/> .
+@prefix val:       <https://sportschema.org/ontologies/valorant/> .
+@prefix valagent:  <https://sportschema.org/ontologies/valorant/agent/> .
+@prefix valwin:    <https://sportschema.org/ontologies/valorant/wincondition/> .
+@prefix valbuy:    <https://sportschema.org/ontologies/valorant/buytype/> .
+@prefix valsite:   <https://sportschema.org/ontologies/valorant/site/> .
+@prefix valside:   <https://sportschema.org/ontologies/valorant/side/> .
+
+# =============================================================================
+#  PART 1 - extend IPTC's closed shapes (the "allowed properties" lists)
+# =============================================================================
+
+sport:ActionShape
+  sh:property [ sh:path val:nativeId ;      sh:datatype xsd:string ] ;
+  sh:property [ sh:path val:roundNumber ;   sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:half ;          sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:roundTime ;     sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:attackingTeam ; sh:class sport:Team ] ;
+  sh:property [ sh:path val:roundWinner ;   sh:class sport:Team ] ;
+  sh:property [ sh:path val:winCondition ;  sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path val:homeCredits ;   sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:awayCredits ;   sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:homeBuy ;       sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path val:awayBuy ;       sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path val:homeScore ;     sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:awayScore ;     sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:roundDuration ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:killer ;        sh:class sport:Athlete ] ;
+  sh:property [ sh:path val:victim ;        sh:class sport:Athlete ] ;
+  sh:property [ sh:path val:assistedBy ;    sh:class sport:Athlete ] ;
+  sh:property [ sh:path val:weapon ;        sh:datatype xsd:string ] ;
+  sh:property [ sh:path val:headshot ;      sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path val:planter ;       sh:class sport:Athlete ] ;
+  sh:property [ sh:path val:defuser ;       sh:class sport:Athlete ] ;
+  sh:property [ sh:path val:site ;          sh:nodeKind sh:IRI ] .
+
+sport:EventShape
+  sh:property [ sh:path val:nativeId ;      sh:datatype xsd:string ] ;
+  sh:property [ sh:path val:map ;           sh:datatype xsd:string ] ;
+  sh:property [ sh:path val:simulatorSeed ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:purpose ;       sh:datatype xsd:string ] .
+
+sport:TeamShape
+  sh:property [ sh:path val:nativeId ; sh:datatype xsd:string ] .
+
+sport:AthleteShape
+  sh:property [ sh:path val:nativeId ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path val:handle ;   sh:datatype xsd:string ] .
+
+sport:SiteShape
+  sh:property [ sh:path val:nativeId ; sh:datatype xsd:string ] .
+
+sport:TeamParticipationShape
+  sh:property [ sh:path val:startingSide ; sh:nodeKind sh:IRI ] .
+
+sport:IndividualParticipationShape
+  sh:property [ sh:path val:agent ;       sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path val:acs ;         sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:firstKills ;  sh:datatype xsd:integer ] ;
+  sh:property [ sh:path val:firstDeaths ; sh:datatype xsd:integer ] .
+
+# =============================================================================
+#  PART 2 - Valorant shapes
+# =============================================================================
+
+val:ValorantActionShape
+  a sh:NodeShape ;
+  sh:targetClass val:Round, val:Kill, val:SpikePlant, val:SpikeDefuse, val:HalfStart, val:HalfEnd ;
+  sh:property [ sh:path val:nativeId ;         sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:sequenceNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[1-9][0-9]*$" ] ;
+  sh:property [ sh:path sport:actionInEvent ;  sh:minCount 1 ; sh:maxCount 1 ] .
+
+val:InRoundShape
+  a sh:NodeShape ;
+  sh:targetClass val:Round, val:Kill, val:SpikePlant, val:SpikeDefuse ;
+  sh:property [ sh:path val:roundNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 1 ] .
+
+val:RoundShape
+  a sh:NodeShape ;
+  sh:targetClass val:Round ;
+  sh:property [ sh:path val:attackingTeam ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:roundWinner ;   sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:winCondition ;  sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( valwin:elimination valwin:spike-detonated valwin:spike-defused valwin:time-expired ) ;
+                sh:message "Win condition must be elimination, spike-detonated, spike-defused or time-expired." ] ;
+  sh:property [ sh:path val:homeCredits ;   sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 9000 ] ;
+  sh:property [ sh:path val:awayCredits ;   sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 9000 ] ;
+  sh:property [ sh:path val:homeBuy ;       sh:minCount 1 ; sh:maxCount 1 ; sh:in ( valbuy:eco valbuy:half-buy valbuy:full-buy ) ;
+                sh:message "Buy type must be eco, half-buy or full-buy." ] ;
+  sh:property [ sh:path val:awayBuy ;       sh:minCount 1 ; sh:maxCount 1 ; sh:in ( valbuy:eco valbuy:half-buy valbuy:full-buy ) ;
+                sh:message "Buy type must be eco, half-buy or full-buy." ] ;
+  sh:property [ sh:path val:homeScore ;     sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path val:awayScore ;     sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path val:roundDuration ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 145 ] ;
+  # --- rules of the game -----------------------------------------------------
+  sh:sparql [
+    sh:message "Sides switch after round 12 (and every round in overtime): the attacking team does not match the round number." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      PREFIX valside: <https://sportschema.org/ontologies/valorant/side/>
+      SELECT $this WHERE {
+        $this val:roundNumber ?r ; val:attackingTeam ?att ; sport:actionInEvent ?m .
+        ?m sport:participation ?tpA, ?tpD .
+        ?tpA val:startingSide valside:attack ; sport:participationBy ?A .
+        ?tpD val:startingSide valside:defence ; sport:participationBy ?D .
+        BIND (IF(?r <= 12, ?A, IF(?r <= 24, ?D,
+              IF(?r - 25 - 2 * FLOOR((?r - 25) / 2) = 0, ?A, ?D))) AS ?expected)
+        FILTER (?att != ?expected)
+      }""" ] ;
+  sh:sparql [
+    sh:message "Round winner is not consistent with the win condition (detonated = attackers after a plant; defused = defenders after a defuse; time expired = defenders, no plant)." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      PREFIX valwin: <https://sportschema.org/ontologies/valorant/wincondition/>
+      SELECT $this WHERE {
+        $this val:roundNumber ?r ; val:attackingTeam ?att ; val:roundWinner ?w ; val:winCondition ?c ; sport:actionInEvent ?m .
+        BIND (EXISTS { ?p a val:SpikePlant ; val:roundNumber ?r ; sport:actionInEvent ?m } AS ?planted)
+        BIND (EXISTS { ?d a val:SpikeDefuse ; val:roundNumber ?r ; sport:actionInEvent ?m } AS ?defused)
+        FILTER ( (?c = valwin:spike-detonated && (?w != ?att || !?planted || ?defused))
+              || (?c = valwin:spike-defused   && (?w = ?att || !?defused))
+              || (?c = valwin:time-expired    && (?w = ?att || ?planted)) )
+      }""" ] .
+
+val:KillShape
+  a sh:NodeShape ;
+  sh:targetClass val:Kill ;
+  sh:property [ sh:path val:killer ;    sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:victim ;    sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:weapon ;    sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:headshot ;  sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:roundTime ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 145 ] ;
+  sh:property [ sh:path val:assistedBy ; sh:maxCount 4 ] ;
+  sh:sparql [
+    sh:message "Killer and victim must play for different teams." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      SELECT $this WHERE {
+        $this val:killer ?k ; val:victim ?v ; sport:actionInEvent ?m .
+        ?m sport:participation ?tp .
+        ?ik sport:participationBy ?k ; sport:teamParticipation ?tp .
+        ?iv sport:participationBy ?v ; sport:teamParticipation ?tp .
+      }""" ] .
+
+val:SpikePlantShape
+  a sh:NodeShape ;
+  sh:targetClass val:SpikePlant ;
+  sh:property [ sh:path val:planter ;   sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:site ;      sh:minCount 1 ; sh:maxCount 1 ; sh:in ( valsite:A valsite:B valsite:C ) ;
+                sh:message "Site must be A, B or C." ] ;
+  sh:property [ sh:path val:roundTime ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 100 ] ;
+  sh:sparql [
+    sh:message "Only the attacking team can plant the spike." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      SELECT $this WHERE {
+        $this val:planter ?p ; val:roundNumber ?r ; sport:actionInEvent ?m .
+        ?round a val:Round ; val:roundNumber ?r ; sport:actionInEvent ?m ; val:attackingTeam ?att .
+        ?ip sport:participationBy ?p ; sport:teamParticipation ?tp .
+        ?m sport:participation ?tp . ?tp sport:participationBy ?team .
+        FILTER (?team != ?att)
+      }""" ] .
+
+val:SpikeDefuseShape
+  a sh:NodeShape ;
+  sh:targetClass val:SpikeDefuse ;
+  sh:property [ sh:path val:defuser ;   sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:site ;      sh:minCount 1 ; sh:maxCount 1 ; sh:in ( valsite:A valsite:B valsite:C ) ;
+                sh:message "Site must be A, B or C." ] ;
+  sh:property [ sh:path val:roundTime ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 145 ] ;
+  sh:sparql [
+    sh:message "A defuse needs a spike plant in the same round." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      SELECT $this WHERE {
+        $this val:roundNumber ?r ; sport:actionInEvent ?m .
+        FILTER NOT EXISTS { ?p a val:SpikePlant ; val:roundNumber ?r ; sport:actionInEvent ?m }
+      }""" ] .
+
+val:HalfShape
+  a sh:NodeShape ;
+  sh:targetClass val:HalfStart, val:HalfEnd ;
+  sh:property [ sh:path val:half ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( 1 2 3 ) ] .
+
+val:HalfEndShape
+  a sh:NodeShape ;
+  sh:targetClass val:HalfEnd ;
+  sh:property [ sh:path val:homeScore ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path val:awayScore ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+val:ValorantTeamShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf val:startingSide ;
+  sh:property [ sh:path val:startingSide ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( valside:attack valside:defence ) ;
+                sh:message "Side must be attack or defence." ] ;
+  sh:sparql [
+    sh:message "A Valorant team has exactly 5 players." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      SELECT $this WHERE {
+        $this a sport:TeamParticipation .
+        OPTIONAL { ?ip sport:teamParticipation $this }
+      } GROUP BY $this HAVING (COUNT(DISTINCT ?ip) != 5)""" ] .
+
+val:ValorantPlayerShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf val:agent ;
+  sh:property [ sh:path val:agent ; sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( valagent:jett valagent:sova valagent:sage valagent:omen valagent:reyna
+                        valagent:killjoy valagent:phoenix valagent:brimstone valagent:viper valagent:cypher ) ;
+                sh:message "Agent must be one of the Valorant agent concepts." ] ;
+  sh:property [ sh:path spespstat:kills ;  sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9]+$" ] ;
+  sh:property [ sh:path spespstat:deaths ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9]+$" ] ;
+  sh:property [ sh:path spespstat:assist ; sh:maxCount 1 ; sh:pattern "^[0-9]+$" ] ;
+  sh:property [ sh:path spespstat:headshot ; sh:maxCount 1 ; sh:pattern "^[0-9]+$" ] ;
+  sh:property [ sh:path spespstat:ADR ;    sh:maxCount 1 ; sh:pattern "^[0-9]+$" ] ;
+  sh:property [ sh:path spespstat:KAST ;   sh:maxCount 1 ; sh:pattern "^[0-9]+$" ] ;
+  sh:property [ sh:path spespstat:FKdiff ; sh:maxCount 1 ; sh:pattern "^-?[0-9]+$" ] ;
+  sh:sparql [
+    sh:message "spespstat:kills does not match the number of Kill events by this player." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX spespstat: <https://sportschema.org/ontologies/esports/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      SELECT $this WHERE {
+        $this spespstat:kills ?k ; sport:participationBy ?a ; sport:teamParticipation ?tp .
+        ?m sport:participation ?tp .
+        OPTIONAL { ?x a val:Kill ; val:killer ?a ; sport:actionInEvent ?m }
+      } GROUP BY $this ?k HAVING (xsd:integer(?k) != COUNT(DISTINCT ?x))""" ] ;
+  sh:sparql [
+    sh:message "spespstat:deaths does not match the number of Kill events with this player as the victim." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX spespstat: <https://sportschema.org/ontologies/esports/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      SELECT $this WHERE {
+        $this spespstat:deaths ?d ; sport:participationBy ?a ; sport:teamParticipation ?tp .
+        ?m sport:participation ?tp .
+        OPTIONAL { ?x a val:Kill ; val:victim ?a ; sport:actionInEvent ?m }
+      } GROUP BY $this ?d HAVING (xsd:integer(?d) != COUNT(DISTINCT ?x))""" ] ;
+  sh:sparql [
+    sh:message "Two players of the same team picked the same agent." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      SELECT $this WHERE {
+        $this val:agent ?ag ; sport:teamParticipation ?tp .
+        ?other val:agent ?ag ; sport:teamParticipation ?tp .
+        FILTER (?other != $this)
+      }""" ] .
+
+val:ValorantMatchShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf val:map ;
+  sh:property [ sh:path sport:sport ; sh:hasValue <http://cv.iptc.org/newscodes/mediatopic/20001183> ;
+                sh:message "A Valorant match must declare sport:sport medtop:20001183 (eSports)." ] ;
+  sh:property [ sh:path val:nativeId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:participation ; sh:minCount 2 ; sh:maxCount 2 ] ;
+  sh:sparql [
+    sh:message "First to 13 rounds; from 12-12 (overtime) a team must win by 2." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      SELECT $this WHERE {
+        $this sport:participation ?t1, ?t2 .
+        ?t1 sport:score ?s1 . ?t2 sport:score ?s2 .
+        FILTER (STR(?t1) < STR(?t2))
+        BIND (IF(xsd:integer(?s1) >= xsd:integer(?s2), xsd:integer(?s1), xsd:integer(?s2)) AS ?w)
+        BIND (IF(xsd:integer(?s1) >= xsd:integer(?s2), xsd:integer(?s2), xsd:integer(?s1)) AS ?l)
+        FILTER (!((?w = 13 && ?l <= 11) || (?l >= 12 && ?w = ?l + 2)))
+      }""" ] ;
+  sh:sparql [
+    sh:message "A team's score must equal the number of rounds it won." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX val: <https://sportschema.org/ontologies/valorant/>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      SELECT $this WHERE {
+        $this sport:participation ?tp . ?tp sport:score ?s ; sport:participationBy ?team .
+        OPTIONAL { ?r a val:Round ; sport:actionInEvent $this ; val:roundWinner ?team }
+      } GROUP BY $this ?tp ?s HAVING (xsd:integer(?s) != COUNT(DISTINCT ?r))""" ] .
