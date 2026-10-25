@@ -15,7 +15,7 @@ Raid Replay is:
 4. **A validator** that checks every file against IPTC's own shapes plus ours (`validate/`).
 5. **Proof** — round-trip tests with DeepDiff = 0, and negative tests showing it's not a fake pass (`tests/`).
 6. **A demo website** that replays the final raid by raid on an animated kabaddi mat, driven only by the
-   converted Sport Schema data (`site/index.html`).
+   converted Sport Schema data, with a full-screen mode for presenting (`site/index.html`).
 
 IEEE CS Confluence Buildathon · PES University · Sunday 25 October 2026 · Track: **Lossless – Bridging systems and formats** · Team **Byte Tackle**.
 
@@ -166,10 +166,14 @@ Made autonomously while building; each is the most reasonable choice we could se
   same five files (checked by a test). The seed is stored in the data (`kab:simulatorSeed`).
 - **Labels.** Actions carry a human-readable `rdfs:label` (e.g. "Raid #45: … (successful, 3-0)") for people
   reading the RDF; it is derived data and ignored on the way back.
-- **Website.** One self-contained HTML file: all data (the final's JSON-LD, the original JSON, the proof
-  results) is inlined because browsers block `fetch()` on `file://`. System font stack, no CDN. The replay
-  and the right-hand scoreboard read only the JSON-LD; the left scoreboard reads the original JSON; the page
-  also does its own field-by-field comparison (2,088 fields, 0 differences).
+- **Website.** One self-contained HTML file with three parts: the hero (with a stats strip), "How it works"
+  (pipeline, the four lossless rules, one raid as JSON / Turtle / JSON-LD) and the live demo. All data (the
+  final's JSON-LD, the original JSON, the proof results) is inlined because browsers block `fetch()` on
+  `file://`. System font stack, no CDN. The replay and the right-hand scoreboard read only the JSON-LD; the
+  left scoreboard reads the original JSON; the page also does its own field-by-field comparison (2,088
+  fields, 0 differences). **Full screen** (button or `F`, `Esc` to exit) enlarges the mat, keeps the clock,
+  commentary and controls, and shows both scoreboards as a compact panel in the corner. The proof tables,
+  the IPTC bugs, use cases and team live in this README and in `SLIDES_CONTENT.md`.
 
 ## Bugs we found in the standard
 
@@ -218,6 +222,8 @@ tests/             pytest: round trip, validation, negative tests, simulator rul
 data/              json/, turtle/, jsonld/ (5 matches each), results.json, validation.json
 site/              index.html (built, self-contained), src/ (template, CSS, JS), build_site.py, check_site.py
 screenshots/       desktop and phone screenshots of the site, incl. the replay mid-animation
+SLIDES_CONTENT.md  presentation material: the gap, proof tables, IPTC bugs, users, team, slide order, demo script
+demo.py            one-command demo: simulate, convert, validate, build and open the site (--quick skips validation)
 run_all.sh         regenerate everything and run every check
 ```
 
