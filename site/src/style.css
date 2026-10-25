@@ -307,3 +307,110 @@ body.rr-fs .boards,body.rr-fs .legend{visibility:hidden}
 .nav .links a.real{font-weight:700}
 .t-timeout{background:#5B61D6}
 .t-review{background:#fff;color:#1B1E23}
+
+/* ---------- multi-sport section ---------- */
+.coverage{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1.5px solid var(--ink);margin:0 0 28px}
+.cov-tile{padding:14px 16px;border-right:1px solid var(--rule);display:flex;flex-direction:column;gap:4px;min-width:0}
+.cov-tile:last-child{border-right:0}
+.cov-h{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cov-h b{font:700 16px var(--sans)}
+.cov-meter{display:flex;gap:3px}
+.cov-meter i{width:16px;height:8px;border:1.5px solid var(--ink)}
+.lvl1 .cov-meter i:first-child,.lvl2 .cov-meter i{background:var(--ink)}
+.cov-iptc{font-size:14px;color:var(--ink2)}
+.cov-add{font:600 12.5px var(--mono);color:var(--green)}
+.sp-switch{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.sp-switch button{font:600 14px var(--sans);padding:8px 16px;border:1.5px solid var(--ink);background:none;color:var(--ink);cursor:pointer;min-height:40px}
+.sp-switch button[aria-selected=true]{background:var(--ink);color:var(--paper)}
+.sp-card{border:1.5px solid var(--ink);background:var(--white)}
+.sp-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--rule)}
+.sp-board{display:flex;flex-wrap:wrap;gap:10px 22px}
+.sp-team{display:flex;align-items:center;gap:8px;min-width:0}
+.sp-team b{font-weight:600}
+.sp-team em{font:600 26px/1 var(--mono);font-style:normal;border:1.5px solid var(--ink);padding:4px 10px;min-width:48px;text-align:center;font-variant-numeric:tabular-nums}
+.sp-team.win em{background:var(--ink);color:var(--paper)}
+.sp-check{display:flex;flex-direction:column;align-items:flex-end;gap:4px;max-width:420px}
+.sp-small{font-size:12.5px;color:var(--muted);text-align:right}
+.ok-badge.bad{background:#fde8e8;color:#b42318}
+.sp-meta-line{margin:12px 18px 0;font:500 13px var(--mono);color:var(--muted)}
+.sp-about{margin:6px 18px 12px;font-size:14.5px;color:var(--ink2)}
+.sp-timeline{max-height:560px;overflow:auto;border-top:1px solid var(--rule2)}
+.sp-divider{font:600 11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:10px 18px 6px;background:var(--code)}
+.sp-row{border-bottom:1px solid var(--rule2)}
+.sp-row summary{display:flex;align-items:center;gap:10px;padding:8px 18px;cursor:pointer;list-style:none;flex-wrap:wrap}
+.sp-row summary::-webkit-details-marker{display:none}
+.sp-row[open] summary{background:var(--code)}
+.sp-n{font:600 13px var(--mono);width:38px}
+.sp-chip{display:inline-block;font:600 12.5px var(--sans);color:#fff;background:var(--c);padding:1px 8px;white-space:nowrap}
+.sp-cond{font-size:14px;color:var(--ink2)}
+.sp-meta{font-size:13px;color:var(--muted)}
+.sp-score{margin-left:auto;font:600 14px var(--mono);font-variant-numeric:tabular-nums}
+.sp-feed{list-style:none;margin:0;padding:6px 18px 12px 66px;font-size:14px}
+.sp-feed li{padding:3px 0;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.sp-t{font:500 12px var(--mono);color:var(--muted);width:40px}
+.sp-x{color:var(--muted)}
+.sp-dim{color:var(--muted);font-size:13px}
+.sp-tag{font:600 11px var(--mono);background:#fff4d6;color:#7a4d00;padding:1px 6px}
+.sp-tag2{background:#e3f2ea;color:var(--green)}
+.sp-game{padding:12px 18px;border-bottom:1px solid var(--rule2)}
+.sp-ghead{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:8px}
+.sp-ghead .sp-score{margin-left:0}
+.sp-dots{display:flex;flex-wrap:wrap;gap:3px}
+.sp-dot{width:11px;height:11px;background:var(--c);display:block}
+.sp-dot.sp-fault{background:#fff;box-shadow:inset 0 0 0 2px var(--c)}
+
+/* ---------- data handling ---------- */
+.q-wrap{overflow-x:auto;border:1.5px solid var(--ink);background:var(--white)}
+.q-table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:640px}
+.q-table th,.q-table td{padding:9px 12px;border-bottom:1px solid var(--rule2);text-align:left;vertical-align:top}
+.q-table thead th{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:var(--code)}
+.q-table td{font-variant-numeric:tabular-nums}
+.q-table td.ok{color:var(--green);font-weight:600}
+.q-ex td:last-child{color:var(--ink2);font-size:13.5px}
+.q-note{font-size:14px;color:var(--ink2);max-width:860px;margin:12px 0 22px}
+.q-note.small{font-size:13px;color:var(--muted)}
+.q-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 28px}
+.q-reasons{border:1px solid var(--rule);padding:12px 14px;background:var(--white);min-width:0}
+.q-reasons h4{margin:0 0 6px;font-size:16px}
+.q-k{font:600 11.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:8px 0 4px}
+.q-reasons ul{list-style:none;margin:0;padding:0;font-size:13.5px}
+.q-reasons li{display:flex;justify-content:space-between;gap:8px;padding:2px 0;border-bottom:1px dotted var(--rule2)}
+.q-h3{font:700 20px var(--sans);margin:28px 0 10px}
+@media (max-width:1020px){.coverage{grid-template-columns:repeat(2,minmax(0,1fr))}.cov-tile:nth-child(2){border-right:0}.cov-tile:nth-child(-n+2){border-bottom:1px solid var(--rule)}.q-grid{grid-template-columns:1fr}}
+@media (max-width:640px){.coverage{grid-template-columns:1fr}.cov-tile{border-right:0;border-bottom:1px solid var(--rule)}.sp-feed{padding-left:18px}.sp-check{align-items:flex-start}.sp-small{text-align:left}.sp-timeline{max-height:460px}}
+
+/* ---------- sport selector + stage ---------- */
+.sport-bar{background:var(--ink);color:var(--paper);position:relative;z-index:5;margin-top:64px}
+.sport-bar-in{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding-top:10px;padding-bottom:10px}
+.sb-l{font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin-right:6px}
+.sport-bar button{font:600 14px var(--sans);color:var(--paper);background:none;border:1.5px solid rgba(255,255,255,.5);padding:7px 16px;cursor:pointer;min-height:38px}
+.sport-bar button[aria-pressed=true]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.stage-sec{display:none}
+body.mode-other .stage-sec{display:block}
+body.mode-other main > section.hero, body.mode-other #how, body.mode-other #demo{display:none}
+.st-wrap{background:#121417;border:1.5px solid var(--ink);color:#fff}
+.st-hud{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;flex-wrap:wrap}
+.st-team{display:flex;align-items:center;gap:8px;font-weight:600}
+.st-team b{font:600 30px/1 var(--mono);margin-left:6px}
+.st-r{flex-direction:row-reverse}.st-r b{margin:0 6px 0 0}
+.st-mid{text-align:center;display:flex;flex-direction:column}
+.st-mid b{font:600 15px var(--mono);color:#ffd166}.st-mid span{font-size:13px;opacity:.75}
+#stSvg{display:block;width:100%;height:auto;background:#1a1d22}
+.st-p{transition:transform .45s ease}
+.st-p.dead{opacity:.25}
+.st-pl{font:700 11px var(--sans);fill:#fff}
+.st-flash{animation:stFade .9s ease forwards}
+@keyframes stFade{from{opacity:1}to{opacity:0}}
+.st-banner .st-bt{font:700 20px var(--sans);fill:#fff;letter-spacing:.04em}
+.st-site{font:700 34px var(--sans);fill:rgba(231,198,107,.35)}
+.st-lbl{font:600 12px var(--mono);fill:rgba(255,255,255,.55);letter-spacing:.05em}
+.st-shuttle{transition:cx .5s ease, cy .5s ease}
+.st-spike{animation:stPulse 1s infinite alternate}
+@keyframes stPulse{from{opacity:1}to{opacity:.4}}
+.st-com{padding:10px 16px;font-size:15.5px;min-height:46px;border-top:1px solid #2a2f36}
+.st-ctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:10px 16px 14px;border-top:1px solid #2a2f36}
+.st-ctl button{font:600 13.5px var(--sans);background:none;color:#fff;border:1.5px solid #4a515b;padding:6px 12px;cursor:pointer;min-height:36px}
+.st-speed{display:flex}.st-speed button{border-right-width:0}.st-speed button:last-child{border-right-width:1.5px}
+.st-speed button.on{background:#fff;color:#121417}
+#stScrub{flex:1;min-width:140px}
+.st-n{font:500 12.5px var(--mono);opacity:.7}

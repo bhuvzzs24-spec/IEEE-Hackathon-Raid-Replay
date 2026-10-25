@@ -188,7 +188,11 @@ def main():
     real_ready = build_real()
     text = dict(TEXT_SIM)
     real_link = '<a class="real" href="real.html">Real PKL match →</a>' if real_ready else ""
-    text["T_NAVLINK"] = f'{real_link}<a href="analytics.html">Analytics &amp; Predictor</a>'
+    payload = sports_payload()
+    extra = sports_section(payload) + quality_section()
+    text["T_EXTRA_SECTIONS"] = extra
+    multi = ('<a href="#sports">Sports</a>' if payload else "") + ('<a href="#quality">Data handling</a>' if "id=\"quality\"" in extra else "")
+    text["T_NAVLINK"] = f'{multi}{real_link}<a href="analytics.html">Analytics &amp; Predictor</a>'
     text["T_TAB_NOTE"] = f"Raid #{snip['seq']} of the final — a super raid with a bonus"
     tpl = fill((SITE / "src" / "template.html").read_text(encoding="utf-8"), text)
     css = (SITE / "src" / "style.css").read_text(encoding="utf-8")
@@ -197,7 +201,9 @@ def main():
         f"window.RR_JSONLD={js_embed(jsonld)};\n"
         f"window.RR_NATIVE={js_embed(native)};\n"
         f"window.RR_RESULTS={js_embed(results)};\n"
+        f"window.RR_SPORTS={js_embed(payload)};\n"
     )
+    js = js + "\n" + (SITE / "src" / "sports.js").read_text(encoding="utf-8") + "\n" + (SITE / "src" / "stage.js").read_text(encoding="utf-8")
     out = (tpl.replace("/*__CSS__*/", css)
               .replace("/*__DATA__*/", data_js)
               .replace("/*__APP__*/", js.replace("</", "<\\/"))
@@ -298,6 +304,7 @@ def build_real() -> bool:
     text = dict(TEXT_SIM)
     text.update({
         "T_TITLE": "Raid Replay · Real PKL match",
+        "T_EXTRA_SECTIONS": "",
         "T_RULES": RULES_REAL,
         "T_NAVLINK": '<a class="real" href="index.html">Simulated final</a><a href="analytics.html">Analytics &amp; Predictor</a>',
         "T_SUB": "This is a <strong>real Pro Kabaddi match</strong>: the official match-centre feed (as collected by "
@@ -343,6 +350,163 @@ def build_real() -> bool:
     out_path.write_text(out, encoding="utf-8")
     print(f"site/real.html written ({len(out):,} bytes, self-contained; {', '.join(names)}; NOT for the public repo)")
     return True
+
+
+
+# ------------------------------------------------------------------ multi-sport section + data handling
+SPORT_LABEL = {"valorant": "Valorant", "badminton": "Badminton", "khokho": "Kho-kho"}
+SHOWCASE_MATCH = {"valorant": "BTI26-V03"}          # the overtime match; others: the first file
+SPORT_ABOUT = {
+    "valorant": "Click a round to open its kill feed. Every round, kill, plant and defuse below is read back from the "
+                "Sport Schema JSON-LD; the player totals reuse IPTC's own esports properties.",
+    "badminton": "Each dot is a rally, coloured by who won it (hover for the score and the ending shot; faults are outlined). "
+                 "Read back from the Sport Schema JSON-LD.",
+    "khokho": "Open a turn to see its tags: who tagged whom, how, and the points. Read back from the Sport Schema JSON-LD.",
+}
+COVERAGE = [  # (sport, what IPTC has, level 0-2, what we add)
+    ("kabaddi", "Kabaddi", "News label only (medtop:20000978)", 1, "the first raid-by-raid plugin"),
+    ("valorant", "Valorant", "Thin esports plugin: 8 player totals, no play-by-play", 2, "rounds, kill feed, spike, economy"),
+    ("badminton", "Badminton", "News label only (medtop:20000847)", 1, "rally-by-rally plugin"),
+    ("khokho", "Kho-kho", "Nothing at all - not even a news topic", 0, "the first kho-kho vocabulary"),
+]
+
+
+def _iri_kind(kind):
+    from engine.converter import LIT, PLAYER, PLAYERS, STRINT, TEAM, TEAMPART, EVENT
+    if isinstance(kind, tuple):
+        return ["concept", str(kind[1])]
+    return [{LIT: "lit", STRINT: "strint", PLAYER: "player", PLAYERS: "players", TEAM: "team",
+             TEAMPART: "teampart", EVENT: "event"}[kind]]
+
+
+def _table(t: dict) -> list:
+    return [[k, str(p), *_iri_kind(kind)] for k, (p, kind) in t.items()]
+
+
+def sports_payload() -> dict:
+    """{sport: {jsonld, original, tables, ...}} for every discovered sport that has converted data; others are hidden."""
+    try:
+        import sports
+    except Exception:
+        return {}
+    out = {}
+    packs = sports.discover()
+    for name in sorted(packs, key=lambda n: (n != "valorant", n)):     # Valorant first, then A-Z
+        pack = packs[name]
+        files = sorted(sports.data_dir(name, "json").glob("*.json"))
+        pick = [f for f in files if f.stem == SHOWCASE_MATCH.get(name)] or files[:1]
+        if not pick:
+            continue
+        ld = sports.match_file(name, "jsonld", pick[0].stem)
+        if not ld.exists():
+            continue
+        spec = pack.spec
+        doc = json.loads(ld.read_text(encoding="utf-8"))
+        out[name] = {
+            "label": SPORT_LABEL.get(name, name.title()),
+            "about": SPORT_ABOUT.get(name, pack.description),
+            "jsonld": doc,
+            "original": json.loads(pick[0].read_text(encoding="utf-8")),
+            "triples": len(Graph().parse(data=json.dumps(doc), format="json-ld")),
+            "native_id": str(spec.native_id),
+            "tables": {"match": _table(spec.match_fields), "team": _table(spec.team_fields),
+                       "player": _table(spec.player_fields), "result": _table(spec.result_fields),
+                       "common": _table(spec.event_common),
+                       "events": {t: _table(f) for t, f in spec.event_fields.items()},
+                       "classes": {t: str(c) for t, (c, _) in spec.event_classes.items()}},
+        }
+    return out
+
+
+def sports_section(payload: dict) -> str:
+    present = {"kabaddi", *payload}
+    tiles = "".join(
+        f'<div class="cov-tile lvl{lvl}"><div class="cov-h"><b>{html.escape(label)}</b>'
+        f'<span class="cov-meter" aria-label="IPTC coverage {lvl} of 2"><i></i><i></i></span></div>'
+        f'<span class="cov-iptc">IPTC today: {html.escape(iptc)}</span><span class="cov-add">We add: {html.escape(add)}</span></div>'
+        for key, label, iptc, lvl, add in COVERAGE if key in present)
+    if not payload:
+        return ""
+    return f"""
+<section class="sec" id="sports">
+  <div class="wrap">
+    <p class="eyebrow">More sports, same engine</p>
+    <h2>One lossless engine for every sport the standards leave out.</h2>
+    <p class="intro">Each sport is a small plugin folder (vocabulary, SHACL rules, simulator). The same generic converter
+    takes it to Sport Schema and back; the page below rebuilds each match from its JSON-LD alone and compares it with the original.</p>
+    <div class="coverage" aria-label="How much IPTC Sport Schema covers each sport today">{tiles}</div>
+    <div class="sp-switch" id="spSwitch" role="tablist" aria-label="Choose a sport"></div>
+    <div class="sp-card">
+      <div class="sp-head">
+        <div class="sp-board" id="spBoard"></div>
+        <div class="sp-check"><span class="ok-badge" id="spDiff">diff = 0 ✓</span><span class="sp-small" id="spDiffSmall"></span></div>
+      </div>
+      <p class="sp-meta-line" id="spMeta"></p>
+      <p class="sp-about" id="spAbout"></p>
+      <div class="sp-timeline" id="spTimeline"></div>
+    </div>
+  </div>
+</section>"""
+
+
+def quality_section() -> str:
+    qp, bp = DATA / "quality_report.json", DATA / "benchmark.json"
+    if not qp.exists():
+        return ""
+    q = json.loads(qp.read_text(encoding="utf-8"))["sports"]
+    b = json.loads(bp.read_text(encoding="utf-8"))["sports"] if bp.exists() else {}
+    e = html.escape
+    rows = "".join(
+        f"<tr><th>{e(SPORT_LABEL.get(n, n))}</th><td>{r['matches_published']} / {r['matches_in']}</td>"
+        f"<td>{r['events_in']:,}</td><td>{r['events_clean']:,}</td><td>{r['events_auto_fixed']:,}</td>"
+        f"<td>{r['events_quarantined']:,}</td><td class='ok'>{r['roundtrip_diff']}</td>"
+        f"<td class='ok'>{r['published_valid']} / {r['matches_published']}</td></tr>" for n, r in q.items())
+    reasons = ""
+    for n, r in q.items():
+        fx = "".join(f"<li>{e(k)} <b>{v}</b></li>" for k, v in r["fixes"].items())
+        qu = "".join(f"<li>{e(k)} <b>{v}</b></li>" for k, v in r["quarantine"].items())
+        reasons += (f"<div class='q-reasons'><h4>{e(SPORT_LABEL.get(n, n))}</h4><p class='q-k'>Auto-fixed</p><ul>{fx}</ul>"
+                    f"<p class='q-k'>Quarantined</p><ul>{qu}</ul></div>")
+    ex_rows, seen = "", set()
+    for n, r in q.items():
+        for reason, exs in r["quarantine_examples"].items():
+            if reason in seen or not exs:
+                continue
+            seen.add(reason)
+            x = exs[0]
+            ex_rows += (f"<tr><td>{e(SPORT_LABEL.get(n, n))}</td><td><code>{e(x['record'])}</code></td><td>{e(x['field'] or '')}</td>"
+                        f"<td>{e(reason)}</td><td>{e(str(x['detail'])[:110])}</td></tr>")
+    bench = ""
+    if b:
+        tiles = "".join(
+            f"<div class='stat'><b>{r['events_per_second']:,}</b><span>{e(SPORT_LABEL.get(n, n))}: events / s · {r['matches']} matches, "
+            f"{r['triples']:,} triples, round-trip diff {r['roundtrip_diff']}"
+            + (f" · SHACL {r['validation']['mean_seconds_per_match']} s / match (sampled)" if r.get('validation') else "")
+            + "</span></div>" for n, r in b.items())
+        bench = (f"<h3 class='q-h3'>Benchmark</h3><p class='q-note'>{e(next(iter(b.values()))['what_is_timed'])}; "
+                 f"each conversion checked with DeepDiff. SHACL validation is slow, so it is sampled (each distinct match once).</p>"
+                 f"<div class='stats'>{tiles}</div>")
+    return f"""
+<section class="sec" id="quality">
+  <div class="wrap">
+    <p class="eyebrow">Data handling</p>
+    <h2>Messy in, clean out - and nothing lost on the way.</h2>
+    <p class="intro">We inject realistic problems into the simulated matches (seeded): numeric strings, padding, wrong-case codes,
+    nulls, unknown keys, duplicates, swapped events, missing fields, unknown codes, broken rules. The pipeline fixes what it can
+    with a logged reason and quarantines the rest - never silently. Every published match round-trips with 0 differences.</p>
+    <div class="q-wrap"><table class="q-table">
+      <thead><tr><th>Sport</th><th>Matches published</th><th>Events in</th><th>Clean</th><th>Auto-fixed</th><th>Quarantined</th><th>Round-trip diff</th><th>Valid</th></tr></thead>
+      <tbody>{rows}</tbody></table></div>
+    <p class="q-note">Events in = clean + quarantined, for every match. A match whose cleaned remainder still breaks the sport's
+    rules (SHACL) is held back as a whole with the messages - its events count as quarantined.</p>
+    <div class="q-grid">{reasons}</div>
+    <h3 class="q-h3">Quarantined, with the reason</h3>
+    <div class="q-wrap"><table class="q-table q-ex"><thead><tr><th>Sport</th><th>Record</th><th>Field</th><th>Reason</th><th>Detail</th></tr></thead>
+      <tbody>{ex_rows}</tbody></table></div>
+    {bench}
+    <p class="q-note small">Regenerate: <code>python -m engine.quality --sport all</code> · <code>python -m engine.benchmark --matches 200</code></p>
+  </div>
+</section>"""
 
 
 if __name__ == "__main__":
