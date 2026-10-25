@@ -1,0 +1,4144 @@
+{
+ "@context": {
+  "medtop": "http://cv.iptc.org/newscodes/mediatopic/",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rr": "https://raid-replay.example/data/valorant/",
+  "spactionclass": "http://cv.iptc.org/newscodes/spactionclass/",
+  "spct": "http://cv.iptc.org/newscodes/spct/",
+  "spespstat": "https://sportschema.org/ontologies/esports/",
+  "speventoutcome": "http://cv.iptc.org/newscodes/speventoutcome/",
+  "speventstatus": "http://cv.iptc.org/newscodes/speventstatus/",
+  "sport": "https://sportschema.org/ontologies/main/",
+  "spplayerstatus": "http://cv.iptc.org/newscodes/spplayerstatus/",
+  "val": "https://sportschema.org/ontologies/valorant/",
+  "valagent": "https://sportschema.org/ontologies/valorant/agent/",
+  "valbuy": "https://sportschema.org/ontologies/valorant/buytype/",
+  "valside": "https://sportschema.org/ontologies/valorant/side/",
+  "valsite": "https://sportschema.org/ontologies/valorant/site/",
+  "valwin": "https://sportschema.org/ontologies/valorant/wincondition/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+ },
+ "@graph": [
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0001",
+   "@type": [
+    "sport:Action",
+    "val:HalfStart"
+   ],
+   "rdfs:label": "half_start #1",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "1",
+   "val:half": 1,
+   "val:nativeId": "BTI26-V04-E0001"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0002",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #2",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "2",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0002",
+   "val:roundNumber": 1,
+   "val:roundTime": 15,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Sheriff"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0003",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #3",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "3",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0003",
+   "val:roundNumber": 1,
+   "val:roundTime": 20,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Shorty"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0004",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #4",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "4",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0004",
+   "val:roundNumber": 1,
+   "val:roundTime": 27,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Shorty"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0005",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #5",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "5",
+   "val:nativeId": "BTI26-V04-E0005",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:roundNumber": 1,
+   "val:roundTime": 32,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0006",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #6",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "6",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0006",
+   "val:roundNumber": 1,
+   "val:roundTime": 47,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Classic"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0007",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #7",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "7",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0007",
+   "val:roundNumber": 1,
+   "val:roundTime": 59,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Classic"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0008",
+   "@type": [
+    "sport:Action",
+    "val:SpikeDefuse"
+   ],
+   "rdfs:label": "defuse #8",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "8",
+   "val:defuser": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0008",
+   "val:roundNumber": 1,
+   "val:roundTime": 67,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0009",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #9",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "9",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:eco"
+   },
+   "val:awayCredits": 800,
+   "val:awayScore": 0,
+   "val:homeBuy": {
+    "@id": "valbuy:eco"
+   },
+   "val:homeCredits": 800,
+   "val:homeScore": 1,
+   "val:nativeId": "BTI26-V04-E0009",
+   "val:roundDuration": 67,
+   "val:roundNumber": 1,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:spike-defused"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0010",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #10",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "10",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:nativeId": "BTI26-V04-E0010",
+   "val:roundNumber": 2,
+   "val:roundTime": 16,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:weapon": "Marshal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0011",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #11",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "11",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0011",
+   "val:roundNumber": 2,
+   "val:roundTime": 21,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0012",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #12",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "12",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0012",
+   "val:roundNumber": 2,
+   "val:roundTime": 26,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0013",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #13",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "13",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0013",
+   "val:roundNumber": 2,
+   "val:roundTime": 39,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0014",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #14",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "14",
+   "val:nativeId": "BTI26-V04-E0014",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:roundNumber": 2,
+   "val:roundTime": 45,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0015",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #15",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "15",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0015",
+   "val:roundNumber": 2,
+   "val:roundTime": 58,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0016",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #16",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "16",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0016",
+   "val:roundNumber": 2,
+   "val:roundTime": 65,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0017",
+   "@type": [
+    "sport:Action",
+    "val:SpikeDefuse"
+   ],
+   "rdfs:label": "defuse #17",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "17",
+   "val:defuser": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0017",
+   "val:roundNumber": 2,
+   "val:roundTime": 74,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0018",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #18",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "18",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:awayCredits": 2600,
+   "val:awayScore": 0,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 4400,
+   "val:homeScore": 2,
+   "val:nativeId": "BTI26-V04-E0018",
+   "val:roundDuration": 74,
+   "val:roundNumber": 2,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:spike-defused"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0019",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #19",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "19",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+    }
+   ],
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:nativeId": "BTI26-V04-E0019",
+   "val:roundNumber": 3,
+   "val:roundTime": 10,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:weapon": "Bulldog"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0020",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #20",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "20",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0020",
+   "val:roundNumber": 3,
+   "val:roundTime": 14,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0021",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #21",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "21",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0021",
+   "val:roundNumber": 3,
+   "val:roundTime": 27,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0022",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #22",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "22",
+   "val:nativeId": "BTI26-V04-E0022",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:roundNumber": 3,
+   "val:roundTime": 30,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0023",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #23",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "23",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:nativeId": "BTI26-V04-E0023",
+   "val:roundNumber": 3,
+   "val:roundTime": 42,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:weapon": "Marshal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0024",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #24",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "24",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0024",
+   "val:roundNumber": 3,
+   "val:roundTime": 58,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0025",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #25",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "25",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:nativeId": "BTI26-V04-E0025",
+   "val:roundNumber": 3,
+   "val:roundTime": 71,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:weapon": "Spectre"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0026",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #26",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "26",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:awayCredits": 3500,
+   "val:awayScore": 1,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 4500,
+   "val:homeScore": 2,
+   "val:nativeId": "BTI26-V04-E0026",
+   "val:roundDuration": 75,
+   "val:roundNumber": 3,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:winCondition": {
+    "@id": "valwin:spike-detonated"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0027",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #27",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "27",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0027",
+   "val:roundNumber": 4,
+   "val:roundTime": 12,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Marshal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0028",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #28",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "28",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:nativeId": "BTI26-V04-E0028",
+   "val:roundNumber": 4,
+   "val:roundTime": 24,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0029",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #29",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "29",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:nativeId": "BTI26-V04-E0029",
+   "val:roundNumber": 4,
+   "val:roundTime": 27,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0030",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #30",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "30",
+   "val:nativeId": "BTI26-V04-E0030",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:roundNumber": 4,
+   "val:roundTime": 33,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0031",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #31",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "31",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:nativeId": "BTI26-V04-E0031",
+   "val:roundNumber": 4,
+   "val:roundTime": 38,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0032",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #32",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "32",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0032",
+   "val:roundNumber": 4,
+   "val:roundTime": 50,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Bulldog"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0033",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #33",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "33",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:nativeId": "BTI26-V04-E0033",
+   "val:roundNumber": 4,
+   "val:roundTime": 54,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0034",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #34",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "34",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:nativeId": "BTI26-V04-E0034",
+   "val:roundNumber": 4,
+   "val:roundTime": 69,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0035",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #35",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "35",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:awayCredits": 5400,
+   "val:awayScore": 2,
+   "val:homeBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:homeCredits": 3100,
+   "val:homeScore": 2,
+   "val:nativeId": "BTI26-V04-E0035",
+   "val:roundDuration": 69,
+   "val:roundNumber": 4,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0036",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #36",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "36",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0036",
+   "val:roundNumber": 5,
+   "val:roundTime": 10,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0037",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #37",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "37",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0037",
+   "val:roundNumber": 5,
+   "val:roundTime": 14,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0038",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #38",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "38",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:nativeId": "BTI26-V04-E0038",
+   "val:roundNumber": 5,
+   "val:roundTime": 18,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0039",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #39",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "39",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0039",
+   "val:roundNumber": 5,
+   "val:roundTime": 23,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0040",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #40",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "40",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0040",
+   "val:roundNumber": 5,
+   "val:roundTime": 32,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0041",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #41",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "41",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0041",
+   "val:roundNumber": 5,
+   "val:roundTime": 45,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0042",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #42",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "42",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:awayCredits": 5800,
+   "val:awayScore": 2,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 3900,
+   "val:homeScore": 3,
+   "val:nativeId": "BTI26-V04-E0042",
+   "val:roundDuration": 45,
+   "val:roundNumber": 5,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0043",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #43",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "43",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0043",
+   "val:roundNumber": 6,
+   "val:roundTime": 6,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0044",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #44",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "44",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0044",
+   "val:roundNumber": 6,
+   "val:roundTime": 19,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0045",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #45",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "45",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0045",
+   "val:roundNumber": 6,
+   "val:roundTime": 31,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0046",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #46",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "46",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+    }
+   ],
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0046",
+   "val:roundNumber": 6,
+   "val:roundTime": 46,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0047",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #47",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "47",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:nativeId": "BTI26-V04-E0047",
+   "val:roundNumber": 6,
+   "val:roundTime": 54,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0048",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #48",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "48",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0048",
+   "val:roundNumber": 6,
+   "val:roundTime": 65,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0049",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #49",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "49",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:awayCredits": 4000,
+   "val:awayScore": 2,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 4000,
+   "val:homeScore": 4,
+   "val:nativeId": "BTI26-V04-E0049",
+   "val:roundDuration": 65,
+   "val:roundNumber": 6,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0050",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #50",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "50",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:nativeId": "BTI26-V04-E0050",
+   "val:roundNumber": 7,
+   "val:roundTime": 16,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:weapon": "Judge"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0051",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #51",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "51",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:nativeId": "BTI26-V04-E0051",
+   "val:roundNumber": 7,
+   "val:roundTime": 21,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:weapon": "Spectre"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0052",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #52",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "52",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0052",
+   "val:roundNumber": 7,
+   "val:roundTime": 30,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0053",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #53",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "53",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0053",
+   "val:roundNumber": 7,
+   "val:roundTime": 45,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0054",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #54",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "54",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0054",
+   "val:roundNumber": 7,
+   "val:roundTime": 55,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0055",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #55",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "55",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0055",
+   "val:roundNumber": 7,
+   "val:roundTime": 64,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0056",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #56",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "56",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0056",
+   "val:roundNumber": 7,
+   "val:roundTime": 75,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0057",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #57",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "57",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:awayCredits": 2700,
+   "val:awayScore": 2,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 4100,
+   "val:homeScore": 5,
+   "val:nativeId": "BTI26-V04-E0057",
+   "val:roundDuration": 75,
+   "val:roundNumber": 7,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0058",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #58",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "58",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0058",
+   "val:roundNumber": 8,
+   "val:roundTime": 13,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0059",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #59",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "59",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+    }
+   ],
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0059",
+   "val:roundNumber": 8,
+   "val:roundTime": 21,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0060",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #60",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "60",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0060",
+   "val:roundNumber": 8,
+   "val:roundTime": 36,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0061",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #61",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "61",
+   "val:nativeId": "BTI26-V04-E0061",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:roundNumber": 8,
+   "val:roundTime": 41,
+   "val:site": {
+    "@id": "valsite:A"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0062",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #62",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "62",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:nativeId": "BTI26-V04-E0062",
+   "val:roundNumber": 8,
+   "val:roundTime": 50,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0063",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #63",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "63",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:nativeId": "BTI26-V04-E0063",
+   "val:roundNumber": 8,
+   "val:roundTime": 59,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0064",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #64",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "64",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0064",
+   "val:roundNumber": 8,
+   "val:roundTime": 70,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0065",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #65",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "65",
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0065",
+   "val:roundNumber": 8,
+   "val:roundTime": 83,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0066",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #66",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "66",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:awayCredits": 4000,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 4200,
+   "val:homeScore": 5,
+   "val:nativeId": "BTI26-V04-E0066",
+   "val:roundDuration": 86,
+   "val:roundNumber": 8,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:winCondition": {
+    "@id": "valwin:spike-detonated"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0067",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #67",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "67",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0067",
+   "val:roundNumber": 9,
+   "val:roundTime": 10,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Spectre"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0068",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #68",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "68",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0068",
+   "val:roundNumber": 9,
+   "val:roundTime": 21,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Marshal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0069",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #69",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "69",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+    }
+   ],
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0069",
+   "val:roundNumber": 9,
+   "val:roundTime": 35,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Spectre"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0070",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #70",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "70",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0070",
+   "val:roundNumber": 9,
+   "val:roundTime": 45,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Sheriff"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0071",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #71",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "71",
+   "val:nativeId": "BTI26-V04-E0071",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:roundNumber": 9,
+   "val:roundTime": 51,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0072",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #72",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "72",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0072",
+   "val:roundNumber": 9,
+   "val:roundTime": 58,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Bulldog"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0073",
+   "@type": [
+    "sport:Action",
+    "val:SpikeDefuse"
+   ],
+   "rdfs:label": "defuse #73",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "73",
+   "val:defuser": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0073",
+   "val:roundNumber": 9,
+   "val:roundTime": 68,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0074",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #74",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "74",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:awayCredits": 3800,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:homeCredits": 3200,
+   "val:homeScore": 6,
+   "val:nativeId": "BTI26-V04-E0074",
+   "val:roundDuration": 68,
+   "val:roundNumber": 9,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:spike-defused"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0075",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #75",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "75",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0075",
+   "val:roundNumber": 10,
+   "val:roundTime": 12,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0076",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #76",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "76",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0076",
+   "val:roundNumber": 10,
+   "val:roundTime": 22,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0077",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #77",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "77",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:nativeId": "BTI26-V04-E0077",
+   "val:roundNumber": 10,
+   "val:roundTime": 34,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0078",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #78",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "78",
+   "val:nativeId": "BTI26-V04-E0078",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:roundNumber": 10,
+   "val:roundTime": 40,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0079",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #79",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "79",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0079",
+   "val:roundNumber": 10,
+   "val:roundTime": 45,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0080",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #80",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "80",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0080",
+   "val:roundNumber": 10,
+   "val:roundTime": 56,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0081",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #81",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "81",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0081",
+   "val:roundNumber": 10,
+   "val:roundTime": 72,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0082",
+   "@type": [
+    "sport:Action",
+    "val:SpikeDefuse"
+   ],
+   "rdfs:label": "defuse #82",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "82",
+   "val:defuser": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0082",
+   "val:roundNumber": 10,
+   "val:roundTime": 82,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0083",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #83",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "83",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:awayCredits": 4000,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 5200,
+   "val:homeScore": 7,
+   "val:nativeId": "BTI26-V04-E0083",
+   "val:roundDuration": 82,
+   "val:roundNumber": 10,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:spike-defused"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0084",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #84",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "84",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0084",
+   "val:roundNumber": 11,
+   "val:roundTime": 15,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0085",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #85",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "85",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0085",
+   "val:roundNumber": 11,
+   "val:roundTime": 20,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0086",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #86",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "86",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0086",
+   "val:roundNumber": 11,
+   "val:roundTime": 28,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0087",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #87",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "87",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0087",
+   "val:roundNumber": 11,
+   "val:roundTime": 41,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0088",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #88",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "88",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0088",
+   "val:roundNumber": 11,
+   "val:roundTime": 56,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0089",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #89",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "89",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:awayCredits": 3000,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 5300,
+   "val:homeScore": 8,
+   "val:nativeId": "BTI26-V04-E0089",
+   "val:roundDuration": 56,
+   "val:roundNumber": 11,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0090",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #90",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "90",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0090",
+   "val:roundNumber": 12,
+   "val:roundTime": 3,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0091",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #91",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "91",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0091",
+   "val:roundNumber": 12,
+   "val:roundTime": 19,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0092",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #92",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "92",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:nativeId": "BTI26-V04-E0092",
+   "val:roundNumber": 12,
+   "val:roundTime": 30,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0093",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #93",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "93",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0093",
+   "val:roundNumber": 12,
+   "val:roundTime": 45,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0094",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #94",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "94",
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0094",
+   "val:roundNumber": 12,
+   "val:roundTime": 48,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0095",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #95",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "95",
+   "val:nativeId": "BTI26-V04-E0095",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:roundNumber": 12,
+   "val:roundTime": 50,
+   "val:site": {
+    "@id": "valsite:A"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0096",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #96",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "96",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0096",
+   "val:roundNumber": 12,
+   "val:roundTime": 63,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0097",
+   "@type": [
+    "sport:Action",
+    "val:SpikeDefuse"
+   ],
+   "rdfs:label": "defuse #97",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "97",
+   "val:defuser": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0097",
+   "val:roundNumber": 12,
+   "val:roundTime": 73,
+   "val:site": {
+    "@id": "valsite:A"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0098",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #98",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "98",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:awayCredits": 3900,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 5400,
+   "val:homeScore": 9,
+   "val:nativeId": "BTI26-V04-E0098",
+   "val:roundDuration": 73,
+   "val:roundNumber": 12,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:spike-defused"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0099",
+   "@type": [
+    "sport:Action",
+    "val:HalfEnd"
+   ],
+   "rdfs:label": "half_end #99",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "99",
+   "val:awayScore": 3,
+   "val:half": 1,
+   "val:homeScore": 9,
+   "val:nativeId": "BTI26-V04-E0099"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0100",
+   "@type": [
+    "sport:Action",
+    "val:HalfStart"
+   ],
+   "rdfs:label": "half_start #100",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "100",
+   "val:half": 2,
+   "val:nativeId": "BTI26-V04-E0100"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0101",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #101",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "101",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0101",
+   "val:roundNumber": 13,
+   "val:roundTime": 6,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Shorty"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0102",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #102",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "102",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0102",
+   "val:roundNumber": 13,
+   "val:roundTime": 19,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Sheriff"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0103",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #103",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "103",
+   "val:headshot": true,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0103",
+   "val:roundNumber": 13,
+   "val:roundTime": 26,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Shorty"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0104",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #104",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "104",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0104",
+   "val:roundNumber": 13,
+   "val:roundTime": 38,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Classic"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0105",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #105",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "105",
+   "val:nativeId": "BTI26-V04-E0105",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:roundNumber": 13,
+   "val:roundTime": 41,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0106",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #106",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "106",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:nativeId": "BTI26-V04-E0106",
+   "val:roundNumber": 13,
+   "val:roundTime": 49,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:weapon": "Classic"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0107",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #107",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "107",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0107",
+   "val:roundNumber": 13,
+   "val:roundTime": 62,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Classic"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0108",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #108",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "108",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:eco"
+   },
+   "val:awayCredits": 800,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:eco"
+   },
+   "val:homeCredits": 800,
+   "val:homeScore": 10,
+   "val:nativeId": "BTI26-V04-E0108",
+   "val:roundDuration": 62,
+   "val:roundNumber": 13,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0109",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #109",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "109",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0109",
+   "val:roundNumber": 14,
+   "val:roundTime": 12,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0110",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #110",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "110",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0110",
+   "val:roundNumber": 14,
+   "val:roundTime": 22,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0111",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #111",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "111",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0111",
+   "val:roundNumber": 14,
+   "val:roundTime": 33,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0112",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #112",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "112",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0112",
+   "val:roundNumber": 14,
+   "val:roundTime": 37,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0113",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #113",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "113",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0113",
+   "val:roundNumber": 14,
+   "val:roundTime": 46,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0114",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #114",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "114",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:awayCredits": 2500,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 4700,
+   "val:homeScore": 11,
+   "val:nativeId": "BTI26-V04-E0114",
+   "val:roundDuration": 46,
+   "val:roundNumber": 14,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0115",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #115",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "115",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0115",
+   "val:roundNumber": 15,
+   "val:roundTime": 6,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0116",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #116",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "116",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0116",
+   "val:roundNumber": 15,
+   "val:roundTime": 9,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0117",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #117",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "117",
+   "val:assistedBy": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+    }
+   ],
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:nativeId": "BTI26-V04-E0117",
+   "val:roundNumber": 15,
+   "val:roundTime": 22,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:weapon": "Marshal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0118",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #118",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "118",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0118",
+   "val:roundNumber": 15,
+   "val:roundTime": 26,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0119",
+   "@type": [
+    "sport:Action",
+    "val:SpikePlant"
+   ],
+   "rdfs:label": "plant #119",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "119",
+   "val:nativeId": "BTI26-V04-E0119",
+   "val:planter": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:roundNumber": 15,
+   "val:roundTime": 31,
+   "val:site": {
+    "@id": "valsite:B"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0120",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #120",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "120",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:nativeId": "BTI26-V04-E0120",
+   "val:roundNumber": 15,
+   "val:roundTime": 40,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0121",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #121",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "121",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:nativeId": "BTI26-V04-E0121",
+   "val:roundNumber": 15,
+   "val:roundTime": 53,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0122",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #122",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "122",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:half-buy"
+   },
+   "val:awayCredits": 2900,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 4800,
+   "val:homeScore": 12,
+   "val:nativeId": "BTI26-V04-E0122",
+   "val:roundDuration": 53,
+   "val:roundNumber": 15,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0123",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #123",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "123",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:nativeId": "BTI26-V04-E0123",
+   "val:roundNumber": 16,
+   "val:roundTime": 8,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0124",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #124",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "124",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0124",
+   "val:roundNumber": 16,
+   "val:roundTime": 19,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "val:weapon": "Operator"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0125",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #125",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "125",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:nativeId": "BTI26-V04-E0125",
+   "val:roundNumber": 16,
+   "val:roundTime": 26,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0126",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #126",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "126",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0126",
+   "val:roundNumber": 16,
+   "val:roundTime": 38,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0127",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #127",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "127",
+   "val:assistedBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "val:nativeId": "BTI26-V04-E0127",
+   "val:roundNumber": 16,
+   "val:roundTime": 52,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "val:weapon": "Phantom"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0128",
+   "@type": [
+    "sport:Action",
+    "val:Kill"
+   ],
+   "rdfs:label": "kill #128",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "128",
+   "val:headshot": false,
+   "val:killer": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "val:nativeId": "BTI26-V04-E0128",
+   "val:roundNumber": 16,
+   "val:roundTime": 55,
+   "val:victim": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "val:weapon": "Vandal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0129",
+   "@type": [
+    "sport:Action",
+    "val:Round"
+   ],
+   "rdfs:label": "round #129",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "129",
+   "val:attackingTeam": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:awayBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:awayCredits": 4000,
+   "val:awayScore": 3,
+   "val:homeBuy": {
+    "@id": "valbuy:full-buy"
+   },
+   "val:homeCredits": 5200,
+   "val:homeScore": 13,
+   "val:nativeId": "BTI26-V04-E0129",
+   "val:roundDuration": 55,
+   "val:roundNumber": 16,
+   "val:roundWinner": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "val:winCondition": {
+    "@id": "valwin:elimination"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/action/BTI26-V04-E0130",
+   "@type": [
+    "sport:Action",
+    "val:HalfEnd"
+   ],
+   "rdfs:label": "half_end #130",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "130",
+   "val:awayScore": 3,
+   "val:half": 2,
+   "val:homeScore": 13,
+   "val:nativeId": "BTI26-V04-E0130"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1",
+   "@type": "sport:Athlete",
+   "rdfs:label": "vexa",
+   "val:nativeId": "NSN-1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2",
+   "@type": "sport:Athlete",
+   "rdfs:label": "kairo",
+   "val:nativeId": "NSN-2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3",
+   "@type": "sport:Athlete",
+   "rdfs:label": "milo",
+   "val:nativeId": "NSN-3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4",
+   "@type": "sport:Athlete",
+   "rdfs:label": "tz",
+   "val:nativeId": "NSN-4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5",
+   "@type": "sport:Athlete",
+   "rdfs:label": "orbit",
+   "val:nativeId": "NSN-5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1",
+   "@type": "sport:Athlete",
+   "rdfs:label": "frost",
+   "val:nativeId": "TDL-1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2",
+   "@type": "sport:Athlete",
+   "rdfs:label": "rook",
+   "val:nativeId": "TDL-2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3",
+   "@type": "sport:Athlete",
+   "rdfs:label": "zeph",
+   "val:nativeId": "TDL-3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4",
+   "@type": "sport:Athlete",
+   "rdfs:label": "koa",
+   "val:nativeId": "TDL-4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5",
+   "@type": "sport:Athlete",
+   "rdfs:label": "blip",
+   "val:nativeId": "TDL-5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/competition/BTI-2026",
+   "@type": "sport:Competition",
+   "rdfs:label": "Byte Tackle Invitational 2026 (fictional)",
+   "sport:competitionType": {
+    "@id": "spct:competition"
+   },
+   "sport:sport": {
+    "@id": "medtop:20001183"
+   },
+   "val:nativeId": "BTI-2026"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/event/BTI26-V04",
+   "@type": "sport:Event",
+   "rdfs:label": "Tidal Lynx vs Nightshade Nomads",
+   "sport:eventInCompetition": {
+    "@id": "https://raid-replay.example/data/valorant/competition/BTI-2026"
+   },
+   "sport:eventStatus": {
+    "@id": "speventstatus:post-event"
+   },
+   "sport:location": {
+    "@id": "https://raid-replay.example/data/valorant/site/ONLINE"
+   },
+   "sport:participation": [
+    {
+     "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN"
+    },
+    {
+     "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL"
+    }
+   ],
+   "sport:sport": {
+    "@id": "medtop:20001183"
+   },
+   "sport:startDateTime": {
+    "@type": "xsd:dateTime",
+    "@value": "2026-10-25T18:00:00+05:30"
+   },
+   "val:map": "Split",
+   "val:nativeId": "BTI26-V04",
+   "val:purpose": "One-sided (13-3)",
+   "val:simulatorSeed": 4000
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Nightshade Nomads in Tidal Lynx vs Nightshade Nomads",
+   "sport:alignment": "away",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:loss"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/team/NSN"
+   },
+   "sport:score": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-1",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "44",
+   "spespstat:FKdiff": "-3",
+   "spespstat:KAST": "44",
+   "spespstat:assist": "8",
+   "spespstat:deaths": "15",
+   "spespstat:headshot": "0",
+   "spespstat:kills": "3",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-1"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN"
+   },
+   "val:acs": 73,
+   "val:agent": {
+    "@id": "valagent:killjoy"
+   },
+   "val:firstDeaths": 4,
+   "val:firstKills": 1
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-2",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "47",
+   "spespstat:FKdiff": "1",
+   "spespstat:KAST": "38",
+   "spespstat:assist": "4",
+   "spespstat:deaths": "15",
+   "spespstat:headshot": "3",
+   "spespstat:kills": "5",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-2"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN"
+   },
+   "val:acs": 78,
+   "val:agent": {
+    "@id": "valagent:sova"
+   },
+   "val:firstDeaths": 0,
+   "val:firstKills": 1
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-3",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "28",
+   "spespstat:FKdiff": "-4",
+   "spespstat:KAST": "25",
+   "spespstat:assist": "2",
+   "spespstat:deaths": "16",
+   "spespstat:headshot": "0",
+   "spespstat:kills": "3",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-3"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN"
+   },
+   "val:acs": 45,
+   "val:agent": {
+    "@id": "valagent:viper"
+   },
+   "val:firstDeaths": 4,
+   "val:firstKills": 0
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-4",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "27",
+   "spespstat:FKdiff": "-3",
+   "spespstat:KAST": "31",
+   "spespstat:assist": "2",
+   "spespstat:deaths": "15",
+   "spespstat:headshot": "0",
+   "spespstat:kills": "3",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-4"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN"
+   },
+   "val:acs": 43,
+   "val:agent": {
+    "@id": "valagent:omen"
+   },
+   "val:firstDeaths": 3,
+   "val:firstKills": 0
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-5",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "53",
+   "spespstat:FKdiff": "1",
+   "spespstat:KAST": "38",
+   "spespstat:assist": "3",
+   "spespstat:deaths": "14",
+   "spespstat:headshot": "0",
+   "spespstat:kills": "6",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/NSN-5"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN"
+   },
+   "val:acs": 90,
+   "val:agent": {
+    "@id": "valagent:reyna"
+   },
+   "val:firstDeaths": 1,
+   "val:firstKills": 2
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Tidal Lynx in Tidal Lynx vs Nightshade Nomads",
+   "sport:alignment": "home",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:win"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/team/TDL"
+   },
+   "sport:score": "13"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-1",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "138",
+   "spespstat:FKdiff": "3",
+   "spespstat:KAST": "100",
+   "spespstat:assist": "15",
+   "spespstat:deaths": "2",
+   "spespstat:headshot": "0",
+   "spespstat:kills": "13",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-1"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL"
+   },
+   "val:acs": 228,
+   "val:agent": {
+    "@id": "valagent:phoenix"
+   },
+   "val:firstDeaths": 0,
+   "val:firstKills": 3
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-2",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "135",
+   "spespstat:FKdiff": "0",
+   "spespstat:KAST": "88",
+   "spespstat:assist": "8",
+   "spespstat:deaths": "3",
+   "spespstat:headshot": "1",
+   "spespstat:kills": "16",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-2"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL"
+   },
+   "val:acs": 218,
+   "val:agent": {
+    "@id": "valagent:cypher"
+   },
+   "val:firstDeaths": 0,
+   "val:firstKills": 0
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-3",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "149",
+   "spespstat:FKdiff": "2",
+   "spespstat:KAST": "88",
+   "spespstat:assist": "12",
+   "spespstat:deaths": "4",
+   "spespstat:headshot": "4",
+   "spespstat:kills": "16",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-3"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL"
+   },
+   "val:acs": 247,
+   "val:agent": {
+    "@id": "valagent:brimstone"
+   },
+   "val:firstDeaths": 1,
+   "val:firstKills": 3
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-4",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "119",
+   "spespstat:FKdiff": "3",
+   "spespstat:KAST": "81",
+   "spespstat:assist": "8",
+   "spespstat:deaths": "5",
+   "spespstat:headshot": "1",
+   "spespstat:kills": "14",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-4"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL"
+   },
+   "val:acs": 205,
+   "val:agent": {
+    "@id": "valagent:killjoy"
+   },
+   "val:firstDeaths": 1,
+   "val:firstKills": 4
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-5",
+   "@type": "sport:IndividualParticipation",
+   "spespstat:ADR": "130",
+   "spespstat:FKdiff": "0",
+   "spespstat:KAST": "81",
+   "spespstat:assist": "6",
+   "spespstat:deaths": "6",
+   "spespstat:headshot": "2",
+   "spespstat:kills": "16",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/valorant/athlete/TDL-5"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL"
+   },
+   "val:acs": 216,
+   "val:agent": {
+    "@id": "valagent:sova"
+   },
+   "val:firstDeaths": 2,
+   "val:firstKills": 2
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/site/ONLINE",
+   "@type": "sport:Site",
+   "rdfs:label": "Online (fictional)",
+   "val:nativeId": "ONLINE"
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/team/NSN",
+   "@type": "sport:Team",
+   "rdfs:label": "Nightshade Nomads",
+   "val:nativeId": "NSN",
+   "val:shortName": "NSN",
+   "val:startingSide": {
+    "@id": "valside:attack"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/valorant/team/TDL",
+   "@type": "sport:Team",
+   "rdfs:label": "Tidal Lynx",
+   "val:nativeId": "TDL",
+   "val:shortName": "TDL",
+   "val:startingSide": {
+    "@id": "valside:defence"
+   }
+  }
+ ]
+}

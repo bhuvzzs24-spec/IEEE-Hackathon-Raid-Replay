@@ -1,0 +1,2178 @@
+@prefix medtop: <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spactionclass: <http://cv.iptc.org/newscodes/spactionclass/> .
+@prefix spct: <http://cv.iptc.org/newscodes/spct/> .
+@prefix spespstat: <https://sportschema.org/ontologies/esports/> .
+@prefix speventoutcome: <http://cv.iptc.org/newscodes/speventoutcome/> .
+@prefix speventstatus: <http://cv.iptc.org/newscodes/speventstatus/> .
+@prefix sport: <https://sportschema.org/ontologies/main/> .
+@prefix val: <https://sportschema.org/ontologies/valorant/> .
+@prefix valagent: <https://sportschema.org/ontologies/valorant/agent/> .
+@prefix valbuy: <https://sportschema.org/ontologies/valorant/buytype/> .
+@prefix valside: <https://sportschema.org/ontologies/valorant/side/> .
+@prefix valsite: <https://sportschema.org/ontologies/valorant/site/> .
+@prefix valwin: <https://sportschema.org/ontologies/valorant/wincondition/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0001> a sport:Action,
+        val:HalfStart ;
+    rdfs:label "half_start #1"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "1"^^xsd:string ;
+    val:half 1 ;
+    val:nativeId "BTI26-V04-E0001"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0002> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #2"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "2"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0002"^^xsd:string ;
+    val:roundNumber 1 ;
+    val:roundTime 15 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Sheriff"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0003> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #3"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "3"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0003"^^xsd:string ;
+    val:roundNumber 1 ;
+    val:roundTime 20 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Shorty"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0004> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #4"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "4"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0004"^^xsd:string ;
+    val:roundNumber 1 ;
+    val:roundTime 27 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Shorty"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0005> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #5"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "5"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0005"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:roundNumber 1 ;
+    val:roundTime 32 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0006> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #6"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "6"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0006"^^xsd:string ;
+    val:roundNumber 1 ;
+    val:roundTime 47 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Classic"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0007> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #7"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "7"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0007"^^xsd:string ;
+    val:roundNumber 1 ;
+    val:roundTime 59 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Classic"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0008> a sport:Action,
+        val:SpikeDefuse ;
+    rdfs:label "defuse #8"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "8"^^xsd:string ;
+    val:defuser <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0008"^^xsd:string ;
+    val:roundNumber 1 ;
+    val:roundTime 67 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0009> a sport:Action,
+        val:Round ;
+    rdfs:label "round #9"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "9"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:eco ;
+    val:awayCredits 800 ;
+    val:awayScore 0 ;
+    val:homeBuy valbuy:eco ;
+    val:homeCredits 800 ;
+    val:homeScore 1 ;
+    val:nativeId "BTI26-V04-E0009"^^xsd:string ;
+    val:roundDuration 67 ;
+    val:roundNumber 1 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:spike-defused .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0010> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #10"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "10"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:nativeId "BTI26-V04-E0010"^^xsd:string ;
+    val:roundNumber 2 ;
+    val:roundTime 16 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:weapon "Marshal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0011> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #11"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "11"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0011"^^xsd:string ;
+    val:roundNumber 2 ;
+    val:roundTime 21 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0012> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #12"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "12"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0012"^^xsd:string ;
+    val:roundNumber 2 ;
+    val:roundTime 26 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0013> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #13"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "13"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0013"^^xsd:string ;
+    val:roundNumber 2 ;
+    val:roundTime 39 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0014> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #14"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "14"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0014"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:roundNumber 2 ;
+    val:roundTime 45 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0015> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #15"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "15"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0015"^^xsd:string ;
+    val:roundNumber 2 ;
+    val:roundTime 58 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0016> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #16"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "16"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0016"^^xsd:string ;
+    val:roundNumber 2 ;
+    val:roundTime 65 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0017> a sport:Action,
+        val:SpikeDefuse ;
+    rdfs:label "defuse #17"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "17"^^xsd:string ;
+    val:defuser <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0017"^^xsd:string ;
+    val:roundNumber 2 ;
+    val:roundTime 74 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0018> a sport:Action,
+        val:Round ;
+    rdfs:label "round #18"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "18"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:half-buy ;
+    val:awayCredits 2600 ;
+    val:awayScore 0 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 4400 ;
+    val:homeScore 2 ;
+    val:nativeId "BTI26-V04-E0018"^^xsd:string ;
+    val:roundDuration 74 ;
+    val:roundNumber 2 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:spike-defused .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0019> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #19"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "19"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1>,
+        <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:nativeId "BTI26-V04-E0019"^^xsd:string ;
+    val:roundNumber 3 ;
+    val:roundTime 10 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:weapon "Bulldog"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0020> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #20"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "20"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0020"^^xsd:string ;
+    val:roundNumber 3 ;
+    val:roundTime 14 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0021> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #21"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "21"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0021"^^xsd:string ;
+    val:roundNumber 3 ;
+    val:roundTime 27 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0022> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #22"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "22"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0022"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:roundNumber 3 ;
+    val:roundTime 30 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0023> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #23"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "23"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-2>,
+        <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:nativeId "BTI26-V04-E0023"^^xsd:string ;
+    val:roundNumber 3 ;
+    val:roundTime 42 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:weapon "Marshal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0024> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #24"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "24"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0024"^^xsd:string ;
+    val:roundNumber 3 ;
+    val:roundTime 58 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0025> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #25"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "25"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:nativeId "BTI26-V04-E0025"^^xsd:string ;
+    val:roundNumber 3 ;
+    val:roundTime 71 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:weapon "Spectre"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0026> a sport:Action,
+        val:Round ;
+    rdfs:label "round #26"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "26"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:half-buy ;
+    val:awayCredits 3500 ;
+    val:awayScore 1 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 4500 ;
+    val:homeScore 2 ;
+    val:nativeId "BTI26-V04-E0026"^^xsd:string ;
+    val:roundDuration 75 ;
+    val:roundNumber 3 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:winCondition valwin:spike-detonated .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0027> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #27"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "27"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0027"^^xsd:string ;
+    val:roundNumber 4 ;
+    val:roundTime 12 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Marshal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0028> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #28"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "28"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:nativeId "BTI26-V04-E0028"^^xsd:string ;
+    val:roundNumber 4 ;
+    val:roundTime 24 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0029> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #29"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "29"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1>,
+        <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:nativeId "BTI26-V04-E0029"^^xsd:string ;
+    val:roundNumber 4 ;
+    val:roundTime 27 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0030> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #30"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "30"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0030"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:roundNumber 4 ;
+    val:roundTime 33 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0031> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #31"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "31"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:nativeId "BTI26-V04-E0031"^^xsd:string ;
+    val:roundNumber 4 ;
+    val:roundTime 38 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0032> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #32"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "32"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0032"^^xsd:string ;
+    val:roundNumber 4 ;
+    val:roundTime 50 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Bulldog"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0033> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #33"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "33"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:nativeId "BTI26-V04-E0033"^^xsd:string ;
+    val:roundNumber 4 ;
+    val:roundTime 54 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0034> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #34"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "34"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:nativeId "BTI26-V04-E0034"^^xsd:string ;
+    val:roundNumber 4 ;
+    val:roundTime 69 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0035> a sport:Action,
+        val:Round ;
+    rdfs:label "round #35"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "35"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:full-buy ;
+    val:awayCredits 5400 ;
+    val:awayScore 2 ;
+    val:homeBuy valbuy:half-buy ;
+    val:homeCredits 3100 ;
+    val:homeScore 2 ;
+    val:nativeId "BTI26-V04-E0035"^^xsd:string ;
+    val:roundDuration 69 ;
+    val:roundNumber 4 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0036> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #36"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "36"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0036"^^xsd:string ;
+    val:roundNumber 5 ;
+    val:roundTime 10 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0037> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #37"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "37"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0037"^^xsd:string ;
+    val:roundNumber 5 ;
+    val:roundTime 14 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0038> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #38"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "38"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:nativeId "BTI26-V04-E0038"^^xsd:string ;
+    val:roundNumber 5 ;
+    val:roundTime 18 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0039> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #39"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "39"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0039"^^xsd:string ;
+    val:roundNumber 5 ;
+    val:roundTime 23 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0040> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #40"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "40"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0040"^^xsd:string ;
+    val:roundNumber 5 ;
+    val:roundTime 32 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0041> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #41"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "41"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0041"^^xsd:string ;
+    val:roundNumber 5 ;
+    val:roundTime 45 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0042> a sport:Action,
+        val:Round ;
+    rdfs:label "round #42"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "42"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:full-buy ;
+    val:awayCredits 5800 ;
+    val:awayScore 2 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 3900 ;
+    val:homeScore 3 ;
+    val:nativeId "BTI26-V04-E0042"^^xsd:string ;
+    val:roundDuration 45 ;
+    val:roundNumber 5 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0043> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #43"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "43"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0043"^^xsd:string ;
+    val:roundNumber 6 ;
+    val:roundTime 6 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0044> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #44"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "44"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0044"^^xsd:string ;
+    val:roundNumber 6 ;
+    val:roundTime 19 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0045> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #45"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "45"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0045"^^xsd:string ;
+    val:roundNumber 6 ;
+    val:roundTime 31 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0046> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #46"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "46"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0046"^^xsd:string ;
+    val:roundNumber 6 ;
+    val:roundTime 46 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0047> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #47"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "47"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:nativeId "BTI26-V04-E0047"^^xsd:string ;
+    val:roundNumber 6 ;
+    val:roundTime 54 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0048> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #48"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "48"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0048"^^xsd:string ;
+    val:roundNumber 6 ;
+    val:roundTime 65 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0049> a sport:Action,
+        val:Round ;
+    rdfs:label "round #49"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "49"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:full-buy ;
+    val:awayCredits 4000 ;
+    val:awayScore 2 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 4000 ;
+    val:homeScore 4 ;
+    val:nativeId "BTI26-V04-E0049"^^xsd:string ;
+    val:roundDuration 65 ;
+    val:roundNumber 6 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0050> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #50"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "50"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:nativeId "BTI26-V04-E0050"^^xsd:string ;
+    val:roundNumber 7 ;
+    val:roundTime 16 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:weapon "Judge"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0051> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #51"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "51"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:nativeId "BTI26-V04-E0051"^^xsd:string ;
+    val:roundNumber 7 ;
+    val:roundTime 21 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:weapon "Spectre"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0052> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #52"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "52"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0052"^^xsd:string ;
+    val:roundNumber 7 ;
+    val:roundTime 30 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0053> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #53"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "53"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0053"^^xsd:string ;
+    val:roundNumber 7 ;
+    val:roundTime 45 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0054> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #54"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "54"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0054"^^xsd:string ;
+    val:roundNumber 7 ;
+    val:roundTime 55 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0055> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #55"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "55"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0055"^^xsd:string ;
+    val:roundNumber 7 ;
+    val:roundTime 64 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0056> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #56"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "56"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0056"^^xsd:string ;
+    val:roundNumber 7 ;
+    val:roundTime 75 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0057> a sport:Action,
+        val:Round ;
+    rdfs:label "round #57"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "57"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:half-buy ;
+    val:awayCredits 2700 ;
+    val:awayScore 2 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 4100 ;
+    val:homeScore 5 ;
+    val:nativeId "BTI26-V04-E0057"^^xsd:string ;
+    val:roundDuration 75 ;
+    val:roundNumber 7 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0058> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #58"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "58"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0058"^^xsd:string ;
+    val:roundNumber 8 ;
+    val:roundTime 13 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0059> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #59"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "59"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0059"^^xsd:string ;
+    val:roundNumber 8 ;
+    val:roundTime 21 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0060> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #60"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "60"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0060"^^xsd:string ;
+    val:roundNumber 8 ;
+    val:roundTime 36 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0061> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #61"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "61"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0061"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:roundNumber 8 ;
+    val:roundTime 41 ;
+    val:site valsite:A .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0062> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #62"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "62"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:nativeId "BTI26-V04-E0062"^^xsd:string ;
+    val:roundNumber 8 ;
+    val:roundTime 50 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0063> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #63"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "63"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:nativeId "BTI26-V04-E0063"^^xsd:string ;
+    val:roundNumber 8 ;
+    val:roundTime 59 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0064> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #64"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "64"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0064"^^xsd:string ;
+    val:roundNumber 8 ;
+    val:roundTime 70 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0065> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #65"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "65"^^xsd:string ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0065"^^xsd:string ;
+    val:roundNumber 8 ;
+    val:roundTime 83 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0066> a sport:Action,
+        val:Round ;
+    rdfs:label "round #66"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "66"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:full-buy ;
+    val:awayCredits 4000 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 4200 ;
+    val:homeScore 5 ;
+    val:nativeId "BTI26-V04-E0066"^^xsd:string ;
+    val:roundDuration 86 ;
+    val:roundNumber 8 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:winCondition valwin:spike-detonated .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0067> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #67"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "67"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0067"^^xsd:string ;
+    val:roundNumber 9 ;
+    val:roundTime 10 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Spectre"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0068> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #68"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "68"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0068"^^xsd:string ;
+    val:roundNumber 9 ;
+    val:roundTime 21 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Marshal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0069> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #69"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "69"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0069"^^xsd:string ;
+    val:roundNumber 9 ;
+    val:roundTime 35 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Spectre"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0070> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #70"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "70"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0070"^^xsd:string ;
+    val:roundNumber 9 ;
+    val:roundTime 45 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Sheriff"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0071> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #71"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "71"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0071"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:roundNumber 9 ;
+    val:roundTime 51 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0072> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #72"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "72"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0072"^^xsd:string ;
+    val:roundNumber 9 ;
+    val:roundTime 58 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Bulldog"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0073> a sport:Action,
+        val:SpikeDefuse ;
+    rdfs:label "defuse #73"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "73"^^xsd:string ;
+    val:defuser <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0073"^^xsd:string ;
+    val:roundNumber 9 ;
+    val:roundTime 68 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0074> a sport:Action,
+        val:Round ;
+    rdfs:label "round #74"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "74"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:half-buy ;
+    val:awayCredits 3800 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:half-buy ;
+    val:homeCredits 3200 ;
+    val:homeScore 6 ;
+    val:nativeId "BTI26-V04-E0074"^^xsd:string ;
+    val:roundDuration 68 ;
+    val:roundNumber 9 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:spike-defused .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0075> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #75"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "75"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-2>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0075"^^xsd:string ;
+    val:roundNumber 10 ;
+    val:roundTime 12 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0076> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #76"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "76"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0076"^^xsd:string ;
+    val:roundNumber 10 ;
+    val:roundTime 22 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0077> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #77"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "77"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-2>,
+        <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:nativeId "BTI26-V04-E0077"^^xsd:string ;
+    val:roundNumber 10 ;
+    val:roundTime 34 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0078> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #78"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "78"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0078"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:roundNumber 10 ;
+    val:roundTime 40 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0079> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #79"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "79"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0079"^^xsd:string ;
+    val:roundNumber 10 ;
+    val:roundTime 45 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0080> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #80"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "80"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0080"^^xsd:string ;
+    val:roundNumber 10 ;
+    val:roundTime 56 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0081> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #81"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "81"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0081"^^xsd:string ;
+    val:roundNumber 10 ;
+    val:roundTime 72 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0082> a sport:Action,
+        val:SpikeDefuse ;
+    rdfs:label "defuse #82"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "82"^^xsd:string ;
+    val:defuser <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0082"^^xsd:string ;
+    val:roundNumber 10 ;
+    val:roundTime 82 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0083> a sport:Action,
+        val:Round ;
+    rdfs:label "round #83"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "83"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:full-buy ;
+    val:awayCredits 4000 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 5200 ;
+    val:homeScore 7 ;
+    val:nativeId "BTI26-V04-E0083"^^xsd:string ;
+    val:roundDuration 82 ;
+    val:roundNumber 10 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:spike-defused .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0084> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #84"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "84"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0084"^^xsd:string ;
+    val:roundNumber 11 ;
+    val:roundTime 15 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0085> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #85"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "85"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0085"^^xsd:string ;
+    val:roundNumber 11 ;
+    val:roundTime 20 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0086> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #86"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "86"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0086"^^xsd:string ;
+    val:roundNumber 11 ;
+    val:roundTime 28 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0087> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #87"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "87"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0087"^^xsd:string ;
+    val:roundNumber 11 ;
+    val:roundTime 41 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0088> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #88"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "88"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0088"^^xsd:string ;
+    val:roundNumber 11 ;
+    val:roundTime 56 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0089> a sport:Action,
+        val:Round ;
+    rdfs:label "round #89"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "89"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:half-buy ;
+    val:awayCredits 3000 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 5300 ;
+    val:homeScore 8 ;
+    val:nativeId "BTI26-V04-E0089"^^xsd:string ;
+    val:roundDuration 56 ;
+    val:roundNumber 11 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0090> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #90"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "90"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0090"^^xsd:string ;
+    val:roundNumber 12 ;
+    val:roundTime 3 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0091> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #91"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "91"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0091"^^xsd:string ;
+    val:roundNumber 12 ;
+    val:roundTime 19 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0092> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #92"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "92"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1>,
+        <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:nativeId "BTI26-V04-E0092"^^xsd:string ;
+    val:roundNumber 12 ;
+    val:roundTime 30 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0093> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #93"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "93"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0093"^^xsd:string ;
+    val:roundNumber 12 ;
+    val:roundTime 45 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0094> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #94"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "94"^^xsd:string ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0094"^^xsd:string ;
+    val:roundNumber 12 ;
+    val:roundTime 48 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0095> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #95"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "95"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0095"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:roundNumber 12 ;
+    val:roundTime 50 ;
+    val:site valsite:A .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0096> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #96"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "96"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0096"^^xsd:string ;
+    val:roundNumber 12 ;
+    val:roundTime 63 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0097> a sport:Action,
+        val:SpikeDefuse ;
+    rdfs:label "defuse #97"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "97"^^xsd:string ;
+    val:defuser <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0097"^^xsd:string ;
+    val:roundNumber 12 ;
+    val:roundTime 73 ;
+    val:site valsite:A .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0098> a sport:Action,
+        val:Round ;
+    rdfs:label "round #98"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "98"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/NSN> ;
+    val:awayBuy valbuy:full-buy ;
+    val:awayCredits 3900 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 5400 ;
+    val:homeScore 9 ;
+    val:nativeId "BTI26-V04-E0098"^^xsd:string ;
+    val:roundDuration 73 ;
+    val:roundNumber 12 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:spike-defused .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0099> a sport:Action,
+        val:HalfEnd ;
+    rdfs:label "half_end #99"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "99"^^xsd:string ;
+    val:awayScore 3 ;
+    val:half 1 ;
+    val:homeScore 9 ;
+    val:nativeId "BTI26-V04-E0099"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0100> a sport:Action,
+        val:HalfStart ;
+    rdfs:label "half_start #100"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "100"^^xsd:string ;
+    val:half 2 ;
+    val:nativeId "BTI26-V04-E0100"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0101> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #101"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "101"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0101"^^xsd:string ;
+    val:roundNumber 13 ;
+    val:roundTime 6 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Shorty"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0102> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #102"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "102"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0102"^^xsd:string ;
+    val:roundNumber 13 ;
+    val:roundTime 19 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Sheriff"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0103> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #103"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "103"^^xsd:string ;
+    val:headshot true ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0103"^^xsd:string ;
+    val:roundNumber 13 ;
+    val:roundTime 26 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Shorty"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0104> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #104"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "104"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0104"^^xsd:string ;
+    val:roundNumber 13 ;
+    val:roundTime 38 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Classic"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0105> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #105"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "105"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0105"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:roundNumber 13 ;
+    val:roundTime 41 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0106> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #106"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "106"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:nativeId "BTI26-V04-E0106"^^xsd:string ;
+    val:roundNumber 13 ;
+    val:roundTime 49 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:weapon "Classic"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0107> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #107"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "107"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0107"^^xsd:string ;
+    val:roundNumber 13 ;
+    val:roundTime 62 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Classic"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0108> a sport:Action,
+        val:Round ;
+    rdfs:label "round #108"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "108"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:awayBuy valbuy:eco ;
+    val:awayCredits 800 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:eco ;
+    val:homeCredits 800 ;
+    val:homeScore 10 ;
+    val:nativeId "BTI26-V04-E0108"^^xsd:string ;
+    val:roundDuration 62 ;
+    val:roundNumber 13 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0109> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #109"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "109"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0109"^^xsd:string ;
+    val:roundNumber 14 ;
+    val:roundTime 12 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0110> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #110"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "110"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0110"^^xsd:string ;
+    val:roundNumber 14 ;
+    val:roundTime 22 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0111> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #111"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "111"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0111"^^xsd:string ;
+    val:roundNumber 14 ;
+    val:roundTime 33 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0112> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #112"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "112"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1>,
+        <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0112"^^xsd:string ;
+    val:roundNumber 14 ;
+    val:roundTime 37 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0113> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #113"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "113"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0113"^^xsd:string ;
+    val:roundNumber 14 ;
+    val:roundTime 46 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0114> a sport:Action,
+        val:Round ;
+    rdfs:label "round #114"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "114"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:awayBuy valbuy:half-buy ;
+    val:awayCredits 2500 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 4700 ;
+    val:homeScore 11 ;
+    val:nativeId "BTI26-V04-E0114"^^xsd:string ;
+    val:roundDuration 46 ;
+    val:roundNumber 14 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0115> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #115"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "115"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0115"^^xsd:string ;
+    val:roundNumber 15 ;
+    val:roundTime 6 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0116> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #116"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "116"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0116"^^xsd:string ;
+    val:roundNumber 15 ;
+    val:roundTime 9 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0117> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #117"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "117"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/NSN-1>,
+        <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:nativeId "BTI26-V04-E0117"^^xsd:string ;
+    val:roundNumber 15 ;
+    val:roundTime 22 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:weapon "Marshal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0118> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #118"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "118"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0118"^^xsd:string ;
+    val:roundNumber 15 ;
+    val:roundTime 26 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0119> a sport:Action,
+        val:SpikePlant ;
+    rdfs:label "plant #119"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "119"^^xsd:string ;
+    val:nativeId "BTI26-V04-E0119"^^xsd:string ;
+    val:planter <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:roundNumber 15 ;
+    val:roundTime 31 ;
+    val:site valsite:B .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0120> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #120"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "120"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:nativeId "BTI26-V04-E0120"^^xsd:string ;
+    val:roundNumber 15 ;
+    val:roundTime 40 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0121> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #121"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "121"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:nativeId "BTI26-V04-E0121"^^xsd:string ;
+    val:roundNumber 15 ;
+    val:roundTime 53 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0122> a sport:Action,
+        val:Round ;
+    rdfs:label "round #122"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "122"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:awayBuy valbuy:half-buy ;
+    val:awayCredits 2900 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 4800 ;
+    val:homeScore 12 ;
+    val:nativeId "BTI26-V04-E0122"^^xsd:string ;
+    val:roundDuration 53 ;
+    val:roundNumber 15 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0123> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #123"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "123"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:nativeId "BTI26-V04-E0123"^^xsd:string ;
+    val:roundNumber 16 ;
+    val:roundTime 8 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0124> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #124"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "124"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0124"^^xsd:string ;
+    val:roundNumber 16 ;
+    val:roundTime 19 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    val:weapon "Operator"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0125> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #125"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "125"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:nativeId "BTI26-V04-E0125"^^xsd:string ;
+    val:roundNumber 16 ;
+    val:roundTime 26 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0126> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #126"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "126"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0126"^^xsd:string ;
+    val:roundNumber 16 ;
+    val:roundTime 38 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0127> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #127"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "127"^^xsd:string ;
+    val:assistedBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    val:nativeId "BTI26-V04-E0127"^^xsd:string ;
+    val:roundNumber 16 ;
+    val:roundTime 52 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    val:weapon "Phantom"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0128> a sport:Action,
+        val:Kill ;
+    rdfs:label "kill #128"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "128"^^xsd:string ;
+    val:headshot false ;
+    val:killer <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    val:nativeId "BTI26-V04-E0128"^^xsd:string ;
+    val:roundNumber 16 ;
+    val:roundTime 55 ;
+    val:victim <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    val:weapon "Vandal"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0129> a sport:Action,
+        val:Round ;
+    rdfs:label "round #129"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "129"^^xsd:string ;
+    val:attackingTeam <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:awayBuy valbuy:full-buy ;
+    val:awayCredits 4000 ;
+    val:awayScore 3 ;
+    val:homeBuy valbuy:full-buy ;
+    val:homeCredits 5200 ;
+    val:homeScore 13 ;
+    val:nativeId "BTI26-V04-E0129"^^xsd:string ;
+    val:roundDuration 55 ;
+    val:roundNumber 16 ;
+    val:roundWinner <https://raid-replay.example/data/valorant/team/TDL> ;
+    val:winCondition valwin:elimination .
+
+<https://raid-replay.example/data/valorant/action/BTI26-V04-E0130> a sport:Action,
+        val:HalfEnd ;
+    rdfs:label "half_end #130"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/valorant/event/BTI26-V04> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "130"^^xsd:string ;
+    val:awayScore 3 ;
+    val:half 2 ;
+    val:homeScore 13 ;
+    val:nativeId "BTI26-V04-E0130"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-1> a sport:IndividualParticipation ;
+    spespstat:ADR "44"^^xsd:string ;
+    spespstat:FKdiff "-3"^^xsd:string ;
+    spespstat:KAST "44"^^xsd:string ;
+    spespstat:assist "8"^^xsd:string ;
+    spespstat:deaths "15"^^xsd:string ;
+    spespstat:headshot "0"^^xsd:string ;
+    spespstat:kills "3"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/NSN-1> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN> ;
+    val:acs 73 ;
+    val:agent valagent:killjoy ;
+    val:firstDeaths 4 ;
+    val:firstKills 1 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-2> a sport:IndividualParticipation ;
+    spespstat:ADR "47"^^xsd:string ;
+    spespstat:FKdiff "1"^^xsd:string ;
+    spespstat:KAST "38"^^xsd:string ;
+    spespstat:assist "4"^^xsd:string ;
+    spespstat:deaths "15"^^xsd:string ;
+    spespstat:headshot "3"^^xsd:string ;
+    spespstat:kills "5"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/NSN-2> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN> ;
+    val:acs 78 ;
+    val:agent valagent:sova ;
+    val:firstDeaths 0 ;
+    val:firstKills 1 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-3> a sport:IndividualParticipation ;
+    spespstat:ADR "28"^^xsd:string ;
+    spespstat:FKdiff "-4"^^xsd:string ;
+    spespstat:KAST "25"^^xsd:string ;
+    spespstat:assist "2"^^xsd:string ;
+    spespstat:deaths "16"^^xsd:string ;
+    spespstat:headshot "0"^^xsd:string ;
+    spespstat:kills "3"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/NSN-3> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN> ;
+    val:acs 45 ;
+    val:agent valagent:viper ;
+    val:firstDeaths 4 ;
+    val:firstKills 0 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-4> a sport:IndividualParticipation ;
+    spespstat:ADR "27"^^xsd:string ;
+    spespstat:FKdiff "-3"^^xsd:string ;
+    spespstat:KAST "31"^^xsd:string ;
+    spespstat:assist "2"^^xsd:string ;
+    spespstat:deaths "15"^^xsd:string ;
+    spespstat:headshot "0"^^xsd:string ;
+    spespstat:kills "3"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/NSN-4> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN> ;
+    val:acs 43 ;
+    val:agent valagent:omen ;
+    val:firstDeaths 3 ;
+    val:firstKills 0 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN-5> a sport:IndividualParticipation ;
+    spespstat:ADR "53"^^xsd:string ;
+    spespstat:FKdiff "1"^^xsd:string ;
+    spespstat:KAST "38"^^xsd:string ;
+    spespstat:assist "3"^^xsd:string ;
+    spespstat:deaths "14"^^xsd:string ;
+    spespstat:headshot "0"^^xsd:string ;
+    spespstat:kills "6"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/NSN-5> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN> ;
+    val:acs 90 ;
+    val:agent valagent:reyna ;
+    val:firstDeaths 1 ;
+    val:firstKills 2 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-1> a sport:IndividualParticipation ;
+    spespstat:ADR "138"^^xsd:string ;
+    spespstat:FKdiff "3"^^xsd:string ;
+    spespstat:KAST "100"^^xsd:string ;
+    spespstat:assist "15"^^xsd:string ;
+    spespstat:deaths "2"^^xsd:string ;
+    spespstat:headshot "0"^^xsd:string ;
+    spespstat:kills "13"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/TDL-1> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL> ;
+    val:acs 228 ;
+    val:agent valagent:phoenix ;
+    val:firstDeaths 0 ;
+    val:firstKills 3 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-2> a sport:IndividualParticipation ;
+    spespstat:ADR "135"^^xsd:string ;
+    spespstat:FKdiff "0"^^xsd:string ;
+    spespstat:KAST "88"^^xsd:string ;
+    spespstat:assist "8"^^xsd:string ;
+    spespstat:deaths "3"^^xsd:string ;
+    spespstat:headshot "1"^^xsd:string ;
+    spespstat:kills "16"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/TDL-2> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL> ;
+    val:acs 218 ;
+    val:agent valagent:cypher ;
+    val:firstDeaths 0 ;
+    val:firstKills 0 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-3> a sport:IndividualParticipation ;
+    spespstat:ADR "149"^^xsd:string ;
+    spespstat:FKdiff "2"^^xsd:string ;
+    spespstat:KAST "88"^^xsd:string ;
+    spespstat:assist "12"^^xsd:string ;
+    spespstat:deaths "4"^^xsd:string ;
+    spespstat:headshot "4"^^xsd:string ;
+    spespstat:kills "16"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/TDL-3> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL> ;
+    val:acs 247 ;
+    val:agent valagent:brimstone ;
+    val:firstDeaths 1 ;
+    val:firstKills 3 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-4> a sport:IndividualParticipation ;
+    spespstat:ADR "119"^^xsd:string ;
+    spespstat:FKdiff "3"^^xsd:string ;
+    spespstat:KAST "81"^^xsd:string ;
+    spespstat:assist "8"^^xsd:string ;
+    spespstat:deaths "5"^^xsd:string ;
+    spespstat:headshot "1"^^xsd:string ;
+    spespstat:kills "14"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/TDL-4> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL> ;
+    val:acs 205 ;
+    val:agent valagent:killjoy ;
+    val:firstDeaths 1 ;
+    val:firstKills 4 .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL-5> a sport:IndividualParticipation ;
+    spespstat:ADR "130"^^xsd:string ;
+    spespstat:FKdiff "0"^^xsd:string ;
+    spespstat:KAST "81"^^xsd:string ;
+    spespstat:assist "6"^^xsd:string ;
+    spespstat:deaths "6"^^xsd:string ;
+    spespstat:headshot "2"^^xsd:string ;
+    spespstat:kills "16"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/valorant/athlete/TDL-5> ;
+    sport:teamParticipation <https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL> ;
+    val:acs 216 ;
+    val:agent valagent:sova ;
+    val:firstDeaths 2 ;
+    val:firstKills 2 .
+
+<https://raid-replay.example/data/valorant/competition/BTI-2026> a sport:Competition ;
+    rdfs:label "Byte Tackle Invitational 2026 (fictional)"^^xsd:string ;
+    sport:competitionType spct:competition ;
+    sport:sport medtop:20001183 ;
+    val:nativeId "BTI-2026"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/site/ONLINE> a sport:Site ;
+    rdfs:label "Online (fictional)"^^xsd:string ;
+    val:nativeId "ONLINE"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN> a sport:TeamParticipation ;
+    rdfs:label "Nightshade Nomads in Tidal Lynx vs Nightshade Nomads"^^xsd:string ;
+    sport:alignment "away"^^xsd:string ;
+    sport:eventOutcome speventoutcome:loss ;
+    sport:participationBy <https://raid-replay.example/data/valorant/team/NSN> ;
+    sport:score "3"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL> a sport:TeamParticipation ;
+    rdfs:label "Tidal Lynx in Tidal Lynx vs Nightshade Nomads"^^xsd:string ;
+    sport:alignment "home"^^xsd:string ;
+    sport:eventOutcome speventoutcome:win ;
+    sport:participationBy <https://raid-replay.example/data/valorant/team/TDL> ;
+    sport:score "13"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/team/NSN> a sport:Team ;
+    rdfs:label "Nightshade Nomads"^^xsd:string ;
+    val:nativeId "NSN"^^xsd:string ;
+    val:shortName "NSN"^^xsd:string ;
+    val:startingSide valside:attack .
+
+<https://raid-replay.example/data/valorant/team/TDL> a sport:Team ;
+    rdfs:label "Tidal Lynx"^^xsd:string ;
+    val:nativeId "TDL"^^xsd:string ;
+    val:shortName "TDL"^^xsd:string ;
+    val:startingSide valside:defence .
+
+<https://raid-replay.example/data/valorant/athlete/NSN-3> a sport:Athlete ;
+    rdfs:label "milo"^^xsd:string ;
+    val:nativeId "NSN-3"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/NSN-4> a sport:Athlete ;
+    rdfs:label "tz"^^xsd:string ;
+    val:nativeId "NSN-4"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/NSN-5> a sport:Athlete ;
+    rdfs:label "orbit"^^xsd:string ;
+    val:nativeId "NSN-5"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/NSN-1> a sport:Athlete ;
+    rdfs:label "vexa"^^xsd:string ;
+    val:nativeId "NSN-1"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/NSN-2> a sport:Athlete ;
+    rdfs:label "kairo"^^xsd:string ;
+    val:nativeId "NSN-2"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/TDL-4> a sport:Athlete ;
+    rdfs:label "koa"^^xsd:string ;
+    val:nativeId "TDL-4"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/TDL-2> a sport:Athlete ;
+    rdfs:label "rook"^^xsd:string ;
+    val:nativeId "TDL-2"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/TDL-5> a sport:Athlete ;
+    rdfs:label "blip"^^xsd:string ;
+    val:nativeId "TDL-5"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/TDL-1> a sport:Athlete ;
+    rdfs:label "frost"^^xsd:string ;
+    val:nativeId "TDL-1"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/athlete/TDL-3> a sport:Athlete ;
+    rdfs:label "zeph"^^xsd:string ;
+    val:nativeId "TDL-3"^^xsd:string .
+
+<https://raid-replay.example/data/valorant/event/BTI26-V04> a sport:Event ;
+    rdfs:label "Tidal Lynx vs Nightshade Nomads"^^xsd:string ;
+    sport:eventInCompetition <https://raid-replay.example/data/valorant/competition/BTI-2026> ;
+    sport:eventStatus speventstatus:post-event ;
+    sport:location <https://raid-replay.example/data/valorant/site/ONLINE> ;
+    sport:participation <https://raid-replay.example/data/valorant/participation/BTI26-V04/NSN>,
+        <https://raid-replay.example/data/valorant/participation/BTI26-V04/TDL> ;
+    sport:sport medtop:20001183 ;
+    sport:startDateTime "2026-10-25T18:00:00+05:30"^^xsd:dateTime ;
+    val:map "Split"^^xsd:string ;
+    val:nativeId "BTI26-V04"^^xsd:string ;
+    val:purpose "One-sided (13-3)"^^xsd:string ;
+    val:simulatorSeed 4000 .
+
