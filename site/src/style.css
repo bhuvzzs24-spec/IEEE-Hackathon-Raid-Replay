@@ -414,3 +414,6 @@ body.mode-other main > section.hero, body.mode-other #how, body.mode-other #demo
 .st-speed button.on{background:#fff;color:#121417}
 #stScrub{flex:1;min-width:140px}
 .st-n{font:500 12.5px var(--mono);opacity:.7}
+
+.st-code{margin-top:22px}
+.st-code .code{max-height:420px}

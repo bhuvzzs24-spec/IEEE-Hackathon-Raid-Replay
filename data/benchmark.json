@@ -1,0 +1,63 @@
+{
+ "command": "python -m engine.benchmark --matches 200",
+ "machine": "Linux x86_64, Python 3.13.17",
+ "sports": {
+  "badminton": {
+   "matches": 200,
+   "distinct_matches": 4,
+   "events": 22250,
+   "triples": 364600,
+   "convert_seconds": 67.74,
+   "events_per_second": 328,
+   "matches_per_second": 2.95,
+   "roundtrip_diff": 0,
+   "diff_check_seconds": 20.43,
+   "what_is_timed": "to_graph + Turtle and JSON-LD serialisation + parsing both back to native JSON",
+   "validation": {
+    "sampled": true,
+    "matches_validated": 4,
+    "valid": 4,
+    "mean_seconds_per_match": 5.09,
+    "note": "SHACL (pySHACL) is slow, so validation is sampled: each of the 4 distinct matches once, not all 200 conversions"
+   }
+  },
+  "khokho": {
+   "matches": 200,
+   "distinct_matches": 3,
+   "events": 11682,
+   "triples": 199348,
+   "convert_seconds": 36.52,
+   "events_per_second": 320,
+   "matches_per_second": 5.48,
+   "roundtrip_diff": 0,
+   "diff_check_seconds": 8.78,
+   "what_is_timed": "to_graph + Turtle and JSON-LD serialisation + parsing both back to native JSON",
+   "validation": {
+    "sampled": true,
+    "matches_validated": 3,
+    "valid": 3,
+    "mean_seconds_per_match": 2.99,
+    "note": "SHACL (pySHACL) is slow, so validation is sampled: each of the 3 distinct matches once, not all 200 conversions"
+   }
+  },
+  "valorant": {
+   "matches": 200,
+   "distinct_matches": 4,
+   "events": 39100,
+   "triples": 578250,
+   "convert_seconds": 115.3,
+   "events_per_second": 339,
+   "matches_per_second": 1.73,
+   "roundtrip_diff": 0,
+   "diff_check_seconds": 28.58,
+   "what_is_timed": "to_graph + Turtle and JSON-LD serialisation + parsing both back to native JSON",
+   "validation": {
+    "sampled": true,
+    "matches_validated": 4,
+    "valid": 4,
+    "mean_seconds_per_match": 3.48,
+    "note": "SHACL (pySHACL) is slow, so validation is sampled: each of the 4 distinct matches once, not all 200 conversions"
+   }
+  }
+ }
+}

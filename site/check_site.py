@@ -1,6 +1,9 @@
 """Open site/index.html over file:// in headless Chromium, check for console errors,
 and save screenshots to screenshots/.
 
+Also checks the other sports (sport bar, animated stage, code tabs, in-page diff 0 for every sport),
+the data handling panel, that the word "fictional" is not on the page, and site/real.html if it was built.
+
     python site/check_site.py
 """
 from __future__ import annotations
@@ -96,6 +99,7 @@ def main() -> int:
                 problems.append(f"{name}: {m}")
             print(f"[{name}] console messages: {len(msgs)}, problems: {len(bad)}")
             ctx.close()
+        problems += check_sports(browser)
         real = ROOT / "site" / "real.html"
         if real.exists():
             problems += check_real(browser, real)
@@ -106,6 +110,67 @@ def main() -> int:
         print("PROBLEM:", pr)
     print("OK" if not problems else f"{len(problems)} problem(s)")
     return 0 if not problems else 1
+
+
+def check_sports(browser) -> list:
+    """Sport bar switches between kabaddi and every other sport; each stage plays without errors,
+    its code tabs are filled, every sport rebuilds from JSON-LD with diff 0, and the quality panel
+    shows one row per sport."""
+    problems = []
+    for name, w, h in (("desktop", 1440, 900), ("phone", 390, 844)):
+        ctx = browser.new_context(viewport={"width": w, "height": h}, device_scale_factor=1 if name == "desktop" else 2)
+        page = ctx.new_page()
+        msgs = []
+        page.on("console", lambda m, msgs=msgs: msgs.append((m.type, m.text)))
+        page.on("pageerror", lambda e, msgs=msgs: msgs.append(("pageerror", str(e))))
+        page.goto(URL)
+        page.wait_for_timeout(1000)
+        sports = page.evaluate("window.RaidReplaySports ? RaidReplaySports.sports : []")
+        if not sports:
+            problems.append(f"{name}: no other sports on the page")
+        for sel in ("#sports", "#quality", ".sport-bar"):
+            if page.locator(sel).count() != 1:
+                problems.append(f"{name}: missing {sel}")
+        if "fictional" in page.inner_text("body").lower():
+            problems.append(f"{name}: the word 'fictional' is on the page")
+        for sp, d in page.evaluate("RaidReplaySports.diffAll()").items():
+            if d["diffs"] != 0 or not d["fields"]:
+                problems.append(f"{name}: {sp} JSON-LD rebuild diff {d}")
+        page.add_style_tag(content=".nav{display:none!important}")
+        for sp in sports:
+            page.click(f'.sport-bar button[data-s="{sp}"]')
+            page.wait_for_timeout(400)
+            if not page.evaluate("document.body.classList.contains('mode-other')"):
+                problems.append(f"{name}: {sp} did not switch the page to the other-sport view")
+            page.evaluate("document.getElementById('stage').scrollIntoView({block:'start'})")
+            page.click("#stPlay")
+            page.wait_for_timeout(4500)
+            page.click("#stPlay")
+            tabs = page.evaluate("[...document.querySelectorAll('#stCode .tab-panel code')].map(c=>c.textContent.length)")
+            note = page.inner_text("#stNote")
+            if len(tabs) != 3 or min(tabs) < 40 or not note:
+                problems.append(f"{name}: {sp} code tabs not filled ({tabs}, note={note!r})")
+            sw = page.evaluate("document.documentElement.scrollWidth")
+            if sw > w:
+                problems.append(f"{name}: {sp} horizontal overflow ({sw}px > {w}px)")
+            page.locator(".st-wrap").screenshot(path=str(OUT / f"{name}-stage-{sp}.png"))
+            print(f"[{name}] {sp}: tabs={tabs} note={note!r}")
+        # back to kabaddi: the original sections come back
+        page.click('.sport-bar button[data-s="kabaddi"]')
+        page.wait_for_timeout(400)
+        if page.evaluate("document.body.classList.contains('mode-other')") or not page.locator("#demo").is_visible():
+            problems.append(f"{name}: switching back to kabaddi did not restore the kabaddi view")
+        page.evaluate("document.querySelectorAll('.reveal').forEach(e=>e.classList.add('in'))")
+        rows = page.locator("#quality .q-table:not(.q-ex) tbody tr").count()
+        if rows < len(sports):
+            problems.append(f"{name}: quality panel has {rows} rows for {len(sports)} sports")
+        page.locator("#quality").screenshot(path=str(OUT / f"{name}-quality.png"))
+        page.locator("#sports").screenshot(path=str(OUT / f"{name}-sports.png"))
+        bad = [m for m in msgs if m[0] in ("error", "pageerror", "warning")]
+        problems += [f"{name} sports: {m}" for m in bad]
+        print(f"[{name}] sports checked: {sports}, quality rows={rows}, problems={len(bad)}")
+        ctx.close()
+    return problems
 
 
 def check_real(browser, real: Path) -> list:

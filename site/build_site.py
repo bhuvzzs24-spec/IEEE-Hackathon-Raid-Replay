@@ -161,7 +161,7 @@ TEXT_SIM = {
     "T_DEMO_INTRO": "Every movement on this mat is driven by the converted JSON-LD: raider, touches, tackles, revivals, cards and "
                     "reviews. The left scoreboard is computed from the original JSON, the right one from the Sport Schema data.",
     "T_MAT_NOTE": "Player positions are illustrative: the data records who raided, who was touched or tackled and who was revived, not where anyone stood.",
-    "T_FOOT": "All teams, players and matches on this page are fictional, produced by our seeded simulator.",
+    "T_FOOT": "All teams, players and matches on this page are simulated: made up by our seeded simulators.",
     "T_FOOT_RUN": "Run it yourself: <code>python demo.py</code> (or <code>./run_all.sh</code>) then open <code>site/index.html</code>.",
 }
 REAL_NAMES = {"s10_semifinal1": "Semi-final 1", "s10_semifinal2": "Semi-final 2", "s10_final": "Final"}
@@ -402,7 +402,9 @@ def sports_payload() -> dict:
             continue
         spec = pack.spec
         doc = json.loads(ld.read_text(encoding="utf-8"))
+        original = json.loads(pick[0].read_text(encoding="utf-8"))
         out[name] = {
+            "snippets": sport_snippets(name, pack, original, doc),
             "label": SPORT_LABEL.get(name, name.title()),
             "about": SPORT_ABOUT.get(name, pack.description),
             "jsonld": doc,
@@ -416,6 +418,35 @@ def sports_payload() -> dict:
                        "classes": {t: str(c) for t, (c, _) in spec.event_classes.items()}},
         }
     return out
+
+
+def sport_snippets(name, pack, m, doc) -> dict:
+    """One interesting event of the showcase match as native JSON, Turtle and JSON-LD (like kabaddi's 'How it works')."""
+    from engine.converter import to_graph
+    evs = m["events"]
+    pickers = {
+        "valorant": (lambda e: e["type"] == "kill" and e.get("headshot") and e.get("assists"), "a headshot kill with an assist"),
+        "badminton": (lambda e: e["type"] == "rally" and e.get("shot") == "smash", "a rally won with a smash"),
+        "khokho": (lambda e: e["type"] == "tag" and e.get("method") == "sky-dive", "a sky-dive tag worth 3 points"),
+    }
+    test, what = pickers.get(name, (lambda e: True, "an event"))
+    ev = next((e for e in evs if test(e)), evs[1] if len(evs) > 1 else evs[0])
+    g_all = to_graph(m, pack.spec)
+    subj = pack.spec.base[f"action/{ev['id']}"]
+    g = Graph()
+    for k, ns in pack.spec.all_prefixes().items():
+        g.bind(k, ns)
+    for p, o in g_all.predicate_objects(subj):
+        g.add((subj, p, o))
+    ttl = g.serialize(format="turtle")
+    lines = ttl.splitlines()
+    body = "\n".join(line for line in lines if not line.startswith("@prefix")).strip()
+    used = [line for line in lines if (mm := re.match(r"@prefix (\w+):", line)) and (mm.group(1) + ":") in body]
+    ttl = "\n".join(sorted(used)) + "\n\n" + body + "\n"
+    node = next((n for n in doc["@graph"] if n["@id"] == str(subj)), {})
+    label = f"{ev['type'].replace('_', ' ').title()} #{ev['seq']}" + (f" (round {ev['round']})" if "round" in ev else "")
+    return {"json": hl_json(json.dumps(ev, indent=2, ensure_ascii=False)), "turtle": hl_turtle(ttl),
+            "jsonld": hl_json(json.dumps(node, indent=2, ensure_ascii=False)), "note": f"{label} — {what}"}
 
 
 def sports_section(payload: dict) -> str:
@@ -432,7 +463,7 @@ def sports_section(payload: dict) -> str:
   <div class="wrap">
     <p class="eyebrow">More sports, same engine</p>
     <h2>One lossless engine for every sport the standards leave out.</h2>
-    <p class="intro">Each sport is a small plugin folder (vocabulary, SHACL rules, simulator). The same generic converter
+    <p class="intro">Each sport is a small plugin folder (vocabulary, SHACL rules, simulator); the matches are simulated, with made-up teams and players. The same generic converter
     takes it to Sport Schema and back; the page below rebuilds each match from its JSON-LD alone and compares it with the original.</p>
     <div class="coverage" aria-label="How much IPTC Sport Schema covers each sport today">{tiles}</div>
     <div class="sp-switch" id="spSwitch" role="tablist" aria-label="Choose a sport"></div>

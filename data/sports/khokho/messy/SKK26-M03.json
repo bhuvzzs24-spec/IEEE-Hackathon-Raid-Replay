@@ -1,0 +1,699 @@
+{
+ "format": "raid-replay/khokho-match/1",
+ "match": {
+  "id": "SKK26-M03",
+  "name": "Ambegaon Arrows vs Maval Mavericks",
+  "start": "2026-10-25T17:30:00+05:30",
+  "competition": {
+   "id": "SKK-2026",
+   "name": "Sahyadri Kho-Kho League 2026 (fictional)"
+  },
+  "venue": {
+   "id": "V1",
+   "name": "Shivaji Maidan Mat Arena, Satara (fictional)"
+  },
+  "turn_limit_seconds": 420,
+  "turns": 4,
+  "seed": 703
+ },
+ "teams": [
+  {
+   "id": "AMB",
+   "name": "Ambegaon Arrows (fictional)",
+   "side": "home",
+   "short": "AMB"
+  },
+  {
+   "id": "MLV",
+   "name": "Maval Mavericks (fictional)",
+   "side": "away",
+   "short": "MLV"
+  }
+ ],
+ "players": [
+  {
+   "id": "AMB-01",
+   "name": "Omkar Mane",
+   "team": "AMB",
+   "jersey": 1,
+   "batch": 1
+  },
+  {
+   "id": "AMB-02",
+   "name": "Pratik Shinde",
+   "team": "AMB",
+   "jersey": 2,
+   "batch": 1
+  },
+  {
+   "id": "AMB-03",
+   "name": "Sahil Chavan",
+   "team": "AMB",
+   "jersey": 3,
+   "batch": 1
+  },
+  {
+   "id": "AMB-04",
+   "name": "Vishal Kadam",
+   "team": "AMB",
+   "jersey": 4,
+   "batch": 2
+  },
+  {
+   "id": "AMB-05",
+   "name": "Ganesh Gaikwad",
+   "team": "AMB",
+   "jersey": 5,
+   "batch": 2
+  },
+  {
+   "id": "AMB-06",
+   "name": "Akash Salunkhe",
+   "team": "AMB",
+   "jersey": 6,
+   "batch": 2
+  },
+  {
+   "id": "AMB-07",
+   "name": "Tushar Pawar",
+   "team": "AMB",
+   "jersey": 7,
+   "batch": 3
+  },
+  {
+   "id": "AMB-08",
+   "name": "Nikhil Thorat",
+   "team": "AMB",
+   "jersey": 8,
+   "batch": 3
+  },
+  {
+   "id": "AMB-09",
+   "name": "Suraj Jadhav",
+   "team": "AMB",
+   "jersey": 9,
+   "batch": 3
+  },
+  {
+   "id": "AMB-10",
+   "name": "Mayur Kale",
+   "team": "AMB",
+   "jersey": 10
+  },
+  {
+   "id": "AMB-11",
+   "name": "Kunal Dhumal",
+   "team": "AMB",
+   "jersey": 11
+  },
+  {
+   "id": "AMB-12",
+   "name": "Yash More",
+   "team": "AMB",
+   "jersey": 12
+  },
+  {
+   "id": "MLV-01",
+   "name": "Dnyanesh Mane",
+   "team": "MLV",
+   "jersey": 1,
+   "batch": 1
+  },
+  {
+   "id": "MLV-02",
+   "name": "Harshal Shinde",
+   "team": "MLV",
+   "jersey": 2,
+   "batch": 1
+  },
+  {
+   "id": "MLV-03",
+   "name": "Siddhesh Chavan",
+   "team": "MLV",
+   "jersey": 3,
+   "batch": 1
+  },
+  {
+   "id": "MLV-04",
+   "name": "Aditya Kadam",
+   "team": "MLV",
+   "jersey": 4,
+   "batch": 2
+  },
+  {
+   "id": "MLV-05",
+   "name": "Pravin Gaikwad",
+   "team": "MLV",
+   "jersey": 5,
+   "batch": 2
+  },
+  {
+   "id": "MLV-06",
+   "name": "Vikram Salunkhe",
+   "team": "MLV",
+   "jersey": 6,
+   "batch": 2
+  },
+  {
+   "id": "MLV-07",
+   "name": "Kiran Pawar",
+   "team": "MLV",
+   "jersey": 7,
+   "batch": 3
+  },
+  {
+   "id": "MLV-08",
+   "name": "Mangesh Thorat",
+   "team": "MLV",
+   "jersey": 8,
+   "batch": 3
+  },
+  {
+   "id": "MLV-09",
+   "name": "Atul Jadhav",
+   "team": "MLV",
+   "jersey": 9,
+   "batch": 3
+  },
+  {
+   "id": "MLV-10",
+   "name": "Datta Kale",
+   "team": "MLV",
+   "jersey": 10
+  },
+  {
+   "id": "MLV-11",
+   "name": "Sumit Dhumal",
+   "team": "MLV",
+   "jersey": 11
+  },
+  {
+   "id": "MLV-12",
+   "name": "Parth More",
+   "team": "MLV",
+   "jersey": 12
+  }
+ ],
+ "events": [
+  {
+   "id": "SKK26-M03-E001",
+   "seq": 1,
+   "type": "turn_start",
+   "turn": 1,
+   "inning": "1"
+  },
+  {
+   "id": "SKK26-M03-E002",
+   "seq": 2,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-04",
+   "defender": "MLV-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 2,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E003",
+   "seq": 3,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-09",
+   "defender": "MLV-03",
+   "method": "TOUCH",
+   "batch": 1,
+   "time": 23,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E004",
+   "seq": 4,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-06",
+   "defender": "MLV-02",
+   "method": "pole-dive",
+   "batch": 1,
+   "time": 143,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E004",
+   "seq": 4,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-06",
+   "defender": "MLV-02",
+   "method": "pole-dive",
+   "batch": 1,
+   "time": 143,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E005",
+   "seq": 5,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-03",
+   "defender": "MLV-05",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 163,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E006",
+   "seq": 6,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-04",
+   "defender": "MLV-06",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 259,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E007",
+   "seq": 7,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-05",
+   "defender": "MLV-04",
+   "method": "touch",
+   "batch": 2,
+   "time": 266,
+   "points": "2"
+  },
+  {
+   "id": "SKK26-M03-E008",
+   "seq": 8,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-09",
+   "defender": "MLV-08",
+   "method": "touch",
+   "batch": 3,
+   "time": 301,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E009",
+   "seq": 9,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-07",
+   "defender": "MLV-09",
+   "method": "touch",
+   "batch": 3,
+   "time": 416,
+   "points": 2,
+   "comment": "entered late by the scorer"
+  },
+  {
+   "id": "SKK26-M03-E010",
+   "seq": 10,
+   "type": "turn_end",
+   "turn": 1,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M03-E011",
+   "seq": 11,
+   "type": "turn",
+   "turn": 1,
+   "chasing": "AMB",
+   "defending": "MLV",
+   "points": 16,
+   "tags": 8
+  },
+  {
+   "id": "SKK26-M03-E012",
+   "seq": 12,
+   "type": "turn_start",
+   "turn": 2,
+   "inning": 1
+  },
+  {
+   "id": "SKK26-M03-E013",
+   "seq": 13,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-03",
+   "defender": "AMB-02",
+   "method": "pole-dive",
+   "batch": 1,
+   "time": 17,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E013",
+   "seq": 13,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-03",
+   "defender": "AMB-02",
+   "method": "pole-dive",
+   "batch": 1,
+   "time": 17,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E014",
+   "seq": 14,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-08",
+   "defender": "  AMB-03 ",
+   "method": "touch",
+   "batch": 1,
+   "time": 149,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E015",
+   "seq": 15,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-05",
+   "defender": "AMB-01",
+   "method": "sky-dive",
+   "batch": 1,
+   "time": 195,
+   "points": 3,
+   "comment": "entered late by the scorer"
+  },
+  {
+   "id": "SKK26-M03-E016",
+   "seq": 16,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-07",
+   "defender": "AMB-04",
+   "method": "sky-dive",
+   "batch": 2,
+   "time": 302,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M03-E017",
+   "seq": 17,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-07",
+   "defender": "AMB-05",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 377,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E018",
+   "seq": 18,
+   "type": "turn_end",
+   "turn": 2,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M03-E019",
+   "seq": 19,
+   "type": "turn",
+   "turn": 2,
+   "chasing": "MLV",
+   "defending": "AMB",
+   "points": 12,
+   "tags": 5
+  },
+  {
+   "id": "SKK26-M03-E020",
+   "seq": 20,
+   "type": "turn_start",
+   "turn": 3,
+   "inning": 2
+  },
+  {
+   "id": "SKK26-M03-E022",
+   "seq": 22,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-08",
+   "defender": "MLV-03",
+   "method": "touch",
+   "batch": 1,
+   "time": 47,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E021",
+   "seq": 21,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-03",
+   "defender": "MLV-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 28,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E023",
+   "seq": 23,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-03",
+   "defender": "MLV-01",
+   "method": "  pole-dive ",
+   "batch": 1,
+   "time": 117,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E024",
+   "seq": 24,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-06",
+   "defender": "MLV-04",
+   "method": "touch",
+   "batch": 2,
+   "time": 172,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E025",
+   "seq": 25,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-04",
+   "defender": "MLV-06",
+   "method": "touch",
+   "batch": 2,
+   "time": 208,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E026",
+   "seq": 26,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-09",
+   "defender": "MLV-05",
+   "method": "sky-dive",
+   "batch": 2,
+   "time": 256,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M03-E027",
+   "seq": 27,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-02",
+   "defender": "MLV-09",
+   "method": "TOUCH",
+   "batch": 3,
+   "time": 278,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E028",
+   "seq": 28,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-01",
+   "defender": "MLV-07",
+   "method": "touch",
+   "batch": 3,
+   "time": 337,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E029",
+   "seq": 29,
+   "type": "turn_end",
+   "turn": 3,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M03-E030",
+   "seq": 30,
+   "type": "turn",
+   "turn": 3,
+   "chasing": "AMB",
+   "defending": "MLV",
+   "points": "17",
+   "tags": 8
+  },
+  {
+   "id": "SKK26-M03-E031",
+   "seq": 31,
+   "type": "turn_start",
+   "turn": 4,
+   "inning": 2
+  },
+  {
+   "id": "SKK26-M03-E032",
+   "seq": 32,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "  MLV-01 ",
+   "defender": "AMB-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 19,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E033",
+   "seq": 33,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-03",
+   "defender": "AMB-03",
+   "method": "pole-dive",
+   "batch": 1,
+   "time": 35,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E035",
+   "seq": 35,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-04",
+   "defender": "AMB-06",
+   "method": "touch",
+   "batch": 2,
+   "time": 156,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E034",
+   "seq": 34,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-09",
+   "defender": "AMB-01",
+   "method": "sky-dive",
+   "batch": 1,
+   "time": 137,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M03-E036",
+   "seq": 36,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-01",
+   "defender": "AMB-05",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 179,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E037",
+   "seq": 37,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-08",
+   "defender": "AMB-04",
+   "method": "touch",
+   "batch": 2,
+   "time": 228,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E038",
+   "seq": 38,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-09",
+   "defender": "AMB-07",
+   "method": "touch",
+   "batch": 3,
+   "time": 231,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E039",
+   "seq": 39,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-04",
+   "defender": "AMB-09",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 289,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E040",
+   "seq": 40,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-06",
+   "defender": "AMB-08",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 296,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E041",
+   "seq": 41,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-08",
+   "defender": "AMB-02",
+   "method": "touch",
+   "batch": 4,
+   "time": 388,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M03-E042",
+   "seq": 42,
+   "type": "turn_end",
+   "turn": 4,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M03-E043",
+   "seq": 43,
+   "type": "turn",
+   "turn": 4,
+   "chasing": "MLV",
+   "defending": "AMB",
+   "points": 21,
+   "tags": 10
+  }
+ ],
+ "result": {
+  "scores": {
+   "AMB": 34,
+   "MLV": 33
+  }
+ }
+}
