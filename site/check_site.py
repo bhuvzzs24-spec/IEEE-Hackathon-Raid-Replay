@@ -30,7 +30,7 @@ def main() -> int:
             page.goto(URL)
             page.wait_for_timeout(1200)
             # the page keeps only the hero, "How it works" and the live demo
-            for sel in ("#how", "#demo", "#stats"):
+            for sel in ("#how", "#demo", "#stats", "#btnFs"):
                 if page.locator(sel).count() != 1:
                     problems.append(f"{name}: missing {sel}")
             for sel in ("#gap", "#proof", "#bugs", "#users", "#team"):
@@ -65,6 +65,20 @@ def main() -> int:
             page.wait_for_timeout(1400)
             box.screenshot(path=str(OUT / f"{name}-replay-2.png"))
             page.locator("#demo").screenshot(path=str(OUT / f"{name}-demo.png"))
+            # full screen: the button toggles it, the compact score panel shows, the label flips
+            page.click("#btnFs")
+            page.wait_for_timeout(800)
+            fs = page.evaluate("({on: document.getElementById('matWrap').classList.contains('fs'),"
+                               " label: document.getElementById('fsLabel').textContent,"
+                               " panel: getComputedStyle(document.getElementById('fsScores')).display})")
+            print(f"[{name}] full screen: {fs}")
+            if not fs["on"] or fs["label"] != "Exit full screen" or fs["panel"] == "none":
+                problems.append(f"{name}: full-screen mode did not switch on ({fs})")
+            page.screenshot(path=str(OUT / f"{name}-fullscreen.png"))
+            page.click("#btnFs")
+            page.wait_for_timeout(800)
+            if page.evaluate("document.getElementById('matWrap').classList.contains('fs')"):
+                problems.append(f"{name}: full-screen mode did not switch off")
             # run the whole match quickly and check state consistency
             page.evaluate("RaidReplay.speed(64)")
             page.wait_for_timeout(16000)

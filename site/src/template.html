@@ -108,7 +108,20 @@
     <p class="intro light">Every movement on this mat is driven by the converted JSON-LD: raider, touches, tackles, revivals, cards and reviews. The left scoreboard is computed from the original JSON, the right one from the Sport Schema data.</p>
 
     <div class="stage">
-      <div class="mat-wrap">
+      <div class="mat-wrap" id="matWrap">
+        <div class="fs-scores" id="fsScores">
+          <div class="fs-board">
+            <div class="fs-h"><span class="src src-json">{ }</span> Original JSON</div>
+            <div class="fs-row"><span class="sw" id="fjHomeSw"></span><span class="fs-n" id="fjHomeName"></span><b id="fjHome">0</b></div>
+            <div class="fs-row"><span class="sw" id="fjAwaySw"></span><span class="fs-n" id="fjAwayName"></span><b id="fjAway">0</b></div>
+          </div>
+          <div class="fs-board">
+            <div class="fs-h"><span class="src src-rdf">⟨⟩</span> Sport Schema JSON-LD</div>
+            <div class="fs-row"><span class="sw" id="frHomeSw"></span><span class="fs-n" id="frHomeName"></span><b id="frHome">0</b></div>
+            <div class="fs-row"><span class="sw" id="frAwaySw"></span><span class="fs-n" id="frAwayName"></span><b id="frAway">0</b></div>
+          </div>
+          <span class="fs-pill" id="fsDiff">diff = 0 ✓</span>
+        </div>
         <div class="mat-hud">
           <div class="hud-team home"><span class="hud-sw" id="hudHomeSw"></span><span id="hudHomeName">HOME</span><b id="hudHomeScore">0</b></div>
           <div class="hud-mid">
@@ -118,6 +131,7 @@
           </div>
           <div class="hud-team away"><b id="hudAwayScore">0</b><span id="hudAwayName">AWAY</span><span class="hud-sw" id="hudAwaySw"></span></div>
         </div>
+        <div class="mat-fit">
         <div class="mat-box">
           <svg id="mat" viewBox="0 0 972 720" role="img" aria-label="Top-down kabaddi mat replaying the final">
             <defs>
@@ -167,6 +181,7 @@
           <div class="tags" id="tags" aria-live="polite"></div>
           <div class="overlay" id="overlay"></div>
         </div>
+        </div>
         <div class="commentary" id="commentary" aria-live="polite">Press play to start the replay.</div>
         <div class="controls">
           <button class="ctl play" id="btnPlay" aria-label="Play"><svg viewBox="0 0 24 24" width="20" height="20"><path id="playIcon" d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg></button>
@@ -177,6 +192,7 @@
             <button data-speed="0.5">½×</button><button data-speed="1" class="on">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button><button data-speed="8">8×</button>
           </div>
           <span class="evcount" id="evCount">0 / 0</span>
+          <button class="ctl-fs" id="btnFs" aria-label="Full screen (F)" title="Full screen (F)"><span aria-hidden="true">⛶</span> <span class="fs-label" id="fsLabel">Full screen</span></button>
         </div>
       </div>
 

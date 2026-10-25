@@ -232,6 +232,37 @@ a:hover .arr{transform:translateX(3px)}
 .lg-bonus{border-radius:2px!important;height:4px!important;background:#FFB347}
 .lg-out{background:rgba(255,255,255,.35)}
 
+/* ---------- full-screen replay ---------- */
+.ctl-fs{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:0;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font:700 13.5px var(--sans);cursor:pointer;white-space:nowrap;transition:background .2s}
+.ctl-fs:hover{background:rgba(255,255,255,.2)}
+.ctl-fs span[aria-hidden]{font-size:16px;line-height:1}
+.fs-scores{display:none}
+.mat-wrap.fs{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;width:100%;height:100%;max-width:none;margin:0;padding:14px 22px 16px;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;background:radial-gradient(900px 500px at 85% -10%,rgba(59,31,158,.55),transparent 60%),#060920;overflow:hidden}
+.mat-wrap.fs::backdrop{background:#060920}
+.mat-wrap.fs .mat-hud{grid-template-columns:1fr;justify-items:center;margin-bottom:8px}
+.mat-wrap.fs .hud-team{display:none}
+.mat-wrap.fs .mat-fit{flex:1;min-height:0;container-type:size;display:grid;place-items:center}
+.mat-wrap.fs .mat-box{width:min(100cqw,calc(100cqh * 972 / 720))}
+.mat-wrap.fs .commentary{justify-content:center;text-align:center;margin:12px auto 10px;max-width:1100px;width:100%}
+.mat-wrap.fs .controls{max-width:1100px;width:100%;margin:0 auto}
+.mat-wrap.fs .fs-scores{display:grid;gap:8px;position:absolute;top:14px;right:16px;z-index:5;width:200px;padding:10px 12px;border-radius:14px;background:rgba(6,9,32,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 16px 40px -16px rgba(0,0,0,.7)}
+.fs-h{display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:750;text-transform:uppercase;letter-spacing:.05em;color:#aab0e0;margin-bottom:2px}
+.fs-h .src{font-size:10px;padding:1px 5px;border-radius:5px}
+.fs-row{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:650;line-height:1.5}
+.fs-row .sw{width:10px;height:10px;border-radius:3px}
+.fs-n{flex:1}
+.fs-row b{font-size:16px;font-weight:850;font-variant-numeric:tabular-nums;transition:color .3s}
+.fs-row b.bump{color:#ffb35c}
+.fs-pill{justify-self:start;font:800 11.5px var(--mono);color:#fff;background:linear-gradient(135deg,#11a36a,#0f9f9a);border-radius:999px;padding:3px 10px}
+.fs-pill.bad{background:linear-gradient(135deg,#e5484d,#b4233a)}
+@media (orientation:portrait){   /* tall screens: put the scores in the free space above the mat */
+  .mat-wrap.fs .fs-scores{position:static;width:auto;grid-template-columns:1fr 1fr;column-gap:14px;margin:0 auto 10px;max-width:520px}
+  .mat-wrap.fs .fs-pill{grid-column:1/-1;justify-self:center}
+}
+body.rr-fs{overflow:hidden}
+body.rr-fs .demo{clip-path:none}   /* the CSS fallback is position:fixed; a clipped ancestor would cut it off */
+body.rr-fs .boards,body.rr-fs .legend{visibility:hidden}
+
 .foot{background:#070a24;color:#c9cdf5;padding:120px 0 50px;margin-top:-80px}   /* tucks under the demo's 70px bottom slant */
 .foot-in{display:grid;gap:18px}
 .foot-brand{display:flex;gap:14px;align-items:center}
@@ -290,6 +321,9 @@ a:hover .arr{transform:translateX(3px)}
   .evcount{margin-left:auto}
   .boards{grid-template-columns:1fr}
   .diff-badge{min-width:0}
+  .ctl-fs{padding:0 12px;order:1;margin-left:auto}
+  .speed,.evcount{order:2}
+  .mat-wrap.fs{padding:10px 10px 12px}
   .legend{gap:12px;font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -539,7 +573,20 @@ a:hover .arr{transform:translateX(3px)}
     <p class="intro light">Every movement on this mat is driven by the converted JSON-LD: raider, touches, tackles, revivals, cards and reviews. The left scoreboard is computed from the original JSON, the right one from the Sport Schema data.</p>
 
     <div class="stage">
-      <div class="mat-wrap">
+      <div class="mat-wrap" id="matWrap">
+        <div class="fs-scores" id="fsScores">
+          <div class="fs-board">
+            <div class="fs-h"><span class="src src-json">{ }</span> Original JSON</div>
+            <div class="fs-row"><span class="sw" id="fjHomeSw"></span><span class="fs-n" id="fjHomeName"></span><b id="fjHome">0</b></div>
+            <div class="fs-row"><span class="sw" id="fjAwaySw"></span><span class="fs-n" id="fjAwayName"></span><b id="fjAway">0</b></div>
+          </div>
+          <div class="fs-board">
+            <div class="fs-h"><span class="src src-rdf">⟨⟩</span> Sport Schema JSON-LD</div>
+            <div class="fs-row"><span class="sw" id="frHomeSw"></span><span class="fs-n" id="frHomeName"></span><b id="frHome">0</b></div>
+            <div class="fs-row"><span class="sw" id="frAwaySw"></span><span class="fs-n" id="frAwayName"></span><b id="frAway">0</b></div>
+          </div>
+          <span class="fs-pill" id="fsDiff">diff = 0 ✓</span>
+        </div>
         <div class="mat-hud">
           <div class="hud-team home"><span class="hud-sw" id="hudHomeSw"></span><span id="hudHomeName">HOME</span><b id="hudHomeScore">0</b></div>
           <div class="hud-mid">
@@ -549,6 +596,7 @@ a:hover .arr{transform:translateX(3px)}
           </div>
           <div class="hud-team away"><b id="hudAwayScore">0</b><span id="hudAwayName">AWAY</span><span class="hud-sw" id="hudAwaySw"></span></div>
         </div>
+        <div class="mat-fit">
         <div class="mat-box">
           <svg id="mat" viewBox="0 0 972 720" role="img" aria-label="Top-down kabaddi mat replaying the final">
             <defs>
@@ -598,6 +646,7 @@ a:hover .arr{transform:translateX(3px)}
           <div class="tags" id="tags" aria-live="polite"></div>
           <div class="overlay" id="overlay"></div>
         </div>
+        </div>
         <div class="commentary" id="commentary" aria-live="polite">Press play to start the replay.</div>
         <div class="controls">
           <button class="ctl play" id="btnPlay" aria-label="Play"><svg viewBox="0 0 24 24" width="20" height="20"><path id="playIcon" d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg></button>
@@ -608,6 +657,7 @@ a:hover .arr{transform:translateX(3px)}
             <button data-speed="0.5">½×</button><button data-speed="1" class="on">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button><button data-speed="8">8×</button>
           </div>
           <span class="evcount" id="evCount">0 / 0</span>
+          <button class="ctl-fs" id="btnFs" aria-label="Full screen (F)" title="Full screen (F)"><span aria-hidden="true">⛶</span> <span class="fs-label" id="fsLabel">Full screen</span></button>
         </div>
       </div>
 
@@ -854,13 +904,16 @@ window.RR_RESULTS={"matches":[{"file":"match1_normal","purpose":"Normal league m
   var playersLayer = $('#players'), fx = $('#fx'), fxTop = $('#fxTop');
 
   // HUD + boards
-  [['#hudHomeName', HOME.name], ['#hudAwayName', AWAY.name], ['#bjHomeName', HOME.name], ['#bjAwayName', AWAY.name], ['#brHomeName', HOME.name], ['#brAwayName', AWAY.name]]
+  [['#hudHomeName', HOME.name], ['#hudAwayName', AWAY.name], ['#bjHomeName', HOME.name], ['#bjAwayName', AWAY.name], ['#brHomeName', HOME.name], ['#brAwayName', AWAY.name],
+   ['#fjHomeName', HOME.short], ['#fjAwayName', AWAY.short], ['#frHomeName', HOME.short], ['#frAwayName', AWAY.short]]
     .forEach(function (x) { $(x[0]).textContent = x[1]; });
-  ['#hudHomeSw', '#bjHomeSw', '#brHomeSw'].forEach(function (s) { $(s).style.background = HOME.colour; });
-  ['#hudAwaySw', '#bjAwaySw', '#brAwaySw'].forEach(function (s) { $(s).style.background = AWAY.colour; });
+  ['#hudHomeSw', '#bjHomeSw', '#brHomeSw', '#fjHomeSw', '#frHomeSw'].forEach(function (s) { $(s).style.background = HOME.colour; });
+  ['#hudAwaySw', '#bjAwaySw', '#brAwaySw', '#fjAwaySw', '#frAwaySw'].forEach(function (s) { $(s).style.background = AWAY.colour; });
   $('#diffN').textContent = DIFF.diffs;
   $('#diffTick').textContent = DIFF.diffs === 0 ? '✓' : '✕';
   $('#diffBadge').classList.toggle('bad', DIFF.diffs !== 0);
+  $('#fsDiff').textContent = 'diff = ' + DIFF.diffs + ' ' + (DIFF.diffs === 0 ? '✓' : '✕');
+  $('#fsDiff').classList.toggle('bad', DIFF.diffs !== 0);
   $('#diffSmall').textContent = fmt(DIFF.fields) + ' fields compared across ' + N + ' events and ' + Object.keys(M.players).length + ' players';
 
   // sprites
@@ -1039,9 +1092,11 @@ window.RR_RESULTS={"matches":[{"file":"match1_normal","purpose":"Normal league m
   // HUD
   var hudH = $('#hudHomeScore'), hudA = $('#hudAwayScore');
   var bj = [$('#bjHome'), $('#bjAway')], br = [$('#brHome'), $('#brAway')];
+  var fj = [$('#fjHome'), $('#fjAway')], fr = [$('#frHome'), $('#frAway')];   // compact full-screen panel
   function setBoards(k) {   // k = number of events applied
     var a = SC_NATIVE[Math.min(k, SC_NATIVE.length - 1)], b = SC_LD[Math.min(k, SC_LD.length - 1)];
-    [[bj[0], a[0]], [bj[1], a[1]], [br[0], b[0]], [br[1], b[1]], [hudH, b[0]], [hudA, b[1]]].forEach(function (x) {
+    [[bj[0], a[0]], [bj[1], a[1]], [br[0], b[0]], [br[1], b[1]], [hudH, b[0]], [hudA, b[1]],
+     [fj[0], a[0]], [fj[1], a[1]], [fr[0], b[0]], [fr[1], b[1]]].forEach(function (x) {
       if (x[0].textContent !== String(x[1])) {
         x[0].textContent = x[1];
         if (x[0].tagName === 'B') { x[0].classList.add('bump'); setTimeout(function () { x[0].classList.remove('bump'); }, 500); }
@@ -1271,6 +1326,46 @@ window.RR_RESULTS={"matches":[{"file":"match1_normal","purpose":"Normal league m
     });
   });
 
+  /* ---- full screen: mat + HUD + commentary + controls, with a compact score panel ---- */
+  var matWrap = $('#matWrap'), btnFs = $('#btnFs'), fsLabel = $('#fsLabel');
+  var fsElement = function () { return document.fullscreenElement || document.webkitFullscreenElement || null; };
+  var pseudoFs = false;   // fallback where the Fullscreen API is missing (e.g. iPhone Safari)
+  function syncFs() {
+    var on = fsElement() === matWrap || pseudoFs;
+    matWrap.classList.toggle('fs', on);
+    matWrap.classList.toggle('fs-pseudo', pseudoFs);
+    document.body.classList.toggle('rr-fs', on);
+    fsLabel.textContent = on ? 'Exit full screen' : 'Full screen';
+    btnFs.setAttribute('aria-label', on ? 'Exit full screen (Esc)' : 'Full screen (F)');
+    btnFs.setAttribute('title', on ? 'Exit full screen (Esc)' : 'Full screen (F)');
+    btnFs.setAttribute('aria-pressed', on);
+  }
+  function setPseudo(v) { pseudoFs = v; syncFs(); }
+  function enterFs() {
+    var req = matWrap.requestFullscreen || matWrap.webkitRequestFullscreen;
+    if (!req) { setPseudo(true); return; }
+    try {
+      var r = req.call(matWrap);
+      if (r && r.catch) r.catch(function () { setPseudo(true); });
+    } catch (err) { setPseudo(true); }
+  }
+  function exitFs() {
+    if (pseudoFs) { setPseudo(false); return; }
+    var ex = document.exitFullscreen || document.webkitExitFullscreen;
+    if (fsElement() && ex) ex.call(document);
+  }
+  function toggleFs() { if (fsElement() === matWrap || pseudoFs) exitFs(); else enterFs(); }
+  btnFs.addEventListener('click', toggleFs);
+  document.addEventListener('fullscreenchange', syncFs);
+  document.addEventListener('webkitfullscreenchange', syncFs);
+  document.addEventListener('keydown', function (ev) {
+    if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
+    var t = ev.target;
+    if (t && (t.isContentEditable || /^(TEXTAREA|SELECT)$/.test(t.tagName) || (t.tagName === 'INPUT' && t.type !== 'range'))) return;
+    if (ev.key === 'f' || ev.key === 'F') { ev.preventDefault(); toggleFs(); }
+    else if (ev.key === 'Escape' && pseudoFs) exitFs();   // the real API handles Esc itself
+  });
+
   seek(0);
   requestAnimationFrame(frame);
 
@@ -1284,7 +1379,7 @@ window.RR_RESULTS={"matches":[{"file":"match1_normal","purpose":"Normal league m
   }
 
   // expose a tiny hook for automated checks
-  window.RaidReplay = { seek: seek, play: function () { setPlaying(true); }, pause: function () { setPlaying(false); }, speed: function (s) { speed = s; }, diff: DIFF, events: N, state: function () { return { idx: idx, home: S.mat[HOME.id].length, away: S.mat[AWAY.id].length }; } };
+  window.RaidReplay = { seek: seek, play: function () { setPlaying(true); }, pause: function () { setPlaying(false); }, speed: function (s) { speed = s; }, fullscreen: toggleFs, diff: DIFF, events: N, state: function () { return { idx: idx, home: S.mat[HOME.id].length, away: S.mat[AWAY.id].length }; } };
 })();
 
 </script>

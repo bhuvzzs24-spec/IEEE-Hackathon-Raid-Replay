@@ -223,6 +223,37 @@ a:hover .arr{transform:translateX(3px)}
 .lg-bonus{border-radius:2px!important;height:4px!important;background:#FFB347}
 .lg-out{background:rgba(255,255,255,.35)}
 
+/* ---------- full-screen replay ---------- */
+.ctl-fs{display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:0;border-radius:999px;background:rgba(255,255,255,.1);color:#fff;font:700 13.5px var(--sans);cursor:pointer;white-space:nowrap;transition:background .2s}
+.ctl-fs:hover{background:rgba(255,255,255,.2)}
+.ctl-fs span[aria-hidden]{font-size:16px;line-height:1}
+.fs-scores{display:none}
+.mat-wrap.fs{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;width:100%;height:100%;max-width:none;margin:0;padding:14px 22px 16px;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;background:radial-gradient(900px 500px at 85% -10%,rgba(59,31,158,.55),transparent 60%),#060920;overflow:hidden}
+.mat-wrap.fs::backdrop{background:#060920}
+.mat-wrap.fs .mat-hud{grid-template-columns:1fr;justify-items:center;margin-bottom:8px}
+.mat-wrap.fs .hud-team{display:none}
+.mat-wrap.fs .mat-fit{flex:1;min-height:0;container-type:size;display:grid;place-items:center}
+.mat-wrap.fs .mat-box{width:min(100cqw,calc(100cqh * 972 / 720))}
+.mat-wrap.fs .commentary{justify-content:center;text-align:center;margin:12px auto 10px;max-width:1100px;width:100%}
+.mat-wrap.fs .controls{max-width:1100px;width:100%;margin:0 auto}
+.mat-wrap.fs .fs-scores{display:grid;gap:8px;position:absolute;top:14px;right:16px;z-index:5;width:200px;padding:10px 12px;border-radius:14px;background:rgba(6,9,32,.72);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 16px 40px -16px rgba(0,0,0,.7)}
+.fs-h{display:flex;align-items:center;gap:6px;font-size:10.5px;font-weight:750;text-transform:uppercase;letter-spacing:.05em;color:#aab0e0;margin-bottom:2px}
+.fs-h .src{font-size:10px;padding:1px 5px;border-radius:5px}
+.fs-row{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:650;line-height:1.5}
+.fs-row .sw{width:10px;height:10px;border-radius:3px}
+.fs-n{flex:1}
+.fs-row b{font-size:16px;font-weight:850;font-variant-numeric:tabular-nums;transition:color .3s}
+.fs-row b.bump{color:#ffb35c}
+.fs-pill{justify-self:start;font:800 11.5px var(--mono);color:#fff;background:linear-gradient(135deg,#11a36a,#0f9f9a);border-radius:999px;padding:3px 10px}
+.fs-pill.bad{background:linear-gradient(135deg,#e5484d,#b4233a)}
+@media (orientation:portrait){   /* tall screens: put the scores in the free space above the mat */
+  .mat-wrap.fs .fs-scores{position:static;width:auto;grid-template-columns:1fr 1fr;column-gap:14px;margin:0 auto 10px;max-width:520px}
+  .mat-wrap.fs .fs-pill{grid-column:1/-1;justify-self:center}
+}
+body.rr-fs{overflow:hidden}
+body.rr-fs .demo{clip-path:none}   /* the CSS fallback is position:fixed; a clipped ancestor would cut it off */
+body.rr-fs .boards,body.rr-fs .legend{visibility:hidden}
+
 .foot{background:#070a24;color:#c9cdf5;padding:120px 0 50px;margin-top:-80px}   /* tucks under the demo's 70px bottom slant */
 .foot-in{display:grid;gap:18px}
 .foot-brand{display:flex;gap:14px;align-items:center}
@@ -281,6 +312,9 @@ a:hover .arr{transform:translateX(3px)}
   .evcount{margin-left:auto}
   .boards{grid-template-columns:1fr}
   .diff-badge{min-width:0}
+  .ctl-fs{padding:0 12px;order:1;margin-left:auto}
+  .speed,.evcount{order:2}
+  .mat-wrap.fs{padding:10px 10px 12px}
   .legend{gap:12px;font-size:13px}
 }
 @media (prefers-reduced-motion:reduce){

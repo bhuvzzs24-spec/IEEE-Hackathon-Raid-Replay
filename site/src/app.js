@@ -201,13 +201,16 @@
   var playersLayer = $('#players'), fx = $('#fx'), fxTop = $('#fxTop');
 
   // HUD + boards
-  [['#hudHomeName', HOME.name], ['#hudAwayName', AWAY.name], ['#bjHomeName', HOME.name], ['#bjAwayName', AWAY.name], ['#brHomeName', HOME.name], ['#brAwayName', AWAY.name]]
+  [['#hudHomeName', HOME.name], ['#hudAwayName', AWAY.name], ['#bjHomeName', HOME.name], ['#bjAwayName', AWAY.name], ['#brHomeName', HOME.name], ['#brAwayName', AWAY.name],
+   ['#fjHomeName', HOME.short], ['#fjAwayName', AWAY.short], ['#frHomeName', HOME.short], ['#frAwayName', AWAY.short]]
     .forEach(function (x) { $(x[0]).textContent = x[1]; });
-  ['#hudHomeSw', '#bjHomeSw', '#brHomeSw'].forEach(function (s) { $(s).style.background = HOME.colour; });
-  ['#hudAwaySw', '#bjAwaySw', '#brAwaySw'].forEach(function (s) { $(s).style.background = AWAY.colour; });
+  ['#hudHomeSw', '#bjHomeSw', '#brHomeSw', '#fjHomeSw', '#frHomeSw'].forEach(function (s) { $(s).style.background = HOME.colour; });
+  ['#hudAwaySw', '#bjAwaySw', '#brAwaySw', '#fjAwaySw', '#frAwaySw'].forEach(function (s) { $(s).style.background = AWAY.colour; });
   $('#diffN').textContent = DIFF.diffs;
   $('#diffTick').textContent = DIFF.diffs === 0 ? '✓' : '✕';
   $('#diffBadge').classList.toggle('bad', DIFF.diffs !== 0);
+  $('#fsDiff').textContent = 'diff = ' + DIFF.diffs + ' ' + (DIFF.diffs === 0 ? '✓' : '✕');
+  $('#fsDiff').classList.toggle('bad', DIFF.diffs !== 0);
   $('#diffSmall').textContent = fmt(DIFF.fields) + ' fields compared across ' + N + ' events and ' + Object.keys(M.players).length + ' players';
 
   // sprites
@@ -386,9 +389,11 @@
   // HUD
   var hudH = $('#hudHomeScore'), hudA = $('#hudAwayScore');
   var bj = [$('#bjHome'), $('#bjAway')], br = [$('#brHome'), $('#brAway')];
+  var fj = [$('#fjHome'), $('#fjAway')], fr = [$('#frHome'), $('#frAway')];   // compact full-screen panel
   function setBoards(k) {   // k = number of events applied
     var a = SC_NATIVE[Math.min(k, SC_NATIVE.length - 1)], b = SC_LD[Math.min(k, SC_LD.length - 1)];
-    [[bj[0], a[0]], [bj[1], a[1]], [br[0], b[0]], [br[1], b[1]], [hudH, b[0]], [hudA, b[1]]].forEach(function (x) {
+    [[bj[0], a[0]], [bj[1], a[1]], [br[0], b[0]], [br[1], b[1]], [hudH, b[0]], [hudA, b[1]],
+     [fj[0], a[0]], [fj[1], a[1]], [fr[0], b[0]], [fr[1], b[1]]].forEach(function (x) {
       if (x[0].textContent !== String(x[1])) {
         x[0].textContent = x[1];
         if (x[0].tagName === 'B') { x[0].classList.add('bump'); setTimeout(function () { x[0].classList.remove('bump'); }, 500); }
@@ -618,6 +623,46 @@
     });
   });
 
+  /* ---- full screen: mat + HUD + commentary + controls, with a compact score panel ---- */
+  var matWrap = $('#matWrap'), btnFs = $('#btnFs'), fsLabel = $('#fsLabel');
+  var fsElement = function () { return document.fullscreenElement || document.webkitFullscreenElement || null; };
+  var pseudoFs = false;   // fallback where the Fullscreen API is missing (e.g. iPhone Safari)
+  function syncFs() {
+    var on = fsElement() === matWrap || pseudoFs;
+    matWrap.classList.toggle('fs', on);
+    matWrap.classList.toggle('fs-pseudo', pseudoFs);
+    document.body.classList.toggle('rr-fs', on);
+    fsLabel.textContent = on ? 'Exit full screen' : 'Full screen';
+    btnFs.setAttribute('aria-label', on ? 'Exit full screen (Esc)' : 'Full screen (F)');
+    btnFs.setAttribute('title', on ? 'Exit full screen (Esc)' : 'Full screen (F)');
+    btnFs.setAttribute('aria-pressed', on);
+  }
+  function setPseudo(v) { pseudoFs = v; syncFs(); }
+  function enterFs() {
+    var req = matWrap.requestFullscreen || matWrap.webkitRequestFullscreen;
+    if (!req) { setPseudo(true); return; }
+    try {
+      var r = req.call(matWrap);
+      if (r && r.catch) r.catch(function () { setPseudo(true); });
+    } catch (err) { setPseudo(true); }
+  }
+  function exitFs() {
+    if (pseudoFs) { setPseudo(false); return; }
+    var ex = document.exitFullscreen || document.webkitExitFullscreen;
+    if (fsElement() && ex) ex.call(document);
+  }
+  function toggleFs() { if (fsElement() === matWrap || pseudoFs) exitFs(); else enterFs(); }
+  btnFs.addEventListener('click', toggleFs);
+  document.addEventListener('fullscreenchange', syncFs);
+  document.addEventListener('webkitfullscreenchange', syncFs);
+  document.addEventListener('keydown', function (ev) {
+    if (ev.ctrlKey || ev.metaKey || ev.altKey) return;
+    var t = ev.target;
+    if (t && (t.isContentEditable || /^(TEXTAREA|SELECT)$/.test(t.tagName) || (t.tagName === 'INPUT' && t.type !== 'range'))) return;
+    if (ev.key === 'f' || ev.key === 'F') { ev.preventDefault(); toggleFs(); }
+    else if (ev.key === 'Escape' && pseudoFs) exitFs();   // the real API handles Esc itself
+  });
+
   seek(0);
   requestAnimationFrame(frame);
 
@@ -631,5 +676,5 @@
   }
 
   // expose a tiny hook for automated checks
-  window.RaidReplay = { seek: seek, play: function () { setPlaying(true); }, pause: function () { setPlaying(false); }, speed: function (s) { speed = s; }, diff: DIFF, events: N, state: function () { return { idx: idx, home: S.mat[HOME.id].length, away: S.mat[AWAY.id].length }; } };
+  window.RaidReplay = { seek: seek, play: function () { setPlaying(true); }, pause: function () { setPlaying(false); }, speed: function (s) { speed = s; }, fullscreen: toggleFs, diff: DIFF, events: N, state: function () { return { idx: idx, home: S.mat[HOME.id].length, away: S.mat[AWAY.id].length }; } };
 })();
