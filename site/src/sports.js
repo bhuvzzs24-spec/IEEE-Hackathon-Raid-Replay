@@ -7,7 +7,7 @@
   var SP = window.RR_SPORTS;
   if (!SP || !Object.keys(SP).length) return;
   var $ = function (s, r) { return (r || document).querySelector(s); };
-  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var esc = function (s) { return String(s).replace(/\s*\(fictional\)/gi, '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var arr = function (v) { return v == null ? [] : Array.isArray(v) ? v : [v]; };
   var fmt = function (n) { return Number(n).toLocaleString('en-IN'); };
   var SPORTNS = 'https://sportschema.org/ontologies/main/', RDFS = 'http://www.w3.org/2000/01/rdf-schema#';
