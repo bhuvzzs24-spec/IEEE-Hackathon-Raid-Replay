@@ -1,0 +1,4308 @@
+{
+ "@context": {
+  "bad": "https://sportschema.org/ontologies/badminton/",
+  "badfault": "https://sportschema.org/ontologies/badminton/faulttype/",
+  "badshot": "https://sportschema.org/ontologies/badminton/shottype/",
+  "medtop": "http://cv.iptc.org/newscodes/mediatopic/",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rr": "https://raid-replay.example/data/badminton/",
+  "spactionclass": "http://cv.iptc.org/newscodes/spactionclass/",
+  "spct": "http://cv.iptc.org/newscodes/spct/",
+  "speventoutcome": "http://cv.iptc.org/newscodes/speventoutcome/",
+  "speventstatus": "http://cv.iptc.org/newscodes/speventstatus/",
+  "sport": "https://sportschema.org/ontologies/main/",
+  "spplayerstatus": "http://cv.iptc.org/newscodes/spplayerstatus/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+ },
+ "@graph": [
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0001",
+   "@type": [
+    "bad:GameStart",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0001",
+   "rdfs:label": "game_start #1",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0002",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0002",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 1,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 0,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #2",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0003",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0003",
+   "bad:rallyLength": 32,
+   "bad:rallyNumber": 2,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 1,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #3",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0004",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0004",
+   "bad:rallyLength": 8,
+   "bad:rallyNumber": 3,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 2,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #4",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0005",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0005",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 4,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 2,
+   "bad:scoreB": 2,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #5",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0006",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0006",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 5,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 2,
+   "bad:scoreB": 3,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #6",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "6"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0007",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0007",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 6,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 2,
+   "bad:scoreB": 4,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #7",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "7"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0008",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0008",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 7,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 3,
+   "bad:scoreB": 4,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #8",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "8"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0009",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0009",
+   "bad:rallyLength": 17,
+   "bad:rallyNumber": 8,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 3,
+   "bad:scoreB": 5,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #9",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "9"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0010",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0010",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 9,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 4,
+   "bad:scoreB": 5,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #10",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "10"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0011",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0011",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 10,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 4,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #11",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "11"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0012",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0012",
+   "bad:rallyLength": 16,
+   "bad:rallyNumber": 11,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 5,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #12",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "12"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0013",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0013",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 12,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 5,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #13",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "13"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0014",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0014",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 13,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 6,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #14",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "14"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0015",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:lift"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0015",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 14,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 6,
+   "bad:scoreB": 8,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #15",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "15"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0016",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0016",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 15,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 6,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #16",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "16"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0017",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0017",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 16,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 7,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #17",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "17"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0018",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0018",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 17,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 7,
+   "bad:scoreB": 10,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #18",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "18"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0019",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0019",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 18,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 8,
+   "bad:scoreB": 10,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #19",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "19"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0020",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:clear"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0020",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 19,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 8,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #20",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "20"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0021",
+   "@type": [
+    "bad:Interval",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0021",
+   "bad:scoreA": 8,
+   "bad:scoreB": 11,
+   "rdfs:label": "interval #21",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "21"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0022",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0022",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 20,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 8,
+   "bad:scoreB": 12,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #22",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "22"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0023",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drop"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0023",
+   "bad:rallyLength": 9,
+   "bad:rallyNumber": 21,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 9,
+   "bad:scoreB": 12,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #23",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "23"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0024",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0024",
+   "bad:rallyLength": 8,
+   "bad:rallyNumber": 22,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 10,
+   "bad:scoreB": 12,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #24",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "24"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0025",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:lift"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0025",
+   "bad:rallyLength": 32,
+   "bad:rallyNumber": 23,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 10,
+   "bad:scoreB": 13,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #25",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "25"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0026",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0026",
+   "bad:rallyLength": 17,
+   "bad:rallyNumber": 24,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 11,
+   "bad:scoreB": 13,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #26",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "26"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0027",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0027",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 25,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 13,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #27",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "27"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0028",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0028",
+   "bad:rallyLength": 11,
+   "bad:rallyNumber": 26,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 14,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #28",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "28"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0029",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0029",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 27,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 15,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #29",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "29"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0030",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0030",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 28,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #30",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "30"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0031",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0031",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 29,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 13,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #31",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "31"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0032",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0032",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 30,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 14,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #32",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "32"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0033",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0033",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 31,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 15,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #33",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "33"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0034",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0034",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 32,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 15,
+   "bad:scoreB": 17,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #34",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "34"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0035",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0035",
+   "bad:rallyLength": 19,
+   "bad:rallyNumber": 33,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 16,
+   "bad:scoreB": 17,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #35",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "35"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0036",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0036",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 34,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 16,
+   "bad:scoreB": 18,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #36",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "36"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0037",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0037",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 35,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 16,
+   "bad:scoreB": 19,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #37",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "37"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0038",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drop"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0038",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 36,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 16,
+   "bad:scoreB": 20,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #38",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "38"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0039",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0039",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 37,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 20,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #39",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "39"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0040",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:clear"
+   },
+   "bad:gameNumber": 1,
+   "bad:nativeId": "KSO26-M02-E0040",
+   "bad:rallyLength": 9,
+   "bad:rallyNumber": 38,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 21,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #40",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "40"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0041",
+   "@type": [
+    "bad:GameEnd",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 1,
+   "bad:gameWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:nativeId": "KSO26-M02-E0041",
+   "bad:scoreA": 17,
+   "bad:scoreB": 21,
+   "rdfs:label": "game_end #41",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "41"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0042",
+   "@type": [
+    "bad:GameStart",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0042",
+   "rdfs:label": "game_start #42",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "42"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0043",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0043",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 1,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 0,
+   "bad:scoreB": 1,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #43",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "43"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0044",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0044",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 2,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 0,
+   "bad:scoreB": 2,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #44",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "44"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0045",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0045",
+   "bad:rallyLength": 14,
+   "bad:rallyNumber": 3,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 2,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #45",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "45"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0046",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0046",
+   "bad:rallyLength": 28,
+   "bad:rallyNumber": 4,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 3,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #46",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "46"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0047",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0047",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 5,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 4,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #47",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "47"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0048",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:double-hit"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0048",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 6,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 5,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #48",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "48"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0049",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drop"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0049",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 7,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #49",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "49"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0050",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0050",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 8,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 2,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #50",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "50"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0051",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0051",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 9,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 3,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #51",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "51"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0052",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0052",
+   "bad:rallyLength": 13,
+   "bad:rallyNumber": 10,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 3,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #52",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "52"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0053",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0053",
+   "bad:rallyLength": 11,
+   "bad:rallyNumber": 11,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 4,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #53",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "53"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0054",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0054",
+   "bad:rallyLength": 14,
+   "bad:rallyNumber": 12,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 5,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #54",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "54"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0055",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0055",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 13,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 6,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #55",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "55"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0056",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0056",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 14,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 6,
+   "bad:scoreB": 8,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #56",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "56"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0057",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0057",
+   "bad:rallyLength": 10,
+   "bad:rallyNumber": 15,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 7,
+   "bad:scoreB": 8,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #57",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "57"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0058",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0058",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 16,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 7,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #58",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "58"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0059",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:double-hit"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0059",
+   "bad:rallyLength": 7,
+   "bad:rallyNumber": 17,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 8,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #59",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "59"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0060",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:double-hit"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0060",
+   "bad:rallyLength": 18,
+   "bad:rallyNumber": 18,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 9,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #60",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "60"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0061",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0061",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 19,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 10,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #61",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "61"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0062",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:lift"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0062",
+   "bad:rallyLength": 8,
+   "bad:rallyNumber": 20,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 11,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #62",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "62"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0063",
+   "@type": [
+    "bad:Interval",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0063",
+   "bad:scoreA": 11,
+   "bad:scoreB": 9,
+   "rdfs:label": "interval #63",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "63"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0064",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0064",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 21,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #64",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "64"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0065",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0065",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 22,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 10,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #65",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "65"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0066",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0066",
+   "bad:rallyLength": 11,
+   "bad:rallyNumber": 23,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #66",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "66"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0067",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drop"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0067",
+   "bad:rallyLength": 15,
+   "bad:rallyNumber": 24,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 13,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #67",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "67"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0068",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0068",
+   "bad:rallyLength": 35,
+   "bad:rallyNumber": 25,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 14,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #68",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "68"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0069",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0069",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 26,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 15,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #69",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "69"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0070",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:lift"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0070",
+   "bad:rallyLength": 17,
+   "bad:rallyNumber": 27,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 16,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #70",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "70"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0071",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0071",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 28,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 16,
+   "bad:scoreB": 12,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #71",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "71"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0072",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0072",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 29,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 12,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #72",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "72"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0073",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0073",
+   "bad:rallyLength": 8,
+   "bad:rallyNumber": 30,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 13,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #73",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "73"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0074",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0074",
+   "bad:rallyLength": 10,
+   "bad:rallyNumber": 31,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 14,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #74",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "74"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0075",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0075",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 32,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 18,
+   "bad:scoreB": 14,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #75",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "75"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0076",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0076",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 33,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 18,
+   "bad:scoreB": 15,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #76",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "76"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0077",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0077",
+   "bad:rallyLength": 31,
+   "bad:rallyNumber": 34,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 19,
+   "bad:scoreB": 15,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #77",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "77"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0078",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0078",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 35,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 19,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #78",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "78"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0079",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:clear"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0079",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 36,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 19,
+   "bad:scoreB": 17,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #79",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "79"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0080",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0080",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 37,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 19,
+   "bad:scoreB": 18,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #80",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "80"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0081",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0081",
+   "bad:rallyLength": 28,
+   "bad:rallyNumber": 38,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 20,
+   "bad:scoreB": 18,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #81",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "81"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0082",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:clear"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0082",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 39,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 20,
+   "bad:scoreB": 19,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #82",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "82"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0083",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 2,
+   "bad:nativeId": "KSO26-M02-E0083",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 40,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 21,
+   "bad:scoreB": 19,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #83",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "83"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0084",
+   "@type": [
+    "bad:GameEnd",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 2,
+   "bad:gameWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:nativeId": "KSO26-M02-E0084",
+   "bad:scoreA": 21,
+   "bad:scoreB": 19,
+   "rdfs:label": "game_end #84",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "84"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0085",
+   "@type": [
+    "bad:GameStart",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0085",
+   "rdfs:label": "game_start #85",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "85"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0086",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0086",
+   "bad:rallyLength": 11,
+   "bad:rallyNumber": 1,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 0,
+   "bad:scoreB": 1,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #86",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "86"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0087",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0087",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 2,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 0,
+   "bad:scoreB": 2,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #87",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "87"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0088",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0088",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 3,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 2,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #88",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "88"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0089",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:double-hit"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0089",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 4,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 1,
+   "bad:scoreB": 3,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #89",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "89"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0090",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:clear"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0090",
+   "bad:rallyLength": 13,
+   "bad:rallyNumber": 5,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 2,
+   "bad:scoreB": 3,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #90",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "90"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0091",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0091",
+   "bad:rallyLength": 15,
+   "bad:rallyNumber": 6,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 3,
+   "bad:scoreB": 3,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #91",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "91"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0092",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:double-hit"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0092",
+   "bad:rallyLength": 14,
+   "bad:rallyNumber": 7,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 3,
+   "bad:scoreB": 4,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #92",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "92"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0093",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0093",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 8,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 4,
+   "bad:scoreB": 4,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #93",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "93"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0094",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0094",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 9,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 4,
+   "bad:scoreB": 5,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #94",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "94"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0095",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0095",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 10,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 4,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #95",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "95"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0096",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0096",
+   "bad:rallyLength": 34,
+   "bad:rallyNumber": 11,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 5,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #96",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "96"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0097",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0097",
+   "bad:rallyLength": 12,
+   "bad:rallyNumber": 12,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 6,
+   "bad:scoreB": 6,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #97",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "97"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0098",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:service-fault"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0098",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 13,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 6,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #98",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "98"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0099",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0099",
+   "bad:rallyLength": 14,
+   "bad:rallyNumber": 14,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 7,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #99",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "99"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0100",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0100",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 15,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 8,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #100",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "100"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0101",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0101",
+   "bad:rallyLength": 10,
+   "bad:rallyNumber": 16,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 9,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #101",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "101"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0102",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0102",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 17,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 10,
+   "bad:scoreB": 7,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #102",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "102"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0103",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0103",
+   "bad:rallyLength": 9,
+   "bad:rallyNumber": 18,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 10,
+   "bad:scoreB": 8,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #103",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "103"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0104",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:double-hit"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0104",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 19,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 11,
+   "bad:scoreB": 8,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #104",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "104"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0105",
+   "@type": [
+    "bad:Interval",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0105",
+   "bad:scoreA": 11,
+   "bad:scoreB": 8,
+   "rdfs:label": "interval #105",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "105"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0106",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0106",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 20,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 8,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #106",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "106"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0107",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0107",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 21,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 9,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #107",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "107"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0108",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0108",
+   "bad:rallyLength": 5,
+   "bad:rallyNumber": 22,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 10,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #108",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "108"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0109",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0109",
+   "bad:rallyLength": 6,
+   "bad:rallyNumber": 23,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 12,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #109",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "109"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0110",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0110",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 24,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 13,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #110",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "110"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0111",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0111",
+   "bad:rallyLength": 36,
+   "bad:rallyNumber": 25,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 14,
+   "bad:scoreB": 11,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #111",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "111"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0112",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:net-shot"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0112",
+   "bad:rallyLength": 14,
+   "bad:rallyNumber": 26,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 14,
+   "bad:scoreB": 12,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #112",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "112"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0113",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0113",
+   "bad:rallyLength": 12,
+   "bad:rallyNumber": 27,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 15,
+   "bad:scoreB": 12,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #113",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "113"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0114",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:out"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0114",
+   "bad:rallyLength": 28,
+   "bad:rallyNumber": 28,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 15,
+   "bad:scoreB": 13,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "fault #114",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "114"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0115",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:clear"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0115",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 29,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 16,
+   "bad:scoreB": 13,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #115",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "115"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0116",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0116",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 30,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 13,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #116",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "116"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0117",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0117",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 31,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 14,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #117",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "117"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0118",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drive"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0118",
+   "bad:rallyLength": 1,
+   "bad:rallyNumber": 32,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 17,
+   "bad:scoreB": 15,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #118",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "118"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0119",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0119",
+   "bad:rallyLength": 20,
+   "bad:rallyNumber": 33,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 18,
+   "bad:scoreB": 15,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #119",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "119"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0120",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drop"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0120",
+   "bad:rallyLength": 11,
+   "bad:rallyNumber": 34,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 18,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #120",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "120"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0121",
+   "@type": [
+    "bad:Fault",
+    "sport:Action"
+   ],
+   "bad:faultBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:faultType": {
+    "@id": "badfault:net-touch"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0121",
+   "bad:rallyLength": 3,
+   "bad:rallyNumber": 35,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 19,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "fault #121",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:infraction"
+   },
+   "sport:sequenceNumber": "121"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0122",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drop"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0122",
+   "bad:rallyLength": 24,
+   "bad:rallyNumber": 36,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 20,
+   "bad:scoreB": 16,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #122",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "122"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0123",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:lift"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0123",
+   "bad:rallyLength": 17,
+   "bad:rallyNumber": 37,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:scoreA": 20,
+   "bad:scoreB": 17,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "rdfs:label": "rally #123",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "123"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0124",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:smash"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0124",
+   "bad:rallyLength": 2,
+   "bad:rallyNumber": 38,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 20,
+   "bad:scoreB": 18,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #124",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "124"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0125",
+   "@type": [
+    "bad:Rally",
+    "sport:Action"
+   ],
+   "bad:endingShot": {
+    "@id": "badshot:drop"
+   },
+   "bad:gameNumber": 3,
+   "bad:nativeId": "KSO26-M02-E0125",
+   "bad:rallyLength": 4,
+   "bad:rallyNumber": 39,
+   "bad:rallyWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:receiver": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:scoreA": 21,
+   "bad:scoreB": 18,
+   "bad:server": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "rdfs:label": "rally #125",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:sequenceNumber": "125"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/action/KSO26-M02-E0126",
+   "@type": [
+    "bad:GameEnd",
+    "sport:Action"
+   ],
+   "bad:gameNumber": 3,
+   "bad:gameWinner": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "bad:nativeId": "KSO26-M02-E0126",
+   "bad:scoreA": 21,
+   "bad:scoreB": 18,
+   "rdfs:label": "game_end #126",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "126"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1",
+   "@type": "sport:Athlete",
+   "bad:nativeId": "CHP-1",
+   "rdfs:label": "Ishaan Kulkarni"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1",
+   "@type": "sport:Athlete",
+   "bad:nativeId": "DPL-1",
+   "rdfs:label": "Rohan Sawant"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/competition/KSO-2026",
+   "@type": "sport:Competition",
+   "bad:nativeId": "KSO-2026",
+   "rdfs:label": "Konkan Shuttle Open 2026 (fictional)",
+   "sport:competitionType": {
+    "@id": "spct:competition"
+   },
+   "sport:sport": {
+    "@id": "medtop:20000847"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/event/KSO26-M02",
+   "@type": "sport:Event",
+   "bad:bestOfGames": 3,
+   "bad:discipline": "singles",
+   "bad:firstServer": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "bad:nativeId": "KSO26-M02",
+   "bad:simulatorSeed": 2005,
+   "rdfs:label": "Ishaan Kulkarni vs Rohan Sawant",
+   "sport:eventInCompetition": {
+    "@id": "https://raid-replay.example/data/badminton/competition/KSO-2026"
+   },
+   "sport:eventStatus": {
+    "@id": "speventstatus:post-event"
+   },
+   "sport:location": {
+    "@id": "https://raid-replay.example/data/badminton/site/V1"
+   },
+   "sport:participation": [
+    {
+     "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/CHP"
+    },
+    {
+     "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/DPL"
+    }
+   ],
+   "sport:sport": {
+    "@id": "medtop:20000847"
+   },
+   "sport:startDateTime": {
+    "@type": "xsd:dateTime",
+    "@value": "2026-10-21T11:30:00+05:30"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/CHP",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Chiplun Feather Club (fictional) in Ishaan Kulkarni vs Rohan Sawant",
+   "sport:alignment": "A",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:win"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/badminton/team/CHP"
+   },
+   "sport:score": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/CHP-1",
+   "@type": "sport:IndividualParticipation",
+   "bad:hand": "right",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/CHP-1"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/CHP"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/DPL",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Dapoli Net Masters (fictional) in Ishaan Kulkarni vs Rohan Sawant",
+   "sport:alignment": "B",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:loss"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/badminton/team/DPL"
+   },
+   "sport:score": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/DPL-1",
+   "@type": "sport:IndividualParticipation",
+   "bad:hand": "right",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/badminton/athlete/DPL-1"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/badminton/participation/KSO26-M02/DPL"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/site/V1",
+   "@type": "sport:Site",
+   "bad:nativeId": "V1",
+   "rdfs:label": "Harbourline Indoor Hall, Ratnagiri (fictional)"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/team/CHP",
+   "@type": "sport:Team",
+   "bad:nativeId": "CHP",
+   "bad:shortName": "CHP",
+   "rdfs:label": "Chiplun Feather Club (fictional)"
+  },
+  {
+   "@id": "https://raid-replay.example/data/badminton/team/DPL",
+   "@type": "sport:Team",
+   "bad:nativeId": "DPL",
+   "bad:shortName": "DPL",
+   "rdfs:label": "Dapoli Net Masters (fictional)"
+  }
+ ]
+}

@@ -1,0 +1,866 @@
+{
+ "format": "raid-replay/khokho-match/1",
+ "match": {
+  "id": "SKK26-M01",
+  "name": "Ambegaon Arrows vs Bhor Blazers",
+  "start": "2026-10-22T16:00:00+05:30",
+  "competition": {
+   "id": "SKK-2026",
+   "name": "Sahyadri Kho-Kho League 2026 (fictional)"
+  },
+  "venue": {
+   "id": "V1",
+   "name": "Shivaji Maidan Mat Arena, Satara (fictional)"
+  },
+  "turn_limit_seconds": 420,
+  "turns": 4,
+  "seed": 501
+ },
+ "teams": [
+  {
+   "id": "AMB",
+   "name": "Ambegaon Arrows (fictional)",
+   "side": "home",
+   "short": "AMB"
+  },
+  {
+   "id": "BHR",
+   "name": "Bhor Blazers (fictional)",
+   "side": "away",
+   "short": "BHR"
+  }
+ ],
+ "players": [
+  {
+   "id": "AMB-01",
+   "name": "Omkar Mane",
+   "team": "AMB",
+   "jersey": 1,
+   "batch": 1
+  },
+  {
+   "id": "AMB-02",
+   "name": "Pratik Shinde",
+   "team": "AMB",
+   "jersey": 2,
+   "batch": 1
+  },
+  {
+   "id": "AMB-03",
+   "name": "Sahil Chavan",
+   "team": "AMB",
+   "jersey": 3,
+   "batch": 1
+  },
+  {
+   "id": "AMB-04",
+   "name": "Vishal Kadam",
+   "team": "AMB",
+   "jersey": 4,
+   "batch": 2
+  },
+  {
+   "id": "AMB-05",
+   "name": "Ganesh Gaikwad",
+   "team": "AMB",
+   "jersey": 5,
+   "batch": 2
+  },
+  {
+   "id": "AMB-06",
+   "name": "Akash Salunkhe",
+   "team": "AMB",
+   "jersey": 6,
+   "batch": 2
+  },
+  {
+   "id": "AMB-07",
+   "name": "Tushar Pawar",
+   "team": "AMB",
+   "jersey": 7,
+   "batch": 3
+  },
+  {
+   "id": "AMB-08",
+   "name": "Nikhil Thorat",
+   "team": "AMB",
+   "jersey": 8,
+   "batch": 3
+  },
+  {
+   "id": "AMB-09",
+   "name": "Suraj Jadhav",
+   "team": "AMB",
+   "jersey": 9,
+   "batch": 3
+  },
+  {
+   "id": "AMB-10",
+   "name": "Mayur Kale",
+   "team": "AMB",
+   "jersey": 10
+  },
+  {
+   "id": "AMB-11",
+   "name": "Kunal Dhumal",
+   "team": "AMB",
+   "jersey": 11
+  },
+  {
+   "id": "AMB-12",
+   "name": "Yash More",
+   "team": "AMB",
+   "jersey": 12
+  },
+  {
+   "id": "BHR-01",
+   "name": "Aniket Mane",
+   "team": "BHR",
+   "jersey": 1,
+   "batch": 1
+  },
+  {
+   "id": "BHR-02",
+   "name": "Rahul Shinde",
+   "team": "BHR",
+   "jersey": 2,
+   "batch": 1
+  },
+  {
+   "id": "BHR-03",
+   "name": "Swapnil Chavan",
+   "team": "BHR",
+   "jersey": 3,
+   "batch": 1
+  },
+  {
+   "id": "BHR-04",
+   "name": "Ketan Kadam",
+   "team": "BHR",
+   "jersey": 4,
+   "batch": 2
+  },
+  {
+   "id": "BHR-05",
+   "name": "Sagar Gaikwad",
+   "team": "BHR",
+   "jersey": 5,
+   "batch": 2
+  },
+  {
+   "id": "BHR-06",
+   "name": "Vinay Salunkhe",
+   "team": "BHR",
+   "jersey": 6,
+   "batch": 2
+  },
+  {
+   "id": "BHR-07",
+   "name": "Rushikesh Pawar",
+   "team": "BHR",
+   "jersey": 7,
+   "batch": 3
+  },
+  {
+   "id": "BHR-08",
+   "name": "Amol Thorat",
+   "team": "BHR",
+   "jersey": 8,
+   "batch": 3
+  },
+  {
+   "id": "BHR-09",
+   "name": "Sachin Jadhav",
+   "team": "BHR",
+   "jersey": 9,
+   "batch": 3
+  },
+  {
+   "id": "BHR-10",
+   "name": "Pankaj Kale",
+   "team": "BHR",
+   "jersey": 10
+  },
+  {
+   "id": "BHR-11",
+   "name": "Hrishi Dhumal",
+   "team": "BHR",
+   "jersey": 11
+  },
+  {
+   "id": "BHR-12",
+   "name": "Ajinkya More",
+   "team": "BHR",
+   "jersey": 12
+  }
+ ],
+ "events": [
+  {
+   "id": "SKK26-M01-E001",
+   "seq": 1,
+   "type": "turn_start",
+   "turn": 1,
+   "inning": 1
+  },
+  {
+   "id": "SKK26-M01-E002",
+   "seq": 2,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-06",
+   "defender": "BHR-03",
+   "method": "touch",
+   "batch": 1,
+   "time": 34,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E003",
+   "seq": 3,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-06",
+   "defender": "BHR-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 47,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E004",
+   "seq": 4,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-08",
+   "defender": "BHR-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 61,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E005",
+   "seq": 5,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-08",
+   "defender": "BHR-05",
+   "method": "touch",
+   "batch": 2,
+   "time": 62,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E006",
+   "seq": 6,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-04",
+   "defender": "BHR-04",
+   "method": "touch",
+   "batch": 2,
+   "time": 112,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E007",
+   "seq": 7,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-01",
+   "defender": "BHR-06",
+   "method": "sky-dive",
+   "batch": 2,
+   "time": 129,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M01-E008",
+   "seq": 8,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-02",
+   "defender": "BHR-07",
+   "method": "touch",
+   "batch": 3,
+   "time": 165,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E009",
+   "seq": 9,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-01",
+   "defender": "BHR-09",
+   "method": "touch",
+   "batch": 3,
+   "time": 170,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E010",
+   "seq": 10,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-07",
+   "defender": "BHR-08",
+   "method": "sky-dive",
+   "batch": 3,
+   "time": 177,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M01-E011",
+   "seq": 11,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-07",
+   "defender": "BHR-03",
+   "method": "touch",
+   "batch": 4,
+   "time": 198,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E012",
+   "seq": 12,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-09",
+   "defender": "BHR-01",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 325,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E013",
+   "seq": 13,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-09",
+   "defender": "BHR-02",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 341,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E014",
+   "seq": 14,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "AMB-07",
+   "defender": "BHR-05",
+   "method": "touch",
+   "batch": 5,
+   "time": 409,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E015",
+   "seq": 15,
+   "type": "turn_end",
+   "turn": 1,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M01-E016",
+   "seq": 16,
+   "type": "turn",
+   "turn": 1,
+   "chasing": "AMB",
+   "defending": "BHR",
+   "points": 28,
+   "tags": 13
+  },
+  {
+   "id": "SKK26-M01-E017",
+   "seq": 17,
+   "type": "turn_start",
+   "turn": 2,
+   "inning": 1
+  },
+  {
+   "id": "SKK26-M01-E018",
+   "seq": 18,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-08",
+   "defender": "AMB-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 14,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E019",
+   "seq": 19,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-08",
+   "defender": "AMB-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 28,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E020",
+   "seq": 20,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-09",
+   "defender": "AMB-03",
+   "method": "touch",
+   "batch": 1,
+   "time": 59,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E021",
+   "seq": 21,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-09",
+   "defender": "AMB-05",
+   "method": "touch",
+   "batch": 2,
+   "time": 73,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E022",
+   "seq": 22,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-01",
+   "defender": "AMB-04",
+   "method": "touch",
+   "batch": 2,
+   "time": 107,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E023",
+   "seq": 23,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-06",
+   "defender": "AMB-06",
+   "method": "sky-dive",
+   "batch": 2,
+   "time": 325,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M01-E024",
+   "seq": 24,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-02",
+   "defender": "AMB-09",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 341,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E025",
+   "seq": 25,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-01",
+   "defender": "AMB-07",
+   "method": "touch",
+   "batch": 3,
+   "time": 347,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E026",
+   "seq": 26,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-04",
+   "defender": "AMB-08",
+   "method": "touch",
+   "batch": 3,
+   "time": 395,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E027",
+   "seq": 27,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-04",
+   "defender": "AMB-03",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 401,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E028",
+   "seq": 28,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-04",
+   "defender": "AMB-01",
+   "method": "sky-dive",
+   "batch": 4,
+   "time": 402,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M01-E029",
+   "seq": 29,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "BHR-07",
+   "defender": "AMB-02",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 419,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E030",
+   "seq": 30,
+   "type": "turn_end",
+   "turn": 2,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M01-E031",
+   "seq": 31,
+   "type": "turn",
+   "turn": 2,
+   "chasing": "BHR",
+   "defending": "AMB",
+   "points": 26,
+   "tags": 12
+  },
+  {
+   "id": "SKK26-M01-E032",
+   "seq": 32,
+   "type": "turn_start",
+   "turn": 3,
+   "inning": 2
+  },
+  {
+   "id": "SKK26-M01-E033",
+   "seq": 33,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-02",
+   "defender": "BHR-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 51,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E034",
+   "seq": 34,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-09",
+   "defender": "BHR-03",
+   "method": "touch",
+   "batch": 1,
+   "time": 112,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E035",
+   "seq": 35,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-08",
+   "defender": "BHR-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 156,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E036",
+   "seq": 36,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-03",
+   "defender": "BHR-04",
+   "method": "touch",
+   "batch": 2,
+   "time": 193,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E037",
+   "seq": 37,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-03",
+   "defender": "BHR-06",
+   "method": "touch",
+   "batch": 2,
+   "time": 207,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E038",
+   "seq": 38,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-07",
+   "defender": "BHR-05",
+   "method": "touch",
+   "batch": 2,
+   "time": 210,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E039",
+   "seq": 39,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-08",
+   "defender": "BHR-08",
+   "method": "touch",
+   "batch": 3,
+   "time": 239,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E040",
+   "seq": 40,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-09",
+   "defender": "BHR-07",
+   "method": "sky-dive",
+   "batch": 3,
+   "time": 244,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M01-E041",
+   "seq": 41,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-07",
+   "defender": "BHR-09",
+   "method": "touch",
+   "batch": 3,
+   "time": 253,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E042",
+   "seq": 42,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-01",
+   "defender": "BHR-01",
+   "method": "touch",
+   "batch": 4,
+   "time": 293,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E043",
+   "seq": 43,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-01",
+   "defender": "BHR-02",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 341,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E044",
+   "seq": 44,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-08",
+   "defender": "BHR-03",
+   "method": "touch",
+   "batch": 4,
+   "time": 342,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E045",
+   "seq": 45,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-06",
+   "defender": "BHR-05",
+   "method": "pole-dive",
+   "batch": 5,
+   "time": 350,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E046",
+   "seq": 46,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-07",
+   "defender": "BHR-06",
+   "method": "touch",
+   "batch": 5,
+   "time": 382,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E047",
+   "seq": 47,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "AMB-07",
+   "defender": "BHR-04",
+   "method": "touch",
+   "batch": 5,
+   "time": 384,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E048",
+   "seq": 48,
+   "type": "turn_end",
+   "turn": 3,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M01-E049",
+   "seq": 49,
+   "type": "turn",
+   "turn": 3,
+   "chasing": "AMB",
+   "defending": "BHR",
+   "points": 31,
+   "tags": 15
+  },
+  {
+   "id": "SKK26-M01-E050",
+   "seq": 50,
+   "type": "turn_start",
+   "turn": 4,
+   "inning": 2
+  },
+  {
+   "id": "SKK26-M01-E051",
+   "seq": 51,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "BHR-06",
+   "defender": "AMB-01",
+   "method": "pole-dive",
+   "batch": 1,
+   "time": 29,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E052",
+   "seq": 52,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "BHR-03",
+   "defender": "AMB-03",
+   "method": "touch",
+   "batch": 1,
+   "time": 181,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E053",
+   "seq": 53,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "BHR-01",
+   "defender": "AMB-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 223,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E054",
+   "seq": 54,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "BHR-08",
+   "defender": "AMB-06",
+   "method": "touch",
+   "batch": 2,
+   "time": 228,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E055",
+   "seq": 55,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "BHR-08",
+   "defender": "AMB-05",
+   "method": "touch",
+   "batch": 2,
+   "time": 272,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E056",
+   "seq": 56,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "BHR-05",
+   "defender": "AMB-04",
+   "method": "sky-dive",
+   "batch": 2,
+   "time": 290,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M01-E057",
+   "seq": 57,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "BHR-08",
+   "defender": "AMB-08",
+   "method": "touch",
+   "batch": 3,
+   "time": 374,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M01-E058",
+   "seq": 58,
+   "type": "turn_end",
+   "turn": 4,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M01-E059",
+   "seq": 59,
+   "type": "turn",
+   "turn": 4,
+   "chasing": "BHR",
+   "defending": "AMB",
+   "points": 15,
+   "tags": 7
+  }
+ ],
+ "result": {
+  "scores": {
+   "AMB": 59,
+   "BHR": 41
+  },
+  "winner": "AMB"
+ }
+}

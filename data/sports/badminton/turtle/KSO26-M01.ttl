@@ -1,0 +1,1419 @@
+@prefix bad: <https://sportschema.org/ontologies/badminton/> .
+@prefix badfault: <https://sportschema.org/ontologies/badminton/faulttype/> .
+@prefix badshot: <https://sportschema.org/ontologies/badminton/shottype/> .
+@prefix medtop: <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spactionclass: <http://cv.iptc.org/newscodes/spactionclass/> .
+@prefix spct: <http://cv.iptc.org/newscodes/spct/> .
+@prefix speventoutcome: <http://cv.iptc.org/newscodes/speventoutcome/> .
+@prefix speventstatus: <http://cv.iptc.org/newscodes/speventstatus/> .
+@prefix sport: <https://sportschema.org/ontologies/main/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0001> a bad:GameStart,
+        sport:Action ;
+    rdfs:label "game_start #1"^^xsd:string ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0001"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "1"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0002> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #2"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0002"^^xsd:string ;
+    bad:rallyLength 27 ;
+    bad:rallyNumber 1 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 0 ;
+    bad:scoreB 1 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "2"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0003> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #3"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0003"^^xsd:string ;
+    bad:rallyLength 8 ;
+    bad:rallyNumber 2 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 1 ;
+    bad:scoreB 1 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "3"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0004> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #4"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0004"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 3 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 2 ;
+    bad:scoreB 1 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "4"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0005> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #5"^^xsd:string ;
+    bad:endingShot badshot:lift ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0005"^^xsd:string ;
+    bad:rallyLength 11 ;
+    bad:rallyNumber 4 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 2 ;
+    bad:scoreB 2 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "5"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0006> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #6"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:faultType badfault:out ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0006"^^xsd:string ;
+    bad:rallyLength 9 ;
+    bad:rallyNumber 5 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 2 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "6"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0007> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #7"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:out ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0007"^^xsd:string ;
+    bad:rallyLength 11 ;
+    bad:rallyNumber 6 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 3 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "7"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0008> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #8"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0008"^^xsd:string ;
+    bad:rallyLength 8 ;
+    bad:rallyNumber 7 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 4 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "8"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0009> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #9"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:net-touch ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0009"^^xsd:string ;
+    bad:rallyLength 2 ;
+    bad:rallyNumber 8 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 5 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "9"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0010> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #10"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0010"^^xsd:string ;
+    bad:rallyLength 4 ;
+    bad:rallyNumber 9 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 6 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "10"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0011> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #11"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0011"^^xsd:string ;
+    bad:rallyLength 20 ;
+    bad:rallyNumber 10 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 7 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "11"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0012> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #12"^^xsd:string ;
+    bad:endingShot badshot:clear ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0012"^^xsd:string ;
+    bad:rallyLength 44 ;
+    bad:rallyNumber 11 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 8 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "12"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0013> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #13"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0013"^^xsd:string ;
+    bad:rallyLength 3 ;
+    bad:rallyNumber 12 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 9 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "13"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0014> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #14"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0014"^^xsd:string ;
+    bad:rallyLength 6 ;
+    bad:rallyNumber 13 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 9 ;
+    bad:scoreB 4 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "14"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0015> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #15"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:faultType badfault:double-hit ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0015"^^xsd:string ;
+    bad:rallyLength 16 ;
+    bad:rallyNumber 14 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 9 ;
+    bad:scoreB 5 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "15"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0016> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #16"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0016"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 15 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 9 ;
+    bad:scoreB 6 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "16"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0017> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #17"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0017"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 16 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 10 ;
+    bad:scoreB 6 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "17"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0018> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #18"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0018"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 17 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 11 ;
+    bad:scoreB 6 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "18"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0019> a bad:Interval,
+        sport:Action ;
+    rdfs:label "interval #19"^^xsd:string ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0019"^^xsd:string ;
+    bad:scoreA 11 ;
+    bad:scoreB 6 ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "19"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0020> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #20"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0020"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 18 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 11 ;
+    bad:scoreB 7 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "20"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0021> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #21"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:service-fault ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0021"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 19 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 12 ;
+    bad:scoreB 7 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "21"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0022> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #22"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0022"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 20 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 7 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "22"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0023> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #23"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0023"^^xsd:string ;
+    bad:rallyLength 39 ;
+    bad:rallyNumber 21 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 8 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "23"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0024> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #24"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0024"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 22 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 9 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "24"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0025> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #25"^^xsd:string ;
+    bad:endingShot badshot:lift ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0025"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 23 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 10 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "25"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0026> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #26"^^xsd:string ;
+    bad:endingShot badshot:clear ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0026"^^xsd:string ;
+    bad:rallyLength 3 ;
+    bad:rallyNumber 24 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 11 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "26"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0027> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #27"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:service-fault ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0027"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 25 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 14 ;
+    bad:scoreB 11 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "27"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0028> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #28"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0028"^^xsd:string ;
+    bad:rallyLength 13 ;
+    bad:rallyNumber 26 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 15 ;
+    bad:scoreB 11 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "28"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0029> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #29"^^xsd:string ;
+    bad:endingShot badshot:lift ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0029"^^xsd:string ;
+    bad:rallyLength 13 ;
+    bad:rallyNumber 27 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 15 ;
+    bad:scoreB 12 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "29"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0030> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #30"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0030"^^xsd:string ;
+    bad:rallyLength 2 ;
+    bad:rallyNumber 28 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 16 ;
+    bad:scoreB 12 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "30"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0031> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #31"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:faultType badfault:service-fault ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0031"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 29 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 16 ;
+    bad:scoreB 13 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "31"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0032> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #32"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:double-hit ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0032"^^xsd:string ;
+    bad:rallyLength 6 ;
+    bad:rallyNumber 30 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 17 ;
+    bad:scoreB 13 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "32"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0033> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #33"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0033"^^xsd:string ;
+    bad:rallyLength 20 ;
+    bad:rallyNumber 31 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 17 ;
+    bad:scoreB 14 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "33"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0034> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #34"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0034"^^xsd:string ;
+    bad:rallyLength 8 ;
+    bad:rallyNumber 32 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 18 ;
+    bad:scoreB 14 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "34"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0035> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #35"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:net-touch ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0035"^^xsd:string ;
+    bad:rallyLength 2 ;
+    bad:rallyNumber 33 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 19 ;
+    bad:scoreB 14 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "35"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0036> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #36"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0036"^^xsd:string ;
+    bad:rallyLength 20 ;
+    bad:rallyNumber 34 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 19 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "36"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0037> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #37"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:net-touch ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0037"^^xsd:string ;
+    bad:rallyLength 3 ;
+    bad:rallyNumber 35 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 20 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "37"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0038> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #38"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:net-touch ;
+    bad:gameNumber 1 ;
+    bad:nativeId "KSO26-M01-E0038"^^xsd:string ;
+    bad:rallyLength 23 ;
+    bad:rallyNumber 36 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 21 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "38"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0039> a bad:GameEnd,
+        sport:Action ;
+    rdfs:label "game_end #39"^^xsd:string ;
+    bad:gameNumber 1 ;
+    bad:gameWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:nativeId "KSO26-M01-E0039"^^xsd:string ;
+    bad:scoreA 21 ;
+    bad:scoreB 15 ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "39"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0040> a bad:GameStart,
+        sport:Action ;
+    rdfs:label "game_start #40"^^xsd:string ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0040"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "40"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0041> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #41"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0041"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 1 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 1 ;
+    bad:scoreB 0 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "41"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0042> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #42"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0042"^^xsd:string ;
+    bad:rallyLength 6 ;
+    bad:rallyNumber 2 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 1 ;
+    bad:scoreB 1 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "42"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0043> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #43"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0043"^^xsd:string ;
+    bad:rallyLength 16 ;
+    bad:rallyNumber 3 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 1 ;
+    bad:scoreB 2 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "43"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0044> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #44"^^xsd:string ;
+    bad:endingShot badshot:clear ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0044"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 4 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 1 ;
+    bad:scoreB 3 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "44"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0045> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #45"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0045"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 5 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 1 ;
+    bad:scoreB 4 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "45"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0046> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #46"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0046"^^xsd:string ;
+    bad:rallyLength 2 ;
+    bad:rallyNumber 6 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 2 ;
+    bad:scoreB 4 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "46"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0047> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #47"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:out ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0047"^^xsd:string ;
+    bad:rallyLength 21 ;
+    bad:rallyNumber 7 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 3 ;
+    bad:scoreB 4 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "47"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0048> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #48"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0048"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 8 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 4 ;
+    bad:scoreB 4 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "48"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0049> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #49"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0049"^^xsd:string ;
+    bad:rallyLength 6 ;
+    bad:rallyNumber 9 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 5 ;
+    bad:scoreB 4 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "49"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0050> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #50"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0050"^^xsd:string ;
+    bad:rallyLength 6 ;
+    bad:rallyNumber 10 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 6 ;
+    bad:scoreB 4 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "50"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0051> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #51"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0051"^^xsd:string ;
+    bad:rallyLength 5 ;
+    bad:rallyNumber 11 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 6 ;
+    bad:scoreB 5 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "51"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0052> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #52"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0052"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 12 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 7 ;
+    bad:scoreB 5 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "52"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0053> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #53"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0053"^^xsd:string ;
+    bad:rallyLength 8 ;
+    bad:rallyNumber 13 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 7 ;
+    bad:scoreB 6 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "53"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0054> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #54"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0054"^^xsd:string ;
+    bad:rallyLength 11 ;
+    bad:rallyNumber 14 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 8 ;
+    bad:scoreB 6 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "54"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0055> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #55"^^xsd:string ;
+    bad:endingShot badshot:clear ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0055"^^xsd:string ;
+    bad:rallyLength 33 ;
+    bad:rallyNumber 15 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 8 ;
+    bad:scoreB 7 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "55"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0056> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #56"^^xsd:string ;
+    bad:endingShot badshot:net-shot ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0056"^^xsd:string ;
+    bad:rallyLength 16 ;
+    bad:rallyNumber 16 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 8 ;
+    bad:scoreB 8 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "56"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0057> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #57"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0057"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 17 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 8 ;
+    bad:scoreB 9 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "57"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0058> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #58"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0058"^^xsd:string ;
+    bad:rallyLength 16 ;
+    bad:rallyNumber 18 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 9 ;
+    bad:scoreB 9 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "58"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0059> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #59"^^xsd:string ;
+    bad:endingShot badshot:lift ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0059"^^xsd:string ;
+    bad:rallyLength 2 ;
+    bad:rallyNumber 19 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 10 ;
+    bad:scoreB 9 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "59"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0060> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #60"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0060"^^xsd:string ;
+    bad:rallyLength 2 ;
+    bad:rallyNumber 20 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 10 ;
+    bad:scoreB 10 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "60"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0061> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #61"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:faultType badfault:out ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0061"^^xsd:string ;
+    bad:rallyLength 23 ;
+    bad:rallyNumber 21 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 10 ;
+    bad:scoreB 11 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "61"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0062> a bad:Interval,
+        sport:Action ;
+    rdfs:label "interval #62"^^xsd:string ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0062"^^xsd:string ;
+    bad:scoreA 10 ;
+    bad:scoreB 11 ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "62"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0063> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #63"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:double-hit ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0063"^^xsd:string ;
+    bad:rallyLength 5 ;
+    bad:rallyNumber 22 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 11 ;
+    bad:scoreB 11 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "63"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0064> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #64"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0064"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 23 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 12 ;
+    bad:scoreB 11 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "64"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0065> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #65"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0065"^^xsd:string ;
+    bad:rallyLength 1 ;
+    bad:rallyNumber 24 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 11 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "65"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0066> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #66"^^xsd:string ;
+    bad:endingShot badshot:clear ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0066"^^xsd:string ;
+    bad:rallyLength 14 ;
+    bad:rallyNumber 25 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 12 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "66"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0067> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #67"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0067"^^xsd:string ;
+    bad:rallyLength 6 ;
+    bad:rallyNumber 26 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 13 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "67"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0068> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #68"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0068"^^xsd:string ;
+    bad:rallyLength 6 ;
+    bad:rallyNumber 27 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 13 ;
+    bad:scoreB 14 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "68"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0069> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #69"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0069"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 28 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 14 ;
+    bad:scoreB 14 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "69"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0070> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #70"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0070"^^xsd:string ;
+    bad:rallyLength 8 ;
+    bad:rallyNumber 29 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 14 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "70"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0071> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #71"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:out ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0071"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 30 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 15 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "71"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0072> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #72"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:net-touch ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0072"^^xsd:string ;
+    bad:rallyLength 7 ;
+    bad:rallyNumber 31 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 16 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "72"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0073> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #73"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0073"^^xsd:string ;
+    bad:rallyLength 8 ;
+    bad:rallyNumber 32 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 17 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "73"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0074> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #74"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:out ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0074"^^xsd:string ;
+    bad:rallyLength 19 ;
+    bad:rallyNumber 33 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 18 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "74"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0075> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #75"^^xsd:string ;
+    bad:endingShot badshot:drop ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0075"^^xsd:string ;
+    bad:rallyLength 2 ;
+    bad:rallyNumber 34 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 19 ;
+    bad:scoreB 15 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "75"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0076> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #76"^^xsd:string ;
+    bad:endingShot badshot:drive ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0076"^^xsd:string ;
+    bad:rallyLength 9 ;
+    bad:rallyNumber 35 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 19 ;
+    bad:scoreB 16 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "76"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0077> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #77"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0077"^^xsd:string ;
+    bad:rallyLength 9 ;
+    bad:rallyNumber 36 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 20 ;
+    bad:scoreB 16 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "77"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0078> a bad:Rally,
+        sport:Action ;
+    rdfs:label "rally #78"^^xsd:string ;
+    bad:endingShot badshot:smash ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0078"^^xsd:string ;
+    bad:rallyLength 3 ;
+    bad:rallyNumber 37 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:scoreA 20 ;
+    bad:scoreB 17 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:play ;
+    sport:sequenceNumber "78"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0079> a bad:Fault,
+        sport:Action ;
+    rdfs:label "fault #79"^^xsd:string ;
+    bad:faultBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    bad:faultType badfault:out ;
+    bad:gameNumber 2 ;
+    bad:nativeId "KSO26-M01-E0079"^^xsd:string ;
+    bad:rallyLength 16 ;
+    bad:rallyNumber 38 ;
+    bad:rallyWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:receiver <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:scoreA 21 ;
+    bad:scoreB 17 ;
+    bad:server <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:infraction ;
+    sport:sequenceNumber "79"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/action/KSO26-M01-E0080> a bad:GameEnd,
+        sport:Action ;
+    rdfs:label "game_end #80"^^xsd:string ;
+    bad:gameNumber 2 ;
+    bad:gameWinner <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:nativeId "KSO26-M01-E0080"^^xsd:string ;
+    bad:scoreA 21 ;
+    bad:scoreB 17 ;
+    sport:actionInEvent <https://raid-replay.example/data/badminton/event/KSO26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "80"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/participation/KSO26-M01/ARN-1> a sport:IndividualParticipation ;
+    bad:hand "right"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    sport:teamParticipation <https://raid-replay.example/data/badminton/participation/KSO26-M01/ARN> .
+
+<https://raid-replay.example/data/badminton/participation/KSO26-M01/BHT-1> a sport:IndividualParticipation ;
+    bad:hand "left"^^xsd:string ;
+    sport:participationBy <https://raid-replay.example/data/badminton/athlete/BHT-1> ;
+    sport:teamParticipation <https://raid-replay.example/data/badminton/participation/KSO26-M01/BHT> .
+
+<https://raid-replay.example/data/badminton/competition/KSO-2026> a sport:Competition ;
+    rdfs:label "Konkan Shuttle Open 2026 (fictional)"^^xsd:string ;
+    bad:nativeId "KSO-2026"^^xsd:string ;
+    sport:competitionType spct:competition ;
+    sport:sport medtop:20000847 .
+
+<https://raid-replay.example/data/badminton/site/V1> a sport:Site ;
+    rdfs:label "Harbourline Indoor Hall, Ratnagiri (fictional)"^^xsd:string ;
+    bad:nativeId "V1"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/team/ARN> a sport:Team ;
+    rdfs:label "Arnala Shuttle Club (fictional)"^^xsd:string ;
+    bad:nativeId "ARN"^^xsd:string ;
+    bad:shortName "ARN"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/team/BHT> a sport:Team ;
+    rdfs:label "Bhatye Smash Academy (fictional)"^^xsd:string ;
+    bad:nativeId "BHT"^^xsd:string ;
+    bad:shortName "BHT"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/participation/KSO26-M01/ARN> a sport:TeamParticipation ;
+    rdfs:label "Arnala Shuttle Club (fictional) in Kavya Desai vs Meera Joshi"^^xsd:string ;
+    sport:alignment "A"^^xsd:string ;
+    sport:eventOutcome speventoutcome:win ;
+    sport:participationBy <https://raid-replay.example/data/badminton/team/ARN> ;
+    sport:score "2"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/participation/KSO26-M01/BHT> a sport:TeamParticipation ;
+    rdfs:label "Bhatye Smash Academy (fictional) in Kavya Desai vs Meera Joshi"^^xsd:string ;
+    sport:alignment "B"^^xsd:string ;
+    sport:eventOutcome speventoutcome:loss ;
+    sport:participationBy <https://raid-replay.example/data/badminton/team/BHT> ;
+    sport:score "0"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/event/KSO26-M01> a sport:Event ;
+    rdfs:label "Kavya Desai vs Meera Joshi"^^xsd:string ;
+    bad:bestOfGames 3 ;
+    bad:discipline "singles"^^xsd:string ;
+    bad:firstServer <https://raid-replay.example/data/badminton/athlete/ARN-1> ;
+    bad:nativeId "KSO26-M01"^^xsd:string ;
+    bad:simulatorSeed 1001 ;
+    sport:eventInCompetition <https://raid-replay.example/data/badminton/competition/KSO-2026> ;
+    sport:eventStatus speventstatus:post-event ;
+    sport:location <https://raid-replay.example/data/badminton/site/V1> ;
+    sport:participation <https://raid-replay.example/data/badminton/participation/KSO26-M01/ARN>,
+        <https://raid-replay.example/data/badminton/participation/KSO26-M01/BHT> ;
+    sport:sport medtop:20000847 ;
+    sport:startDateTime "2026-10-20T10:00:00+05:30"^^xsd:dateTime .
+
+<https://raid-replay.example/data/badminton/athlete/BHT-1> a sport:Athlete ;
+    rdfs:label "Meera Joshi"^^xsd:string ;
+    bad:nativeId "BHT-1"^^xsd:string .
+
+<https://raid-replay.example/data/badminton/athlete/ARN-1> a sport:Athlete ;
+    rdfs:label "Kavya Desai"^^xsd:string ;
+    bad:nativeId "ARN-1"^^xsd:string .
+

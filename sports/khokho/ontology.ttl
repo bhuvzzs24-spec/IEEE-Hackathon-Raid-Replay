@@ -1,0 +1,113 @@
+# =============================================================================
+#  Kho-kho plugin for IPTC Sport Schema - vocabulary (ontology + code lists)
+#  Raid Replay / team Byte Tackle
+#
+#  IPTC has NOTHING for kho-kho: no Sport Schema plugin and not even a Media
+#  Topic news label (we searched all of iptc/vocabularies/mediatopic.ttl).
+#  IPTC's Competition shape requires sport:sport, so matches point at the
+#  top-level topic medtop:15000000 ("sport") - the most specific IPTC term
+#  that is true.
+#
+#  Namespace https://sportschema.org/ontologies/khokho/ follows the pattern of
+#  the existing plugins. It is a PROPOSED namespace; IPTC has not endorsed it.
+#
+#  Simplified, documented rules (README, "Kho-kho"):
+#    * 4 turns of at most 420 s; the teams take turns to chase.
+#    * Defenders enter in batches of 3 (batch 1, 2, 3, then 1 again ...).
+#    * A tag scores for the chasers: touch 2, pole dive 2, sky dive 3.
+# =============================================================================
+
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix sport:    <https://sportschema.org/ontologies/main/> .
+@prefix kk:       <https://sportschema.org/ontologies/khokho/> .
+@prefix kkmethod: <https://sportschema.org/ontologies/khokho/tagmethod/> .
+
+<https://sportschema.org/ontologies/khokho>
+    a owl:Ontology ;
+    rdfs:label "IPTC Sport Schema - Kho-kho plugin (proposed)"@en ;
+    dcterms:creator "Byte Tackle" ;
+    owl:versionInfo "0.1" ;
+    owl:imports <https://sportschema.org/ontologies/main/> ;
+    rdfs:comment "Tag-by-tag vocabulary for kho-kho. Every kho-kho event is a sport:Action."@en .
+
+# -----------------------------------------------------------------------------
+#  Classes
+# -----------------------------------------------------------------------------
+
+kk:TurnStart a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Start of turn"@en .
+
+kk:Tag a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Tag"@en ;
+    rdfs:comment "An active chaser puts a defender out (touch, pole dive or sky dive). Scores for the chasing team."@en .
+
+kk:TurnEnd a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "End of turn"@en ;
+    rdfs:comment "When the turn ended (kk:turnDurationSeconds)."@en .
+
+kk:Turn a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Turn"@en ;
+    rdfs:comment "Summary of one turn: who chased, who defended, total points and number of tags. Logged after the turn ends; the totals must equal the turn's tags."@en .
+
+# -----------------------------------------------------------------------------
+#  Properties
+# -----------------------------------------------------------------------------
+
+kk:nativeId a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "native identifier"@en ;
+    rdfs:comment "Identifier in the source feed. Unique per match/team/player/event."@en .
+
+kk:turnLimitSeconds a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ;
+    rdfs:label "turn time limit (seconds)"@en .
+kk:turnsPerMatch a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ;
+    rdfs:label "turns per match"@en .
+kk:simulatorSeed a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ;
+    rdfs:label "simulator seed"@en .
+kk:shortName a owl:DatatypeProperty ; rdfs:domain sport:Team ; rdfs:range xsd:string ;
+    rdfs:label "short name"@en .
+
+kk:defenderBatch a owl:DatatypeProperty ; rdfs:range xsd:integer ;
+    rdfs:label "defender batch"@en ;
+    rdfs:comment "On a player's participation: the batch (1, 2 or 3) the player defends in. On a tag: the batch entry the tagged defender was in (1, 2, 3, then 4 = batch 1 re-entering, ...)."@en .
+
+kk:turnNumber a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "turn number"@en .
+kk:inning a owl:DatatypeProperty ; rdfs:domain kk:TurnStart ; rdfs:range xsd:integer ;
+    rdfs:label "inning"@en ; rdfs:comment "Inning 1 = turns 1-2, inning 2 = turns 3-4."@en .
+kk:chasingTeam a owl:ObjectProperty ; rdfs:domain kk:Turn ; rdfs:range sport:Team ;
+    rdfs:label "chasing team"@en .
+kk:defendingTeam a owl:ObjectProperty ; rdfs:domain kk:Turn ; rdfs:range sport:Team ;
+    rdfs:label "defending team"@en .
+kk:tagger a owl:ObjectProperty ; rdfs:domain kk:Tag ; rdfs:range sport:Athlete ;
+    rdfs:label "tagger"@en ; rdfs:comment "The active chaser who made the tag."@en .
+kk:taggedDefender a owl:ObjectProperty ; rdfs:domain kk:Tag ; rdfs:range sport:Athlete ;
+    rdfs:label "tagged defender"@en .
+kk:tagMethod a owl:ObjectProperty ; rdfs:domain kk:Tag ; rdfs:range skos:Concept ;
+    rdfs:label "tag method"@en .
+kk:timeOfTag a owl:DatatypeProperty ; rdfs:domain kk:Tag ; rdfs:range xsd:integer ;
+    rdfs:label "time of tag (seconds into the turn)"@en .
+kk:points a owl:DatatypeProperty ; rdfs:domain kk:Tag ; rdfs:range xsd:integer ;
+    rdfs:label "points"@en .
+kk:turnDurationSeconds a owl:DatatypeProperty ; rdfs:domain kk:TurnEnd ; rdfs:range xsd:integer ;
+    rdfs:label "turn duration (seconds)"@en .
+kk:turnPoints a owl:DatatypeProperty ; rdfs:domain kk:Turn ; rdfs:range xsd:integer ;
+    rdfs:label "points in the turn"@en .
+kk:tagCount a owl:DatatypeProperty ; rdfs:domain kk:Turn ; rdfs:range xsd:integer ;
+    rdfs:label "tags in the turn"@en .
+
+# -----------------------------------------------------------------------------
+#  Code list
+# -----------------------------------------------------------------------------
+
+kkmethod: a skos:ConceptScheme ; rdfs:label "Kho-kho tag methods"@en .
+kkmethod:touch     a skos:Concept ; skos:inScheme kkmethod: ; skos:prefLabel "touch"@en ;
+    skos:definition "Chaser touches the defender with the palm. 2 points."@en .
+kkmethod:pole-dive a skos:Concept ; skos:inScheme kkmethod: ; skos:prefLabel "pole dive"@en ;
+    skos:definition "Chaser dives from the pole to tag. 2 points."@en .
+kkmethod:sky-dive  a skos:Concept ; skos:inScheme kkmethod: ; skos:prefLabel "sky dive"@en ;
+    skos:definition "Chaser dives through the air to tag. 3 points (bonus for the risk)."@en .

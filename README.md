@@ -163,6 +163,34 @@ the summary numbers (`data/kabaddipy/roundtrip_all.json`) are committed. The tes
 **The replay is symbolic.** The feed records who raided and who touched or tackled whom, not positions or
 revivals, so revivals follow the rules (first out, first in; an all-out brings everyone back).
 
+## More sports: one engine, one plugin per sport
+
+`engine/` is a generic version of the kabaddi converter and validator, driven by a per-sport spec; `sports/<name>/`
+holds one plugin per sport, found automatically (contract: [`sports/CONTRACT.md`](sports/CONTRACT.md)). The kabaddi
+code is unchanged. All data for these sports is **simulated** with a seeded generator (made-up teams and players).
+
+```bash
+python -m engine list                                   # discovered sports
+python -m engine generate|convert|roundtrip --sport all
+python -m engine validate --sport all [--no-plugin]     # with plugin must PASS, without must FAIL
+```
+
+**Badminton** (`sports/badminton/`). IPTC has only the news label `medtop:20000847`. Rally-by-rally singles:
+a game is won at 21 with a 2-point lead, capped at 30 (30-29 is valid); best of 3; the rally winner's score rises by
+exactly 1; the server is the previous rally's winner. 4 matches (2-0, 2-1, a 25-23 deuce game, a 30-29 game).
+
+**Kho-kho** (`sports/khokho/`). **IPTC has nothing for kho-kho**: no Sport Schema plugin and not even a Media Topic
+news label (none in `iptc/vocabularies/mediatopic.ttl`). IPTC's Competition shape requires `sport:sport`, so matches
+use the top-level topic `medtop:15000000` ("sport"). Simplified, documented rules: 4 turns of at most 420 s,
+the teams take turns to chase; defenders enter in batches of 3 (batch 1, 2, 3, then batch 1 re-enters); a tag scores
+for the chasers (touch 2, pole dive 2, sky dive 3); no defender is tagged twice in a turn before their batch
+re-enters; turn and match totals must add up. 3 matches (clear win, a batch re-entering up to entry 7, a 33-33 tie).
+
+**How long a new sport takes.** Kho-kho, the second pack, took about 5 minutes from an empty folder to all tests
+passing, with no edit to any shared file: 275 lines of Python (spec, simulator, mutations) and 360 lines of Turtle
+(ontology, shapes). Badminton, the first, took about 17 minutes, most of it spent on two SHACL pitfalls that are now
+written into the contract (see the comments at the top of `sports/badminton/shapes.ttl`).
+
 ## How it works
 
 ```

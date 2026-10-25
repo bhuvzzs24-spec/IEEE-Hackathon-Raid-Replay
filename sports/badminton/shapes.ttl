@@ -1,0 +1,313 @@
+# =============================================================================
+#  Badminton plugin for IPTC Sport Schema - SHACL shapes
+#  Raid Replay / team Byte Tackle
+#
+#  Part 1 extends IPTC's *closed* shapes, the same method as
+#  kabaddi_plugin/kabaddi-shapes.ttl: IPTC's ActionShape, EventShape,
+#  TeamShape, AthleteShape, SiteShape and IndividualParticipationShape only
+#  accept listed properties, so we list ours. Without this file every
+#  badminton file is rejected by IPTC's own shapes.
+#
+#  Part 2 adds badminton shapes: required fields, datatypes, code lists
+#  (sh:in) and the rules of the game (SPARQL):
+#    * a game is won at 21 with a 2-point lead, capped at 30 (30-29 is valid)
+#    * a match is best of 3 games
+#    * after every rally the rally winner's score rises by exactly 1
+#    * the server is the previous rally's winner (game winner for rally 1)
+#
+#  The rules run once per match (focus node = the sport:Event) and name the
+#  offending action in the message. Written per rally they are equivalent but
+#  ~10x slower under pySHACL, which runs one SPARQL query per focus node.
+#
+#  Strings are checked with sh:pattern, not sh:in: rdflib reads a JSON-LD
+#  string as a plain literal and sh:in then compares it unequal to
+#  "x"^^xsd:string, so the same data would pass as Turtle and fail as JSON-LD.
+# =============================================================================
+
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix sport:    <https://sportschema.org/ontologies/main/> .
+@prefix bad:      <https://sportschema.org/ontologies/badminton/> .
+@prefix badshot:  <https://sportschema.org/ontologies/badminton/shottype/> .
+@prefix badfault: <https://sportschema.org/ontologies/badminton/faulttype/> .
+
+# =============================================================================
+#  PART 1 - extend IPTC's closed shapes (the "allowed properties" lists)
+# =============================================================================
+
+sport:ActionShape
+  sh:property [ sh:path bad:nativeId ;    sh:datatype xsd:string ] ;
+  sh:property [ sh:path bad:gameNumber ;  sh:datatype xsd:integer ] ;
+  sh:property [ sh:path bad:rallyNumber ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path bad:server ;      sh:class sport:Athlete ] ;
+  sh:property [ sh:path bad:receiver ;    sh:class sport:Athlete ] ;
+  sh:property [ sh:path bad:rallyWinner ; sh:class sport:Athlete ] ;
+  sh:property [ sh:path bad:scoreA ;      sh:datatype xsd:integer ] ;
+  sh:property [ sh:path bad:scoreB ;      sh:datatype xsd:integer ] ;
+  sh:property [ sh:path bad:rallyLength ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path bad:endingShot ;  sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path bad:faultType ;   sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path bad:faultBy ;     sh:class sport:Athlete ] ;
+  sh:property [ sh:path bad:gameWinner ;  sh:class sport:Athlete ] .
+
+sport:EventShape
+  sh:property [ sh:path bad:nativeId ;      sh:datatype xsd:string ] ;
+  sh:property [ sh:path bad:discipline ;    sh:datatype xsd:string ] ;
+  sh:property [ sh:path bad:bestOfGames ;   sh:datatype xsd:integer ] ;
+  sh:property [ sh:path bad:firstServer ;   sh:class sport:Athlete ] ;
+  sh:property [ sh:path bad:simulatorSeed ; sh:datatype xsd:integer ] .
+
+sport:TeamShape
+  sh:property [ sh:path bad:nativeId ;  sh:datatype xsd:string ] ;
+  sh:property [ sh:path bad:shortName ; sh:datatype xsd:string ] .
+
+sport:AthleteShape
+  sh:property [ sh:path bad:nativeId ; sh:datatype xsd:string ] .
+
+sport:SiteShape
+  sh:property [ sh:path bad:nativeId ; sh:datatype xsd:string ] .
+
+sport:IndividualParticipationShape
+  sh:property [ sh:path bad:hand ; sh:datatype xsd:string ; sh:pattern "^(left|right)$" ] .
+
+# =============================================================================
+#  PART 2 - badminton shapes
+# =============================================================================
+
+bad:BadmintonActionShape
+  a sh:NodeShape ;
+  sh:targetClass bad:Rally, bad:Fault, bad:GameStart, bad:GameEnd, bad:Interval ;
+  sh:property [ sh:path bad:nativeId ;         sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:sequenceNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[1-9][0-9]*$" ] ;
+  sh:property [ sh:path sport:actionInEvent ;  sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path bad:gameNumber ;       sh:minCount 1 ; sh:maxCount 1 ; sh:in ( 1 2 3 ) ;
+                sh:message "Best of 3: game number must be 1, 2 or 3." ] .
+
+bad:RallyShape
+  a sh:NodeShape ;
+  sh:targetClass bad:Rally, bad:Fault ;
+  sh:property [ sh:path bad:rallyNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 1 ] ;
+  sh:property [ sh:path bad:server ;      sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path bad:receiver ;    sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path bad:rallyWinner ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path bad:scoreA ;      sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 30 ] ;
+  sh:property [ sh:path bad:scoreB ;      sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 30 ] ;
+  sh:property [ sh:path bad:rallyLength ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 1 ] .
+
+bad:ShotRallyShape
+  a sh:NodeShape ;
+  sh:targetClass bad:Rally ;
+  sh:property [ sh:path bad:endingShot ; sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( badshot:smash badshot:drop badshot:clear badshot:net-shot badshot:drive badshot:lift ) ;
+                sh:message "Ending shot must be smash, drop, clear, net shot, drive or lift." ] ;
+  sh:property [ sh:path bad:faultType ; sh:maxCount 0 ] .
+
+bad:FaultShape
+  a sh:NodeShape ;
+  sh:targetClass bad:Fault ;
+  sh:property [ sh:path bad:faultType ; sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( badfault:service-fault badfault:net-touch badfault:out badfault:double-hit ) ;
+                sh:message "Fault type must be service fault, net touch, out or double hit." ] ;
+  sh:property [ sh:path bad:faultBy ;    sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path bad:endingShot ; sh:maxCount 0 ] .
+
+bad:GameEndShape
+  a sh:NodeShape ;
+  sh:targetClass bad:GameEnd, bad:Interval ;
+  sh:property [ sh:path bad:scoreA ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path bad:scoreB ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+bad:GameWinnerShape
+  a sh:NodeShape ;
+  sh:targetClass bad:GameEnd ;
+  sh:property [ sh:path bad:gameWinner ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+# ---- the match and the rules of the game ------------------------------------------
+bad:BadmintonMatchShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf bad:bestOfGames ;
+  sh:property [ sh:path sport:sport ; sh:hasValue <http://cv.iptc.org/newscodes/mediatopic/20000847> ;
+                sh:message "A badminton match must declare sport:sport medtop:20000847 (badminton)." ] ;
+  sh:property [ sh:path bad:nativeId ;    sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path bad:bestOfGames ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( 3 ) ] ;
+  sh:property [ sh:path bad:discipline ;  sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^singles$" ] ;
+  sh:property [ sh:path bad:firstServer ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:participation ; sh:minCount 2 ; sh:maxCount 2 ] ;
+
+  # --- rallies ------------------------------------------------------------------------
+  sh:sparql [
+    sh:message "Score must rise by exactly 1 for the rally winner, and not at all for the loser: {?r}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?r WHERE {
+        ?r sport:actionInEvent $this ; bad:rallyNumber ?n ; bad:gameNumber ?g ;
+           bad:scoreA ?a ; bad:scoreB ?b ; bad:rallyWinner ?w .
+        $this sport:participation ?tp . ?tp sport:alignment ?side .
+        ?ip sport:participationBy ?w ; sport:teamParticipation ?tp .
+        BIND (?n - 1 AS ?pn)
+        OPTIONAL { ?p sport:actionInEvent $this ; bad:gameNumber ?g ; bad:rallyNumber ?pn ;
+                      bad:scoreA ?pa0 ; bad:scoreB ?pb0 . }
+        BIND (COALESCE(?pa0, 0) AS ?pa)
+        BIND (COALESCE(?pb0, 0) AS ?pb)
+        FILTER (IF(STR(?side) = "A", ?a != ?pa + 1 || ?b != ?pb, ?b != ?pb + 1 || ?a != ?pa))
+      }""" ] ;
+  sh:sparql [
+    sh:message "The server must be the previous rally's winner (rally 1: the first server in game 1, the previous game's winner after that): {?r}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?r WHERE {
+        ?r sport:actionInEvent $this ; bad:rallyNumber ?n ; bad:gameNumber ?g ; bad:server ?s .
+        BIND (?n - 1 AS ?pn)
+        BIND (?g - 1 AS ?pg)
+        OPTIONAL { ?p sport:actionInEvent $this ; bad:gameNumber ?g ; bad:rallyNumber ?pn ; bad:rallyWinner ?pw . }
+        OPTIONAL { ?ge sport:actionInEvent $this ; a bad:GameEnd ; bad:gameNumber ?pg ; bad:gameWinner ?gw . }
+        OPTIONAL { $this bad:firstServer ?fs . }
+        FILTER ( (?n > 1 && (!BOUND(?pw) || ?s != ?pw))
+              || (?n = 1 && ?g > 1 && (!BOUND(?gw) || ?s != ?gw))
+              || (?n = 1 && ?g = 1 && (!BOUND(?fs) || ?s != ?fs)) )
+      }""" ] ;
+  sh:sparql [
+    sh:message "Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: {?r}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      SELECT $this ?r WHERE {
+        ?r sport:actionInEvent $this ; bad:rallyNumber ?n ; bad:gameNumber ?g ; sport:sequenceNumber ?seq .
+        FILTER (?n > 1)
+        BIND (?n - 1 AS ?pn)
+        FILTER NOT EXISTS {
+          ?p sport:actionInEvent $this ; bad:gameNumber ?g ; bad:rallyNumber ?pn ; sport:sequenceNumber ?pseq .
+          FILTER (xsd:integer(?pseq) < xsd:integer(?seq))
+        }
+      }""" ] ;
+  sh:sparql [
+    sh:message "Rally number used twice in the same game: {?r}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?r WHERE {
+        ?r sport:actionInEvent $this ; bad:rallyNumber ?n ; bad:gameNumber ?g .
+        ?o sport:actionInEvent $this ; bad:rallyNumber ?n ; bad:gameNumber ?g .
+        FILTER (?o != ?r)
+      }""" ] ;
+  sh:sparql [
+    sh:message "Server and receiver must differ, and the rally winner must be one of them: {?r}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?r WHERE {
+        ?r sport:actionInEvent $this ; bad:server ?s ; bad:receiver ?rc ; bad:rallyWinner ?w .
+        FILTER (?s = ?rc || (?w != ?s && ?w != ?rc))
+      }""" ] ;
+  sh:sparql [
+    sh:message "A fault is committed by the rally loser: {?r}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?r WHERE {
+        ?r sport:actionInEvent $this ; bad:faultBy ?f ; bad:rallyWinner ?w ; bad:server ?s ; bad:receiver ?rc .
+        FILTER (?f = ?w || (?f != ?s && ?f != ?rc))
+      }""" ] ;
+  sh:sparql [
+    sh:message "A service fault is committed by the server on a 1-shot rally: {?r}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      PREFIX badfault: <https://sportschema.org/ontologies/badminton/faulttype/>
+      SELECT $this ?r WHERE {
+        ?r sport:actionInEvent $this ; bad:faultType badfault:service-fault ; bad:faultBy ?f ;
+           bad:server ?s ; bad:rallyLength ?l .
+        FILTER (?f != ?s || ?l != 1)
+      }""" ] ;
+
+  # --- games --------------------------------------------------------------------------
+  sh:sparql [
+    sh:message "Invalid final game score - a game is won at 21 with a 2-point lead, or at 30 (30-29): {?x}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?x WHERE {
+        ?x sport:actionInEvent $this ; a bad:GameEnd ; bad:scoreA ?a ; bad:scoreB ?b .
+        BIND (IF(?a > ?b, ?a, ?b) AS ?w)
+        BIND (IF(?a > ?b, ?b, ?a) AS ?l)
+        FILTER (!( (?w = 21 && ?l <= 19) || (?w >= 22 && ?w <= 30 && ?w - ?l = 2) || (?w = 30 && ?l = 29) ))
+      }""" ] ;
+  sh:sparql [
+    sh:message "The game winner must be the player with the higher score: {?x}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?x WHERE {
+        ?x sport:actionInEvent $this ; bad:scoreA ?a ; bad:scoreB ?b ; bad:gameWinner ?w .
+        $this sport:participation ?tp . ?tp sport:alignment ?side .
+        ?ip sport:participationBy ?w ; sport:teamParticipation ?tp .
+        FILTER (IF(STR(?side) = "A", ?a <= ?b, ?b <= ?a))
+      }""" ] ;
+  sh:sparql [
+    sh:message "The final game score must equal the score after the game's last rally: {?x}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?x WHERE {
+        ?x sport:actionInEvent $this ; a bad:GameEnd ; bad:gameNumber ?g ; bad:scoreA ?a ; bad:scoreB ?b .
+        ?r sport:actionInEvent $this ; bad:gameNumber ?g ; bad:rallyNumber ?n ; bad:scoreA ?ra ; bad:scoreB ?rb .
+        FILTER NOT EXISTS { ?r2 sport:actionInEvent $this ; bad:gameNumber ?g ; bad:rallyNumber ?n2 . FILTER (?n2 > ?n) }
+        FILTER (?ra != ?a || ?rb != ?b)
+      }""" ] ;
+  sh:sparql [
+    sh:message "The interval is taken when the leading score reaches 11: {?x}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this ?x WHERE {
+        ?x sport:actionInEvent $this ; a bad:Interval ; bad:scoreA ?a ; bad:scoreB ?b .
+        FILTER (IF(?a > ?b, ?a, ?b) != 11)
+      }""" ] ;
+
+  # --- best of 3 ----------------------------------------------------------------------
+  sh:sparql [
+    sh:message "Best of 3: a match has at most 3 games." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this WHERE { ?ge sport:actionInEvent $this ; a bad:GameEnd . }
+      GROUP BY $this HAVING (COUNT(?ge) > 3)""" ] ;
+  sh:sparql [
+    sh:message "Each side's sport:score must equal the number of games it won: {?tp}" ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      SELECT $this ?tp WHERE {
+        $this sport:participation ?tp . ?tp sport:score ?sc .
+        OPTIONAL { ?ge sport:actionInEvent $this ; a bad:GameEnd ; bad:gameWinner ?w .
+                   ?ip sport:participationBy ?w ; sport:teamParticipation ?tp . }
+      } GROUP BY $this ?tp ?sc HAVING (COUNT(?ge) != xsd:integer(?sc))""" ] ;
+  sh:sparql [
+    sh:message "Best of 3: the winner wins exactly 2 games, the loser fewer than 2." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX speventoutcome: <http://cv.iptc.org/newscodes/speventoutcome/>
+      PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+      SELECT $this WHERE {
+        { $this sport:participation ?tp . ?tp sport:score ?sc ; sport:eventOutcome ?o .
+          FILTER (IF(?o = speventoutcome:win, xsd:integer(?sc) != 2, xsd:integer(?sc) >= 2)) }
+        UNION
+        { $this sport:participation ?any .
+          FILTER NOT EXISTS { $this sport:participation ?w . ?w sport:eventOutcome speventoutcome:win } }
+      }""" ] ;
+  sh:sparql [
+    sh:message "Best of 3: there is no game 3 when one player won games 1 and 2." ;
+    sh:select """
+      PREFIX sport: <https://sportschema.org/ontologies/main/>
+      PREFIX bad: <https://sportschema.org/ontologies/badminton/>
+      SELECT $this WHERE {
+        ?g1 sport:actionInEvent $this ; a bad:GameEnd ; bad:gameNumber 1 ; bad:gameWinner ?w .
+        ?g2 sport:actionInEvent $this ; a bad:GameEnd ; bad:gameNumber 2 ; bad:gameWinner ?w .
+        ?g3 sport:actionInEvent $this ; bad:gameNumber 3 .
+      }""" ] .
