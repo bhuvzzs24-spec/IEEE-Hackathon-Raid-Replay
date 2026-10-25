@@ -63,7 +63,7 @@ def main() -> dict:
     val_neg = []
     for name, fn in VALIDATOR_MUTATIONS.items():
         ok, text, n = validate_graph(fn(final))
-        msgs = sorted(set(re.findall(r"Message: (.*)", text)))
+        msgs = sorted(set(re.findall(r"Message: (.*)", text)), key=lambda s: ("datatype" not in s, s))
         val_neg.append({"name": name, "rejected": not ok, "violations": n, "message": msgs[0] if msgs else ""})
     results = {
         "matches": matches,

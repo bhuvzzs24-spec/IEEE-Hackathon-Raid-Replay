@@ -177,7 +177,7 @@
       "diff": [
         "type_changes"
       ],
-      "detail": "{'type_changes': {\"root['events'][76]['touch_points']\": {'old_type': <class 'int'>, 'new_type': <class 'str'>, 'old_value': 2, 'new_value': '2'}}}"
+      "detail": "{'type_changes': {\"root['events'][41]['touch_points']\": {'old_type': <class 'int'>, 'new_type': <class 'str'>, 'old_value': 2, 'new_value': '2'}}}"
     }
   ],
   "negative_validator": [

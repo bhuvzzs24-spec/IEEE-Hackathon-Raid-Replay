@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raid Replay</title>
+<meta name="description" content="Raid Replay gives kabaddi the open data standard it's missing: the first kabaddi plugin for IPTC Sport Schema, with a lossless two-way converter.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF8A00'/%3E%3Cstop offset='.55' stop-color='%23E0218A'/%3E%3Cstop offset='1' stop-color='%234F3BD9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M16 6v20' stroke='white' stroke-width='2.4'/%3E%3Ccircle cx='10' cy='16' r='3.2' fill='white'/%3E%3Ccircle cx='22.5' cy='11' r='2.2' fill='white' opacity='.75'/%3E%3Ccircle cx='22.5' cy='21' r='2.2' fill='white' opacity='.75'/%3E%3C/svg%3E">
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+
+<!-- ============================== NAV ============================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Raid Replay home">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A00"/><stop offset=".55" stop-color="#E0218A"/><stop offset="1" stop-color="#4F3BD9"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M16 6v20" stroke="#fff" stroke-width="2.4"/><circle cx="10" cy="16" r="3.2" fill="#fff"/><circle cx="22.5" cy="11" r="2.2" fill="#fff" opacity=".75"/><circle cx="22.5" cy="21" r="2.2" fill="#fff" opacity=".75"/></svg>
+      <span>Raid Replay</span>
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#gap">The gap</a><a href="#how">How it works</a><a href="#demo">Live demo</a><a href="#proof">Proof</a><a href="#bugs">Bugs we found</a><a href="#team">Team</a>
+    </nav>
+    <a class="btn btn-sm btn-dark" href="#demo">Watch the replay <span class="arr">→</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================== HERO ============================== -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div><div class="blob b5"></div>
+    <div class="grain"></div>
+  </div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow-pill"><span class="dot"></span> IEEE CS Confluence Buildathon · Track: Lossless</p>
+      <h1>Raid Replay</h1>
+      <p class="lede">gives kabaddi the open data standard it's missing.</p>
+      <p class="sub">230 million people watch Pro Kabaddi, yet no open sports-data standard could describe a single raid. We built the first kabaddi plugin for <strong>IPTC Sport Schema</strong> and a converter that goes there and back without losing a single value.</p>
+      <div class="cta">
+        <a class="btn btn-light" href="#demo">Watch the replay <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="#proof">See the proof</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="card-float score-card">
+        <div class="sc-top"><span class="live-dot"></span> Final · Replay from Sport Schema</div>
+        <div class="sc-row"><span class="sw" style="background:#FF7A00"></span><b>Saffron Strikers</b><em id="heroHome">0</em></div>
+        <div class="sc-row"><span class="sw" style="background:#3B2CC9"></span><b>Indigo Titans</b><em id="heroAway">0</em></div>
+        <div class="sc-foot"><span class="ok-badge">diff = 0 ✓</span><span>SHACL: conforms</span></div>
+      </div>
+      <div class="card-float code-card">
+        <div class="code-head"><i></i><i></i><i></i><span>raid #<!--SNIP_SEQ-->.jsonld</span></div>
+        <pre class="code"><code><!--SNIP_HERO--></code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="wrap stats" id="stats"></div>
+</section>
+
+<!-- ============================== THE GAP ============================== -->
+<section class="sec" id="gap">
+  <div class="wrap">
+    <p class="eyebrow">The gap</p>
+    <h2>Ten sports have a data plugin. Kabaddi had a news label.</h2>
+    <p class="intro">IPTC Sport Schema is the open, RDF-based sports-data standard from the news-standards body IPTC. Its ontology ships statistics plugins for ten sports. In every IPTC standard, kabaddi existed only as a topic tag for news stories — <code>medtop:20000978</code> — with no way to say who raided, who tackled, or how a point was scored.</p>
+    <div class="sports reveal">
+      <div class="sport"><span class="ic">⚽</span>Soccer<small>plugin</small></div>
+      <div class="sport"><span class="ic">🎾</span>Tennis<small>plugin</small></div>
+      <div class="sport"><span class="ic">🏉</span>Rugby<small>plugin</small></div>
+      <div class="sport"><span class="ic">⛳</span>Golf<small>plugin</small></div>
+      <div class="sport"><span class="ic">🎮</span>Esports<small>plugin</small></div>
+      <div class="sport"><span class="ic">🏀</span>Basketball<small>plugin</small></div>
+      <div class="sport"><span class="ic">⚾</span>Baseball<small>plugin</small></div>
+      <div class="sport"><span class="ic">🏈</span>American football<small>plugin</small></div>
+      <div class="sport"><span class="ic">🏐</span>Volleyball<small>plugin</small></div>
+      <div class="sport"><span class="ic">🏎️</span>Motor racing<small>plugin</small></div>
+      <div class="sport kabaddi"><span class="ic kab-ic">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3v18" stroke="currentColor" stroke-width="2"/><circle cx="7" cy="12" r="2.6" fill="currentColor"/><circle cx="17" cy="8" r="1.8" fill="currentColor" opacity=".7"/><circle cx="17" cy="16" r="1.8" fill="currentColor" opacity=".7"/></svg>
+      </span>Kabaddi<small class="was">was: news label only</small><small class="now">now: Raid Replay plugin</small></div>
+    </div>
+    <div class="gap-grid">
+      <div class="gcard reveal"><h3>Closed by design</h3><p>Sport Schema only accepts pre-approved properties on a play. Golf got in by being added to that list. So a kabaddi plugin has to extend the allowed list — not just invent new words.</p></div>
+      <div class="gcard reveal"><h3>Our plugin</h3><p>A small Turtle ontology (raid, card, review, substitution + 40 properties + 4 code lists) and SHACL shapes that extend IPTC's closed shapes and encode the rules of the game.</p></div>
+      <div class="gcard reveal"><h3>Lossless, provably</h3><p>Five simulated matches go JSON → Turtle / JSON-LD → JSON with zero differences, pass IPTC's own validator, and fail it without our plugin.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== HOW IT WORKS ============================== -->
+<section class="sec sec-tint slant" id="how">
+  <div class="wrap">
+    <p class="eyebrow">How it works</p>
+    <h2>One raid, three formats, zero loss.</h2>
+    <p class="intro">Our simulator writes native kabaddi JSON. The converter (Python + rdflib) maps every field to Sport Schema and back. pySHACL checks the result against IPTC's shapes plus ours.</p>
+
+    <div class="flow reveal" role="img" aria-label="Kabaddi JSON converts to Sport Schema Turtle and JSON-LD and back; both are validated with IPTC and kabaddi SHACL shapes">
+      <div class="node n-json"><div class="n-ic">{ }</div><b>Kabaddi JSON</b><span>native raid-by-raid feed</span></div>
+      <div class="pipe"><span class="pipe-l">to_graph()</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><defs><linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#FF8A00"/><stop offset="1" stop-color="#E0218A"/></linearGradient></defs><path d="M2 14 H112 l-8 -8 M2 26 H112" stroke="url(#pg)" stroke-width="2.5" fill="none" class="p1"/><path d="M118 26 H8 l8 8" stroke="#4F3BD9" stroke-width="2.5" fill="none" class="p2"/></svg><span class="pipe-l pipe-r">from_graph()</span></div>
+      <div class="node n-rdf"><div class="n-ic">⟨⟩</div><b>Sport Schema</b><span>Turtle · JSON-LD</span></div>
+      <div class="pipe pipe-down"><span class="pipe-l">pySHACL</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><path d="M2 20 H112 l-8 -8 M112 20 l-8 8" stroke="#0F9F9A" stroke-width="2.5" fill="none" class="p1"/></svg></div>
+      <div class="node n-val"><div class="n-ic">✓</div><b>Validator</b><span>IPTC shapes + kabaddi plugin</span></div>
+    </div>
+
+    <div class="rules reveal">
+      <div><b>Unique IDs</b><span>every raid, team and player keeps its native id in <code>kab:nativeId</code></span></div>
+      <div><b>Explicit order</b><span><code>sport:sequenceNumber</code> on every action — RDF has no order</span></div>
+      <div><b>Missing = no triple</b><span>absent values emit nothing, never <code>null</code></span></div>
+      <div><b>Typed literals</b><span><code>xsd:integer</code> / <code>xsd:boolean</code>, so 2 ≠ "2" and false ≠ 0</span></div>
+    </div>
+
+    <div class="tabs reveal" id="codeTabs">
+      <div class="tab-bar" role="tablist">
+        <button role="tab" aria-selected="true" data-tab="t-json">Native JSON</button>
+        <button role="tab" aria-selected="false" data-tab="t-ttl">Sport Schema · Turtle</button>
+        <button role="tab" aria-selected="false" data-tab="t-jsonld">Sport Schema · JSON-LD</button>
+        <span class="tab-note">Raid #<!--SNIP_SEQ--> of the final — a super raid with a bonus</span>
+      </div>
+      <div class="tab-panels">
+        <pre class="code tab-panel active" id="t-json"><code><!--SNIP_JSON--></code></pre>
+        <pre class="code tab-panel" id="t-ttl"><code><!--SNIP_TURTLE--></code></pre>
+        <pre class="code tab-panel" id="t-jsonld"><code><!--SNIP_JSONLD--></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== LIVE DEMO ============================== -->
+<section class="sec demo slant-dark" id="demo">
+  <div class="demo-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow light">Live demo</p>
+    <h2 class="light">The final, replayed raid by raid — from Sport Schema data only.</h2>
+    <p class="intro light">Every movement on this mat is driven by the converted JSON-LD: raider, touches, tackles, revivals, cards and reviews. The left scoreboard is computed from the original JSON, the right one from the Sport Schema data.</p>
+
+    <div class="stage">
+      <div class="mat-wrap">
+        <div class="mat-hud">
+          <div class="hud-team home"><span class="hud-sw" id="hudHomeSw"></span><span id="hudHomeName">HOME</span><b id="hudHomeScore">0</b></div>
+          <div class="hud-mid">
+            <div class="hud-clock" id="hudClock">H1 00:00</div>
+            <div class="raid-timer"><div class="raid-bar" id="raidBar"></div></div>
+            <div class="hud-raid" id="hudRaid">&nbsp;</div>
+          </div>
+          <div class="hud-team away"><b id="hudAwayScore">0</b><span id="hudAwayName">AWAY</span><span class="hud-sw" id="hudAwaySw"></span></div>
+        </div>
+        <div class="mat-box">
+          <svg id="mat" viewBox="0 0 972 720" role="img" aria-label="Top-down kabaddi mat replaying the final">
+            <defs>
+              <linearGradient id="matL" x1="0" x2="1"><stop offset="0" stop-color="#1d2a78"/><stop offset="1" stop-color="#26358f"/></linearGradient>
+              <linearGradient id="matR" x1="0" x2="1"><stop offset="0" stop-color="#26358f"/><stop offset="1" stop-color="#1d2a78"/></linearGradient>
+              <pattern id="lobbyPat" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="#18225f"/><rect width="5" height="12" fill="#1b276b"/></pattern>
+              <radialGradient id="spot" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect x="0" y="0" width="972" height="720" rx="22" fill="#121a4d"/>
+            <!-- lobbies -->
+            <rect x="96" y="0" width="780" height="60" fill="url(#lobbyPat)"/>
+            <rect x="96" y="660" width="780" height="60" fill="url(#lobbyPat)"/>
+            <!-- halves -->
+            <rect x="96" y="60" width="390" height="600" fill="url(#matL)"/>
+            <rect x="486" y="60" width="390" height="600" fill="url(#matR)"/>
+            <ellipse id="spotlight" cx="486" cy="360" rx="190" ry="190" fill="url(#spot)" opacity="0"/>
+            <!-- boundary -->
+            <rect x="96" y="0" width="780" height="720" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="3"/>
+            <line x1="96" y1="60" x2="876" y2="60" stroke="#fff" stroke-opacity=".45" stroke-width="2"/>
+            <line x1="96" y1="660" x2="876" y2="660" stroke="#fff" stroke-opacity=".45" stroke-width="2"/>
+            <!-- midline -->
+            <line x1="486" y1="0" x2="486" y2="720" stroke="#fff" stroke-width="5"/>
+            <!-- baulk lines -->
+            <line x1="261" y1="60" x2="261" y2="660" stroke="#fff" stroke-opacity=".8" stroke-width="3"/>
+            <line x1="711" y1="60" x2="711" y2="660" stroke="#fff" stroke-opacity=".8" stroke-width="3"/>
+            <!-- bonus lines -->
+            <line x1="201" y1="60" x2="201" y2="660" stroke="#FFB347" stroke-width="3" stroke-dasharray="14 9"/>
+            <line x1="771" y1="60" x2="771" y2="660" stroke="#FFB347" stroke-width="3" stroke-dasharray="14 9"/>
+            <!-- labels -->
+            <g class="mat-lbl">
+              <rect class="lblbg" x="431" y="16" width="110" height="28" rx="8"/>
+              <text x="486" y="36" text-anchor="middle">MIDLINE</text>
+              <text x="261" y="690" text-anchor="middle" transform="rotate(0)">BAULK</text>
+              <text x="711" y="690" text-anchor="middle">BAULK</text>
+              <text x="201" y="36" text-anchor="middle" fill="#FFB347">BONUS</text>
+              <text x="771" y="36" text-anchor="middle" fill="#FFB347">BONUS</text>
+              <text x="350" y="36" text-anchor="middle">LOBBY</text>
+              <text x="622" y="36" text-anchor="middle">LOBBY</text>
+              <text x="48" y="96" text-anchor="middle" class="sit">OUT</text>
+              <text x="924" y="96" text-anchor="middle" class="sit">OUT</text>
+            </g>
+            <g id="fx"></g>
+            <g id="players"></g>
+            <g id="fxTop"></g>
+          </svg>
+          <div class="tags" id="tags" aria-live="polite"></div>
+          <div class="overlay" id="overlay"></div>
+        </div>
+        <div class="commentary" id="commentary" aria-live="polite">Press play to start the replay.</div>
+        <div class="controls">
+          <button class="ctl play" id="btnPlay" aria-label="Play"><svg viewBox="0 0 24 24" width="20" height="20"><path id="playIcon" d="M7 4.5v15l12-7.5z" fill="currentColor"/></svg></button>
+          <button class="ctl" id="btnPrev" aria-label="Previous event"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 5h2v14H6zM20 5v14L9 12z" fill="currentColor"/></svg></button>
+          <button class="ctl" id="btnNext" aria-label="Next event"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M16 5h2v14h-2zM4 5v14l11-7z" fill="currentColor"/></svg></button>
+          <div class="scrub"><input type="range" id="scrub" min="0" max="1" value="0" step="1" aria-label="Scrub through the match"><div class="ticks" id="ticks"></div></div>
+          <div class="speed" role="group" aria-label="Speed">
+            <button data-speed="0.5">½×</button><button data-speed="1" class="on">1×</button><button data-speed="2">2×</button><button data-speed="4">4×</button><button data-speed="8">8×</button>
+          </div>
+          <span class="evcount" id="evCount">0 / 0</span>
+        </div>
+      </div>
+
+      <div class="boards">
+        <div class="board">
+          <div class="board-h"><span class="src src-json">{ }</span> From the original JSON</div>
+          <div class="board-row"><span class="sw" id="bjHomeSw"></span><span class="bn" id="bjHomeName"></span><b id="bjHome">0</b></div>
+          <div class="board-row"><span class="sw" id="bjAwaySw"></span><span class="bn" id="bjAwayName"></span><b id="bjAway">0</b></div>
+        </div>
+        <div class="diff-badge" id="diffBadge"><span class="db-big">diff = <b id="diffN">0</b> <i id="diffTick">✓</i></span><span class="db-small" id="diffSmall">checking…</span></div>
+        <div class="board">
+          <div class="board-h"><span class="src src-rdf">⟨⟩</span> From the Sport Schema JSON-LD</div>
+          <div class="board-row"><span class="sw" id="brHomeSw"></span><span class="bn" id="brHomeName"></span><b id="brHome">0</b></div>
+          <div class="board-row"><span class="sw" id="brAwaySw"></span><span class="bn" id="brAwayName"></span><b id="brAway">0</b></div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><i class="lg-raid"></i>Raider</span><span><i class="lg-touch"></i>Touched → out</span><span><i class="lg-tackle"></i>Tackle</span><span><i class="lg-bonus"></i>Bonus line</span><span><i class="lg-out"></i>Out / waiting for revival</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PROOF ============================== -->
+<section class="sec" id="proof">
+  <div class="wrap">
+    <p class="eyebrow">Proof</p>
+    <h2>Zero differences. Every file valid. And it isn't a fake pass.</h2>
+    <p class="intro">All numbers below are computed by our test suite (<code>pytest</code>) and proof script from the files in <code>data/</code>.</p>
+    <div class="kpis reveal" id="kpis"></div>
+    <div class="table-card reveal">
+      <div class="table-scroll">
+        <table class="results" id="resultsTable"></table>
+      </div>
+    </div>
+    <div class="neg-grid">
+      <div class="neg reveal">
+        <h3><span class="neg-ic">≠</span> The diff catches every corruption</h3>
+        <p>We break the converted final on purpose and convert it back. DeepDiff must report a difference.</p>
+        <ul id="negDiff"></ul>
+      </div>
+      <div class="neg reveal">
+        <h3><span class="neg-ic">✕</span> The validator rejects bad kabaddi</h3>
+        <p>Each corruption must fail SHACL validation, with a message saying why.</p>
+        <ul id="negVal"></ul>
+      </div>
+      <div class="neg neg-wide reveal">
+        <h3><span class="neg-ic">🔒</span> Without our plugin, IPTC's own checker rejects every file</h3>
+        <p id="strictText">IPTC's shapes are closed. Remove the kabaddi plugin and every one of the 10 files fails.</p>
+        <div class="bars" id="strictBars"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== BUGS ============================== -->
+<section class="sec sec-tint slant" id="bugs">
+  <div class="wrap">
+    <p class="eyebrow">Bugs we found in the standard</p>
+    <h2>IPTC's files didn't load as shipped. We patched them in a few lines — in memory, never on disk.</h2>
+    <p class="intro">We use the official files from IPTC's GitHub repository (Sport Schema 1.1). These are the problems we hit, and our workaround for each (<code>iptc/loader.py</code>).</p>
+    <div class="bug-grid">
+      <article class="bug reveal">
+        <div class="bug-n">01</div>
+        <h3>Missing full stop in vocabulary files</h3>
+        <p><b id="bugVocab">15 of 17</b> NewsCodes vocabulary files end an <code>@prefix</code> line without the terminating “.”, so no strict Turtle parser can read them.</p>
+        <pre class="code sm"><code><span class="kw">@prefix</span> <span class="q">spct:</span>	<span class="iri">&lt;…/newscodes/spct/&gt;</span><span class="miss">.</span> <span class="c">&larr; this full stop is missing</span></code></pre>
+        <p class="fix"><b>Fix:</b> one regex adds the “ .” on load.</p>
+      </article>
+      <article class="bug reveal">
+        <div class="bug-n">02</div>
+        <h3>Shapes only Apache Jena tolerates</h3>
+        <p><b id="bugLenient">6</b> shapes use <code>sh:ignoredProperties</code> without <code>sh:closed true</code>. The SHACL spec forbids that; Jena ignores it, pySHACL refuses to load the shapes at all.</p>
+        <pre class="code sm"><code><span class="q">sport:CompetitionShape</span>
+  <span class="c"># sh:closed true;</span>
+  <span class="k">sh:ignoredProperties</span> ( rdf:type rdfs:label ) ;</code></pre>
+        <p class="fix"><b>Fix:</b> drop <code>sh:ignoredProperties</code> on non-closed shapes (it has no effect there).</p>
+      </article>
+      <article class="bug reveal">
+        <div class="bug-n">03</div>
+        <h3>Shapes that are referenced but never defined</h3>
+        <p><code>sh:node</code> points at <b id="bugUndef">4</b> shapes that don't exist, e.g. <code id="bugUndefList">NewsCodesSportEventStatusShape</code>. Any event with a status fails to validate.</p>
+        <p class="fix"><b>Fix:</b> define the four missing shapes, modelled on their siblings.</p>
+      </article>
+      <article class="bug reveal">
+        <div class="bug-n">04</div>
+        <h3>A one-letter SKOS typo</h3>
+        <p>The vocabularies use <code>skos:HasTopConcept</code> (<b id="bugTop">228</b> times). The SKOS property is <code>skos:hasTopConcept</code>, so tools never see the top concepts.</p>
+        <p class="fix"><b>Fix:</b> add the correctly-cased triple alongside each one.</p>
+      </article>
+      <article class="bug reveal">
+        <div class="bug-n">05</div>
+        <h3>A validator built around one data file</h3>
+        <p>IPTC's script <code>cat</code>s the ontology, all vocabularies and the data into one temporary file, because Jena's <code>shacl</code> tool accepts a single data file.</p>
+        <p class="fix"><b>Fix:</b> merge the graphs in Python and call pySHACL directly.</p>
+      </article>
+      <article class="bug reveal">
+        <div class="bug-n">06</div>
+        <h3>Numbers typed as strings</h3>
+        <p>IPTC's shapes require <code>xsd:string</code> for <code>sport:score</code>, <code>sport:sequenceNumber</code> and <code>sport:uniformNumberEvent</code> — the exact 2 vs “2” trap.</p>
+        <p class="fix"><b>Fix:</b> we obey IPTC's shapes and convert those three back to integers through an explicit table; every kabaddi number is a real <code>xsd:integer</code>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== WHO USES IT ============================== -->
+<section class="sec" id="users">
+  <div class="wrap">
+    <p class="eyebrow">Who uses it</p>
+    <h2>One open format, many kabaddi products.</h2>
+    <div class="use-grid">
+      <div class="use reveal"><div class="use-ic ic1">📰</div><h3>Sports news sites</h3><p>Newsrooms already speak IPTC. Live raid-by-raid feeds can drop straight into their existing Sport Schema pipelines.</p></div>
+      <div class="use reveal"><div class="use-ic ic2">🏆</div><h3>Fantasy apps</h3><p>Touch points, bonuses, tackles and super raids per player — the exact numbers fantasy scoring needs, in a typed, validated format.</p></div>
+      <div class="use reveal"><div class="use-ic ic3">📊</div><h3>Analysts &amp; coaches</h3><p>Query every do-or-die raid or every super tackle across seasons with SPARQL instead of scraping scorecards.</p></div>
+      <div class="use reveal"><div class="use-ic ic4">🌍</div><h3>Other leagues</h3><p>British Kabaddi League, the Kabaddi World Cup and grassroots leagues can publish in the same open format — no vendor lock-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== TEAM ============================== -->
+<section class="sec sec-tint slant" id="team">
+  <div class="wrap">
+    <p class="eyebrow">Team Byte Tackle</p>
+    <h2>Built in a day at PES University.</h2>
+    <p class="intro">IEEE CS Confluence Buildathon · Sunday 25 October 2026 · Track: <b>Lossless – Bridging systems and formats</b></p>
+    <div class="team-grid">
+      <div class="member reveal"><div class="av av1">PM</div><b>P Manas Siddhardha</b><span>PES1UG24AM186</span></div>
+      <div class="member reveal"><div class="av av2">RK</div><b>Rohith Karning</b><span>PES1UG24AM229</span></div>
+      <div class="member reveal"><div class="av av3">SB</div><b>S Bhuvanashree</b><span>PES1UG24AM235</span></div>
+      <div class="member reveal"><div class="av av4">PH</div><b>Pabbisetty Harshitha Sai</b><span>PES1UG24AM182</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M16 6v20" stroke="#fff" stroke-width="2.4"/><circle cx="10" cy="16" r="3.2" fill="#fff"/><circle cx="22.5" cy="11" r="2.2" fill="#fff" opacity=".75"/><circle cx="22.5" cy="21" r="2.2" fill="#fff" opacity=".75"/></svg>
+      <div><b>Raid Replay</b><span>Kabaddi's open data standard — by Byte Tackle.</span></div>
+    </div>
+    <p class="foot-note">All teams, players and matches are fictional, produced by our seeded simulator. No real match data is used. IPTC Sport Schema and NewsCodes are standards of IPTC; this kabaddi plugin is an independent proposal and is not endorsed by IPTC.</p>
+    <p class="foot-note small">Run it yourself: <code>./run_all.sh</code> then open <code>site/index.html</code>.</p>
+  </div>
+</footer>
+
+<script>
+/*__DATA__*/
+</script>
+<script>
+/*__APP__*/
+</script>
+</body>
+</html>

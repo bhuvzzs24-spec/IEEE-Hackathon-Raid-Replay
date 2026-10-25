@@ -9,7 +9,7 @@ echo "== 1. simulate 5 matches";      $PY -m simulator.generate
 echo "== 2. convert to Sport Schema"; $PY -m converter
 echo "== 3. validate (with plugin)";  $PY -m validate
 echo "== 4. validate (NO plugin, must fail)"; $PY -m validate --no-plugin data/turtle/match3_final.ttl && exit 1 || echo "   -> rejected, as expected"
-echo "== 5. tests";                   $PY -m pytest -q
+echo "== 5. tests";                   $PY -m pytest -q --junitxml=data/pytest-report.xml
 echo "== 6. proof numbers";           $PY -m validate.proof > /dev/null
 echo "== 7. build website";           $PY site/build_site.py
 echo
