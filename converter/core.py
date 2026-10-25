@@ -418,8 +418,19 @@ def to_turtle(m: dict) -> str:
     return to_graph(m).serialize(format="turtle")
 
 
+def _canonical(o):
+    """Stable JSON-LD: graph nodes and multi-valued arrays sorted (RDF itself is unordered)."""
+    if isinstance(o, dict):
+        return {k: _canonical(v) for k, v in o.items()}
+    if isinstance(o, list):
+        items = [_canonical(v) for v in o]
+        return sorted(items, key=lambda v: json.dumps(v, sort_keys=True, ensure_ascii=False))
+    return o
+
+
 def to_jsonld(m: dict) -> str:
-    return to_graph(m).serialize(format="json-ld", context=JSONLD_CONTEXT, indent=1, sort_keys=True)
+    doc = json.loads(to_graph(m).serialize(format="json-ld", context=JSONLD_CONTEXT))
+    return json.dumps(_canonical(doc), indent=1, sort_keys=True, ensure_ascii=False)
 
 
 def from_turtle(text: str) -> dict:

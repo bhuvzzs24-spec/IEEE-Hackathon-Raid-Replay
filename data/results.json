@@ -177,7 +177,7 @@
       "diff": [
         "type_changes"
       ],
-      "detail": "{'type_changes': {\"root['events'][41]['touch_points']\": {'old_type': <class 'int'>, 'new_type': <class 'str'>, 'old_value': 2, 'new_value': '2'}}}"
+      "detail": "{'type_changes': {\"root['events'][11]['touch_points']\": {'old_type': <class 'int'>, 'new_type': <class 'str'>, 'old_value': 2, 'new_value': '2'}}}"
     }
   ],
   "negative_validator": [
@@ -197,7 +197,7 @@
       "name": "touchPoints \"2\" as a string",
       "rejected": true,
       "violations": 4,
-      "message": "Value is not <= Literal(\"7\", datatype=xsd:integer)"
+      "message": "Value is not Literal with datatype xsd:integer"
     },
     {
       "name": "Super tackle with 4+ defenders",
