@@ -1,6 +1,7 @@
 """Seeded, rule-following Valorant match simulator (made-up teams and handles; no Riot API, no scraped data).
 
-    python -m sports.valorant.simulator          # write the 4 matches to data/sports/valorant/json/
+    python -m engine generate --sport valorant   # write the 4 matches to data/sports/valorant/json/
+    python -m sports.valorant.simulator          # print a summary of the 4 matches
 
 Round by round it simulates the economy (credits, buy type), the kill feed (killer, victim, weapon,
 headshot, assists), spike plant / defuse and the round result. Player totals are computed FROM the
@@ -21,14 +22,10 @@ fits, so the same code always writes the same four files.
 """
 from __future__ import annotations
 
-import json
 import random
 import sys
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "data" / "sports" / "valorant" / "json"
-FORMAT = "raid-replay/valorant-match/1"
+FORMAT = "raid-replay/valorant-match/1"     # native layout: sports/CONTRACT.md section 4
 
 AGENTS = ["jett", "sova", "sage", "omen", "reyna", "killjoy", "phoenix", "brimstone", "viper", "cypher"]
 WIN_CONDITIONS = ["elimination", "spike-detonated", "spike-defused", "time-expired"]
@@ -189,21 +186,22 @@ def simulate(seed: int, home: int, away: int, map_name: str, gap: float, mid: st
     add({"type": "half_end", "half": half, "home_score": score[tid[0]], "away_score": score[tid[1]]})
 
     rounds = r
-    stats = player_stats(events, players, rounds)
+    stats = {x["player"]: x for x in player_stats(events, players, rounds)}
     winner_id = tid[0] if score[tid[0]] > score[tid[1]] else tid[1]
     m = {
         "format": FORMAT,
-        "match": {"id": mid, "name": f"{tdef[0][1]} vs {tdef[1][1]}", "map": map_name,
-                  "start": "2026-10-25T18:00:00+05:30",
+        "match": {"id": mid, "name": f"{tdef[0][1]} vs {tdef[1][1]}", "start": "2026-10-25T18:00:00+05:30",
                   "competition": {"id": "BTI-2026", "name": "Byte Tackle Invitational 2026 (fictional)"},
-                  "venue": {"id": "ONLINE", "name": "Online (fictional)"}, "seed": seed},
-        "teams": [{"id": tdef[k][0], "name": tdef[k][1], "side": "home" if k == 0 else "away",
-                   "first_side": "attack" if tdef[k][0] == first_attack else "defence",
-                   "players": [{"id": p, "handle": players[p]["handle"], "agent": players[p]["agent"]} for p in roster[tdef[k][0]]]}
-                  for k in (0, 1)],
+                  "venue": {"id": "ONLINE", "name": "Online (fictional)"}, "map": map_name, "seed": seed},
+        "teams": sorted(({"id": tdef[k][0], "name": tdef[k][1], "side": "home" if k == 0 else "away",
+                          "short": tdef[k][0], "first_side": "attack" if tdef[k][0] == first_attack else "defence"}
+                         for k in (0, 1)), key=lambda t: t["id"]),
+        "players": sorted(({"id": p, "name": players[p]["handle"], "team": players[p]["team"],
+                            "agent": players[p]["agent"],
+                            **{k: v for k, v in stats[p].items() if k != "player"}} for p in players),
+                          key=lambda p: p["id"]),
         "events": events,
-        "stats": stats,
-        "result": {"home_score": score[tid[0]], "away_score": score[tid[1]], "winner": winner_id},
+        "result": {"scores": {tid[0]: score[tid[0]], tid[1]: score[tid[1]]}, "winner": winner_id},
     }
     return m
 
@@ -254,17 +252,17 @@ def player_stats(events: list, players: dict, rounds: int) -> list:
     return out
 
 
-def generate() -> dict[str, dict]:
-    out = {}
+def generate() -> list[dict]:
+    """The 4 test matches (contract: deterministic, seeded, >= 3 matches)."""
+    out = []
     for i, (stem, purpose, home, away, map_name, gap, ok) in enumerate(MATCHES):
         mid = f"BTI26-V{i + 1:02d}"
         for seed in range(1000 * (i + 1), 1000 * (i + 1) + 5000):
             m = simulate(seed, home, away, map_name, gap, mid)
-            r = m["result"]
-            w, l = max(r["home_score"], r["away_score"]), min(r["home_score"], r["away_score"])
+            w, l = max(m["result"]["scores"].values()), min(m["result"]["scores"].values())
             if ok(w, l):
                 m["match"]["purpose"] = purpose
-                out[stem] = m
+                out.append(m)
                 break
         else:
             raise RuntimeError(f"no seed found for {stem}")
@@ -272,14 +270,13 @@ def generate() -> dict[str, dict]:
 
 
 def main() -> int:
-    OUT.mkdir(parents=True, exist_ok=True)
-    for stem, m in generate().items():
-        (OUT / f"{stem}.json").write_text(json.dumps(m, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    for m in generate():
         ev = m["events"]
         n = lambda t: sum(1 for e in ev if e["type"] == t)
-        r = m["result"]
-        print(f"{stem + '.json':<24} seed={m['match']['seed']:<5} {r['home_score']}-{r['away_score']}  rounds={n('round')} "
-              f"kills={n('kill')} plants={n('plant')} defuses={n('defuse')} events={len(ev)}")
+        sc = m["result"]["scores"]
+        print(f"{m['match']['id']:<11} {m['match']['purpose']:<22} seed={m['match']['seed']:<5} "
+              f"{' - '.join(f'{t} {sc[t]}' for t in sc)}  rounds={n('round')} kills={n('kill')} "
+              f"plants={n('plant')} defuses={n('defuse')} events={len(ev)}")
     return 0
 
 

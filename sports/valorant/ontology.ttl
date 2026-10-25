@@ -68,13 +68,13 @@ val:HalfEnd a owl:Class ; rdfs:subClassOf sport:Action ;
 # -----------------------------------------------------------------------------
 
 val:nativeId a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "native id"@en ;
-    rdfs:comment "The id of this match, team, player or event in the source data, so nothing is parsed back out of an IRI."@en .
+    rdfs:comment "The id of this match, competition, site, team, player or event in the source data, so nothing is parsed back out of an IRI. Written by the engine on every node."@en .
 val:map a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:string ; rdfs:label "map"@en .
 val:simulatorSeed a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ; rdfs:label "simulator seed"@en .
 val:purpose a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:string ; rdfs:label "purpose of this test match"@en .
-val:startingSide a owl:ObjectProperty ; rdfs:domain sport:TeamParticipation ; rdfs:range skos:Concept ;
-    rdfs:label "starting side"@en ; rdfs:comment "The side (attack or defence) the team plays in rounds 1-12."@en .
-val:handle a owl:DatatypeProperty ; rdfs:domain sport:Athlete ; rdfs:range xsd:string ; rdfs:label "player handle"@en .
+val:shortName a owl:DatatypeProperty ; rdfs:domain sport:Team ; rdfs:range xsd:string ; rdfs:label "short name"@en .
+val:startingSide a owl:ObjectProperty ; rdfs:domain sport:Team ; rdfs:range skos:Concept ;
+    rdfs:label "starting side"@en ; rdfs:comment "The side (attack or defence) the team plays in rounds 1-12 of this match."@en .
 val:agent a owl:ObjectProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range skos:Concept ;
     rdfs:label "agent"@en ; rdfs:comment "The agent the player picked for this match."@en .
 val:acs a owl:DatatypeProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range xsd:integer ;

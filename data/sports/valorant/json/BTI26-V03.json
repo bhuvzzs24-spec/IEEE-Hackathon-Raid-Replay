@@ -3,7 +3,6 @@
  "match": {
   "id": "BTI26-V03",
   "name": "Copper Comets vs Glasshouse Vipers",
-  "map": "Haven",
   "start": "2026-10-25T18:00:00+05:30",
   "competition": {
    "id": "BTI-2026",
@@ -13,6 +12,7 @@
    "id": "ONLINE",
    "name": "Online (fictional)"
   },
+  "map": "Haven",
   "seed": 3029,
   "purpose": "Overtime (15-13)"
  },
@@ -21,67 +21,177 @@
    "id": "CPC",
    "name": "Copper Comets",
    "side": "home",
-   "first_side": "attack",
-   "players": [
-    {
-     "id": "CPC-1",
-     "handle": "rune",
-     "agent": "viper"
-    },
-    {
-     "id": "CPC-2",
-     "handle": "sable",
-     "agent": "sage"
-    },
-    {
-     "id": "CPC-3",
-     "handle": "nyx",
-     "agent": "cypher"
-    },
-    {
-     "id": "CPC-4",
-     "handle": "pixel",
-     "agent": "brimstone"
-    },
-    {
-     "id": "CPC-5",
-     "handle": "dash",
-     "agent": "killjoy"
-    }
-   ]
+   "short": "CPC",
+   "first_side": "attack"
   },
   {
    "id": "GLV",
    "name": "Glasshouse Vipers",
    "side": "away",
-   "first_side": "defence",
-   "players": [
-    {
-     "id": "GLV-1",
-     "handle": "ember",
-     "agent": "omen"
-    },
-    {
-     "id": "GLV-2",
-     "handle": "quill",
-     "agent": "jett"
-    },
-    {
-     "id": "GLV-3",
-     "handle": "jolt",
-     "agent": "viper"
-    },
-    {
-     "id": "GLV-4",
-     "handle": "haze",
-     "agent": "brimstone"
-    },
-    {
-     "id": "GLV-5",
-     "handle": "lumen",
-     "agent": "reyna"
-    }
-   ]
+   "short": "GLV",
+   "first_side": "defence"
+  }
+ ],
+ "players": [
+  {
+   "id": "CPC-1",
+   "name": "rune",
+   "team": "CPC",
+   "agent": "viper",
+   "kills": 27,
+   "deaths": 20,
+   "assists": 15,
+   "headshots": 6,
+   "first_kills": 3,
+   "first_deaths": 3,
+   "fk_diff": 0,
+   "adr": 138,
+   "kast": 68,
+   "acs": 224
+  },
+  {
+   "id": "CPC-2",
+   "name": "sable",
+   "team": "CPC",
+   "agent": "sage",
+   "kills": 12,
+   "deaths": 21,
+   "assists": 10,
+   "headshots": 2,
+   "first_kills": 1,
+   "first_deaths": 6,
+   "fk_diff": -5,
+   "adr": 64,
+   "kast": 43,
+   "acs": 104
+  },
+  {
+   "id": "CPC-3",
+   "name": "nyx",
+   "team": "CPC",
+   "agent": "cypher",
+   "kills": 16,
+   "deaths": 21,
+   "assists": 9,
+   "headshots": 1,
+   "first_kills": 1,
+   "first_deaths": 4,
+   "fk_diff": -3,
+   "adr": 80,
+   "kast": 54,
+   "acs": 129
+  },
+  {
+   "id": "CPC-4",
+   "name": "pixel",
+   "team": "CPC",
+   "agent": "brimstone",
+   "kills": 26,
+   "deaths": 17,
+   "assists": 7,
+   "headshots": 7,
+   "first_kills": 2,
+   "first_deaths": 2,
+   "fk_diff": 0,
+   "adr": 119,
+   "kast": 68,
+   "acs": 194
+  },
+  {
+   "id": "CPC-5",
+   "name": "dash",
+   "team": "CPC",
+   "agent": "killjoy",
+   "kills": 19,
+   "deaths": 19,
+   "assists": 8,
+   "headshots": 1,
+   "first_kills": 3,
+   "first_deaths": 3,
+   "fk_diff": 0,
+   "adr": 89,
+   "kast": 54,
+   "acs": 149
+  },
+  {
+   "id": "GLV-1",
+   "name": "ember",
+   "team": "GLV",
+   "agent": "omen",
+   "kills": 27,
+   "deaths": 19,
+   "assists": 8,
+   "headshots": 8,
+   "first_kills": 1,
+   "first_deaths": 1,
+   "fk_diff": 0,
+   "adr": 126,
+   "kast": 75,
+   "acs": 202
+  },
+  {
+   "id": "GLV-2",
+   "name": "quill",
+   "team": "GLV",
+   "agent": "jett",
+   "kills": 15,
+   "deaths": 18,
+   "assists": 20,
+   "headshots": 4,
+   "first_kills": 4,
+   "first_deaths": 1,
+   "fk_diff": 3,
+   "adr": 92,
+   "kast": 68,
+   "acs": 154
+  },
+  {
+   "id": "GLV-3",
+   "name": "jolt",
+   "team": "GLV",
+   "agent": "viper",
+   "kills": 15,
+   "deaths": 23,
+   "assists": 11,
+   "headshots": 5,
+   "first_kills": 5,
+   "first_deaths": 5,
+   "fk_diff": 0,
+   "adr": 80,
+   "kast": 61,
+   "acs": 136
+  },
+  {
+   "id": "GLV-4",
+   "name": "haze",
+   "team": "GLV",
+   "agent": "brimstone",
+   "kills": 23,
+   "deaths": 21,
+   "assists": 10,
+   "headshots": 2,
+   "first_kills": 4,
+   "first_deaths": 1,
+   "fk_diff": 3,
+   "adr": 111,
+   "kast": 75,
+   "acs": 185
+  },
+  {
+   "id": "GLV-5",
+   "name": "lumen",
+   "team": "GLV",
+   "agent": "reyna",
+   "kills": 18,
+   "deaths": 19,
+   "assists": 11,
+   "headshots": 8,
+   "first_kills": 4,
+   "first_deaths": 2,
+   "fk_diff": 2,
+   "adr": 92,
+   "kast": 68,
+   "acs": 154
   }
  ],
  "events": [
@@ -3341,141 +3451,11 @@
    "away_score": 15
   }
  ],
- "stats": [
-  {
-   "player": "CPC-1",
-   "kills": 27,
-   "deaths": 20,
-   "assists": 15,
-   "headshots": 6,
-   "first_kills": 3,
-   "first_deaths": 3,
-   "fk_diff": 0,
-   "adr": 138,
-   "kast": 68,
-   "acs": 224
-  },
-  {
-   "player": "CPC-2",
-   "kills": 12,
-   "deaths": 21,
-   "assists": 10,
-   "headshots": 2,
-   "first_kills": 1,
-   "first_deaths": 6,
-   "fk_diff": -5,
-   "adr": 64,
-   "kast": 43,
-   "acs": 104
-  },
-  {
-   "player": "CPC-3",
-   "kills": 16,
-   "deaths": 21,
-   "assists": 9,
-   "headshots": 1,
-   "first_kills": 1,
-   "first_deaths": 4,
-   "fk_diff": -3,
-   "adr": 80,
-   "kast": 54,
-   "acs": 129
-  },
-  {
-   "player": "CPC-4",
-   "kills": 26,
-   "deaths": 17,
-   "assists": 7,
-   "headshots": 7,
-   "first_kills": 2,
-   "first_deaths": 2,
-   "fk_diff": 0,
-   "adr": 119,
-   "kast": 68,
-   "acs": 194
-  },
-  {
-   "player": "CPC-5",
-   "kills": 19,
-   "deaths": 19,
-   "assists": 8,
-   "headshots": 1,
-   "first_kills": 3,
-   "first_deaths": 3,
-   "fk_diff": 0,
-   "adr": 89,
-   "kast": 54,
-   "acs": 149
-  },
-  {
-   "player": "GLV-1",
-   "kills": 27,
-   "deaths": 19,
-   "assists": 8,
-   "headshots": 8,
-   "first_kills": 1,
-   "first_deaths": 1,
-   "fk_diff": 0,
-   "adr": 126,
-   "kast": 75,
-   "acs": 202
-  },
-  {
-   "player": "GLV-2",
-   "kills": 15,
-   "deaths": 18,
-   "assists": 20,
-   "headshots": 4,
-   "first_kills": 4,
-   "first_deaths": 1,
-   "fk_diff": 3,
-   "adr": 92,
-   "kast": 68,
-   "acs": 154
-  },
-  {
-   "player": "GLV-3",
-   "kills": 15,
-   "deaths": 23,
-   "assists": 11,
-   "headshots": 5,
-   "first_kills": 5,
-   "first_deaths": 5,
-   "fk_diff": 0,
-   "adr": 80,
-   "kast": 61,
-   "acs": 136
-  },
-  {
-   "player": "GLV-4",
-   "kills": 23,
-   "deaths": 21,
-   "assists": 10,
-   "headshots": 2,
-   "first_kills": 4,
-   "first_deaths": 1,
-   "fk_diff": 3,
-   "adr": 111,
-   "kast": 75,
-   "acs": 185
-  },
-  {
-   "player": "GLV-5",
-   "kills": 18,
-   "deaths": 19,
-   "assists": 11,
-   "headshots": 8,
-   "first_kills": 4,
-   "first_deaths": 2,
-   "fk_diff": 2,
-   "adr": 92,
-   "kast": 68,
-   "acs": 154
-  }
- ],
  "result": {
-  "home_score": 13,
-  "away_score": 15,
+  "scores": {
+   "CPC": 13,
+   "GLV": 15
+  },
   "winner": "GLV"
  }
 }

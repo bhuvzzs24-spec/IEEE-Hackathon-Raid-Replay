@@ -3,7 +3,6 @@
  "match": {
   "id": "BTI26-V01",
   "name": "Nightshade Nomads vs Copper Comets",
-  "map": "Ascent",
   "start": "2026-10-25T18:00:00+05:30",
   "competition": {
    "id": "BTI-2026",
@@ -13,75 +12,186 @@
    "id": "ONLINE",
    "name": "Online (fictional)"
   },
+  "map": "Ascent",
   "seed": 1000,
   "purpose": "Normal match (13-x)"
  },
  "teams": [
   {
-   "id": "NSN",
-   "name": "Nightshade Nomads",
-   "side": "home",
-   "first_side": "defence",
-   "players": [
-    {
-     "id": "NSN-1",
-     "handle": "vexa",
-     "agent": "phoenix"
-    },
-    {
-     "id": "NSN-2",
-     "handle": "kairo",
-     "agent": "sova"
-    },
-    {
-     "id": "NSN-3",
-     "handle": "milo",
-     "agent": "cypher"
-    },
-    {
-     "id": "NSN-4",
-     "handle": "tz",
-     "agent": "sage"
-    },
-    {
-     "id": "NSN-5",
-     "handle": "orbit",
-     "agent": "jett"
-    }
-   ]
-  },
-  {
    "id": "CPC",
    "name": "Copper Comets",
    "side": "away",
-   "first_side": "attack",
-   "players": [
-    {
-     "id": "CPC-1",
-     "handle": "rune",
-     "agent": "brimstone"
-    },
-    {
-     "id": "CPC-2",
-     "handle": "sable",
-     "agent": "omen"
-    },
-    {
-     "id": "CPC-3",
-     "handle": "nyx",
-     "agent": "killjoy"
-    },
-    {
-     "id": "CPC-4",
-     "handle": "pixel",
-     "agent": "sova"
-    },
-    {
-     "id": "CPC-5",
-     "handle": "dash",
-     "agent": "viper"
-    }
-   ]
+   "short": "CPC",
+   "first_side": "attack"
+  },
+  {
+   "id": "NSN",
+   "name": "Nightshade Nomads",
+   "side": "home",
+   "short": "NSN",
+   "first_side": "defence"
+  }
+ ],
+ "players": [
+  {
+   "id": "CPC-1",
+   "name": "rune",
+   "team": "CPC",
+   "agent": "brimstone",
+   "kills": 6,
+   "deaths": 15,
+   "assists": 10,
+   "headshots": 1,
+   "first_kills": 2,
+   "first_deaths": 2,
+   "fk_diff": 0,
+   "adr": 54,
+   "kast": 48,
+   "acs": 90
+  },
+  {
+   "id": "CPC-2",
+   "name": "sable",
+   "team": "CPC",
+   "agent": "omen",
+   "kills": 12,
+   "deaths": 14,
+   "assists": 5,
+   "headshots": 2,
+   "first_kills": 1,
+   "first_deaths": 2,
+   "fk_diff": -1,
+   "adr": 79,
+   "kast": 52,
+   "acs": 128
+  },
+  {
+   "id": "CPC-3",
+   "name": "nyx",
+   "team": "CPC",
+   "agent": "killjoy",
+   "kills": 16,
+   "deaths": 12,
+   "assists": 1,
+   "headshots": 6,
+   "first_kills": 4,
+   "first_deaths": 2,
+   "fk_diff": 2,
+   "adr": 89,
+   "kast": 52,
+   "acs": 153
+  },
+  {
+   "id": "CPC-4",
+   "name": "pixel",
+   "team": "CPC",
+   "agent": "sova",
+   "kills": 14,
+   "deaths": 12,
+   "assists": 8,
+   "headshots": 0,
+   "first_kills": 2,
+   "first_deaths": 5,
+   "fk_diff": -3,
+   "adr": 92,
+   "kast": 67,
+   "acs": 153
+  },
+  {
+   "id": "CPC-5",
+   "name": "dash",
+   "team": "CPC",
+   "agent": "viper",
+   "kills": 9,
+   "deaths": 13,
+   "assists": 4,
+   "headshots": 1,
+   "first_kills": 0,
+   "first_deaths": 1,
+   "fk_diff": -1,
+   "adr": 57,
+   "kast": 57,
+   "acs": 92
+  },
+  {
+   "id": "NSN-1",
+   "name": "vexa",
+   "team": "NSN",
+   "agent": "phoenix",
+   "kills": 10,
+   "deaths": 10,
+   "assists": 14,
+   "headshots": 3,
+   "first_kills": 1,
+   "first_deaths": 1,
+   "fk_diff": 0,
+   "adr": 84,
+   "kast": 57,
+   "acs": 136
+  },
+  {
+   "id": "NSN-2",
+   "name": "kairo",
+   "team": "NSN",
+   "agent": "sova",
+   "kills": 15,
+   "deaths": 12,
+   "assists": 5,
+   "headshots": 2,
+   "first_kills": 5,
+   "first_deaths": 1,
+   "fk_diff": 4,
+   "adr": 94,
+   "kast": 62,
+   "acs": 162
+  },
+  {
+   "id": "NSN-3",
+   "name": "milo",
+   "team": "NSN",
+   "agent": "cypher",
+   "kills": 13,
+   "deaths": 12,
+   "assists": 11,
+   "headshots": 1,
+   "first_kills": 2,
+   "first_deaths": 3,
+   "fk_diff": -1,
+   "adr": 95,
+   "kast": 57,
+   "acs": 156
+  },
+  {
+   "id": "NSN-4",
+   "name": "tz",
+   "team": "NSN",
+   "agent": "sage",
+   "kills": 13,
+   "deaths": 12,
+   "assists": 10,
+   "headshots": 0,
+   "first_kills": 3,
+   "first_deaths": 3,
+   "fk_diff": 0,
+   "adr": 94,
+   "kast": 71,
+   "acs": 157
+  },
+  {
+   "id": "NSN-5",
+   "name": "orbit",
+   "team": "NSN",
+   "agent": "jett",
+   "kills": 15,
+   "deaths": 11,
+   "assists": 15,
+   "headshots": 5,
+   "first_kills": 1,
+   "first_deaths": 1,
+   "fk_diff": 0,
+   "adr": 113,
+   "kast": 71,
+   "acs": 183
   }
  ],
  "events": [
@@ -2221,141 +2331,11 @@
    "away_score": 8
   }
  ],
- "stats": [
-  {
-   "player": "NSN-1",
-   "kills": 10,
-   "deaths": 10,
-   "assists": 14,
-   "headshots": 3,
-   "first_kills": 1,
-   "first_deaths": 1,
-   "fk_diff": 0,
-   "adr": 84,
-   "kast": 57,
-   "acs": 136
-  },
-  {
-   "player": "NSN-2",
-   "kills": 15,
-   "deaths": 12,
-   "assists": 5,
-   "headshots": 2,
-   "first_kills": 5,
-   "first_deaths": 1,
-   "fk_diff": 4,
-   "adr": 94,
-   "kast": 62,
-   "acs": 162
-  },
-  {
-   "player": "NSN-3",
-   "kills": 13,
-   "deaths": 12,
-   "assists": 11,
-   "headshots": 1,
-   "first_kills": 2,
-   "first_deaths": 3,
-   "fk_diff": -1,
-   "adr": 95,
-   "kast": 57,
-   "acs": 156
-  },
-  {
-   "player": "NSN-4",
-   "kills": 13,
-   "deaths": 12,
-   "assists": 10,
-   "headshots": 0,
-   "first_kills": 3,
-   "first_deaths": 3,
-   "fk_diff": 0,
-   "adr": 94,
-   "kast": 71,
-   "acs": 157
-  },
-  {
-   "player": "NSN-5",
-   "kills": 15,
-   "deaths": 11,
-   "assists": 15,
-   "headshots": 5,
-   "first_kills": 1,
-   "first_deaths": 1,
-   "fk_diff": 0,
-   "adr": 113,
-   "kast": 71,
-   "acs": 183
-  },
-  {
-   "player": "CPC-1",
-   "kills": 6,
-   "deaths": 15,
-   "assists": 10,
-   "headshots": 1,
-   "first_kills": 2,
-   "first_deaths": 2,
-   "fk_diff": 0,
-   "adr": 54,
-   "kast": 48,
-   "acs": 90
-  },
-  {
-   "player": "CPC-2",
-   "kills": 12,
-   "deaths": 14,
-   "assists": 5,
-   "headshots": 2,
-   "first_kills": 1,
-   "first_deaths": 2,
-   "fk_diff": -1,
-   "adr": 79,
-   "kast": 52,
-   "acs": 128
-  },
-  {
-   "player": "CPC-3",
-   "kills": 16,
-   "deaths": 12,
-   "assists": 1,
-   "headshots": 6,
-   "first_kills": 4,
-   "first_deaths": 2,
-   "fk_diff": 2,
-   "adr": 89,
-   "kast": 52,
-   "acs": 153
-  },
-  {
-   "player": "CPC-4",
-   "kills": 14,
-   "deaths": 12,
-   "assists": 8,
-   "headshots": 0,
-   "first_kills": 2,
-   "first_deaths": 5,
-   "fk_diff": -3,
-   "adr": 92,
-   "kast": 67,
-   "acs": 153
-  },
-  {
-   "player": "CPC-5",
-   "kills": 9,
-   "deaths": 13,
-   "assists": 4,
-   "headshots": 1,
-   "first_kills": 0,
-   "first_deaths": 1,
-   "fk_diff": -1,
-   "adr": 57,
-   "kast": 57,
-   "acs": 92
-  }
- ],
  "result": {
-  "home_score": 13,
-  "away_score": 8,
+  "scores": {
+   "NSN": 13,
+   "CPC": 8
+  },
   "winner": "NSN"
  }
 }

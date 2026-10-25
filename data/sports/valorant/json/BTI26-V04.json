@@ -3,7 +3,6 @@
  "match": {
   "id": "BTI26-V04",
   "name": "Tidal Lynx vs Nightshade Nomads",
-  "map": "Split",
   "start": "2026-10-25T18:00:00+05:30",
   "competition": {
    "id": "BTI-2026",
@@ -13,75 +12,186 @@
    "id": "ONLINE",
    "name": "Online (fictional)"
   },
+  "map": "Split",
   "seed": 4000,
   "purpose": "One-sided (13-3)"
  },
  "teams": [
   {
-   "id": "TDL",
-   "name": "Tidal Lynx",
-   "side": "home",
-   "first_side": "defence",
-   "players": [
-    {
-     "id": "TDL-1",
-     "handle": "frost",
-     "agent": "phoenix"
-    },
-    {
-     "id": "TDL-2",
-     "handle": "rook",
-     "agent": "cypher"
-    },
-    {
-     "id": "TDL-3",
-     "handle": "zeph",
-     "agent": "brimstone"
-    },
-    {
-     "id": "TDL-4",
-     "handle": "koa",
-     "agent": "killjoy"
-    },
-    {
-     "id": "TDL-5",
-     "handle": "blip",
-     "agent": "sova"
-    }
-   ]
-  },
-  {
    "id": "NSN",
    "name": "Nightshade Nomads",
    "side": "away",
-   "first_side": "attack",
-   "players": [
-    {
-     "id": "NSN-1",
-     "handle": "vexa",
-     "agent": "killjoy"
-    },
-    {
-     "id": "NSN-2",
-     "handle": "kairo",
-     "agent": "sova"
-    },
-    {
-     "id": "NSN-3",
-     "handle": "milo",
-     "agent": "viper"
-    },
-    {
-     "id": "NSN-4",
-     "handle": "tz",
-     "agent": "omen"
-    },
-    {
-     "id": "NSN-5",
-     "handle": "orbit",
-     "agent": "reyna"
-    }
-   ]
+   "short": "NSN",
+   "first_side": "attack"
+  },
+  {
+   "id": "TDL",
+   "name": "Tidal Lynx",
+   "side": "home",
+   "short": "TDL",
+   "first_side": "defence"
+  }
+ ],
+ "players": [
+  {
+   "id": "NSN-1",
+   "name": "vexa",
+   "team": "NSN",
+   "agent": "killjoy",
+   "kills": 3,
+   "deaths": 15,
+   "assists": 8,
+   "headshots": 0,
+   "first_kills": 1,
+   "first_deaths": 4,
+   "fk_diff": -3,
+   "adr": 44,
+   "kast": 44,
+   "acs": 73
+  },
+  {
+   "id": "NSN-2",
+   "name": "kairo",
+   "team": "NSN",
+   "agent": "sova",
+   "kills": 5,
+   "deaths": 15,
+   "assists": 4,
+   "headshots": 3,
+   "first_kills": 1,
+   "first_deaths": 0,
+   "fk_diff": 1,
+   "adr": 47,
+   "kast": 38,
+   "acs": 78
+  },
+  {
+   "id": "NSN-3",
+   "name": "milo",
+   "team": "NSN",
+   "agent": "viper",
+   "kills": 3,
+   "deaths": 16,
+   "assists": 2,
+   "headshots": 0,
+   "first_kills": 0,
+   "first_deaths": 4,
+   "fk_diff": -4,
+   "adr": 28,
+   "kast": 25,
+   "acs": 45
+  },
+  {
+   "id": "NSN-4",
+   "name": "tz",
+   "team": "NSN",
+   "agent": "omen",
+   "kills": 3,
+   "deaths": 15,
+   "assists": 2,
+   "headshots": 0,
+   "first_kills": 0,
+   "first_deaths": 3,
+   "fk_diff": -3,
+   "adr": 27,
+   "kast": 31,
+   "acs": 43
+  },
+  {
+   "id": "NSN-5",
+   "name": "orbit",
+   "team": "NSN",
+   "agent": "reyna",
+   "kills": 6,
+   "deaths": 14,
+   "assists": 3,
+   "headshots": 0,
+   "first_kills": 2,
+   "first_deaths": 1,
+   "fk_diff": 1,
+   "adr": 53,
+   "kast": 38,
+   "acs": 90
+  },
+  {
+   "id": "TDL-1",
+   "name": "frost",
+   "team": "TDL",
+   "agent": "phoenix",
+   "kills": 13,
+   "deaths": 2,
+   "assists": 15,
+   "headshots": 0,
+   "first_kills": 3,
+   "first_deaths": 0,
+   "fk_diff": 3,
+   "adr": 138,
+   "kast": 100,
+   "acs": 228
+  },
+  {
+   "id": "TDL-2",
+   "name": "rook",
+   "team": "TDL",
+   "agent": "cypher",
+   "kills": 16,
+   "deaths": 3,
+   "assists": 8,
+   "headshots": 1,
+   "first_kills": 0,
+   "first_deaths": 0,
+   "fk_diff": 0,
+   "adr": 135,
+   "kast": 88,
+   "acs": 218
+  },
+  {
+   "id": "TDL-3",
+   "name": "zeph",
+   "team": "TDL",
+   "agent": "brimstone",
+   "kills": 16,
+   "deaths": 4,
+   "assists": 12,
+   "headshots": 4,
+   "first_kills": 3,
+   "first_deaths": 1,
+   "fk_diff": 2,
+   "adr": 149,
+   "kast": 88,
+   "acs": 247
+  },
+  {
+   "id": "TDL-4",
+   "name": "koa",
+   "team": "TDL",
+   "agent": "killjoy",
+   "kills": 14,
+   "deaths": 5,
+   "assists": 8,
+   "headshots": 1,
+   "first_kills": 4,
+   "first_deaths": 1,
+   "fk_diff": 3,
+   "adr": 119,
+   "kast": 81,
+   "acs": 205
+  },
+  {
+   "id": "TDL-5",
+   "name": "blip",
+   "team": "TDL",
+   "agent": "sova",
+   "kills": 16,
+   "deaths": 6,
+   "assists": 6,
+   "headshots": 2,
+   "first_kills": 2,
+   "first_deaths": 2,
+   "fk_diff": 0,
+   "adr": 130,
+   "kast": 81,
+   "acs": 216
   }
  ],
  "events": [
@@ -1718,141 +1828,11 @@
    "away_score": 3
   }
  ],
- "stats": [
-  {
-   "player": "TDL-1",
-   "kills": 13,
-   "deaths": 2,
-   "assists": 15,
-   "headshots": 0,
-   "first_kills": 3,
-   "first_deaths": 0,
-   "fk_diff": 3,
-   "adr": 138,
-   "kast": 100,
-   "acs": 228
-  },
-  {
-   "player": "TDL-2",
-   "kills": 16,
-   "deaths": 3,
-   "assists": 8,
-   "headshots": 1,
-   "first_kills": 0,
-   "first_deaths": 0,
-   "fk_diff": 0,
-   "adr": 135,
-   "kast": 88,
-   "acs": 218
-  },
-  {
-   "player": "TDL-3",
-   "kills": 16,
-   "deaths": 4,
-   "assists": 12,
-   "headshots": 4,
-   "first_kills": 3,
-   "first_deaths": 1,
-   "fk_diff": 2,
-   "adr": 149,
-   "kast": 88,
-   "acs": 247
-  },
-  {
-   "player": "TDL-4",
-   "kills": 14,
-   "deaths": 5,
-   "assists": 8,
-   "headshots": 1,
-   "first_kills": 4,
-   "first_deaths": 1,
-   "fk_diff": 3,
-   "adr": 119,
-   "kast": 81,
-   "acs": 205
-  },
-  {
-   "player": "TDL-5",
-   "kills": 16,
-   "deaths": 6,
-   "assists": 6,
-   "headshots": 2,
-   "first_kills": 2,
-   "first_deaths": 2,
-   "fk_diff": 0,
-   "adr": 130,
-   "kast": 81,
-   "acs": 216
-  },
-  {
-   "player": "NSN-1",
-   "kills": 3,
-   "deaths": 15,
-   "assists": 8,
-   "headshots": 0,
-   "first_kills": 1,
-   "first_deaths": 4,
-   "fk_diff": -3,
-   "adr": 44,
-   "kast": 44,
-   "acs": 73
-  },
-  {
-   "player": "NSN-2",
-   "kills": 5,
-   "deaths": 15,
-   "assists": 4,
-   "headshots": 3,
-   "first_kills": 1,
-   "first_deaths": 0,
-   "fk_diff": 1,
-   "adr": 47,
-   "kast": 38,
-   "acs": 78
-  },
-  {
-   "player": "NSN-3",
-   "kills": 3,
-   "deaths": 16,
-   "assists": 2,
-   "headshots": 0,
-   "first_kills": 0,
-   "first_deaths": 4,
-   "fk_diff": -4,
-   "adr": 28,
-   "kast": 25,
-   "acs": 45
-  },
-  {
-   "player": "NSN-4",
-   "kills": 3,
-   "deaths": 15,
-   "assists": 2,
-   "headshots": 0,
-   "first_kills": 0,
-   "first_deaths": 3,
-   "fk_diff": -3,
-   "adr": 27,
-   "kast": 31,
-   "acs": 43
-  },
-  {
-   "player": "NSN-5",
-   "kills": 6,
-   "deaths": 14,
-   "assists": 3,
-   "headshots": 0,
-   "first_kills": 2,
-   "first_deaths": 1,
-   "fk_diff": 1,
-   "adr": 53,
-   "kast": 38,
-   "acs": 90
-  }
- ],
  "result": {
-  "home_score": 13,
-  "away_score": 3,
+  "scores": {
+   "TDL": 13,
+   "NSN": 3
+  },
   "winner": "TDL"
  }
 }
