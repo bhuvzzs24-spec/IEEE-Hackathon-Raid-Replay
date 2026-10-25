@@ -1,0 +1,1130 @@
+@prefix kk: <https://sportschema.org/ontologies/khokho/> .
+@prefix kkmethod: <https://sportschema.org/ontologies/khokho/tagmethod/> .
+@prefix medtop: <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spactionclass: <http://cv.iptc.org/newscodes/spactionclass/> .
+@prefix spct: <http://cv.iptc.org/newscodes/spct/> .
+@prefix speventoutcome: <http://cv.iptc.org/newscodes/speventoutcome/> .
+@prefix speventstatus: <http://cv.iptc.org/newscodes/speventstatus/> .
+@prefix sport: <https://sportschema.org/ontologies/main/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E001> a kk:TurnStart,
+        sport:Action ;
+    rdfs:label "turn_start #1"^^xsd:string ;
+    kk:inning 1 ;
+    kk:nativeId "SKK26-M01-E001"^^xsd:string ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "1"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E002> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #2"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E002"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-03> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-06> ;
+    kk:timeOfTag 34 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "2"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E003> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #3"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E003"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-02> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-06> ;
+    kk:timeOfTag 47 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "3"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E004> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #4"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E004"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    kk:timeOfTag 61 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "4"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E005> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #5"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E005"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-05> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    kk:timeOfTag 62 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "5"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E006> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #6"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E006"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-04> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-04> ;
+    kk:timeOfTag 112 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "6"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E007> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #7"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E007"^^xsd:string ;
+    kk:points 3 ;
+    kk:tagMethod kkmethod:sky-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-06> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    kk:timeOfTag 129 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "7"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E008> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #8"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E008"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-07> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-02> ;
+    kk:timeOfTag 165 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "8"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E009> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #9"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E009"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-09> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    kk:timeOfTag 170 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "9"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E010> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #10"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E010"^^xsd:string ;
+    kk:points 3 ;
+    kk:tagMethod kkmethod:sky-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:timeOfTag 177 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "10"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E011> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #11"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E011"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-03> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:timeOfTag 198 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "11"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E012> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #12"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E012"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-09> ;
+    kk:timeOfTag 325 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "12"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E013> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #13"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E013"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-02> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-09> ;
+    kk:timeOfTag 341 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "13"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E014> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #14"^^xsd:string ;
+    kk:defenderBatch 5 ;
+    kk:nativeId "SKK26-M01-E014"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-05> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:timeOfTag 409 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "14"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E015> a kk:TurnEnd,
+        sport:Action ;
+    rdfs:label "turn_end #15"^^xsd:string ;
+    kk:nativeId "SKK26-M01-E015"^^xsd:string ;
+    kk:turnDurationSeconds 420 ;
+    kk:turnNumber 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "15"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E016> a kk:Turn,
+        sport:Action ;
+    rdfs:label "turn #16"^^xsd:string ;
+    kk:chasingTeam <https://raid-replay.example/data/khokho/team/AMB> ;
+    kk:defendingTeam <https://raid-replay.example/data/khokho/team/BHR> ;
+    kk:nativeId "SKK26-M01-E016"^^xsd:string ;
+    kk:tagCount 13 ;
+    kk:turnNumber 1 ;
+    kk:turnPoints 28 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "16"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E017> a kk:TurnStart,
+        sport:Action ;
+    rdfs:label "turn_start #17"^^xsd:string ;
+    kk:inning 1 ;
+    kk:nativeId "SKK26-M01-E017"^^xsd:string ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "17"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E018> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #18"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E018"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    kk:timeOfTag 14 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "18"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E019> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #19"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E019"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-02> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    kk:timeOfTag 28 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "19"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E020> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #20"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E020"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-03> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-09> ;
+    kk:timeOfTag 59 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "20"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E021> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #21"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E021"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-05> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-09> ;
+    kk:timeOfTag 73 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "21"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E022> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #22"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E022"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-04> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    kk:timeOfTag 107 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "22"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E023> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #23"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E023"^^xsd:string ;
+    kk:points 3 ;
+    kk:tagMethod kkmethod:sky-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-06> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-06> ;
+    kk:timeOfTag 325 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "23"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E024> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #24"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E024"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-09> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-02> ;
+    kk:timeOfTag 341 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "24"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E025> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #25"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E025"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    kk:timeOfTag 347 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "25"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E026> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #26"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E026"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-04> ;
+    kk:timeOfTag 395 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "26"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E027> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #27"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E027"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-03> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-04> ;
+    kk:timeOfTag 401 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "27"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E028> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #28"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E028"^^xsd:string ;
+    kk:points 3 ;
+    kk:tagMethod kkmethod:sky-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-04> ;
+    kk:timeOfTag 402 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "28"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E029> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #29"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E029"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-02> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-07> ;
+    kk:timeOfTag 419 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "29"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E030> a kk:TurnEnd,
+        sport:Action ;
+    rdfs:label "turn_end #30"^^xsd:string ;
+    kk:nativeId "SKK26-M01-E030"^^xsd:string ;
+    kk:turnDurationSeconds 420 ;
+    kk:turnNumber 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "30"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E031> a kk:Turn,
+        sport:Action ;
+    rdfs:label "turn #31"^^xsd:string ;
+    kk:chasingTeam <https://raid-replay.example/data/khokho/team/BHR> ;
+    kk:defendingTeam <https://raid-replay.example/data/khokho/team/AMB> ;
+    kk:nativeId "SKK26-M01-E031"^^xsd:string ;
+    kk:tagCount 12 ;
+    kk:turnNumber 2 ;
+    kk:turnPoints 26 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "31"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E032> a kk:TurnStart,
+        sport:Action ;
+    rdfs:label "turn_start #32"^^xsd:string ;
+    kk:inning 2 ;
+    kk:nativeId "SKK26-M01-E032"^^xsd:string ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "32"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E033> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #33"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E033"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-02> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-02> ;
+    kk:timeOfTag 51 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "33"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E034> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #34"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E034"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-03> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-09> ;
+    kk:timeOfTag 112 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "34"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E035> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #35"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E035"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    kk:timeOfTag 156 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "35"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E036> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #36"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E036"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-04> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-03> ;
+    kk:timeOfTag 193 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "36"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E037> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #37"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E037"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-06> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-03> ;
+    kk:timeOfTag 207 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "37"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E038> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #38"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E038"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-05> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:timeOfTag 210 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "38"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E039> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #39"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E039"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    kk:timeOfTag 239 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "39"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E040> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #40"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E040"^^xsd:string ;
+    kk:points 3 ;
+    kk:tagMethod kkmethod:sky-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-07> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-09> ;
+    kk:timeOfTag 244 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "40"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E041> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #41"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E041"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-09> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:timeOfTag 253 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "41"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E042> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #42"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E042"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    kk:timeOfTag 293 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "42"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E043> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #43"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E043"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-02> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    kk:timeOfTag 341 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "43"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E044> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #44"^^xsd:string ;
+    kk:defenderBatch 4 ;
+    kk:nativeId "SKK26-M01-E044"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-03> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    kk:timeOfTag 342 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "44"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E045> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #45"^^xsd:string ;
+    kk:defenderBatch 5 ;
+    kk:nativeId "SKK26-M01-E045"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-05> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-06> ;
+    kk:timeOfTag 350 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "45"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E046> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #46"^^xsd:string ;
+    kk:defenderBatch 5 ;
+    kk:nativeId "SKK26-M01-E046"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-06> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:timeOfTag 382 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "46"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E047> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #47"^^xsd:string ;
+    kk:defenderBatch 5 ;
+    kk:nativeId "SKK26-M01-E047"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/BHR-04> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    kk:timeOfTag 384 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "47"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E048> a kk:TurnEnd,
+        sport:Action ;
+    rdfs:label "turn_end #48"^^xsd:string ;
+    kk:nativeId "SKK26-M01-E048"^^xsd:string ;
+    kk:turnDurationSeconds 420 ;
+    kk:turnNumber 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "48"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E049> a kk:Turn,
+        sport:Action ;
+    rdfs:label "turn #49"^^xsd:string ;
+    kk:chasingTeam <https://raid-replay.example/data/khokho/team/AMB> ;
+    kk:defendingTeam <https://raid-replay.example/data/khokho/team/BHR> ;
+    kk:nativeId "SKK26-M01-E049"^^xsd:string ;
+    kk:tagCount 15 ;
+    kk:turnNumber 3 ;
+    kk:turnPoints 31 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "49"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E050> a kk:TurnStart,
+        sport:Action ;
+    rdfs:label "turn_start #50"^^xsd:string ;
+    kk:inning 2 ;
+    kk:nativeId "SKK26-M01-E050"^^xsd:string ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "50"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E051> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #51"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E051"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:pole-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-06> ;
+    kk:timeOfTag 29 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "51"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E052> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #52"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E052"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-03> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-03> ;
+    kk:timeOfTag 181 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "52"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E053> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #53"^^xsd:string ;
+    kk:defenderBatch 1 ;
+    kk:nativeId "SKK26-M01-E053"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-02> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    kk:timeOfTag 223 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "53"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E054> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #54"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E054"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-06> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    kk:timeOfTag 228 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "54"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E055> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #55"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E055"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-05> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    kk:timeOfTag 272 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "55"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E056> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #56"^^xsd:string ;
+    kk:defenderBatch 2 ;
+    kk:nativeId "SKK26-M01-E056"^^xsd:string ;
+    kk:points 3 ;
+    kk:tagMethod kkmethod:sky-dive ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-04> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-05> ;
+    kk:timeOfTag 290 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "56"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E057> a kk:Tag,
+        sport:Action ;
+    rdfs:label "tag #57"^^xsd:string ;
+    kk:defenderBatch 3 ;
+    kk:nativeId "SKK26-M01-E057"^^xsd:string ;
+    kk:points 2 ;
+    kk:tagMethod kkmethod:touch ;
+    kk:taggedDefender <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    kk:tagger <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    kk:timeOfTag 374 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:score ;
+    sport:sequenceNumber "57"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E058> a kk:TurnEnd,
+        sport:Action ;
+    rdfs:label "turn_end #58"^^xsd:string ;
+    kk:nativeId "SKK26-M01-E058"^^xsd:string ;
+    kk:turnDurationSeconds 420 ;
+    kk:turnNumber 4 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "58"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/action/SKK26-M01-E059> a kk:Turn,
+        sport:Action ;
+    rdfs:label "turn #59"^^xsd:string ;
+    kk:chasingTeam <https://raid-replay.example/data/khokho/team/BHR> ;
+    kk:defendingTeam <https://raid-replay.example/data/khokho/team/AMB> ;
+    kk:nativeId "SKK26-M01-E059"^^xsd:string ;
+    kk:tagCount 7 ;
+    kk:turnNumber 4 ;
+    kk:turnPoints 15 ;
+    sport:actionInEvent <https://raid-replay.example/data/khokho/event/SKK26-M01> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "59"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-01> a sport:IndividualParticipation ;
+    kk:defenderBatch 1 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-01> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "1"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-02> a sport:IndividualParticipation ;
+    kk:defenderBatch 1 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-02> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "2"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-03> a sport:IndividualParticipation ;
+    kk:defenderBatch 1 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-03> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "3"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-04> a sport:IndividualParticipation ;
+    kk:defenderBatch 2 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-04> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "4"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-05> a sport:IndividualParticipation ;
+    kk:defenderBatch 2 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-05> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "5"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-06> a sport:IndividualParticipation ;
+    kk:defenderBatch 2 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-06> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "6"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-07> a sport:IndividualParticipation ;
+    kk:defenderBatch 3 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-07> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "7"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-08> a sport:IndividualParticipation ;
+    kk:defenderBatch 3 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-08> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "8"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-09> a sport:IndividualParticipation ;
+    kk:defenderBatch 3 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-09> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "9"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-10> a sport:IndividualParticipation ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-10> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "10"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-11> a sport:IndividualParticipation ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-11> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "11"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB-12> a sport:IndividualParticipation ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/AMB-12> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> ;
+    sport:uniformNumberEvent "12"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-01> a sport:IndividualParticipation ;
+    kk:defenderBatch 1 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-01> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "1"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-02> a sport:IndividualParticipation ;
+    kk:defenderBatch 1 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-02> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "2"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-03> a sport:IndividualParticipation ;
+    kk:defenderBatch 1 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-03> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "3"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-04> a sport:IndividualParticipation ;
+    kk:defenderBatch 2 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-04> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "4"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-05> a sport:IndividualParticipation ;
+    kk:defenderBatch 2 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-05> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "5"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-06> a sport:IndividualParticipation ;
+    kk:defenderBatch 2 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-06> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "6"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-07> a sport:IndividualParticipation ;
+    kk:defenderBatch 3 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-07> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "7"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-08> a sport:IndividualParticipation ;
+    kk:defenderBatch 3 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-08> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "8"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-09> a sport:IndividualParticipation ;
+    kk:defenderBatch 3 ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-09> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "9"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-10> a sport:IndividualParticipation ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-10> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "10"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-11> a sport:IndividualParticipation ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-11> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "11"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR-12> a sport:IndividualParticipation ;
+    sport:participationBy <https://raid-replay.example/data/khokho/athlete/BHR-12> ;
+    sport:teamParticipation <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:uniformNumberEvent "12"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-10> a sport:Athlete ;
+    rdfs:label "Mayur Kale"^^xsd:string ;
+    kk:nativeId "AMB-10"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-11> a sport:Athlete ;
+    rdfs:label "Kunal Dhumal"^^xsd:string ;
+    kk:nativeId "AMB-11"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-12> a sport:Athlete ;
+    rdfs:label "Yash More"^^xsd:string ;
+    kk:nativeId "AMB-12"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-10> a sport:Athlete ;
+    rdfs:label "Pankaj Kale"^^xsd:string ;
+    kk:nativeId "BHR-10"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-11> a sport:Athlete ;
+    rdfs:label "Hrishi Dhumal"^^xsd:string ;
+    kk:nativeId "BHR-11"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-12> a sport:Athlete ;
+    rdfs:label "Ajinkya More"^^xsd:string ;
+    kk:nativeId "BHR-12"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/competition/SKK-2026> a sport:Competition ;
+    rdfs:label "Sahyadri Kho-Kho League 2026 (fictional)"^^xsd:string ;
+    kk:nativeId "SKK-2026"^^xsd:string ;
+    sport:competitionType spct:competition ;
+    sport:sport medtop:15000000 .
+
+<https://raid-replay.example/data/khokho/site/V1> a sport:Site ;
+    rdfs:label "Shivaji Maidan Mat Arena, Satara (fictional)"^^xsd:string ;
+    kk:nativeId "V1"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-05> a sport:Athlete ;
+    rdfs:label "Ganesh Gaikwad"^^xsd:string ;
+    kk:nativeId "AMB-05"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-04> a sport:Athlete ;
+    rdfs:label "Vishal Kadam"^^xsd:string ;
+    kk:nativeId "AMB-04"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-07> a sport:Athlete ;
+    rdfs:label "Rushikesh Pawar"^^xsd:string ;
+    kk:nativeId "BHR-07"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-09> a sport:Athlete ;
+    rdfs:label "Sachin Jadhav"^^xsd:string ;
+    kk:nativeId "BHR-09"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/team/AMB> a sport:Team ;
+    rdfs:label "Ambegaon Arrows (fictional)"^^xsd:string ;
+    kk:nativeId "AMB"^^xsd:string ;
+    kk:shortName "AMB"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/team/BHR> a sport:Team ;
+    rdfs:label "Bhor Blazers (fictional)"^^xsd:string ;
+    kk:nativeId "BHR"^^xsd:string ;
+    kk:shortName "BHR"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-02> a sport:Athlete ;
+    rdfs:label "Pratik Shinde"^^xsd:string ;
+    kk:nativeId "AMB-02"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-03> a sport:Athlete ;
+    rdfs:label "Sahil Chavan"^^xsd:string ;
+    kk:nativeId "AMB-03"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-06> a sport:Athlete ;
+    rdfs:label "Akash Salunkhe"^^xsd:string ;
+    kk:nativeId "AMB-06"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-09> a sport:Athlete ;
+    rdfs:label "Suraj Jadhav"^^xsd:string ;
+    kk:nativeId "AMB-09"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-02> a sport:Athlete ;
+    rdfs:label "Rahul Shinde"^^xsd:string ;
+    kk:nativeId "BHR-02"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-03> a sport:Athlete ;
+    rdfs:label "Swapnil Chavan"^^xsd:string ;
+    kk:nativeId "BHR-03"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-05> a sport:Athlete ;
+    rdfs:label "Sagar Gaikwad"^^xsd:string ;
+    kk:nativeId "BHR-05"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-06> a sport:Athlete ;
+    rdfs:label "Vinay Salunkhe"^^xsd:string ;
+    kk:nativeId "BHR-06"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-04> a sport:Athlete ;
+    rdfs:label "Ketan Kadam"^^xsd:string ;
+    kk:nativeId "BHR-04"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-01> a sport:Athlete ;
+    rdfs:label "Omkar Mane"^^xsd:string ;
+    kk:nativeId "AMB-01"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-08> a sport:Athlete ;
+    rdfs:label "Nikhil Thorat"^^xsd:string ;
+    kk:nativeId "AMB-08"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-01> a sport:Athlete ;
+    rdfs:label "Aniket Mane"^^xsd:string ;
+    kk:nativeId "BHR-01"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/BHR-08> a sport:Athlete ;
+    rdfs:label "Amol Thorat"^^xsd:string ;
+    kk:nativeId "BHR-08"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/athlete/AMB-07> a sport:Athlete ;
+    rdfs:label "Tushar Pawar"^^xsd:string ;
+    kk:nativeId "AMB-07"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB> a sport:TeamParticipation ;
+    rdfs:label "Ambegaon Arrows (fictional) in Ambegaon Arrows vs Bhor Blazers"^^xsd:string ;
+    sport:alignment "home"^^xsd:string ;
+    sport:eventOutcome speventoutcome:win ;
+    sport:participationBy <https://raid-replay.example/data/khokho/team/AMB> ;
+    sport:score "59"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> a sport:TeamParticipation ;
+    rdfs:label "Bhor Blazers (fictional) in Ambegaon Arrows vs Bhor Blazers"^^xsd:string ;
+    sport:alignment "away"^^xsd:string ;
+    sport:eventOutcome speventoutcome:loss ;
+    sport:participationBy <https://raid-replay.example/data/khokho/team/BHR> ;
+    sport:score "41"^^xsd:string .
+
+<https://raid-replay.example/data/khokho/event/SKK26-M01> a sport:Event ;
+    rdfs:label "Ambegaon Arrows vs Bhor Blazers"^^xsd:string ;
+    kk:nativeId "SKK26-M01"^^xsd:string ;
+    kk:simulatorSeed 501 ;
+    kk:turnLimitSeconds 420 ;
+    kk:turnsPerMatch 4 ;
+    sport:eventInCompetition <https://raid-replay.example/data/khokho/competition/SKK-2026> ;
+    sport:eventStatus speventstatus:post-event ;
+    sport:location <https://raid-replay.example/data/khokho/site/V1> ;
+    sport:participation <https://raid-replay.example/data/khokho/participation/SKK26-M01/AMB>,
+        <https://raid-replay.example/data/khokho/participation/SKK26-M01/BHR> ;
+    sport:sport medtop:15000000 ;
+    sport:startDateTime "2026-10-22T16:00:00+05:30"^^xsd:dateTime .
+

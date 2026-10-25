@@ -1,0 +1,1034 @@
+{
+ "format": "raid-replay/khokho-match/1",
+ "match": {
+  "id": "SKK26-M02",
+  "name": "Junnar Jaguars vs Maval Mavericks",
+  "start": "2026-10-23T16:00:00+05:30",
+  "competition": {
+   "id": "SKK-2026",
+   "name": "Sahyadri Kho-Kho League 2026 (fictional)"
+  },
+  "venue": {
+   "id": "V1",
+   "name": "Shivaji Maidan Mat Arena, Satara (fictional)"
+  },
+  "turn_limit_seconds": 420,
+  "turns": 4,
+  "seed": 601
+ },
+ "teams": [
+  {
+   "id": "JNR",
+   "name": "Junnar Jaguars (fictional)",
+   "side": "home",
+   "short": "JNR"
+  },
+  {
+   "id": "MLV",
+   "name": "Maval Mavericks (fictional)",
+   "side": "away",
+   "short": "MLV"
+  }
+ ],
+ "players": [
+  {
+   "id": "JNR-01",
+   "name": "Shubham Mane",
+   "team": "JNR",
+   "jersey": 1,
+   "batch": 1
+  },
+  {
+   "id": "JNR-02",
+   "name": "Saurabh Shinde",
+   "team": "JNR",
+   "jersey": 2,
+   "batch": 1
+  },
+  {
+   "id": "JNR-03",
+   "name": "Prasad Chavan",
+   "team": "JNR",
+   "jersey": 3,
+   "batch": 1
+  },
+  {
+   "id": "JNR-04",
+   "name": "Nilesh Kadam",
+   "team": "JNR",
+   "jersey": 4,
+   "batch": 2
+  },
+  {
+   "id": "JNR-05",
+   "name": "Mahesh Gaikwad",
+   "team": "JNR",
+   "jersey": 5,
+   "batch": 2
+  },
+  {
+   "id": "JNR-06",
+   "name": "Abhijit Salunkhe",
+   "team": "JNR",
+   "jersey": 6,
+   "batch": 2
+  },
+  {
+   "id": "JNR-07",
+   "name": "Sandeep Pawar",
+   "team": "JNR",
+   "jersey": 7,
+   "batch": 3
+  },
+  {
+   "id": "JNR-08",
+   "name": "Vaibhav Thorat",
+   "team": "JNR",
+   "jersey": 8,
+   "batch": 3
+  },
+  {
+   "id": "JNR-09",
+   "name": "Chetan Jadhav",
+   "team": "JNR",
+   "jersey": 9,
+   "batch": 3
+  },
+  {
+   "id": "JNR-10",
+   "name": "Rohit Kale",
+   "team": "JNR",
+   "jersey": 10
+  },
+  {
+   "id": "JNR-11",
+   "name": "Sushant Dhumal",
+   "team": "JNR",
+   "jersey": 11
+  },
+  {
+   "id": "JNR-12",
+   "name": "Tejas More",
+   "team": "JNR",
+   "jersey": 12
+  },
+  {
+   "id": "MLV-01",
+   "name": "Dnyanesh Mane",
+   "team": "MLV",
+   "jersey": 1,
+   "batch": 1
+  },
+  {
+   "id": "MLV-02",
+   "name": "Harshal Shinde",
+   "team": "MLV",
+   "jersey": 2,
+   "batch": 1
+  },
+  {
+   "id": "MLV-03",
+   "name": "Siddhesh Chavan",
+   "team": "MLV",
+   "jersey": 3,
+   "batch": 1
+  },
+  {
+   "id": "MLV-04",
+   "name": "Aditya Kadam",
+   "team": "MLV",
+   "jersey": 4,
+   "batch": 2
+  },
+  {
+   "id": "MLV-05",
+   "name": "Pravin Gaikwad",
+   "team": "MLV",
+   "jersey": 5,
+   "batch": 2
+  },
+  {
+   "id": "MLV-06",
+   "name": "Vikram Salunkhe",
+   "team": "MLV",
+   "jersey": 6,
+   "batch": 2
+  },
+  {
+   "id": "MLV-07",
+   "name": "Kiran Pawar",
+   "team": "MLV",
+   "jersey": 7,
+   "batch": 3
+  },
+  {
+   "id": "MLV-08",
+   "name": "Mangesh Thorat",
+   "team": "MLV",
+   "jersey": 8,
+   "batch": 3
+  },
+  {
+   "id": "MLV-09",
+   "name": "Atul Jadhav",
+   "team": "MLV",
+   "jersey": 9,
+   "batch": 3
+  },
+  {
+   "id": "MLV-10",
+   "name": "Datta Kale",
+   "team": "MLV",
+   "jersey": 10
+  },
+  {
+   "id": "MLV-11",
+   "name": "Sumit Dhumal",
+   "team": "MLV",
+   "jersey": 11
+  },
+  {
+   "id": "MLV-12",
+   "name": "Parth More",
+   "team": "MLV",
+   "jersey": 12
+  }
+ ],
+ "events": [
+  {
+   "id": "SKK26-M02-E001",
+   "seq": 1,
+   "type": "turn_start",
+   "turn": 1,
+   "inning": 1
+  },
+  {
+   "id": "SKK26-M02-E002",
+   "seq": 2,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-01",
+   "defender": "MLV-03",
+   "method": "touch",
+   "batch": 1,
+   "time": 6,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E003",
+   "seq": 3,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-01",
+   "defender": "MLV-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 9,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E004",
+   "seq": 4,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-09",
+   "defender": "MLV-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 62,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E005",
+   "seq": 5,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-04",
+   "defender": "MLV-06",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 74,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E006",
+   "seq": 6,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-04",
+   "defender": "MLV-05",
+   "method": "touch",
+   "batch": 2,
+   "time": 93,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E007",
+   "seq": 7,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-07",
+   "defender": "MLV-04",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 143,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E008",
+   "seq": 8,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-02",
+   "defender": "MLV-07",
+   "method": "touch",
+   "batch": 3,
+   "time": 151,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E009",
+   "seq": 9,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-05",
+   "defender": "MLV-08",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 165,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E010",
+   "seq": 10,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-04",
+   "defender": "MLV-09",
+   "method": "touch",
+   "batch": 3,
+   "time": 185,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E011",
+   "seq": 11,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-06",
+   "defender": "MLV-03",
+   "method": "sky-dive",
+   "batch": 4,
+   "time": 188,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E012",
+   "seq": 12,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-01",
+   "defender": "MLV-01",
+   "method": "touch",
+   "batch": 4,
+   "time": 205,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E013",
+   "seq": 13,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-06",
+   "defender": "MLV-02",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 387,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E014",
+   "seq": 14,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-01",
+   "defender": "MLV-06",
+   "method": "touch",
+   "batch": 5,
+   "time": 388,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E015",
+   "seq": 15,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-01",
+   "defender": "MLV-05",
+   "method": "pole-dive",
+   "batch": 5,
+   "time": 400,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E016",
+   "seq": 16,
+   "type": "tag",
+   "turn": 1,
+   "tagger": "JNR-09",
+   "defender": "MLV-04",
+   "method": "pole-dive",
+   "batch": 5,
+   "time": 406,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E017",
+   "seq": 17,
+   "type": "turn_end",
+   "turn": 1,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M02-E018",
+   "seq": 18,
+   "type": "turn",
+   "turn": 1,
+   "chasing": "JNR",
+   "defending": "MLV",
+   "points": 31,
+   "tags": 15
+  },
+  {
+   "id": "SKK26-M02-E019",
+   "seq": 19,
+   "type": "turn_start",
+   "turn": 2,
+   "inning": 1
+  },
+  {
+   "id": "SKK26-M02-E020",
+   "seq": 20,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-03",
+   "defender": "JNR-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 8,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E021",
+   "seq": 21,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-08",
+   "defender": "JNR-03",
+   "method": "sky-dive",
+   "batch": 1,
+   "time": 49,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E022",
+   "seq": 22,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-04",
+   "defender": "JNR-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 76,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E023",
+   "seq": 23,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-04",
+   "defender": "JNR-04",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 82,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E024",
+   "seq": 24,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-05",
+   "defender": "JNR-05",
+   "method": "touch",
+   "batch": 2,
+   "time": 99,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E025",
+   "seq": 25,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-02",
+   "defender": "JNR-06",
+   "method": "touch",
+   "batch": 2,
+   "time": 137,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E026",
+   "seq": 26,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-02",
+   "defender": "JNR-09",
+   "method": "touch",
+   "batch": 3,
+   "time": 149,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E027",
+   "seq": 27,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-04",
+   "defender": "JNR-07",
+   "method": "touch",
+   "batch": 3,
+   "time": 153,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E028",
+   "seq": 28,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-04",
+   "defender": "JNR-08",
+   "method": "touch",
+   "batch": 3,
+   "time": 157,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E029",
+   "seq": 29,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-06",
+   "defender": "JNR-03",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 173,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E030",
+   "seq": 30,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-07",
+   "defender": "JNR-02",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 174,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E031",
+   "seq": 31,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-09",
+   "defender": "JNR-01",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 193,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E032",
+   "seq": 32,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-03",
+   "defender": "JNR-06",
+   "method": "touch",
+   "batch": 5,
+   "time": 239,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E033",
+   "seq": 33,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-01",
+   "defender": "JNR-05",
+   "method": "pole-dive",
+   "batch": 5,
+   "time": 245,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E034",
+   "seq": 34,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-05",
+   "defender": "JNR-04",
+   "method": "touch",
+   "batch": 5,
+   "time": 251,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E035",
+   "seq": 35,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-04",
+   "defender": "JNR-08",
+   "method": "touch",
+   "batch": 6,
+   "time": 282,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E036",
+   "seq": 36,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-06",
+   "defender": "JNR-07",
+   "method": "touch",
+   "batch": 6,
+   "time": 288,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E037",
+   "seq": 37,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-05",
+   "defender": "JNR-09",
+   "method": "sky-dive",
+   "batch": 6,
+   "time": 302,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E038",
+   "seq": 38,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-02",
+   "defender": "JNR-03",
+   "method": "sky-dive",
+   "batch": 7,
+   "time": 314,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E039",
+   "seq": 39,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-05",
+   "defender": "JNR-02",
+   "method": "pole-dive",
+   "batch": 7,
+   "time": 352,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E040",
+   "seq": 40,
+   "type": "tag",
+   "turn": 2,
+   "tagger": "MLV-03",
+   "defender": "JNR-01",
+   "method": "touch",
+   "batch": 7,
+   "time": 379,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E041",
+   "seq": 41,
+   "type": "turn_end",
+   "turn": 2,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M02-E042",
+   "seq": 42,
+   "type": "turn",
+   "turn": 2,
+   "chasing": "MLV",
+   "defending": "JNR",
+   "points": 45,
+   "tags": 21
+  },
+  {
+   "id": "SKK26-M02-E043",
+   "seq": 43,
+   "type": "turn_start",
+   "turn": 3,
+   "inning": 2
+  },
+  {
+   "id": "SKK26-M02-E044",
+   "seq": 44,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-04",
+   "defender": "MLV-03",
+   "method": "touch",
+   "batch": 1,
+   "time": 1,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E045",
+   "seq": 45,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-09",
+   "defender": "MLV-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 40,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E046",
+   "seq": 46,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-06",
+   "defender": "MLV-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 136,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E047",
+   "seq": 47,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-04",
+   "defender": "MLV-06",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 151,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E048",
+   "seq": 48,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-09",
+   "defender": "MLV-05",
+   "method": "touch",
+   "batch": 2,
+   "time": 172,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E049",
+   "seq": 49,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-07",
+   "defender": "MLV-04",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 183,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E050",
+   "seq": 50,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-09",
+   "defender": "MLV-09",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 186,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E051",
+   "seq": 51,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-02",
+   "defender": "MLV-08",
+   "method": "sky-dive",
+   "batch": 3,
+   "time": 188,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E052",
+   "seq": 52,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-06",
+   "defender": "MLV-07",
+   "method": "sky-dive",
+   "batch": 3,
+   "time": 189,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E053",
+   "seq": 53,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-05",
+   "defender": "MLV-03",
+   "method": "touch",
+   "batch": 4,
+   "time": 223,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E054",
+   "seq": 54,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-01",
+   "defender": "MLV-01",
+   "method": "sky-dive",
+   "batch": 4,
+   "time": 285,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E055",
+   "seq": 55,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-06",
+   "defender": "MLV-02",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 339,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E056",
+   "seq": 56,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-08",
+   "defender": "MLV-06",
+   "method": "touch",
+   "batch": 5,
+   "time": 342,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E057",
+   "seq": 57,
+   "type": "tag",
+   "turn": 3,
+   "tagger": "JNR-07",
+   "defender": "MLV-04",
+   "method": "pole-dive",
+   "batch": 5,
+   "time": 368,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E058",
+   "seq": 58,
+   "type": "turn_end",
+   "turn": 3,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M02-E059",
+   "seq": 59,
+   "type": "turn",
+   "turn": 3,
+   "chasing": "JNR",
+   "defending": "MLV",
+   "points": 31,
+   "tags": 14
+  },
+  {
+   "id": "SKK26-M02-E060",
+   "seq": 60,
+   "type": "turn_start",
+   "turn": 4,
+   "inning": 2
+  },
+  {
+   "id": "SKK26-M02-E061",
+   "seq": 61,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-03",
+   "defender": "JNR-03",
+   "method": "sky-dive",
+   "batch": 1,
+   "time": 41,
+   "points": 3
+  },
+  {
+   "id": "SKK26-M02-E062",
+   "seq": 62,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-03",
+   "defender": "JNR-01",
+   "method": "touch",
+   "batch": 1,
+   "time": 56,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E063",
+   "seq": 63,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-02",
+   "defender": "JNR-02",
+   "method": "touch",
+   "batch": 1,
+   "time": 94,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E064",
+   "seq": 64,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-01",
+   "defender": "JNR-04",
+   "method": "touch",
+   "batch": 2,
+   "time": 147,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E065",
+   "seq": 65,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-08",
+   "defender": "JNR-05",
+   "method": "pole-dive",
+   "batch": 2,
+   "time": 164,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E066",
+   "seq": 66,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-03",
+   "defender": "JNR-06",
+   "method": "touch",
+   "batch": 2,
+   "time": 188,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E067",
+   "seq": 67,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-04",
+   "defender": "JNR-09",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 233,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E068",
+   "seq": 68,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-03",
+   "defender": "JNR-07",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 251,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E069",
+   "seq": 69,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-03",
+   "defender": "JNR-08",
+   "method": "pole-dive",
+   "batch": 3,
+   "time": 252,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E070",
+   "seq": 70,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-04",
+   "defender": "JNR-02",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 305,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E071",
+   "seq": 71,
+   "type": "tag",
+   "turn": 4,
+   "tagger": "MLV-02",
+   "defender": "JNR-03",
+   "method": "pole-dive",
+   "batch": 4,
+   "time": 317,
+   "points": 2
+  },
+  {
+   "id": "SKK26-M02-E072",
+   "seq": 72,
+   "type": "turn_end",
+   "turn": 4,
+   "time": 420
+  },
+  {
+   "id": "SKK26-M02-E073",
+   "seq": 73,
+   "type": "turn",
+   "turn": 4,
+   "chasing": "MLV",
+   "defending": "JNR",
+   "points": 23,
+   "tags": 11
+  }
+ ],
+ "result": {
+  "scores": {
+   "JNR": 62,
+   "MLV": 68
+  },
+  "winner": "MLV"
+ }
+}

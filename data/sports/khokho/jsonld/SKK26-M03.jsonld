@@ -1,0 +1,1678 @@
+{
+ "@context": {
+  "kk": "https://sportschema.org/ontologies/khokho/",
+  "kkmethod": "https://sportschema.org/ontologies/khokho/tagmethod/",
+  "medtop": "http://cv.iptc.org/newscodes/mediatopic/",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rr": "https://raid-replay.example/data/khokho/",
+  "spactionclass": "http://cv.iptc.org/newscodes/spactionclass/",
+  "spct": "http://cv.iptc.org/newscodes/spct/",
+  "speventoutcome": "http://cv.iptc.org/newscodes/speventoutcome/",
+  "speventstatus": "http://cv.iptc.org/newscodes/speventstatus/",
+  "sport": "https://sportschema.org/ontologies/main/",
+  "spplayerstatus": "http://cv.iptc.org/newscodes/spplayerstatus/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+ },
+ "@graph": [
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E001",
+   "@type": [
+    "kk:TurnStart",
+    "sport:Action"
+   ],
+   "kk:inning": 1,
+   "kk:nativeId": "SKK26-M03-E001",
+   "kk:turnNumber": 1,
+   "rdfs:label": "turn_start #1",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E002",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E002",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-01"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-04"
+   },
+   "kk:timeOfTag": 2,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #2",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E003",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E003",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-03"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-09"
+   },
+   "kk:timeOfTag": 23,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #3",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E004",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E004",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-02"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-06"
+   },
+   "kk:timeOfTag": 143,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #4",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E005",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E005",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-05"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-03"
+   },
+   "kk:timeOfTag": 163,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #5",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E006",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E006",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-06"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-04"
+   },
+   "kk:timeOfTag": 259,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #6",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "6"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E007",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E007",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-04"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-05"
+   },
+   "kk:timeOfTag": 266,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #7",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "7"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E008",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 3,
+   "kk:nativeId": "SKK26-M03-E008",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-08"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-09"
+   },
+   "kk:timeOfTag": 301,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #8",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "8"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E009",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 3,
+   "kk:nativeId": "SKK26-M03-E009",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-09"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-07"
+   },
+   "kk:timeOfTag": 416,
+   "kk:turnNumber": 1,
+   "rdfs:label": "tag #9",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "9"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E010",
+   "@type": [
+    "kk:TurnEnd",
+    "sport:Action"
+   ],
+   "kk:nativeId": "SKK26-M03-E010",
+   "kk:turnDurationSeconds": 420,
+   "kk:turnNumber": 1,
+   "rdfs:label": "turn_end #10",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "10"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E011",
+   "@type": [
+    "kk:Turn",
+    "sport:Action"
+   ],
+   "kk:chasingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/AMB"
+   },
+   "kk:defendingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/MLV"
+   },
+   "kk:nativeId": "SKK26-M03-E011",
+   "kk:tagCount": 8,
+   "kk:turnNumber": 1,
+   "kk:turnPoints": 16,
+   "rdfs:label": "turn #11",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "11"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E012",
+   "@type": [
+    "kk:TurnStart",
+    "sport:Action"
+   ],
+   "kk:inning": 1,
+   "kk:nativeId": "SKK26-M03-E012",
+   "kk:turnNumber": 2,
+   "rdfs:label": "turn_start #12",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "12"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E013",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E013",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-02"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-03"
+   },
+   "kk:timeOfTag": 17,
+   "kk:turnNumber": 2,
+   "rdfs:label": "tag #13",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "13"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E014",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E014",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-03"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-08"
+   },
+   "kk:timeOfTag": 149,
+   "kk:turnNumber": 2,
+   "rdfs:label": "tag #14",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "14"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E015",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E015",
+   "kk:points": 3,
+   "kk:tagMethod": {
+    "@id": "kkmethod:sky-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-01"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-05"
+   },
+   "kk:timeOfTag": 195,
+   "kk:turnNumber": 2,
+   "rdfs:label": "tag #15",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "15"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E016",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E016",
+   "kk:points": 3,
+   "kk:tagMethod": {
+    "@id": "kkmethod:sky-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-04"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-07"
+   },
+   "kk:timeOfTag": 302,
+   "kk:turnNumber": 2,
+   "rdfs:label": "tag #16",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "16"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E017",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E017",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-05"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-07"
+   },
+   "kk:timeOfTag": 377,
+   "kk:turnNumber": 2,
+   "rdfs:label": "tag #17",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "17"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E018",
+   "@type": [
+    "kk:TurnEnd",
+    "sport:Action"
+   ],
+   "kk:nativeId": "SKK26-M03-E018",
+   "kk:turnDurationSeconds": 420,
+   "kk:turnNumber": 2,
+   "rdfs:label": "turn_end #18",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "18"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E019",
+   "@type": [
+    "kk:Turn",
+    "sport:Action"
+   ],
+   "kk:chasingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/MLV"
+   },
+   "kk:defendingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/AMB"
+   },
+   "kk:nativeId": "SKK26-M03-E019",
+   "kk:tagCount": 5,
+   "kk:turnNumber": 2,
+   "kk:turnPoints": 12,
+   "rdfs:label": "turn #19",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "19"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E020",
+   "@type": [
+    "kk:TurnStart",
+    "sport:Action"
+   ],
+   "kk:inning": 2,
+   "kk:nativeId": "SKK26-M03-E020",
+   "kk:turnNumber": 3,
+   "rdfs:label": "turn_start #20",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "20"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E021",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E021",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-02"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-03"
+   },
+   "kk:timeOfTag": 28,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #21",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "21"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E022",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E022",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-03"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-08"
+   },
+   "kk:timeOfTag": 47,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #22",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "22"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E023",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E023",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-01"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-03"
+   },
+   "kk:timeOfTag": 117,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #23",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "23"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E024",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E024",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-04"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-06"
+   },
+   "kk:timeOfTag": 172,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #24",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "24"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E025",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E025",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-06"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-04"
+   },
+   "kk:timeOfTag": 208,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #25",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "25"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E026",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E026",
+   "kk:points": 3,
+   "kk:tagMethod": {
+    "@id": "kkmethod:sky-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-05"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-09"
+   },
+   "kk:timeOfTag": 256,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #26",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "26"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E027",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 3,
+   "kk:nativeId": "SKK26-M03-E027",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-09"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-02"
+   },
+   "kk:timeOfTag": 278,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #27",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "27"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E028",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 3,
+   "kk:nativeId": "SKK26-M03-E028",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-07"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-01"
+   },
+   "kk:timeOfTag": 337,
+   "kk:turnNumber": 3,
+   "rdfs:label": "tag #28",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "28"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E029",
+   "@type": [
+    "kk:TurnEnd",
+    "sport:Action"
+   ],
+   "kk:nativeId": "SKK26-M03-E029",
+   "kk:turnDurationSeconds": 420,
+   "kk:turnNumber": 3,
+   "rdfs:label": "turn_end #29",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "29"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E030",
+   "@type": [
+    "kk:Turn",
+    "sport:Action"
+   ],
+   "kk:chasingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/AMB"
+   },
+   "kk:defendingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/MLV"
+   },
+   "kk:nativeId": "SKK26-M03-E030",
+   "kk:tagCount": 8,
+   "kk:turnNumber": 3,
+   "kk:turnPoints": 17,
+   "rdfs:label": "turn #30",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "30"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E031",
+   "@type": [
+    "kk:TurnStart",
+    "sport:Action"
+   ],
+   "kk:inning": 2,
+   "kk:nativeId": "SKK26-M03-E031",
+   "kk:turnNumber": 4,
+   "rdfs:label": "turn_start #31",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "31"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E032",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E032",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-02"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-01"
+   },
+   "kk:timeOfTag": 19,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #32",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "32"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E033",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E033",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-03"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-03"
+   },
+   "kk:timeOfTag": 35,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #33",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "33"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E034",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 1,
+   "kk:nativeId": "SKK26-M03-E034",
+   "kk:points": 3,
+   "kk:tagMethod": {
+    "@id": "kkmethod:sky-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-01"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-09"
+   },
+   "kk:timeOfTag": 137,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #34",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "34"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E035",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E035",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-06"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-04"
+   },
+   "kk:timeOfTag": 156,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #35",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "35"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E036",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E036",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-05"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-01"
+   },
+   "kk:timeOfTag": 179,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #36",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "36"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E037",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 2,
+   "kk:nativeId": "SKK26-M03-E037",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-04"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-08"
+   },
+   "kk:timeOfTag": 228,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #37",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "37"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E038",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 3,
+   "kk:nativeId": "SKK26-M03-E038",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-07"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-09"
+   },
+   "kk:timeOfTag": 231,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #38",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "38"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E039",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 3,
+   "kk:nativeId": "SKK26-M03-E039",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-09"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-04"
+   },
+   "kk:timeOfTag": 289,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #39",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "39"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E040",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 3,
+   "kk:nativeId": "SKK26-M03-E040",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:pole-dive"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-08"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-06"
+   },
+   "kk:timeOfTag": 296,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #40",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "40"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E041",
+   "@type": [
+    "kk:Tag",
+    "sport:Action"
+   ],
+   "kk:defenderBatch": 4,
+   "kk:nativeId": "SKK26-M03-E041",
+   "kk:points": 2,
+   "kk:tagMethod": {
+    "@id": "kkmethod:touch"
+   },
+   "kk:taggedDefender": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-02"
+   },
+   "kk:tagger": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-08"
+   },
+   "kk:timeOfTag": 388,
+   "kk:turnNumber": 4,
+   "rdfs:label": "tag #41",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:score"
+   },
+   "sport:sequenceNumber": "41"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E042",
+   "@type": [
+    "kk:TurnEnd",
+    "sport:Action"
+   ],
+   "kk:nativeId": "SKK26-M03-E042",
+   "kk:turnDurationSeconds": 420,
+   "kk:turnNumber": 4,
+   "rdfs:label": "turn_end #42",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "42"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/action/SKK26-M03-E043",
+   "@type": [
+    "kk:Turn",
+    "sport:Action"
+   ],
+   "kk:chasingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/MLV"
+   },
+   "kk:defendingTeam": {
+    "@id": "https://raid-replay.example/data/khokho/team/AMB"
+   },
+   "kk:nativeId": "SKK26-M03-E043",
+   "kk:tagCount": 10,
+   "kk:turnNumber": 4,
+   "kk:turnPoints": 21,
+   "rdfs:label": "turn #43",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "43"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-01",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-01",
+   "rdfs:label": "Omkar Mane"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-02",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-02",
+   "rdfs:label": "Pratik Shinde"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-03",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-03",
+   "rdfs:label": "Sahil Chavan"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-04",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-04",
+   "rdfs:label": "Vishal Kadam"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-05",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-05",
+   "rdfs:label": "Ganesh Gaikwad"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-06",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-06",
+   "rdfs:label": "Akash Salunkhe"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-07",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-07",
+   "rdfs:label": "Tushar Pawar"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-08",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-08",
+   "rdfs:label": "Nikhil Thorat"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-09",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-09",
+   "rdfs:label": "Suraj Jadhav"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-10",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-10",
+   "rdfs:label": "Mayur Kale"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-11",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-11",
+   "rdfs:label": "Kunal Dhumal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/AMB-12",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "AMB-12",
+   "rdfs:label": "Yash More"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-01",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-01",
+   "rdfs:label": "Dnyanesh Mane"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-02",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-02",
+   "rdfs:label": "Harshal Shinde"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-03",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-03",
+   "rdfs:label": "Siddhesh Chavan"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-04",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-04",
+   "rdfs:label": "Aditya Kadam"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-05",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-05",
+   "rdfs:label": "Pravin Gaikwad"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-06",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-06",
+   "rdfs:label": "Vikram Salunkhe"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-07",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-07",
+   "rdfs:label": "Kiran Pawar"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-08",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-08",
+   "rdfs:label": "Mangesh Thorat"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-09",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-09",
+   "rdfs:label": "Atul Jadhav"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-10",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-10",
+   "rdfs:label": "Datta Kale"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-11",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-11",
+   "rdfs:label": "Sumit Dhumal"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/athlete/MLV-12",
+   "@type": "sport:Athlete",
+   "kk:nativeId": "MLV-12",
+   "rdfs:label": "Parth More"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/competition/SKK-2026",
+   "@type": "sport:Competition",
+   "kk:nativeId": "SKK-2026",
+   "rdfs:label": "Sahyadri Kho-Kho League 2026 (fictional)",
+   "sport:competitionType": {
+    "@id": "spct:competition"
+   },
+   "sport:sport": {
+    "@id": "medtop:15000000"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/event/SKK26-M03",
+   "@type": "sport:Event",
+   "kk:nativeId": "SKK26-M03",
+   "kk:simulatorSeed": 703,
+   "kk:turnLimitSeconds": 420,
+   "kk:turnsPerMatch": 4,
+   "rdfs:label": "Ambegaon Arrows vs Maval Mavericks",
+   "sport:eventInCompetition": {
+    "@id": "https://raid-replay.example/data/khokho/competition/SKK-2026"
+   },
+   "sport:eventStatus": {
+    "@id": "speventstatus:post-event"
+   },
+   "sport:location": {
+    "@id": "https://raid-replay.example/data/khokho/site/V1"
+   },
+   "sport:participation": [
+    {
+     "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+    },
+    {
+     "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+    }
+   ],
+   "sport:sport": {
+    "@id": "medtop:15000000"
+   },
+   "sport:startDateTime": {
+    "@type": "xsd:dateTime",
+    "@value": "2026-10-25T17:30:00+05:30"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Ambegaon Arrows (fictional) in Ambegaon Arrows vs Maval Mavericks",
+   "sport:alignment": "home",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:tie"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/team/AMB"
+   },
+   "sport:score": "33"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-01",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 1,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-01"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-02",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 1,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-02"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-03",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 1,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-03"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-04",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 2,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-04"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-05",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 2,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-05"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-06",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 2,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-06"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "6"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-07",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 3,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-07"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "7"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-08",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 3,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-08"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "8"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-09",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 3,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-09"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "9"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-10",
+   "@type": "sport:IndividualParticipation",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-10"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "10"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-11",
+   "@type": "sport:IndividualParticipation",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-11"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "11"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB-12",
+   "@type": "sport:IndividualParticipation",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/AMB-12"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/AMB"
+   },
+   "sport:uniformNumberEvent": "12"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Maval Mavericks (fictional) in Ambegaon Arrows vs Maval Mavericks",
+   "sport:alignment": "away",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:tie"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/team/MLV"
+   },
+   "sport:score": "33"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-01",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 1,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-01"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-02",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 1,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-02"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-03",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 1,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-03"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-04",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 2,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-04"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-05",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 2,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-05"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-06",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 2,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-06"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "6"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-07",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 3,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-07"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "7"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-08",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 3,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-08"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "8"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-09",
+   "@type": "sport:IndividualParticipation",
+   "kk:defenderBatch": 3,
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-09"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "9"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-10",
+   "@type": "sport:IndividualParticipation",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-10"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "10"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-11",
+   "@type": "sport:IndividualParticipation",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-11"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "11"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV-12",
+   "@type": "sport:IndividualParticipation",
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/khokho/athlete/MLV-12"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/khokho/participation/SKK26-M03/MLV"
+   },
+   "sport:uniformNumberEvent": "12"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/site/V1",
+   "@type": "sport:Site",
+   "kk:nativeId": "V1",
+   "rdfs:label": "Shivaji Maidan Mat Arena, Satara (fictional)"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/team/AMB",
+   "@type": "sport:Team",
+   "kk:nativeId": "AMB",
+   "kk:shortName": "AMB",
+   "rdfs:label": "Ambegaon Arrows (fictional)"
+  },
+  {
+   "@id": "https://raid-replay.example/data/khokho/team/MLV",
+   "@type": "sport:Team",
+   "kk:nativeId": "MLV",
+   "kk:shortName": "MLV",
+   "rdfs:label": "Maval Mavericks (fictional)"
+  }
+ ]
+}
