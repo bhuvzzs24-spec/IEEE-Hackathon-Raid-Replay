@@ -1,0 +1,117 @@
+# =============================================================================
+#  Badminton plugin for IPTC Sport Schema - vocabulary (ontology + code lists)
+#  Raid Replay / team Byte Tackle
+#
+#  IPTC's only badminton term is the news label Media Topic medtop:20000847.
+#  Sport Schema has no badminton plugin, so there is no way to say "rally 17
+#  of game 2 was won 15-13 with a smash". This file adds those words.
+#
+#  Namespace https://sportschema.org/ontologies/badminton/ follows the pattern
+#  of the existing plugins. It is a PROPOSED namespace; IPTC has not endorsed it.
+# =============================================================================
+
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix sport:    <https://sportschema.org/ontologies/main/> .
+@prefix bad:      <https://sportschema.org/ontologies/badminton/> .
+@prefix badshot:  <https://sportschema.org/ontologies/badminton/shottype/> .
+@prefix badfault: <https://sportschema.org/ontologies/badminton/faulttype/> .
+
+<https://sportschema.org/ontologies/badminton>
+    a owl:Ontology ;
+    rdfs:label "IPTC Sport Schema - Badminton plugin (proposed)"@en ;
+    dcterms:creator "Byte Tackle" ;
+    owl:versionInfo "0.1" ;
+    owl:imports <https://sportschema.org/ontologies/main/> ;
+    rdfs:comment "Rally-by-rally vocabulary for badminton singles. Every badminton event is a sport:Action."@en .
+
+# -----------------------------------------------------------------------------
+#  Classes
+# -----------------------------------------------------------------------------
+
+bad:Rally a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Rally"@en ;
+    rdfs:comment "One rally, from serve to the shuttle being dead. Won by a shot (bad:endingShot). Rally-point scoring: the winner always scores 1."@en .
+
+bad:Fault a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Fault"@en ;
+    rdfs:comment "A rally that ended in a fault (bad:faultType) committed by the rally loser (bad:faultBy). Scores exactly like a rally. Deliberately NOT a subclass of bad:Rally: SHACL targets follow rdfs:subClassOf, and a fault has no ending shot."@en .
+
+bad:GameStart a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Start of game"@en .
+
+bad:GameEnd a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "End of game"@en ;
+    rdfs:comment "Final score of a game: 21 with a 2-point lead, or 30 (cap)."@en .
+
+bad:Interval a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Interval"@en ;
+    rdfs:comment "The 60-second interval when the leading score first reaches 11 in a game."@en .
+
+# -----------------------------------------------------------------------------
+#  Properties
+# -----------------------------------------------------------------------------
+
+bad:nativeId a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "native identifier"@en ;
+    rdfs:comment "Identifier in the source feed. Unique per match/team/player/event."@en .
+
+bad:discipline a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:string ;
+    rdfs:label "discipline"@en ; rdfs:comment "singles (v0.1 covers singles only)."@en .
+bad:bestOfGames a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ;
+    rdfs:label "best of (games)"@en .
+bad:firstServer a owl:ObjectProperty ; rdfs:domain sport:Event ; rdfs:range sport:Athlete ;
+    rdfs:label "first server"@en ; rdfs:comment "Player who serves the first rally of game 1."@en .
+bad:simulatorSeed a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ;
+    rdfs:label "simulator seed"@en .
+bad:shortName a owl:DatatypeProperty ; rdfs:domain sport:Team ; rdfs:range xsd:string ;
+    rdfs:label "short name"@en .
+bad:hand a owl:DatatypeProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range xsd:string ;
+    rdfs:label "playing hand"@en ; rdfs:comment "left or right."@en .
+
+bad:gameNumber a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "game number"@en .
+bad:rallyNumber a owl:DatatypeProperty ; rdfs:domain bad:Rally ; rdfs:range xsd:integer ;
+    rdfs:label "rally number"@en ; rdfs:comment "1, 2, 3 ... within the game."@en .
+bad:server a owl:ObjectProperty ; rdfs:domain bad:Rally ; rdfs:range sport:Athlete ;
+    rdfs:label "server"@en .
+bad:receiver a owl:ObjectProperty ; rdfs:domain bad:Rally ; rdfs:range sport:Athlete ;
+    rdfs:label "receiver"@en .
+bad:rallyWinner a owl:ObjectProperty ; rdfs:domain bad:Rally ; rdfs:range sport:Athlete ;
+    rdfs:label "rally winner"@en .
+bad:scoreA a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "score of side A"@en ; rdfs:comment "Side A's points in the current game after this action. Side = sport:alignment of the team participation."@en .
+bad:scoreB a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "score of side B"@en .
+bad:rallyLength a owl:DatatypeProperty ; rdfs:domain bad:Rally ; rdfs:range xsd:integer ;
+    rdfs:label "rally length (shots)"@en ; rdfs:comment "Number of shots including the serve."@en .
+bad:endingShot a owl:ObjectProperty ; rdfs:domain bad:Rally ; rdfs:range skos:Concept ;
+    rdfs:label "ending shot type"@en .
+bad:faultType a owl:ObjectProperty ; rdfs:domain bad:Fault ; rdfs:range skos:Concept ;
+    rdfs:label "fault type"@en .
+bad:faultBy a owl:ObjectProperty ; rdfs:domain bad:Fault ; rdfs:range sport:Athlete ;
+    rdfs:label "fault committed by"@en .
+bad:gameWinner a owl:ObjectProperty ; rdfs:domain bad:GameEnd ; rdfs:range sport:Athlete ;
+    rdfs:label "game winner"@en .
+
+# -----------------------------------------------------------------------------
+#  Code lists
+# -----------------------------------------------------------------------------
+
+badshot: a skos:ConceptScheme ; rdfs:label "Badminton ending shot types"@en .
+badshot:smash    a skos:Concept ; skos:inScheme badshot: ; skos:prefLabel "smash"@en .
+badshot:drop     a skos:Concept ; skos:inScheme badshot: ; skos:prefLabel "drop"@en .
+badshot:clear    a skos:Concept ; skos:inScheme badshot: ; skos:prefLabel "clear"@en .
+badshot:net-shot a skos:Concept ; skos:inScheme badshot: ; skos:prefLabel "net shot"@en .
+badshot:drive    a skos:Concept ; skos:inScheme badshot: ; skos:prefLabel "drive"@en .
+badshot:lift     a skos:Concept ; skos:inScheme badshot: ; skos:prefLabel "lift"@en .
+
+badfault: a skos:ConceptScheme ; rdfs:label "Badminton fault types"@en .
+badfault:service-fault a skos:Concept ; skos:inScheme badfault: ; skos:prefLabel "service fault"@en .
+badfault:net-touch     a skos:Concept ; skos:inScheme badfault: ; skos:prefLabel "net touch"@en .
+badfault:out           a skos:Concept ; skos:inScheme badfault: ; skos:prefLabel "out"@en .
+badfault:double-hit    a skos:Concept ; skos:inScheme badfault: ; skos:prefLabel "double hit"@en .
