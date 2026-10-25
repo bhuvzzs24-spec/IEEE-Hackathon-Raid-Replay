@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Raid Replay</title>
 <meta name="description" content="Raid Replay gives kabaddi the open data standard it's missing: the first kabaddi plugin for IPTC Sport Schema, with a lossless two-way converter.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF8A00'/%3E%3Cstop offset='.55' stop-color='%23E0218A'/%3E%3Cstop offset='1' stop-color='%234F3BD9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M16 6v20' stroke='white' stroke-width='2.4'/%3E%3Ccircle cx='10' cy='16' r='3.2' fill='white'/%3E%3Ccircle cx='22.5' cy='11' r='2.2' fill='white' opacity='.75'/%3E%3Ccircle cx='22.5' cy='21' r='2.2' fill='white' opacity='.75'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' fill='%23FBFBF8' stroke='%231B1E23' stroke-width='3'/%3E%3Cpath d='M16 2v28' stroke='%231B1E23' stroke-width='3'/%3E%3Ccircle cx='9' cy='16' r='3.6' fill='%231C5E41'/%3E%3C/svg%3E">
 <style>
 /*__CSS__*/
 </style>
@@ -16,53 +16,55 @@
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="Raid Replay home">
-      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF8A00"/><stop offset=".55" stop-color="#E0218A"/><stop offset="1" stop-color="#4F3BD9"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M16 6v20" stroke="#fff" stroke-width="2.4"/><circle cx="10" cy="16" r="3.2" fill="#fff"/><circle cx="22.5" cy="11" r="2.2" fill="#fff" opacity=".75"/><circle cx="22.5" cy="21" r="2.2" fill="#fff" opacity=".75"/></svg>
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/><path d="M16 2v28" stroke="currentColor" stroke-width="3"/><circle cx="9" cy="16" r="3.6" fill="#1C5E41"/></svg>
       <span>Raid Replay</span>
     </a>
     <nav class="links" aria-label="Sections">
       <a href="#how">How it works</a><a href="#demo">Live demo</a>
     </nav>
-    <a class="btn btn-sm btn-dark" href="#demo">Watch the replay <span class="arr">→</span></a>
+    <a class="btn btn-sm btn-dark" href="#demo">Watch the replay</a>
   </div>
 </header>
 
 <main id="top">
 
-<!-- ============================== HERO ============================== -->
+<!-- ============================== MATCH SHEET (hero) ============================== -->
 <section class="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div><div class="blob b5"></div>
-    <div class="grain"></div>
-  </div>
-  <div class="wrap hero-in">
+  <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow-pill"><span class="dot"></span> IEEE CS Confluence Buildathon · Track: Lossless</p>
+      <p class="kicker">IEEE CS Confluence Buildathon · Track: Lossless · Team Byte Tackle</p>
       <h1>Raid Replay</h1>
-      <p class="lede">gives kabaddi the open data standard it's missing.</p>
-      <p class="sub">230 million people watch Pro Kabaddi, yet no open sports-data standard could describe a single raid. We built the first kabaddi plugin for <strong>IPTC Sport Schema</strong> and a converter that goes there and back without losing a single value.</p>
-      <div class="cta">
-        <a class="btn btn-light" href="#demo">Watch the replay <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#how">How it works</a>
+      <p class="sub">230 million people watch Pro Kabaddi, yet no open sports-data standard could describe a single raid. We built the first kabaddi plugin for <strong>IPTC Sport Schema</strong>, and a converter that goes there and back without losing a single value. Below is the final of our simulated league, as the converted data tells it.</p>
+    </div>
+
+    <div class="sheet" aria-label="Match details of the final">
+      <div class="sheet-h"><b>Match sheet</b><span id="sheetId"></span></div>
+      <dl class="fields">
+        <div><dt>Competition</dt><dd id="fComp"></dd></div>
+        <div><dt>Stage</dt><dd id="fStage"></dd></div>
+        <div><dt>Venue</dt><dd id="fVenue"></dd></div>
+        <div><dt>Date</dt><dd id="fDate"></dd></div>
+        <div><dt>Toss · first raid</dt><dd id="fToss"></dd></div>
+      </dl>
+      <div class="result">
+        <span class="team"><span class="sw" id="heroHomeSw"></span><b id="heroHomeName"></b></span>
+        <em id="heroHome">0</em>
+        <em id="heroAway">0</em>
+        <span class="team away"><b id="heroAwayName"></b><span class="sw" id="heroAwaySw"></span></span>
+        <span class="result-note"><span class="ok-badge">diff = 0 ✓</span> SHACL: conforms</span>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="card-float score-card">
-        <div class="sc-top"><span class="live-dot"></span> Final · Replay from Sport Schema</div>
-        <div class="sc-row"><span class="sw" style="background:#FF7A00"></span><b>Saffron Strikers</b><em id="heroHome">0</em></div>
-        <div class="sc-row"><span class="sw" style="background:#3B2CC9"></span><b>Indigo Titans</b><em id="heroAway">0</em></div>
-        <div class="sc-foot"><span class="ok-badge">diff = 0 ✓</span><span>SHACL: conforms</span></div>
-      </div>
-      <div class="card-float code-card">
-        <div class="code-head"><i></i><i></i><i></i><span>raid #<!--SNIP_SEQ-->.jsonld</span></div>
-        <pre class="code"><code><!--SNIP_HERO--></code></pre>
-      </div>
+
+    <div class="cta">
+      <a class="btn btn-dark" href="#demo">Watch the replay</a>
+      <a class="btn btn-line" href="#how">How it works</a>
     </div>
+    <div class="stats" id="stats"></div>
   </div>
-  <div class="wrap stats" id="stats"></div>
 </section>
 
 <!-- ============================== HOW IT WORKS ============================== -->
-<section class="sec sec-tint slant" id="how">
+<section class="sec" id="how">
   <div class="wrap">
     <p class="eyebrow">How it works</p>
     <h2>One raid, three formats, zero loss.</h2>
@@ -70,9 +72,9 @@
 
     <div class="flow reveal" role="img" aria-label="Kabaddi JSON converts to Sport Schema Turtle and JSON-LD and back; both are validated with IPTC and kabaddi SHACL shapes">
       <div class="node n-json"><div class="n-ic">{ }</div><b>Kabaddi JSON</b><span>native raid-by-raid feed</span></div>
-      <div class="pipe"><span class="pipe-l">to_graph()</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><defs><linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#FF8A00"/><stop offset="1" stop-color="#E0218A"/></linearGradient></defs><path d="M2 14 H112 l-8 -8 M2 26 H112" stroke="url(#pg)" stroke-width="2.5" fill="none" class="p1"/><path d="M118 26 H8 l8 8" stroke="#4F3BD9" stroke-width="2.5" fill="none" class="p2"/></svg><span class="pipe-l pipe-r">from_graph()</span></div>
+      <div class="pipe"><span class="pipe-l">to_graph()</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><path d="M2 14 H112 l-8 -8 M2 26 H112" stroke="#1B1E23" stroke-width="2.5" fill="none" class="p1"/><path d="M118 26 H8 l8 8" stroke="#6A6F78" stroke-width="2.5" fill="none" class="p2"/></svg><span class="pipe-l pipe-r">from_graph()</span></div>
       <div class="node n-rdf"><div class="n-ic">⟨⟩</div><b>Sport Schema</b><span>Turtle · JSON-LD</span></div>
-      <div class="pipe pipe-down"><span class="pipe-l">pySHACL</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><path d="M2 20 H112 l-8 -8 M112 20 l-8 8" stroke="#0F9F9A" stroke-width="2.5" fill="none" class="p1"/></svg></div>
+      <div class="pipe pipe-down"><span class="pipe-l">pySHACL</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><path d="M2 20 H112 l-8 -8 M112 20 l-8 8" stroke="#1C5E41" stroke-width="2.5" fill="none" class="p1"/></svg></div>
       <div class="node n-val"><div class="n-ic">✓</div><b>Validator</b><span>IPTC shapes + kabaddi plugin</span></div>
     </div>
 
@@ -100,12 +102,11 @@
 </section>
 
 <!-- ============================== LIVE DEMO ============================== -->
-<section class="sec demo slant-dark" id="demo">
-  <div class="demo-glow" aria-hidden="true"></div>
-  <div class="wrap">
-    <p class="eyebrow light">Live demo</p>
-    <h2 class="light">The final, replayed raid by raid — from Sport Schema data only.</h2>
-    <p class="intro light">Every movement on this mat is driven by the converted JSON-LD: raider, touches, tackles, revivals, cards and reviews. The left scoreboard is computed from the original JSON, the right one from the Sport Schema data.</p>
+<section class="sec demo" id="demo">
+   <div class="wrap">
+    <p class="eyebrow">Live demo</p>
+    <h2>The final, replayed raid by raid — from Sport Schema data only.</h2>
+    <p class="intro">Every movement on this mat is driven by the converted JSON-LD: raider, touches, tackles, revivals, cards and reviews. The left scoreboard is computed from the original JSON, the right one from the Sport Schema data.</p>
 
     <div class="stage">
       <div class="mat-wrap" id="matWrap">
@@ -141,7 +142,7 @@
               <radialGradient id="spot" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
               <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
             </defs>
-            <rect x="0" y="0" width="972" height="720" rx="22" fill="#121a4d"/>
+            <rect x="0" y="0" width="972" height="720" rx="4" fill="#121a4d"/>
             <!-- lobbies -->
             <rect x="96" y="0" width="780" height="60" fill="url(#lobbyPat)"/>
             <rect x="96" y="660" width="780" height="60" fill="url(#lobbyPat)"/>
@@ -221,7 +222,7 @@
 <footer class="foot">
   <div class="wrap foot-in">
     <div class="foot-brand">
-      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="url(#lg)"/><path d="M16 6v20" stroke="#fff" stroke-width="2.4"/><circle cx="10" cy="16" r="3.2" fill="#fff"/><circle cx="22.5" cy="11" r="2.2" fill="#fff" opacity=".75"/><circle cx="22.5" cy="21" r="2.2" fill="#fff" opacity=".75"/></svg>
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" fill="none" stroke="currentColor" stroke-width="3"/><path d="M16 2v28" stroke="currentColor" stroke-width="3"/><circle cx="9" cy="16" r="3.6" fill="#1C5E41"/></svg>
       <div><b>Raid Replay</b><span>Kabaddi's open data standard — by Byte Tackle.</span></div>
     </div>
     <p class="foot-note">All teams, players and matches are fictional, produced by our seeded simulator. No real match data is used. IPTC Sport Schema and NewsCodes are standards of IPTC; this kabaddi plugin is an independent proposal and is not endorsed by IPTC.</p>

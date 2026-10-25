@@ -178,7 +178,26 @@
     [totalDiff, 'differences after round trip'], [validFiles + ' / ' + MS.length * 2, 'files pass SHACL']
   ].map(function (s) { return '<div class="stat"><b>' + s[0] + '</b><span>' + s[1] + '</span></div>'; }).join('');
 
-  /* hero score card counts up to the final score read from JSON-LD */
+  /* match sheet: details from the original JSON, teams from the JSON-LD */
+  (function () {
+    var m = NV.match || {};
+    var plain = function (s) { return String(s || '').replace(/ \(fictional\)/, ''); };
+    var st = String(m.start || '');
+    var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var date = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(st)
+      ? parseInt(st.slice(8, 10), 10) + ' ' + MON[parseInt(st.slice(5, 7), 10) - 1] + ' ' + st.slice(0, 4) + ', ' + st.slice(11, 16) + (st.slice(19) === '+05:30' ? ' IST' : '')
+      : st;
+    $('#sheetId').textContent = m.id || '';
+    $('#fComp').textContent = plain(m.competition && m.competition.name);
+    $('#fStage').textContent = (m.stage ? m.stage.charAt(0).toUpperCase() + m.stage.slice(1) : '') + (m.knockout ? ' (knockout)' : '');
+    $('#fVenue').textContent = plain(m.venue && m.venue.name);
+    $('#fDate').textContent = date;
+    $('#fToss').textContent = (m.toss_winner || '') + ' · ' + (m.first_raid_team || '');
+    $('#heroHomeName').textContent = HOME.name; $('#heroAwayName').textContent = AWAY.name;
+    $('#heroHomeSw').style.background = HOME.colour; $('#heroAwaySw').style.background = AWAY.colour;
+  })();
+
+  /* hero score counts up to the final score read from JSON-LD */
   (function () {
     var hEl = $('#heroHome'), aEl = $('#heroAway'), t0 = null, D = 1600;
     function step(ts) {
