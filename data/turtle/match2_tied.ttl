@@ -1,0 +1,2683 @@
+@prefix kab: <https://sportschema.org/ontologies/kabaddi/> .
+@prefix kabcard: <https://sportschema.org/ontologies/kabaddi/cardcolour/> .
+@prefix kabrev: <https://sportschema.org/ontologies/kabaddi/reviewresult/> .
+@prefix kabro: <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+@prefix kabrole: <https://sportschema.org/ontologies/kabaddi/playingrole/> .
+@prefix medtop: <http://cv.iptc.org/newscodes/mediatopic/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix spactionclass: <http://cv.iptc.org/newscodes/spactionclass/> .
+@prefix spct: <http://cv.iptc.org/newscodes/spct/> .
+@prefix speventoutcome: <http://cv.iptc.org/newscodes/speventoutcome/> .
+@prefix speventstatus: <http://cv.iptc.org/newscodes/speventstatus/> .
+@prefix sport: <https://sportschema.org/ontologies/main/> .
+@prefix spplayerstatus: <http://cv.iptc.org/newscodes/spplayerstatus/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raid-replay.example/data/action/DKL26-M02-E001> a kab:PeriodStart,
+        sport:Action ;
+    rdfs:label "Start of half 1"^^xsd:string ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 0 ;
+    kab:clockSeconds 0 ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 0 ;
+    kab:nativeId "DKL26-M02-E001"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "1"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E002> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #2: Naveen Dhillon (tackled, 1-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 1 ;
+    kab:bonusPoint true ;
+    kab:clockSeconds 0 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 1 ;
+    kab:nativeId "DKL26-M02-E002"^^xsd:string ;
+    kab:raidDurationSeconds 25 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "2"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E003> a kab:Substitution,
+        sport:Action ;
+    rdfs:label "Substitution CRM: CRM-11 for CRM-06"^^xsd:string ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 1 ;
+    kab:clockSeconds 37 ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 1 ;
+    kab:nativeId "DKL26-M02-E003"^^xsd:string ;
+    kab:playerIn <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:playerOut <https://raid-replay.example/data/athlete/CRM-06> ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:substitution ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "3"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E004> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #4: Sachin Verma (self-out, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 2 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 37 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 1 ;
+    kab:nativeId "DKL26-M02-E004"^^xsd:string ;
+    kab:raidDurationSeconds 16 ;
+    kab:raidOutcome kabro:self-out ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "4"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E005> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #5: Madhav Kamath (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 2 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 60 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 2 ;
+    kab:nativeId "DKL26-M02-E005"^^xsd:string ;
+    kab:raidDurationSeconds 15 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-02>,
+        <https://raid-replay.example/data/athlete/CRM-03>,
+        <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "5"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E006> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #6: Sachin Verma (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 2 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 83 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 3 ;
+    kab:nativeId "DKL26-M02-E006"^^xsd:string ;
+    kab:raidDurationSeconds 30 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "6"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E008> a kab:Review,
+        sport:Action ;
+    rdfs:label "Review by CRM (unsuccessful)"^^xsd:string ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 3 ;
+    kab:clockSeconds 151 ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 3 ;
+    kab:nativeId "DKL26-M02-E008"^^xsd:string ;
+    kab:reviewOf <https://raid-replay.example/data/action/DKL26-M02-E007> ;
+    kab:reviewResult kabrev:unsuccessful ;
+    kab:reviewsRemaining 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "8"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E009> a kab:Substitution,
+        sport:Action ;
+    rdfs:label "Substitution GLD: GLD-11 for GLD-01"^^xsd:string ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 3 ;
+    kab:clockSeconds 191 ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 3 ;
+    kab:nativeId "DKL26-M02-E009"^^xsd:string ;
+    kab:playerIn <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:playerOut <https://raid-replay.example/data/athlete/GLD-01> ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:substitution ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "9"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E010> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #10: Sachin Verma (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 3 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 191 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 3 ;
+    kab:nativeId "DKL26-M02-E010"^^xsd:string ;
+    kab:raidDurationSeconds 23 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "10"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E011> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #11: Naveen Chauhan (successful, 2-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 5 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 229 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-02>,
+        <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 3 ;
+    kab:nativeId "DKL26-M02-E011"^^xsd:string ;
+    kab:raidDurationSeconds 24 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 2 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "11"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E012> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #12: Vikram Malik (successful, 2-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 5 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 261 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-04>,
+        <https://raid-replay.example/data/athlete/GLD-07> ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 5 ;
+    kab:nativeId "DKL26-M02-E012"^^xsd:string ;
+    kab:raidDurationSeconds 13 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 2 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-04>,
+        <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "12"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E013> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #13: Naveen Dhillon (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 5 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 280 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 5 ;
+    kab:nativeId "DKL26-M02-E013"^^xsd:string ;
+    kab:raidDurationSeconds 28 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "13"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E014> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #14: Girish Patil (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 6 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 320 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 5 ;
+    kab:nativeId "DKL26-M02-E014"^^xsd:string ;
+    kab:raidDurationSeconds 27 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-07> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-02>,
+        <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-06> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "14"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E015> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #15: Lohith Verma (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 6 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 360 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 6 ;
+    kab:nativeId "DKL26-M02-E015"^^xsd:string ;
+    kab:raidDurationSeconds 27 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-01>,
+        <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "15"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E016> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #16: Sachin Verma (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 7 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 403 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 6 ;
+    kab:nativeId "DKL26-M02-E016"^^xsd:string ;
+    kab:raidDurationSeconds 26 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-02>,
+        <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-06> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "16"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E017> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #17: Naveen Dhillon (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 8 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 441 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 6 ;
+    kab:nativeId "DKL26-M02-E017"^^xsd:string ;
+    kab:raidDurationSeconds 19 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "17"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E018> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #18: Farhan Rao (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 8 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 471 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 7 ;
+    kab:nativeId "DKL26-M02-E018"^^xsd:string ;
+    kab:raidDurationSeconds 14 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-02> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "18"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E019> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #19: Abhay Rao (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 9 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 491 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 7 ;
+    kab:nativeId "DKL26-M02-E019"^^xsd:string ;
+    kab:raidDurationSeconds 30 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-06> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "19"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E020> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #20: Girish Patil (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 10 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 533 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 7 ;
+    kab:nativeId "DKL26-M02-E020"^^xsd:string ;
+    kab:raidDurationSeconds 14 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-02>,
+        <https://raid-replay.example/data/athlete/GLD-07> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "20"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E022> a kab:Review,
+        sport:Action ;
+    rdfs:label "Review by CRM (successful)"^^xsd:string ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 12 ;
+    kab:clockSeconds 576 ;
+    kab:half 1 ;
+    kab:homeOnMat 1 ;
+    kab:homeScore 7 ;
+    kab:nativeId "DKL26-M02-E022"^^xsd:string ;
+    kab:reviewOf <https://raid-replay.example/data/action/DKL26-M02-E021> ;
+    kab:reviewResult kabrev:successful ;
+    kab:reviewsRemaining 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "22"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E023> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #23: Karthik Reddy (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 12 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 617 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 1 ;
+    kab:homeScore 7 ;
+    kab:nativeId "DKL26-M02-E023"^^xsd:string ;
+    kab:raidDurationSeconds 26 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "23"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E024> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #24: Lohith Verma (successful, 3-0)"^^xsd:string ;
+    kab:allOutPoints 2 ;
+    kab:allOutTeam <https://raid-replay.example/data/team/CRM> ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 652 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:defendersOnMat 1 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 7 ;
+    kab:nativeId "DKL26-M02-E024"^^xsd:string ;
+    kab:raidDurationSeconds 24 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 3 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-01>,
+        <https://raid-replay.example/data/athlete/CRM-02>,
+        <https://raid-replay.example/data/athlete/CRM-03>,
+        <https://raid-replay.example/data/athlete/CRM-04>,
+        <https://raid-replay.example/data/athlete/CRM-05>,
+        <https://raid-replay.example/data/athlete/CRM-07>,
+        <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "24"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E025> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #25: Vikram Malik (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 688 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-06> ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 8 ;
+    kab:nativeId "DKL26-M02-E025"^^xsd:string ;
+    kab:raidDurationSeconds 15 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "25"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E026> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #26: Naveen Dhillon (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 719 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 9 ;
+    kab:nativeId "DKL26-M02-E026"^^xsd:string ;
+    kab:raidDurationSeconds 9 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-02>,
+        <https://raid-replay.example/data/athlete/CRM-07> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "26"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E027> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #27: Farhan Rao (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 741 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 9 ;
+    kab:nativeId "DKL26-M02-E027"^^xsd:string ;
+    kab:raidDurationSeconds 26 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "27"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E028> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #28: Lohith Verma (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 783 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 9 ;
+    kab:nativeId "DKL26-M02-E028"^^xsd:string ;
+    kab:raidDurationSeconds 28 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "28"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E029> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #29: Sachin Verma (successful, 2-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 3 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 827 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-03>,
+        <https://raid-replay.example/data/athlete/GLD-07> ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 11 ;
+    kab:nativeId "DKL26-M02-E029"^^xsd:string ;
+    kab:raidDurationSeconds 25 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 2 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "29"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E030> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #30: Madhav Kamath (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 3 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 867 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 11 ;
+    kab:nativeId "DKL26-M02-E030"^^xsd:string ;
+    kab:raidDurationSeconds 23 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "30"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E031> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #31: Vikram Malik (successful, 5-0)"^^xsd:string ;
+    kab:allOutPoints 2 ;
+    kab:allOutTeam <https://raid-replay.example/data/team/GLD> ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 15 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 903 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-04>,
+        <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 16 ;
+    kab:nativeId "DKL26-M02-E031"^^xsd:string ;
+    kab:raidDurationSeconds 16 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 5 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02>,
+        <https://raid-replay.example/data/athlete/GLD-03>,
+        <https://raid-replay.example/data/athlete/GLD-04>,
+        <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-06>,
+        <https://raid-replay.example/data/athlete/GLD-07>,
+        <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:superRaid true ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "31"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E032> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #32: Lohith Verma (successful, 3-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 18 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 934 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-04>,
+        <https://raid-replay.example/data/athlete/CRM-05>,
+        <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie true ;
+    kab:half 1 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 16 ;
+    kab:nativeId "DKL26-M02-E032"^^xsd:string ;
+    kab:raidDurationSeconds 20 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 3 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid true ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "32"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E033> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #33: Sachin Verma (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 18 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 970 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 16 ;
+    kab:nativeId "DKL26-M02-E033"^^xsd:string ;
+    kab:raidDurationSeconds 29 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "33"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E034> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #34: Naveen Dhillon (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 19 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1010 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-01> ;
+    kab:defendersOnMat 4 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 16 ;
+    kab:nativeId "DKL26-M02-E034"^^xsd:string ;
+    kab:raidDurationSeconds 30 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "34"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E035> a kab:Substitution,
+        sport:Action ;
+    rdfs:label "Substitution CRM: CRM-08 for CRM-02"^^xsd:string ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 19 ;
+    kab:clockSeconds 1050 ;
+    kab:half 1 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 16 ;
+    kab:nativeId "DKL26-M02-E035"^^xsd:string ;
+    kab:playerIn <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:playerOut <https://raid-replay.example/data/athlete/CRM-02> ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:substitution ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "35"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E036> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #36: Jayanth Jadhav (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 19 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1050 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 16 ;
+    kab:nativeId "DKL26-M02-E036"^^xsd:string ;
+    kab:raidDurationSeconds 28 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "36"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E037> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #37: Naveen Dhillon (tackled, 0-2)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 19 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1086 ;
+    kab:defencePoints 2 ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 18 ;
+    kab:nativeId "DKL26-M02-E037"^^xsd:string ;
+    kab:raidDurationSeconds 20 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle true ;
+    kab:tacklePoints 2 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-03>,
+        <https://raid-replay.example/data/athlete/CRM-07> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "37"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E038> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #38: Jayanth Jadhav (tackled, 1-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 20 ;
+    kab:bonusPoint true ;
+    kab:clockSeconds 1119 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie true ;
+    kab:half 1 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E038"^^xsd:string ;
+    kab:raidDurationSeconds 10 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "38"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E039> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #39: Chiranth Hegde (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 20 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1141 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E039"^^xsd:string ;
+    kab:raidDurationSeconds 25 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-07> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "39"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E040> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #40: Zubin Urs (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 21 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1175 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E040"^^xsd:string ;
+    kab:raidDurationSeconds 28 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-07> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "40"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E041> a kab:PeriodEnd,
+        sport:Action ;
+    rdfs:label "End of half 1"^^xsd:string ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 21 ;
+    kab:clockSeconds 1200 ;
+    kab:half 1 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E041"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "41"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E042> a kab:PeriodStart,
+        sport:Action ;
+    rdfs:label "Start of half 2"^^xsd:string ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 21 ;
+    kab:clockSeconds 0 ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E042"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "42"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E043> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #43: Girish Patil (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 21 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 0 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E043"^^xsd:string ;
+    kab:raidDurationSeconds 30 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "43"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E044> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #44: Lohith Verma (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 21 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 39 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 2 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E044"^^xsd:string ;
+    kab:raidDurationSeconds 24 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "44"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E045> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #45: Girish Patil (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 22 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 72 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 1 ;
+    kab:homeScore 19 ;
+    kab:nativeId "DKL26-M02-E045"^^xsd:string ;
+    kab:raidDurationSeconds 11 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "45"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E046> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #46: Naveen Dhillon (do-or-die-out, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 22 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 95 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 1 ;
+    kab:doOrDie true ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 20 ;
+    kab:nativeId "DKL26-M02-E046"^^xsd:string ;
+    kab:raidDurationSeconds 25 ;
+    kab:raidOutcome kabro:do-or-die-out ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "46"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E047> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #47: Vikram Malik (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 22 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 131 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 20 ;
+    kab:nativeId "DKL26-M02-E047"^^xsd:string ;
+    kab:raidDurationSeconds 22 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "47"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E048> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #48: Lohith Verma (tackled, 0-2)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 22 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 166 ;
+    kab:defencePoints 2 ;
+    kab:defendersOnMat 2 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 22 ;
+    kab:nativeId "DKL26-M02-E048"^^xsd:string ;
+    kab:raidDurationSeconds 19 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:superRaid false ;
+    kab:superTackle true ;
+    kab:tacklePoints 2 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "48"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E049> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #49: Vikram Malik (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 23 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 199 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 22 ;
+    kab:nativeId "DKL26-M02-E049"^^xsd:string ;
+    kab:raidDurationSeconds 19 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-04>,
+        <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "49"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E050> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #50: Madhav Kamath (successful, 4-0)"^^xsd:string ;
+    kab:allOutPoints 2 ;
+    kab:allOutTeam <https://raid-replay.example/data/team/CRM> ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 27 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 230 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-05>,
+        <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:defendersOnMat 2 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 22 ;
+    kab:nativeId "DKL26-M02-E050"^^xsd:string ;
+    kab:raidDurationSeconds 24 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 4 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-01>,
+        <https://raid-replay.example/data/athlete/CRM-03>,
+        <https://raid-replay.example/data/athlete/CRM-04>,
+        <https://raid-replay.example/data/athlete/CRM-05>,
+        <https://raid-replay.example/data/athlete/CRM-07>,
+        <https://raid-replay.example/data/athlete/CRM-08>,
+        <https://raid-replay.example/data/athlete/CRM-11>,
+        <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "50"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E051> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #51: Vikram Malik (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 27 ;
+    kab:bonusPoint true ;
+    kab:clockSeconds 268 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 7 ;
+    kab:homeScore 23 ;
+    kab:nativeId "DKL26-M02-E051"^^xsd:string ;
+    kab:raidDurationSeconds 24 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "51"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E052> a kab:Card,
+        sport:Action ;
+    rdfs:label "Red card: Sachin Verma"^^xsd:string ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 27 ;
+    kab:clockSeconds 302 ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 23 ;
+    kab:nativeId "DKL26-M02-E052"^^xsd:string ;
+    kab:player <https://raid-replay.example/data/athlete/CRM-01> ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:penalty ;
+    sport:infractionLevel kabcard:red ;
+    sport:infractionType "Dangerous tackle"^^xsd:string ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "52"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E053> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #53: Lohith Verma (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 27 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 302 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 24 ;
+    kab:nativeId "DKL26-M02-E053"^^xsd:string ;
+    kab:raidDurationSeconds 18 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "53"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E054> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #54: Girish Patil (successful, 2-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 4 ;
+    kab:awayScore 27 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 335 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-02>,
+        <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 26 ;
+    kab:nativeId "DKL26-M02-E054"^^xsd:string ;
+    kab:raidDurationSeconds 17 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 2 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "54"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E055> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #55: Madhav Kamath (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 3 ;
+    kab:awayScore 27 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 368 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 27 ;
+    kab:nativeId "DKL26-M02-E055"^^xsd:string ;
+    kab:raidDurationSeconds 17 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "55"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E056> a kab:Substitution,
+        sport:Action ;
+    rdfs:label "Substitution GLD: GLD-09 for GLD-07"^^xsd:string ;
+    kab:awayOnMat 3 ;
+    kab:awayScore 27 ;
+    kab:clockSeconds 394 ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 27 ;
+    kab:nativeId "DKL26-M02-E056"^^xsd:string ;
+    kab:playerIn <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:playerOut <https://raid-replay.example/data/athlete/GLD-07> ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:substitution ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "56"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E057> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #57: Jayanth Jadhav (tackled, 0-2)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 4 ;
+    kab:awayScore 29 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 394 ;
+    kab:defencePoints 2 ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 27 ;
+    kab:nativeId "DKL26-M02-E057"^^xsd:string ;
+    kab:raidDurationSeconds 6 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle true ;
+    kab:tacklePoints 2 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "57"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E058> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #58: Farhan Tiwari (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 3 ;
+    kab:awayScore 29 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 413 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 28 ;
+    kab:nativeId "DKL26-M02-E058"^^xsd:string ;
+    kab:raidDurationSeconds 15 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-03>,
+        <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "58"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E059> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #59: Jayanth Jadhav (tackled, 0-2)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 4 ;
+    kab:awayScore 31 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 436 ;
+    kab:defencePoints 2 ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 28 ;
+    kab:nativeId "DKL26-M02-E059"^^xsd:string ;
+    kab:raidDurationSeconds 18 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle true ;
+    kab:tacklePoints 2 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "59"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E060> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #60: Naveen Dhillon (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 3 ;
+    kab:awayScore 31 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 467 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 29 ;
+    kab:nativeId "DKL26-M02-E060"^^xsd:string ;
+    kab:raidDurationSeconds 23 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-05>,
+        <https://raid-replay.example/data/athlete/CRM-07> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "60"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E061> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #61: Vikram Malik (tackled, 0-2)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 4 ;
+    kab:awayScore 33 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 498 ;
+    kab:defencePoints 2 ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 29 ;
+    kab:nativeId "DKL26-M02-E061"^^xsd:string ;
+    kab:raidDurationSeconds 16 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:superRaid false ;
+    kab:superTackle true ;
+    kab:tacklePoints 2 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-05> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "61"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E062> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #62: Lohith Verma (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 3 ;
+    kab:awayScore 33 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 526 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 30 ;
+    kab:nativeId "DKL26-M02-E062"^^xsd:string ;
+    kab:raidDurationSeconds 25 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-04>,
+        <https://raid-replay.example/data/athlete/CRM-07> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "62"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E063> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #63: Jayanth Jadhav (successful, 2-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 1 ;
+    kab:awayScore 33 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 565 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-06> ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 32 ;
+    kab:nativeId "DKL26-M02-E063"^^xsd:string ;
+    kab:raidDurationSeconds 16 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 2 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "63"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E064> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #64: Naveen Chauhan (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 2 ;
+    kab:awayScore 34 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 590 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 32 ;
+    kab:nativeId "DKL26-M02-E064"^^xsd:string ;
+    kab:raidDurationSeconds 17 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "64"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E065> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #65: Girish Patil (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 1 ;
+    kab:awayScore 34 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 620 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:defendersOnMat 2 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 33 ;
+    kab:nativeId "DKL26-M02-E065"^^xsd:string ;
+    kab:raidDurationSeconds 28 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "65"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E066> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #66: Madhav Kamath (tackled, 1-3)"^^xsd:string ;
+    kab:allOutPoints 2 ;
+    kab:allOutTeam <https://raid-replay.example/data/team/GLD> ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 35 ;
+    kab:bonusPoint true ;
+    kab:clockSeconds 663 ;
+    kab:defencePoints 3 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 36 ;
+    kab:nativeId "DKL26-M02-E066"^^xsd:string ;
+    kab:raidDurationSeconds 19 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02>,
+        <https://raid-replay.example/data/athlete/GLD-03>,
+        <https://raid-replay.example/data/athlete/GLD-04>,
+        <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-06>,
+        <https://raid-replay.example/data/athlete/GLD-09>,
+        <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-03>,
+        <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "66"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E067> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #67: Vikram Malik (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 36 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 689 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 5 ;
+    kab:homeScore 36 ;
+    kab:nativeId "DKL26-M02-E067"^^xsd:string ;
+    kab:raidDurationSeconds 24 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-03>,
+        <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "67"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E069> a kab:Review,
+        sport:Action ;
+    rdfs:label "Review by CRM (unsuccessful)"^^xsd:string ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 37 ;
+    kab:clockSeconds 748 ;
+    kab:half 2 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 36 ;
+    kab:nativeId "DKL26-M02-E069"^^xsd:string ;
+    kab:reviewOf <https://raid-replay.example/data/action/DKL26-M02-E068> ;
+    kab:reviewResult kabrev:unsuccessful ;
+    kab:reviewsRemaining 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "69"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E070> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #70: Girish Patil (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 38 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 791 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 36 ;
+    kab:nativeId "DKL26-M02-E070"^^xsd:string ;
+    kab:raidDurationSeconds 9 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-05>,
+        <https://raid-replay.example/data/athlete/GLD-06> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "70"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E071> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #71: Lohith Verma (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 38 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 810 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 36 ;
+    kab:nativeId "DKL26-M02-E071"^^xsd:string ;
+    kab:raidDurationSeconds 20 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "71"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E072> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #72: Jayanth Jadhav (tackled, 1-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 39 ;
+    kab:bonusPoint true ;
+    kab:clockSeconds 846 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 37 ;
+    kab:nativeId "DKL26-M02-E072"^^xsd:string ;
+    kab:raidDurationSeconds 14 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-05> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "72"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E073> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #73: Lohith Verma (tackled, 0-2)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 39 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 875 ;
+    kab:defencePoints 2 ;
+    kab:defendersOnMat 2 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 39 ;
+    kab:nativeId "DKL26-M02-E073"^^xsd:string ;
+    kab:raidDurationSeconds 17 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:superRaid false ;
+    kab:superTackle true ;
+    kab:tacklePoints 2 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-07>,
+        <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "73"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E074> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #74: Vikram Malik (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 39 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 906 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 40 ;
+    kab:nativeId "DKL26-M02-E074"^^xsd:string ;
+    kab:raidDurationSeconds 16 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "74"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E075> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #75: Farhan Tiwari (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 40 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 930 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:defendersOnMat 4 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 40 ;
+    kab:nativeId "DKL26-M02-E075"^^xsd:string ;
+    kab:raidDurationSeconds 24 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "75"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E076> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #76: Vikram Malik (tackled, 0-1)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 41 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 962 ;
+    kab:defencePoints 1 ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 40 ;
+    kab:nativeId "DKL26-M02-E076"^^xsd:string ;
+    kab:raidDurationSeconds 21 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 1 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/GLD-06>,
+        <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "76"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E077> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #77: Abhay Rao (tackled, 0-2)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 41 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 996 ;
+    kab:defencePoints 2 ;
+    kab:defendersOnMat 2 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 3 ;
+    kab:homeScore 42 ;
+    kab:nativeId "DKL26-M02-E077"^^xsd:string ;
+    kab:raidDurationSeconds 20 ;
+    kab:raidOutcome kabro:tackled ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-06> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:superRaid false ;
+    kab:superTackle true ;
+    kab:tacklePoints 2 ;
+    kab:tackledBy <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "77"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E078> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #78: Girish Patil (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 5 ;
+    kab:awayScore 41 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1023 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:defendersOnMat 6 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 43 ;
+    kab:nativeId "DKL26-M02-E078"^^xsd:string ;
+    kab:raidDurationSeconds 29 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "78"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E079> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #79: Lohith Verma (successful, 3-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 44 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1063 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-04>,
+        <https://raid-replay.example/data/athlete/CRM-07>,
+        <https://raid-replay.example/data/athlete/CRM-08> ;
+    kab:defendersOnMat 4 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 1 ;
+    kab:homeScore 43 ;
+    kab:nativeId "DKL26-M02-E079"^^xsd:string ;
+    kab:raidDurationSeconds 21 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 3 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-03> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-06>,
+        <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:superRaid true ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 3 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "79"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E081> a kab:Review,
+        sport:Action ;
+    rdfs:label "Review by GLD (successful)"^^xsd:string ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 44 ;
+    kab:clockSeconds 1120 ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 44 ;
+    kab:nativeId "DKL26-M02-E081"^^xsd:string ;
+    kab:reviewOf <https://raid-replay.example/data/action/DKL26-M02-E080> ;
+    kab:reviewResult kabrev:successful ;
+    kab:reviewsRemaining 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "81"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E082> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #82: Naveen Dhillon (empty, 0-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 44 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1167 ;
+    kab:defencePoints 0 ;
+    kab:defendersOnMat 2 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 44 ;
+    kab:nativeId "DKL26-M02-E082"^^xsd:string ;
+    kab:raidDurationSeconds 23 ;
+    kab:raidOutcome kabro:empty ;
+    kab:raidPoints 0 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 0 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "82"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E083> a kab:PeriodEnd,
+        sport:Action ;
+    rdfs:label "End of half 2"^^xsd:string ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 44 ;
+    kab:clockSeconds 1200 ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 44 ;
+    kab:nativeId "DKL26-M02-E083"^^xsd:string ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:official-procedure ;
+    sport:sequenceNumber "83"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-01> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-01> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "1"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-02> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-02> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "2"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-03> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:all-rounder ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-03> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "3"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-04> a sport:IndividualParticipation ;
+    kab:captain true ;
+    kab:playingRole kabrole:all-rounder ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-04> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "4"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-05> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-05> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "5"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-06> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-06> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "6"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-07> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-07> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "7"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-08> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-08> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "8"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-09> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-09> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "9"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-10> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:all-rounder ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-10> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "10"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-11> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-11> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "11"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM-12> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/CRM-12> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:uniformNumberEvent "12"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-01> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-01> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "1"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-02> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-02> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "2"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-03> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:all-rounder ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-03> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "3"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-04> a sport:IndividualParticipation ;
+    kab:captain true ;
+    kab:playingRole kabrole:all-rounder ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-04> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "4"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-05> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-05> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "5"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-06> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-06> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "6"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-07> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-07> ;
+    sport:playerStatus spplayerstatus:starter ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "7"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-08> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-08> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "8"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-09> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:raider ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-09> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "9"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-10> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:all-rounder ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-10> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "10"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-11> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-11> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "11"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD-12> a sport:IndividualParticipation ;
+    kab:captain false ;
+    kab:playingRole kabrole:defender ;
+    sport:participationBy <https://raid-replay.example/data/athlete/GLD-12> ;
+    sport:playerStatus spplayerstatus:bench ;
+    sport:teamParticipation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:uniformNumberEvent "12"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E007> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #7: Nikhil Achar (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 3 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 124 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-04> ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 6 ;
+    kab:homeScore 3 ;
+    kab:nativeId "DKL26-M02-E007"^^xsd:string ;
+    kab:raidDurationSeconds 27 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-01> ;
+    kab:revived <https://raid-replay.example/data/athlete/GLD-04> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "7"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E021> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #21: Naveen Dhillon (successful, 2-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 12 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 559 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-02>,
+        <https://raid-replay.example/data/athlete/CRM-07> ;
+    kab:defendersOnMat 3 ;
+    kab:doOrDie false ;
+    kab:half 1 ;
+    kab:homeOnMat 1 ;
+    kab:homeScore 7 ;
+    kab:nativeId "DKL26-M02-E021"^^xsd:string ;
+    kab:raidDurationSeconds 17 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 2 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-02> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 2 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "21"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E068> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #68: Farhan Tiwari (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 7 ;
+    kab:awayScore 37 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 720 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:defendersOnMat 5 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 4 ;
+    kab:homeScore 36 ;
+    kab:nativeId "DKL26-M02-E068"^^xsd:string ;
+    kab:raidDurationSeconds 28 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/GLD-09> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sequenceNumber "68"^^xsd:string .
+
+<https://raid-replay.example/data/action/DKL26-M02-E080> a kab:Raid,
+        sport:Action ;
+    rdfs:label "Raid #80: Sandeep Chavan (successful, 1-0)"^^xsd:string ;
+    kab:allOutPoints 0 ;
+    kab:awayOnMat 6 ;
+    kab:awayScore 44 ;
+    kab:bonusPoint false ;
+    kab:clockSeconds 1094 ;
+    kab:defencePoints 0 ;
+    kab:defenderOut <https://raid-replay.example/data/athlete/GLD-11> ;
+    kab:defendersOnMat 7 ;
+    kab:doOrDie false ;
+    kab:half 2 ;
+    kab:homeOnMat 2 ;
+    kab:homeScore 44 ;
+    kab:nativeId "DKL26-M02-E080"^^xsd:string ;
+    kab:raidDurationSeconds 26 ;
+    kab:raidOutcome kabro:successful ;
+    kab:raidPoints 1 ;
+    kab:raider <https://raid-replay.example/data/athlete/CRM-05> ;
+    kab:revived <https://raid-replay.example/data/athlete/CRM-11> ;
+    kab:superRaid false ;
+    kab:superTackle false ;
+    kab:tacklePoints 0 ;
+    kab:touchPoints 1 ;
+    sport:actionInEvent <https://raid-replay.example/data/event/DKL26-M02> ;
+    sport:class spactionclass:play ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM> ;
+    sport:sequenceNumber "80"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-09> a sport:Athlete ;
+    rdfs:label "Akash Menon"^^xsd:string ;
+    kab:nativeId "CRM-09"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-10> a sport:Athlete ;
+    rdfs:label "Naveen Bains"^^xsd:string ;
+    kab:nativeId "CRM-10"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-12> a sport:Athlete ;
+    rdfs:label "Naveen Jadhav"^^xsd:string ;
+    kab:nativeId "CRM-12"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-08> a sport:Athlete ;
+    rdfs:label "Ishaan Patil"^^xsd:string ;
+    kab:nativeId "GLD-08"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-10> a sport:Athlete ;
+    rdfs:label "Kiran Verma"^^xsd:string ;
+    kab:nativeId "GLD-10"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-12> a sport:Athlete ;
+    rdfs:label "Charan Shetty"^^xsd:string ;
+    kab:nativeId "GLD-12"^^xsd:string .
+
+<https://raid-replay.example/data/competition/DKL-2026> a sport:Competition ;
+    rdfs:label "Deccan Kabaddi League 2026 (fictional)"^^xsd:string ;
+    kab:nativeId "DKL-2026"^^xsd:string ;
+    sport:competitionType spct:competition ;
+    sport:sport medtop:20000978 .
+
+<https://raid-replay.example/data/site/V2> a sport:Site ;
+    rdfs:label "Ring Road Sports Dome, Mysuru (fictional)"^^xsd:string ;
+    kab:nativeId "V2"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-06> a sport:Athlete ;
+    rdfs:label "Sachin Rathod"^^xsd:string ;
+    kab:nativeId "CRM-06"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-01> a sport:Athlete ;
+    rdfs:label "Nikhil Achar"^^xsd:string ;
+    kab:nativeId "GLD-01"^^xsd:string .
+
+<https://raid-replay.example/data/team/CRM> a sport:Team ;
+    rdfs:label "Crimson Cobras"^^xsd:string ;
+    kab:colour "#C81E3A"^^xsd:string ;
+    kab:nativeId "CRM"^^xsd:string ;
+    kab:shortName "CRM"^^xsd:string .
+
+<https://raid-replay.example/data/team/GLD> a sport:Team ;
+    rdfs:label "Golden Gaurs"^^xsd:string ;
+    kab:colour "#C9971C"^^xsd:string ;
+    kab:nativeId "GLD"^^xsd:string ;
+    kab:shortName "GLD"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-07> a sport:Athlete ;
+    rdfs:label "Chiranth Hegde"^^xsd:string ;
+    kab:nativeId "GLD-07"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-02> a sport:Athlete ;
+    rdfs:label "Farhan Rao"^^xsd:string ;
+    kab:nativeId "CRM-02"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-09> a sport:Athlete ;
+    rdfs:label "Farhan Tiwari"^^xsd:string ;
+    kab:nativeId "GLD-09"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-07> a sport:Athlete ;
+    rdfs:label "Zubin Urs"^^xsd:string ;
+    kab:nativeId "CRM-07"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-05> a sport:Athlete ;
+    rdfs:label "Akash Verma"^^xsd:string ;
+    kab:nativeId "GLD-05"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-06> a sport:Athlete ;
+    rdfs:label "Abhay Rao"^^xsd:string ;
+    kab:nativeId "GLD-06"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-01> a sport:Athlete ;
+    rdfs:label "Sachin Verma"^^xsd:string ;
+    kab:nativeId "CRM-01"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-08> a sport:Athlete ;
+    rdfs:label "Jayanth Jadhav"^^xsd:string ;
+    kab:nativeId "CRM-08"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-11> a sport:Athlete ;
+    rdfs:label "Karthik Reddy"^^xsd:string ;
+    kab:nativeId "CRM-11"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-04> a sport:Athlete ;
+    rdfs:label "Madhav Kamath"^^xsd:string ;
+    kab:nativeId "GLD-04"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-11> a sport:Athlete ;
+    rdfs:label "Naveen Chauhan"^^xsd:string ;
+    kab:nativeId "GLD-11"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-05> a sport:Athlete ;
+    rdfs:label "Sandeep Chavan"^^xsd:string ;
+    kab:nativeId "CRM-05"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-03> a sport:Athlete ;
+    rdfs:label "Vikram Malik"^^xsd:string ;
+    kab:nativeId "CRM-03"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/CRM-04> a sport:Athlete ;
+    rdfs:label "Girish Patil"^^xsd:string ;
+    kab:nativeId "CRM-04"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-03> a sport:Athlete ;
+    rdfs:label "Lohith Verma"^^xsd:string ;
+    kab:nativeId "GLD-03"^^xsd:string .
+
+<https://raid-replay.example/data/athlete/GLD-02> a sport:Athlete ;
+    rdfs:label "Naveen Dhillon"^^xsd:string ;
+    kab:nativeId "GLD-02"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/GLD> a sport:TeamParticipation ;
+    rdfs:label "Golden Gaurs in Crimson Cobras vs Golden Gaurs"^^xsd:string ;
+    sport:alignment "away"^^xsd:string ;
+    sport:eventOutcome speventoutcome:tie ;
+    sport:participationBy <https://raid-replay.example/data/team/GLD> ;
+    sport:score "44"^^xsd:string .
+
+<https://raid-replay.example/data/participation/DKL26-M02/CRM> a sport:TeamParticipation ;
+    rdfs:label "Crimson Cobras in Crimson Cobras vs Golden Gaurs"^^xsd:string ;
+    sport:alignment "home"^^xsd:string ;
+    sport:eventOutcome speventoutcome:tie ;
+    sport:participationBy <https://raid-replay.example/data/team/CRM> ;
+    sport:score "44"^^xsd:string .
+
+<https://raid-replay.example/data/event/DKL26-M02> a sport:Event ;
+    rdfs:label "Crimson Cobras vs Golden Gaurs"^^xsd:string ;
+    kab:firstRaidTeam <https://raid-replay.example/data/team/GLD> ;
+    kab:halfLengthMinutes 20 ;
+    kab:knockout false ;
+    kab:nativeId "DKL26-M02"^^xsd:string ;
+    kab:simulatorSeed 320 ;
+    kab:stage "league"^^xsd:string ;
+    kab:tossWinner <https://raid-replay.example/data/team/GLD> ;
+    sport:eventInCompetition <https://raid-replay.example/data/competition/DKL-2026> ;
+    sport:eventStatus speventstatus:post-event ;
+    sport:location <https://raid-replay.example/data/site/V2> ;
+    sport:participation <https://raid-replay.example/data/participation/DKL26-M02/CRM>,
+        <https://raid-replay.example/data/participation/DKL26-M02/GLD> ;
+    sport:sport medtop:20000978 ;
+    sport:startDateTime "2026-10-19T20:30:00+05:30"^^xsd:dateTime .
+

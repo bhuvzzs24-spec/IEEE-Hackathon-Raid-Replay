@@ -1,0 +1,4614 @@
+{
+ "@context": {
+  "kab": "https://sportschema.org/ontologies/kabaddi/",
+  "kabcard": "https://sportschema.org/ontologies/kabaddi/cardcolour/",
+  "kabrev": "https://sportschema.org/ontologies/kabaddi/reviewresult/",
+  "kabro": "https://sportschema.org/ontologies/kabaddi/raidoutcome/",
+  "kabrole": "https://sportschema.org/ontologies/kabaddi/playingrole/",
+  "medtop": "http://cv.iptc.org/newscodes/mediatopic/",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rr": "https://raid-replay.example/data/",
+  "spactionclass": "http://cv.iptc.org/newscodes/spactionclass/",
+  "spct": "http://cv.iptc.org/newscodes/spct/",
+  "speventoutcome": "http://cv.iptc.org/newscodes/speventoutcome/",
+  "speventstatus": "http://cv.iptc.org/newscodes/speventstatus/",
+  "sport": "https://sportschema.org/ontologies/main/",
+  "spplayerstatus": "http://cv.iptc.org/newscodes/spplayerstatus/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+ },
+ "@graph": [
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-09",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-09",
+   "rdfs:label": "Kiran Rao"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E006",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 0,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 157,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 3,
+   "kab:nativeId": "DKL26-M04-E006",
+   "kab:raidDurationSeconds": 21,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #6: Rohan Iyer (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "6"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-11",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-11",
+   "rdfs:label": "Akash Achar"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E082",
+   "@type": [
+    "sport:Action",
+    "kab:PeriodEnd"
+   ],
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 42,
+   "kab:clockSeconds": 1200,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 50,
+   "kab:nativeId": "DKL26-M04-E082",
+   "rdfs:label": "End of half 2",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "82"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E007",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 3,
+   "kab:awayScore": 1,
+   "kab:bonusPoint": true,
+   "kab:clockSeconds": 192,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": true,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 4,
+   "kab:nativeId": "DKL26-M04-E007",
+   "kab:raidDurationSeconds": 19,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #7: Jatin Kamath (tackled, 1-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "7"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E003",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 0,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 40,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 3,
+   "kab:nativeId": "DKL26-M04-E003",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #3: Jatin Kamath (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/team/TEA",
+   "@type": "sport:Team",
+   "kab:colour": "#0F9F9A",
+   "kab:nativeId": "TEA",
+   "kab:shortName": "TEA",
+   "rdfs:label": "Teal Tuskers"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E060",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 2,
+   "kab:allOutTeam": {
+    "@id": "https://raid-replay.example/data/team/TEA"
+   },
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 30,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 482,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E060",
+   "kab:raidDurationSeconds": 22,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 4,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-07"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 2,
+   "rdfs:label": "Raid #60: Jatin Kamath (successful, 4-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "60"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-04",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-04",
+   "rdfs:label": "Rohan Iyer"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-08",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-08",
+   "rdfs:label": "Naveen Nair"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E046",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 19,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 56,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E046",
+   "kab:raidDurationSeconds": 21,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 2,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    }
+   ],
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 2,
+   "rdfs:label": "Raid #46: Deepak Iyer (successful, 2-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "46"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-10",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:all-rounder"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-10"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "10"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E021",
+   "@type": [
+    "sport:Action",
+    "kab:Substitution"
+   ],
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 9,
+   "kab:clockSeconds": 611,
+   "kab:half": 1,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 17,
+   "kab:nativeId": "DKL26-M04-E021",
+   "kab:playerIn": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-12"
+   },
+   "kab:playerOut": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-02"
+   },
+   "rdfs:label": "Substitution TEA: TEA-12 for TEA-02",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:substitution"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "21"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E045",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 17,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 38,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E045",
+   "kab:raidDurationSeconds": 9,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #45: Karthik Bains (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "45"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E062",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 31,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 539,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E062",
+   "kab:raidDurationSeconds": 24,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #62: Dhruv Hegde (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "62"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-01",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-01",
+   "rdfs:label": "Deepak Iyer"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E073",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 41,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 899,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 40,
+   "kab:nativeId": "DKL26-M04-E073",
+   "kab:raidDurationSeconds": 29,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-07"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #73: Karthik Sandhu (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "73"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-04",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:all-rounder"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-10",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-10",
+   "rdfs:label": "Dhruv Bains"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E039",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 13,
+   "kab:bonusPoint": true,
+   "kab:clockSeconds": 1108,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": true,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E039",
+   "kab:raidDurationSeconds": 12,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #39: Eshwar Gill (successful, 1-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "39"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E050",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 20,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 188,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 26,
+   "kab:nativeId": "DKL26-M04-E050",
+   "kab:raidDurationSeconds": 23,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #50: Eshwar Gill (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "50"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E029",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 11,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 805,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E029",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #29: Jatin Kamath (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "29"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-08",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-08"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "8"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E075",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 951,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 41,
+   "kab:nativeId": "DKL26-M04-E075",
+   "kab:raidDurationSeconds": 30,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #75: Kiran Yadav (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "75"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E049",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 20,
+   "kab:bonusPoint": true,
+   "kab:clockSeconds": 153,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 26,
+   "kab:nativeId": "DKL26-M04-E049",
+   "kab:raidDurationSeconds": 23,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-05"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #49: Rohan Iyer (tackled, 1-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "49"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-04",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:all-rounder"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-04"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-03",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-03",
+   "rdfs:label": "Kiran Yadav"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E035",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 12,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 991,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    }
+   ],
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E035",
+   "kab:raidDurationSeconds": 17,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 3,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-12"
+    }
+   ],
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #35: Kiran Yadav (successful, 3-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "35"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Crimson Cobras in Teal Tuskers vs Crimson Cobras",
+   "sport:alignment": "away",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:loss"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/team/CRM"
+   },
+   "sport:score": "42"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E067",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 32,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 696,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    }
+   ],
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 34,
+   "kab:nativeId": "DKL26-M04-E067",
+   "kab:raidDurationSeconds": 24,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 2,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 2,
+   "rdfs:label": "Raid #67: Kiran Yadav (successful, 2-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "67"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E077",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1033,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-10"
+    }
+   ],
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": true,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 45,
+   "kab:nativeId": "DKL26-M04-E077",
+   "kab:raidDurationSeconds": 27,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 3,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #77: Karthik Bains (successful, 3-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "77"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-12",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-12"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "12"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E042",
+   "@type": [
+    "sport:Action",
+    "kab:PeriodEnd"
+   ],
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 16,
+   "kab:clockSeconds": 1200,
+   "kab:half": 1,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E042",
+   "rdfs:label": "End of half 1",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "42"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-06",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-06",
+   "rdfs:label": "Karthik Rao"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E058",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 26,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 428,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    }
+   ],
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E058",
+   "kab:raidDurationSeconds": 17,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 3,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-10"
+    }
+   ],
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #58: Eshwar Gill (successful, 3-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "58"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-07",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-07",
+   "rdfs:label": "Manoj Tiwari"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E012",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 5,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 352,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 5,
+   "kab:nativeId": "DKL26-M04-E012",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #12: Karthik Bains (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "12"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E033",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 12,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 925,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 20,
+   "kab:nativeId": "DKL26-M04-E033",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-05"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #33: Ishaan Kamath (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "33"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-08",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-08",
+   "rdfs:label": "Madhav Shetty"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E040",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 3,
+   "kab:awayScore": 15,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1129,
+   "kab:defencePoints": 2,
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E040",
+   "kab:raidDurationSeconds": 22,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": true,
+   "kab:tacklePoints": 2,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #40: Rohan Iyer (tackled, 0-2)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "40"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E043",
+   "@type": [
+    "sport:Action",
+    "kab:PeriodStart"
+   ],
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 16,
+   "kab:clockSeconds": 0,
+   "kab:half": 2,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E043",
+   "rdfs:label": "Start of half 2",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "43"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E025",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 11,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 700,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E025",
+   "kab:raidDurationSeconds": 16,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-07"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #25: Karthik Bains (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "25"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-09",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-09",
+   "rdfs:label": "Farhan Jadhav"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E076",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 991,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 42,
+   "kab:nativeId": "DKL26-M04-E076",
+   "kab:raidDurationSeconds": 28,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-07"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #76: Eshwar Gill (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "76"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E013",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 5,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 387,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 5,
+   "kab:nativeId": "DKL26-M04-E013",
+   "kab:raidDurationSeconds": 24,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #13: Dhruv Hegde (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "13"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E054",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 21,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 324,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-07"
+   },
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": true,
+   "kab:half": 2,
+   "kab:homeOnMat": 1,
+   "kab:homeScore": 26,
+   "kab:nativeId": "DKL26-M04-E054",
+   "kab:raidDurationSeconds": 18,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 1,
+   "rdfs:label": "Raid #54: Deepak Iyer (successful, 1-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "54"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E063",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 32,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 574,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E063",
+   "kab:raidDurationSeconds": 19,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #63: Karthik Bains (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "63"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-09",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-09"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "9"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E052",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 20,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 255,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 26,
+   "kab:nativeId": "DKL26-M04-E052",
+   "kab:raidDurationSeconds": 22,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #52: Deepak Iyer (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "52"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E044",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 16,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 0,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E044",
+   "kab:raidDurationSeconds": 22,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #44: Deepak Iyer (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "44"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E027",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 11,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 730,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E027",
+   "kab:raidDurationSeconds": 27,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #27: Jatin Kamath (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "27"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-12",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-12"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "12"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E030",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 12,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 836,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 3,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E030",
+   "kab:raidDurationSeconds": 21,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-12"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-06"
+   },
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #30: Zubin Achar (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "30"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E053",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 20,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 287,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 26,
+   "kab:nativeId": "DKL26-M04-E053",
+   "kab:raidDurationSeconds": 28,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #53: Kiran Yadav (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "53"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E069",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 2,
+   "kab:allOutTeam": {
+    "@id": "https://raid-replay.example/data/team/CRM"
+   },
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 32,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 769,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-10"
+    }
+   ],
+   "kab:defendersOnMat": 3,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 40,
+   "kab:nativeId": "DKL26-M04-E069",
+   "kab:raidDurationSeconds": 28,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 5,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-10"
+    }
+   ],
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #69: Karthik Bains (successful, 5-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "69"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E005",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 0,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 114,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 3,
+   "kab:nativeId": "DKL26-M04-E005",
+   "kab:raidDurationSeconds": 30,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #5: Deepak Iyer (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E018",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 6,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 522,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-07"
+    }
+   ],
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 16,
+   "kab:nativeId": "DKL26-M04-E018",
+   "kab:raidDurationSeconds": 27,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 4,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 4,
+   "rdfs:label": "Raid #18: Rohan Iyer (successful, 4-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "18"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-11",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-11",
+   "rdfs:label": "Tarun Bains"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-01",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-07",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-07"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "7"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-05",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-05",
+   "rdfs:label": "Ishaan Kamath"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E032",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 12,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 903,
+   "kab:defencePoints": 2,
+   "kab:defendersOnMat": 3,
+   "kab:doOrDie": true,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 20,
+   "kab:nativeId": "DKL26-M04-E032",
+   "kab:raidDurationSeconds": 14,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-10"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": true,
+   "kab:tacklePoints": 2,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-07"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #32: Dhruv Bains (tackled, 0-2)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "32"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E031",
+   "@type": [
+    "sport:Action",
+    "kab:Review"
+   ],
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 12,
+   "kab:clockSeconds": 857,
+   "kab:half": 1,
+   "kab:homeOnMat": 3,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E031",
+   "kab:reviewOf": {
+    "@id": "https://raid-replay.example/data/action/DKL26-M04-E030"
+   },
+   "kab:reviewResult": {
+    "@id": "kabrev:successful"
+   },
+   "kab:reviewsRemaining": 2,
+   "rdfs:label": "Review by TEA (successful)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "31"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-11",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-11"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "11"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E081",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": true,
+   "kab:clockSeconds": 1166,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 50,
+   "kab:nativeId": "DKL26-M04-E081",
+   "kab:raidDurationSeconds": 27,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #81: Karthik Bains (successful, 1-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "81"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-05",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-05",
+   "rdfs:label": "Jatin Achar"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-12",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-12",
+   "rdfs:label": "Varun Bhat"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E071",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 36,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 839,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 3,
+   "kab:homeScore": 40,
+   "kab:nativeId": "DKL26-M04-E071",
+   "kab:raidDurationSeconds": 23,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #71: Kiran Yadav (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "71"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-02",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-02"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-07",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-07",
+   "rdfs:label": "Karthik Sandhu"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-07",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-07"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "7"
+  },
+  {
+   "@id": "https://raid-replay.example/data/event/DKL26-M04",
+   "@type": "sport:Event",
+   "kab:firstRaidTeam": {
+    "@id": "https://raid-replay.example/data/team/TEA"
+   },
+   "kab:halfLengthMinutes": 20,
+   "kab:knockout": true,
+   "kab:nativeId": "DKL26-M04",
+   "kab:simulatorSeed": 650,
+   "kab:stage": "semi-final",
+   "kab:tossWinner": {
+    "@id": "https://raid-replay.example/data/team/TEA"
+   },
+   "rdfs:label": "Teal Tuskers vs Crimson Cobras",
+   "sport:eventInCompetition": {
+    "@id": "https://raid-replay.example/data/competition/DKL-2026"
+   },
+   "sport:eventStatus": {
+    "@id": "speventstatus:post-event"
+   },
+   "sport:location": {
+    "@id": "https://raid-replay.example/data/site/V1"
+   },
+   "sport:participation": [
+    {
+     "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+    },
+    {
+     "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+    }
+   ],
+   "sport:sport": {
+    "@id": "medtop:20000978"
+   },
+   "sport:startDateTime": {
+    "@type": "xsd:dateTime",
+    "@value": "2026-10-23T19:30:00+05:30"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-02",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": true,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-02",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-02",
+   "rdfs:label": "Dhruv Rao"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-01",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-01",
+   "rdfs:label": "Karthik Bains"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-03",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": true,
+   "kab:playingRole": {
+    "@id": "kabrole:all-rounder"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E057",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 3,
+   "kab:awayScore": 23,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 403,
+   "kab:defencePoints": 2,
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E057",
+   "kab:raidDurationSeconds": 10,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-06"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": true,
+   "kab:tacklePoints": 2,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #57: Karthik Bains (tackled, 0-2)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "57"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA",
+   "@type": "sport:TeamParticipation",
+   "rdfs:label": "Teal Tuskers in Teal Tuskers vs Crimson Cobras",
+   "sport:alignment": "home",
+   "sport:eventOutcome": {
+    "@id": "speventoutcome:win"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/team/TEA"
+   },
+   "sport:score": "50"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E064",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 32,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 601,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E064",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #64: Deepak Iyer (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "64"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-05",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-05"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-06",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-06"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "6"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E061",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 31,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 516,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E061",
+   "kab:raidDurationSeconds": 16,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-07"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-10"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #61: Karthik Sandhu (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "61"
+  },
+  {
+   "@id": "https://raid-replay.example/data/competition/DKL-2026",
+   "@type": "sport:Competition",
+   "kab:nativeId": "DKL-2026",
+   "rdfs:label": "Deccan Kabaddi League 2026 (fictional)",
+   "sport:competitionType": {
+    "@id": "spct:competition"
+   },
+   "sport:sport": {
+    "@id": "medtop:20000978"
+   }
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E002",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 0,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 0,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-07"
+    }
+   ],
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 3,
+   "kab:nativeId": "DKL26-M04-E002",
+   "kab:raidDurationSeconds": 24,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 3,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #2: Karthik Bains (successful, 3-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "2"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E028",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 11,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 773,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E028",
+   "kab:raidDurationSeconds": 25,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-06"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #28: Akash Gill (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "28"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E079",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 1,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1093,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 1,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 46,
+   "kab:nativeId": "DKL26-M04-E079",
+   "kab:raidDurationSeconds": 27,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #79: Karthik Bains (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "79"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E041",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 16,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1163,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-05"
+   },
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E041",
+   "kab:raidDurationSeconds": 14,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-10"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 1,
+   "rdfs:label": "Raid #41: Deepak Iyer (successful, 1-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "41"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E078",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 1,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1073,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 46,
+   "kab:nativeId": "DKL26-M04-E078",
+   "kab:raidDurationSeconds": 6,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-06"
+   },
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #78: Dhruv Hegde (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "78"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E009",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 3,
+   "kab:awayScore": 3,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 256,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 5,
+   "kab:nativeId": "DKL26-M04-E009",
+   "kab:raidDurationSeconds": 22,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #9: Deepak Iyer (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "9"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E011",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 5,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 316,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 5,
+   "kab:nativeId": "DKL26-M04-E011",
+   "kab:raidDurationSeconds": 23,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #11: Eshwar Gill (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "11"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E023",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 10,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 648,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 17,
+   "kab:nativeId": "DKL26-M04-E023",
+   "kab:raidDurationSeconds": 6,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-07"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-06"
+   },
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #23: Rohan Iyer (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "23"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E036",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 12,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1023,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E036",
+   "kab:raidDurationSeconds": 28,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #36: Eshwar Gill (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "36"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E037",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 12,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1066,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E037",
+   "kab:raidDurationSeconds": 27,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #37: Karthik Bains (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "37"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E056",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 21,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 377,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E056",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #56: Deepak Iyer (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "56"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E065",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 32,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 634,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E065",
+   "kab:raidDurationSeconds": 30,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #65: Kiran Yadav (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "65"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E068",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 3,
+   "kab:awayScore": 32,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 730,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 35,
+   "kab:nativeId": "DKL26-M04-E068",
+   "kab:raidDurationSeconds": 25,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #68: Deepak Iyer (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "68"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-04",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-04",
+   "rdfs:label": "Dhruv Hegde"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-03",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-03",
+   "rdfs:label": "Eshwar Gill"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E001",
+   "@type": [
+    "sport:Action",
+    "kab:PeriodStart"
+   ],
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 0,
+   "kab:clockSeconds": 0,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 0,
+   "kab:nativeId": "DKL26-M04-E001",
+   "rdfs:label": "Start of half 1",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:official-procedure"
+   },
+   "sport:sequenceNumber": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E047",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 19,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 88,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E047",
+   "kab:raidDurationSeconds": 24,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #47: Kiran Yadav (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "47"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/CRM-02",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "CRM-02",
+   "rdfs:label": "Jatin Kamath"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-06",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-06",
+   "rdfs:label": "Akash Gill"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E072",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 2,
+   "kab:allOutTeam": {
+    "@id": "https://raid-replay.example/data/team/TEA"
+   },
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 41,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 873,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:defendersOnMat": 3,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 40,
+   "kab:nativeId": "DKL26-M04-E072",
+   "kab:raidDurationSeconds": 14,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 5,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-07"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #72: Eshwar Gill (successful, 5-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "72"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E055",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 3,
+   "kab:awayScore": 21,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 353,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-10"
+    }
+   ],
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": true,
+   "kab:half": 2,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 30,
+   "kab:nativeId": "DKL26-M04-E055",
+   "kab:raidDurationSeconds": 13,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 4,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 4,
+   "rdfs:label": "Raid #55: Kiran Yadav (successful, 4-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "55"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E038",
+   "@type": [
+    "sport:Action",
+    "kab:Substitution"
+   ],
+   "kab:awayOnMat": 2,
+   "kab:awayScore": 12,
+   "kab:clockSeconds": 1108,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 23,
+   "kab:nativeId": "DKL26-M04-E038",
+   "kab:playerIn": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-11"
+   },
+   "kab:playerOut": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-12"
+   },
+   "rdfs:label": "Substitution TEA: TEA-11 for TEA-12",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:substitution"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "38"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E066",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 32,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 678,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": true,
+   "kab:half": 2,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 32,
+   "kab:nativeId": "DKL26-M04-E066",
+   "kab:raidDurationSeconds": 8,
+   "kab:raidOutcome": {
+    "@id": "kabro:self-out"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-07"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #66: Jatin Kamath (self-out, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "66"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-12",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-12",
+   "rdfs:label": "Zubin Achar"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E051",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 20,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 226,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 26,
+   "kab:nativeId": "DKL26-M04-E051",
+   "kab:raidDurationSeconds": 21,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #51: Kiran Yadav (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "51"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E034",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 12,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 957,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 20,
+   "kab:nativeId": "DKL26-M04-E034",
+   "kab:raidDurationSeconds": 23,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #34: Jatin Kamath (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "34"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E019",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 9,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 562,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    }
+   ],
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 16,
+   "kab:nativeId": "DKL26-M04-E019",
+   "kab:raidDurationSeconds": 18,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 3,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    }
+   ],
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #19: Eshwar Gill (successful, 3-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "19"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-06",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-06"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "6"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E015",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 2,
+   "kab:allOutTeam": {
+    "@id": "https://raid-replay.example/data/team/CRM"
+   },
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 5,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 462,
+   "kab:defencePoints": 3,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": true,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 11,
+   "kab:nativeId": "DKL26-M04-E015",
+   "kab:raidDurationSeconds": 8,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-05"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-07"
+    }
+   ],
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #15: Jatin Achar (tackled, 0-3)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "15"
+  },
+  {
+   "@id": "https://raid-replay.example/data/athlete/TEA-10",
+   "@type": "sport:Athlete",
+   "kab:nativeId": "TEA-10",
+   "rdfs:label": "Deepak Menon"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E016",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 6,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 482,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 11,
+   "kab:nativeId": "DKL26-M04-E016",
+   "kab:raidDurationSeconds": 7,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-07"
+   },
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #16: Rohan Iyer (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "16"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E024",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 10,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 663,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E024",
+   "kab:raidDurationSeconds": 25,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-05"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-07"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #24: Deepak Iyer (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "24"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E014",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 1,
+   "kab:awayScore": 5,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 426,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    }
+   ],
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 8,
+   "kab:nativeId": "DKL26-M04-E014",
+   "kab:raidDurationSeconds": 24,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 3,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-07"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #14: Karthik Sandhu (successful, 3-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "14"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E020",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 9,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 586,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 17,
+   "kab:nativeId": "DKL26-M04-E020",
+   "kab:raidDurationSeconds": 17,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-02"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 1,
+   "rdfs:label": "Raid #20: Dhruv Rao (successful, 1-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "20"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E008",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 3,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 217,
+   "kab:defencePoints": 2,
+   "kab:defendersOnMat": 3,
+   "kab:doOrDie": true,
+   "kab:half": 1,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 4,
+   "kab:nativeId": "DKL26-M04-E008",
+   "kab:raidDurationSeconds": 26,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-06"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": true,
+   "kab:tacklePoints": 2,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #8: Rohan Iyer (tackled, 0-2)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "8"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E059",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 26,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 453,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 2,
+   "kab:homeScore": 31,
+   "kab:nativeId": "DKL26-M04-E059",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #59: Kiran Yadav (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "59"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-11",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-11"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "11"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-05",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:defender"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-05"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "5"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-10",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:all-rounder"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-10"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "10"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E074",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": true,
+   "kab:clockSeconds": 936,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 41,
+   "kab:nativeId": "DKL26-M04-E074",
+   "kab:raidDurationSeconds": 7,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 1,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #74: Deepak Iyer (tackled, 1-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "74"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E022",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 9,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 611,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 5,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 5,
+   "kab:homeScore": 17,
+   "kab:nativeId": "DKL26-M04-E022",
+   "kab:raidDurationSeconds": 27,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #22: Jatin Kamath (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "22"
+  },
+  {
+   "@id": "https://raid-replay.example/data/site/V1",
+   "@type": "sport:Site",
+   "kab:nativeId": "V1",
+   "rdfs:label": "Lalbagh Indoor Arena, Bengaluru (fictional)"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E017",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 6,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 495,
+   "kab:defencePoints": 1,
+   "kab:defendersOnMat": 6,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 12,
+   "kab:nativeId": "DKL26-M04-E017",
+   "kab:raidDurationSeconds": 12,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-02"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #17: Jatin Kamath (tackled, 0-1)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "17"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-01",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-01"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "1"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E026",
+   "@type": [
+    "sport:Action",
+    "kab:Substitution"
+   ],
+   "kab:awayOnMat": 5,
+   "kab:awayScore": 11,
+   "kab:clockSeconds": 730,
+   "kab:half": 1,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 18,
+   "kab:nativeId": "DKL26-M04-E026",
+   "kab:playerIn": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-10"
+   },
+   "kab:playerOut": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-07"
+   },
+   "rdfs:label": "Substitution CRM: CRM-10 for CRM-07",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:substitution"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "26"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA-08",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-08"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:uniformNumberEvent": "8"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E048",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 6,
+   "kab:awayScore": 19,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 123,
+   "kab:defencePoints": 2,
+   "kab:defendersOnMat": 2,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 3,
+   "kab:homeScore": 25,
+   "kab:nativeId": "DKL26-M04-E048",
+   "kab:raidDurationSeconds": 15,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-05"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": true,
+   "kab:tacklePoints": 2,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-07"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #48: Jatin Achar (tackled, 0-2)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "48"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-03",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:all-rounder"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:starter"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "3"
+  },
+  {
+   "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM-09",
+   "@type": "sport:IndividualParticipation",
+   "kab:captain": false,
+   "kab:playingRole": {
+    "@id": "kabrole:raider"
+   },
+   "sport:participationBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-09"
+   },
+   "sport:playerStatus": {
+    "@id": "spplayerstatus:bench"
+   },
+   "sport:teamParticipation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:uniformNumberEvent": "9"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E004",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 0,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 70,
+   "kab:defencePoints": 0,
+   "kab:defendersOnMat": 4,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 3,
+   "kab:nativeId": "DKL26-M04-E004",
+   "kab:raidDurationSeconds": 29,
+   "kab:raidOutcome": {
+    "@id": "kabro:empty"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-02"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #4: Dhruv Rao (empty, 0-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "4"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E080",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 2,
+   "kab:allOutTeam": {
+    "@id": "https://raid-replay.example/data/team/CRM"
+   },
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 42,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 1131,
+   "kab:defencePoints": 3,
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 7,
+   "kab:homeScore": 49,
+   "kab:nativeId": "DKL26-M04-E080",
+   "kab:raidDurationSeconds": 22,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-05"
+   },
+   "kab:revived": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-01"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-02"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-03"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-04"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/CRM-10"
+    }
+   ],
+   "kab:superRaid": false,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 1,
+   "kab:tackledBy": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-11"
+    }
+   ],
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #80: Jatin Achar (tackled, 0-3)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "80"
+  },
+  {
+   "@id": "https://raid-replay.example/data/team/CRM",
+   "@type": "sport:Team",
+   "kab:colour": "#C81E3A",
+   "kab:nativeId": "CRM",
+   "kab:shortName": "CRM",
+   "rdfs:label": "Crimson Cobras"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E010",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 4,
+   "kab:awayScore": 5,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 286,
+   "kab:defencePoints": 2,
+   "kab:defendersOnMat": 3,
+   "kab:doOrDie": false,
+   "kab:half": 1,
+   "kab:homeOnMat": 6,
+   "kab:homeScore": 5,
+   "kab:nativeId": "DKL26-M04-E010",
+   "kab:raidDurationSeconds": 20,
+   "kab:raidOutcome": {
+    "@id": "kabro:tackled"
+   },
+   "kab:raidPoints": 0,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/TEA-04"
+   },
+   "kab:revived": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-03"
+   },
+   "kab:superRaid": false,
+   "kab:superTackle": true,
+   "kab:tacklePoints": 2,
+   "kab:tackledBy": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-06"
+   },
+   "kab:touchPoints": 0,
+   "rdfs:label": "Raid #10: Rohan Iyer (tackled, 0-2)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/TEA"
+   },
+   "sport:sequenceNumber": "10"
+  },
+  {
+   "@id": "https://raid-replay.example/data/action/DKL26-M04-E070",
+   "@type": [
+    "sport:Action",
+    "kab:Raid"
+   ],
+   "kab:allOutPoints": 0,
+   "kab:awayOnMat": 7,
+   "kab:awayScore": 35,
+   "kab:bonusPoint": false,
+   "kab:clockSeconds": 810,
+   "kab:defencePoints": 0,
+   "kab:defenderOut": [
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-05"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-06"
+    },
+    {
+     "@id": "https://raid-replay.example/data/athlete/TEA-07"
+    }
+   ],
+   "kab:defendersOnMat": 7,
+   "kab:doOrDie": false,
+   "kab:half": 2,
+   "kab:homeOnMat": 4,
+   "kab:homeScore": 40,
+   "kab:nativeId": "DKL26-M04-E070",
+   "kab:raidDurationSeconds": 21,
+   "kab:raidOutcome": {
+    "@id": "kabro:successful"
+   },
+   "kab:raidPoints": 3,
+   "kab:raider": {
+    "@id": "https://raid-replay.example/data/athlete/CRM-04"
+   },
+   "kab:superRaid": true,
+   "kab:superTackle": false,
+   "kab:tacklePoints": 0,
+   "kab:touchPoints": 3,
+   "rdfs:label": "Raid #70: Dhruv Hegde (successful, 3-0)",
+   "sport:actionInEvent": {
+    "@id": "https://raid-replay.example/data/event/DKL26-M04"
+   },
+   "sport:class": {
+    "@id": "spactionclass:play"
+   },
+   "sport:participation": {
+    "@id": "https://raid-replay.example/data/participation/DKL26-M04/CRM"
+   },
+   "sport:sequenceNumber": "70"
+  }
+ ]
+}
