@@ -9,6 +9,10 @@ echo "== 1. simulate 5 matches";      $PY -m simulator.generate
 echo "== 2. convert to Sport Schema"; $PY -m converter
 echo "== 3. validate (with plugin)";  $PY -m validate
 echo "== 4. validate (NO plugin, must fail)"; $PY -m validate --no-plugin data/turtle/match3_final.ttl && exit 1 || echo "   -> rejected, as expected"
+echo "== 4b. multi-sport engine: simulate + convert all sports"; $PY -m engine generate --sport all; $PY -m engine convert --sport all
+echo "== 4c. multi-sport engine: validate all sports (with plugin)"; $PY -m engine validate --sport all
+echo "== 4d. multi-sport engine: validate all sports (NO plugin, must fail)"; $PY -m engine validate --sport all --no-plugin
+echo "== 4e. multi-sport engine: round trip all sports"; $PY -m engine roundtrip --sport all
 echo "== 5. tests";                   $PY -m pytest -q --junitxml=data/pytest-report.xml
 echo "== 6. proof numbers";           $PY -m validate.proof > /dev/null
 if [ -d data/kabaddipy/raw ]; then

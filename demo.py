@@ -1,5 +1,7 @@
 """One-command demo: simulate, convert, validate, build the site, open it.
 
+Also runs the multi-sport engine (python -m engine ...) for every sport pack in sports/.
+
 Usage:  python demo.py           # full run
         python demo.py --quick   # skip SHACL validation
         python demo.py --real    # also fetch + convert real PKL Season 10 knockouts and open site/real.html
@@ -26,12 +28,16 @@ def main() -> int:
         ("simulate 5 matches", ["-m", "simulator.generate"]),
         ("convert to Sport Schema", ["-m", "converter"]),
         ("validate (IPTC + kabaddi shapes)", ["-m", "validate"]),
+        ("multi-sport engine: simulate all sports", ["-m", "engine", "generate", "--sport", "all"]),
+        ("multi-sport engine: convert all sports", ["-m", "engine", "convert", "--sport", "all"]),
+        ("multi-sport engine: validate all sports", ["-m", "engine", "validate", "--sport", "all"]),
+        ("multi-sport engine: round trip all sports", ["-m", "engine", "roundtrip", "--sport", "all"]),
         ("run IPTC AI analytics & prediction", ["-m", "analytics"]),
         ("build website", ["site/build_site.py"]),
         ("build analytics dashboard", ["site/build_analytics.py"]),
     ]
     if quick:
-        steps = [s for s in steps if s[1] != ["-m", "validate"]]
+        steps = [s for s in steps if s[1] != ["-m", "validate"] and s[1][:3] != ["-m", "engine", "validate"]]
     if real:   # real data first, so build_site.py also writes site/real.html
         steps[-1:-1] = [("fetch real PKL data (kabaddiPy-data)", ["-m", "kabaddipy", "fetch"]),
                         ("convert Season 10 knockouts", ["-m", "kabaddipy", "convert"]),
