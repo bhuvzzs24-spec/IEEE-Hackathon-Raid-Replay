@@ -136,6 +136,19 @@ Validation (`engine/validator.py`) merges IPTC ontology + vocabularies + your
 ontology + data, and IPTC shapes + your shapes. `allow_warnings=False`: use
 `sh:Violation` (the default severity) for anything that must fail.
 
+### Pitfalls (each one cost us a failing run)
+
+1. **No `sh:in` for strings.** rdflib reads a JSON-LD string as a plain literal, and pySHACL's `sh:in` then
+   compares it unequal to `"x"^^xsd:string`: the same match passes as Turtle and fails as JSON-LD. Use
+   `sh:datatype xsd:string ; sh:pattern "^(left|right)$"`. `sh:in` is fine for IRIs and integers.
+2. **No `rdfs:subClassOf` between your own event classes** unless you mean it. The ontology is merged into
+   the data graph, so `sh:targetClass bad:Rally` also targets every subclass instance.
+3. **Write game rules once per match, not once per action.** pySHACL runs one SPARQL query per focus node
+   (~18 ms each on this graph). Target the match (`sh:targetSubjectsOf <a match-only property>`), select
+   `$this ?x`, and name the action in the message with `{?x}`. Badminton went from ~25 s to ~4 s per file.
+4. Compare `sport:alignment` with `STR(?side) = "A"`, and IPTC's string-typed numbers with
+   `xsd:integer(?score)`.
+
 ## 6. Commands
 
 ```
