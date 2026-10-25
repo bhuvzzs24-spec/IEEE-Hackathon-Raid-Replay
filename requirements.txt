@@ -1,0 +1,4 @@
+rdflib>=7.0
+pyshacl>=0.26
+deepdiff>=7.0
+pytest>=8.0
