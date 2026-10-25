@@ -1,0 +1,52 @@
+[
+  {
+    "file": "match1_normal.ttl",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match2_tied.ttl",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match3_final.ttl",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match4_dense.ttl",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match5_discipline.ttl",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match1_normal.jsonld",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match2_tied.jsonld",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match3_final.jsonld",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match4_dense.jsonld",
+    "conforms": true,
+    "violations": 0
+  },
+  {
+    "file": "match5_discipline.jsonld",
+    "conforms": true,
+    "violations": 0
+  }
+]
