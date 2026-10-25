@@ -19,6 +19,12 @@ Raid Replay is:
 7. **Real data: the official Pro Kabaddi feed** — a second converter for the PKL match-centre feed as collected by
    [kabaddiPy-data](https://github.com/kabaddiPy/kabaddiPy-data): **all 1,060 matches of seasons 1–10 go to Sport
    Schema and back with 0 differences**, and the Season 10 knockouts replay on the mat (`kabaddipy/`, `site/real.html`).
+8. **More sports on one engine** — a generic converter and validator (`engine/`) with one plugin per sport
+   (`sports/`): **badminton**, **kho-kho** and **Valorant**, each lossless and validated, each with its own replay
+   on the website (pick the sport in the bar at the top of the page).
+9. **Data quality for messy input** — a pipeline that auto-fixes what it safely can, quarantines the rest with a
+   reason, and never loses an event (`engine/quality.py`, report in `data/quality_report.md`), plus a throughput
+   benchmark (`engine/benchmark.py`).
 
 IEEE CS Confluence Buildathon · PES University · Sunday 25 October 2026 · Track: **Lossless – Bridging systems and formats** · Team **Byte Tackle**.
 
@@ -36,7 +42,7 @@ python -m simulator.generate             # 1. simulate the 5 matches  -> data/js
 python -m converter                      # 2. convert                 -> data/turtle/, data/jsonld/
 python -m validate                       # 3. SHACL: IPTC + kabaddi shapes (all PASS)
 python -m validate --no-plugin           # 4. SHACL: IPTC shapes only (all FAIL - proves strictness)
-python -m pytest                         # 5. 90 tests: round trip, validation, negative tests, simulator rules, real feed
+python -m pytest                         # 5. 225 tests: round trip, validation, negative tests, simulator rules, real feed, other sports, data quality
 python -m validate.proof                 # 6. recompute the numbers shown below -> data/results.json
 python site/build_site.py                # 7. rebuild the website (inlines all data)
 ```
@@ -84,7 +90,8 @@ All numbers come from `python -m validate.proof` (`data/results.json`) and `pyte
 - **Round trip:** 5 matches × 2 serialisations, JSON → RDF → JSON, DeepDiff = 0 differences (also Turtle → JSON → JSON-LD → JSON).
 - **Validation:** all 10 files conform to IPTC's shapes + the kabaddi plugin (0 violations).
 - **Strictness:** without the plugin, IPTC's own shapes reject every file (1,751–1,841 violations each — "Node is closed. It cannot have value …").
-- **Tests:** 90 / 90 pytest tests pass (6 of them need the real data and are skipped until `python -m kabaddipy fetch`).
+- **Tests:** 225 pytest tests: 223 pass and 2 are skipped until the real data is fetched (`python -m kabaddipy fetch`);
+  with the real data, all 225 run.
 
 ### Negative tests (proof it's not a fake pass)
 
@@ -186,10 +193,62 @@ the teams take turns to chase; defenders enter in batches of 3 (batch 1, 2, 3, t
 for the chasers (touch 2, pole dive 2, sky dive 3); no defender is tagged twice in a turn before their batch
 re-enters; turn and match totals must add up. 3 matches (clear win, a batch re-entering up to entry 7, a 33-33 tie).
 
+**Valorant** (`sports/valorant/`, details in [`sports/valorant/README.md`](sports/valorant/README.md)). IPTC already
+has a thin esports plugin (`spespstat:`, eight player totals such as kills, deaths and headshots); we reuse it and add a
+round-by-round play-by-play: rounds, kills (weapon, headshot, assists), spike plants and defuses, economy and sides.
+13 rules of the game in SHACL: 5 players per team, first to 13 (overtime: win by 2), sides switch after round 12, a
+defuse needs a plant in the same round, only attackers plant, the round winner matches the win condition, kill totals
+equal the kill feed, and more. `python -m sports.valorant.check` breaks each rule once and shows the validator
+rejects it. 4 matches (13-8, 13-11, 15-13 in overtime, 13-3). Teams and player handles are made up; no Riot API and
+no scraped data.
+
 **How long a new sport takes.** Kho-kho, the second pack, took about 5 minutes from an empty folder to all tests
 passing, with no edit to any shared file: 275 lines of Python (spec, simulator, mutations) and 360 lines of Turtle
 (ontology, shapes). Badminton, the first, took about 17 minutes, most of it spent on two SHACL pitfalls that are now
 written into the contract (see the comments at the top of `sports/badminton/shapes.ttl`).
+
+## Data quality: messy input in, clean Sport Schema out
+
+Real feeds are messy, so `engine/quality.py` puts every match through a cleaning step before conversion. It takes
+its rules from each sport's own plugin (types from the ontology, allowed values from the SKOS code lists, required
+fields from the SHACL shapes), so a new sport gets data-quality checks for free.
+
+- **Auto-fixed, and logged:** numbers stored as text (`"27"` → `27`), `"TRUE"` → `true`, extra spaces, wrong-case
+  codes (`"ELIMINATION"` → `elimination`), unknown keys, `null` in optional fields, exact duplicates, events out of order.
+- **Quarantined, with a reason:** a missing required field, an unknown code (`"banana"`), text in a number field, a
+  reference to a player who doesn't exist, a reused event id.
+- **Held back:** a match that is well-formed but still breaks a rule of the game (for example a score that doesn't
+  add up) is caught by SHACL and not published.
+- **Nothing is lost:** for every match, events in = clean + quarantined.
+
+To test it, `engine/messify.py` deliberately damages the simulated matches with a fixed seed
+(`data/sports/<sport>/messy/`, with a log of every injected problem). Result (`data/quality_report.md`):
+
+| Sport | Matches published | Events in | Clean | Auto-fixed | Quarantined | Round-trip diff | Published & valid |
+|---|---|---|---|---|---|---|---|
+| Badminton | 2 / 4 | 453 | 189 | 28 | 264 | 0 | 2 / 2 |
+| Kho-kho | 1 / 3 | 181 | 59 | 14 | 122 | 0 | 1 / 1 |
+| Valorant | 2 / 4 | 790 | 301 | 32 | 489 | 0 | 2 / 2 |
+
+`tests/test_quality.py` (53 tests) checks that every injected problem is fixed or quarantined, never lost, and that a
+match with only fixable problems cleans back to exactly the original.
+
+**Benchmark** (`python -m engine.benchmark --matches 200`, `data/benchmark.json`): 200 matches per sport converted to
+Turtle and JSON-LD and back, every round trip checked with DeepDiff.
+
+| Sport | Events | Triples | Events / second | Round-trip diff | SHACL (sampled) |
+|---|---|---|---|---|---|
+| Badminton | 22,250 | 364,600 | 328 | 0 | 5.1 s / match |
+| Kho-kho | 11,682 | 199,348 | 320 | 0 | 3.0 s / match |
+| Valorant | 39,100 | 578,250 | 339 | 0 | 3.5 s / match |
+
+Timings are from one laptop and will vary; the counts and the diff do not.
+
+```bash
+python -m engine.quality --sport all          # clean the messy matches -> data/quality_report.{json,md}
+python -m engine.quality --sport all --remessify   # regenerate the messy input first
+python -m engine.benchmark --matches 200      # -> data/benchmark.json
+```
 
 ## How it works
 
@@ -268,7 +327,10 @@ Made autonomously while building; each is the most reasonable choice we could se
   `file://`. System font stack, no CDN. The replay and the right-hand scoreboard read only the JSON-LD; the
   left scoreboard reads the original JSON; the page also does its own field-by-field comparison (2,088
   fields, 0 differences). **Full screen** (button or `F`, `Esc` to exit) enlarges the mat, keeps the clock,
-  commentary and controls, and shows both scoreboards as a compact panel in the corner. The proof tables,
+  commentary and controls, and shows both scoreboards as a compact panel in the corner. A **sport bar** at the
+  top switches to badminton, kho-kho or Valorant: each gets an animated replay rebuilt in the browser from its
+  JSON-LD (with its own 0-differences check), the same JSON / Turtle / JSON-LD tabs for one event, and the
+  data-quality table. Player positions in those replays are illustrative; the events are the data. The proof tables,
   the IPTC bugs, use cases and team live in this README and in `SLIDES_CONTENT.md`.
 
 ## Bugs we found in the standard
@@ -313,15 +375,19 @@ iptc/              official IPTC Sport Schema files (unmodified) + loader.py (in
 kabaddi_plugin/    kabaddi-ontology.ttl, kabaddi-shapes.ttl  <- the plugin
                    kabaddi-feed-ontology.ttl, kabaddi-feed-shapes.ttl  <- terms + shapes for the real PKL feed
 kabaddipy/         core.py (real PKL feed <-> RDF), __main__.py (fetch, convert, roundtrip, validate, query)
+engine/            generic converter + validator for any sport pack; quality.py (cleaning pipeline),
+                   messify.py (seeded messy data), benchmark.py
+sports/            one plugin per sport: badminton/, khokho/, valorant/ (+ CONTRACT.md)
 simulator/         engine.py (rules), generate.py (the 5 matches)
 converter/         core.py (JSON <-> RDF), __main__.py (CLI)
 validate/          core.py (pySHACL), mutations.py (negative cases), proof.py (numbers)
 tests/             pytest: round trip, validation, negative tests, simulator rules, real feed (+ fixtures/)
 data/              json/, turtle/, jsonld/ (5 matches each), results.json, validation.json,
+                   sports/<sport>/{json,turtle,jsonld,messy}/, quality_report.{json,md}, benchmark.json,
                    kabaddipy/roundtrip_all.json (real-data summary; the real files themselves are not committed)
 site/              index.html (built, self-contained), real.html (built locally from real data, not committed),
                    src/ (template, CSS, JS), build_site.py, check_site.py
-screenshots/       desktop and phone screenshots of the site, incl. the replay mid-animation
+screenshots/       desktop and phone screenshots of the site, incl. the replay mid-animation and each sport's replay
 SLIDES_CONTENT.md  presentation material: the gap, proof tables, IPTC bugs, users, team, slide order, demo script
 demo.py            one-command demo: simulate, convert, validate, build and open the site
                    (--quick skips validation, --real adds the real PKL knockouts and opens site/real.html)
@@ -330,6 +396,6 @@ run_all.sh         regenerate everything and run every check
 
 
 
-The simulated teams, players and matches are fictional, produced by our seeded simulator. Real matches come from
+The simulated teams, players and matches are made up, produced by our seeded simulators. Real matches come from
 the PKL match-centre feed via kabaddiPy-data, are used for the demo only, and are not redistributed here.
 IPTC Sport Schema and NewsCodes are standards of IPTC; this kabaddi plugin is an independent proposal.
