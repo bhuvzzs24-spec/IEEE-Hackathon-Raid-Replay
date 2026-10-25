@@ -227,14 +227,7 @@ demo.py            one-command demo: simulate, convert, validate, build and open
 run_all.sh         regenerate everything and run every check
 ```
 
-## Team Byte Tackle
 
-| Name | SRN |
-|---|---|
-| P Manas Siddhardha | PES1UG24AM186 |
-| Rohith Karning | PES1UG24AM229 |
-| S Bhuvanashree | PES1UG24AM235 |
-| Pabbisetty Harshitha Sai | PES1UG24AM182 |
 
 All teams, players and matches are fictional, produced by our seeded simulator; no real match data is used.
 IPTC Sport Schema and NewsCodes are standards of IPTC; this kabaddi plugin is an independent proposal.
