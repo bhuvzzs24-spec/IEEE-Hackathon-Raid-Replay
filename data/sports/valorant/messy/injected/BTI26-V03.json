@@ -1,0 +1,104 @@
+[
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V03-E0185",
+  "field": "time",
+  "detail": "72 -> '72'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V03-E0160",
+  "field": "time",
+  "detail": "70 -> '70'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V03-E0092",
+  "field": "time",
+  "detail": "46 -> '46'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V03-E0068",
+  "field": "weapon",
+  "detail": "padded 'Phantom'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V03-E0183",
+  "field": "site",
+  "detail": "padded 'A'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V03-E0044",
+  "field": "victim",
+  "detail": "padded 'GLV-3'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V03-E0097",
+  "field": "win_condition",
+  "detail": "'elimination' -> 'ELIMINATION'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V03-E0187",
+  "field": "home_buy",
+  "detail": "'half-buy' -> 'HALF-BUY'"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V03-E0195",
+  "field": "duration",
+  "detail": "79 -> null"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V03-E0119",
+  "field": "duration",
+  "detail": "90 -> null"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V03-E0218",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V03-E0095",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "rule_violation",
+  "record": "match",
+  "field": "result.scores.CPC",
+  "detail": "CPC score 13 -> 14"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V03-E0075",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V03-E0201",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V03-E0058",
+  "field": null,
+  "detail": "swapped with BTI26-V03-E0059"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V03-E0111",
+  "field": null,
+  "detail": "swapped with BTI26-V03-E0112"
+ }
+]

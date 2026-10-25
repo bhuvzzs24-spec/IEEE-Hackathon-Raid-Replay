@@ -1,0 +1,98 @@
+[
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V04-E0121",
+  "field": "time",
+  "detail": "53 -> '53'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V04-E0119",
+  "field": "time",
+  "detail": "31 -> '31'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V04-E0025",
+  "field": "round",
+  "detail": "3 -> '3'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V04-E0068",
+  "field": "weapon",
+  "detail": "padded 'Marshal'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V04-E0045",
+  "field": "weapon",
+  "detail": "padded 'Phantom'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V04-E0007",
+  "field": "victim",
+  "detail": "padded 'NSN-4'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V04-E0066",
+  "field": "home_buy",
+  "detail": "'full-buy' -> 'FULL-BUY'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V04-E0009",
+  "field": "home_buy",
+  "detail": "'eco' -> 'ECO'"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V04-E0026",
+  "field": "duration",
+  "detail": "75 -> null"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V04-E0114",
+  "field": "duration",
+  "detail": "46 -> null"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V04-E0029",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V04-E0093",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V04-E0063",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V04-E0043",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V04-E0101",
+  "field": null,
+  "detail": "swapped with BTI26-V04-E0102"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V04-E0053",
+  "field": null,
+  "detail": "swapped with BTI26-V04-E0054"
+ }
+]

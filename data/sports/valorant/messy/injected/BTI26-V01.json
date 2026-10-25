@@ -1,0 +1,98 @@
+[
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V01-E0158",
+  "field": "time",
+  "detail": "30 -> '30'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V01-E0133",
+  "field": "away_credits",
+  "detail": "5300 -> '5300'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V01-E0050",
+  "field": "time",
+  "detail": "48 -> '48'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V01-E0109",
+  "field": "victim",
+  "detail": "padded 'CPC-5'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V01-E0087",
+  "field": "weapon",
+  "detail": "padded 'Vandal'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V01-E0103",
+  "field": "planter",
+  "detail": "padded 'NSN-5'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V01-E0053",
+  "field": "win_condition",
+  "detail": "'spike-detonated' -> 'SPIKE-DETONATED'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V01-E0163",
+  "field": "home_buy",
+  "detail": "'full-buy' -> 'FULL-BUY'"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V01-E0170",
+  "field": "duration",
+  "detail": "77 -> null"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V01-E0037",
+  "field": "duration",
+  "detail": "86 -> null"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V01-E0062",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V01-E0119",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V01-E0128",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V01-E0010",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V01-E0088",
+  "field": null,
+  "detail": "swapped with BTI26-V01-E0089"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V01-E0005",
+  "field": null,
+  "detail": "swapped with BTI26-V01-E0006"
+ }
+]

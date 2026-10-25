@@ -1,0 +1,2368 @@
+{
+ "format": "raid-replay/valorant-match/1",
+ "match": {
+  "id": "BTI26-V01",
+  "name": "Nightshade Nomads vs Copper Comets",
+  "start": "2026-10-25T18:00:00+05:30",
+  "competition": {
+   "id": "BTI-2026",
+   "name": "Byte Tackle Invitational 2026 (fictional)"
+  },
+  "venue": {
+   "id": "ONLINE",
+   "name": "Online (fictional)"
+  },
+  "map": "Ascent",
+  "seed": 1000,
+  "purpose": "Normal match (13-x)"
+ },
+ "teams": [
+  {
+   "id": "CPC",
+   "name": "Copper Comets",
+   "side": "away",
+   "short": "CPC",
+   "first_side": "attack"
+  },
+  {
+   "id": "NSN",
+   "name": "Nightshade Nomads",
+   "side": "home",
+   "short": "NSN",
+   "first_side": "defence"
+  }
+ ],
+ "players": [
+  {
+   "id": "CPC-1",
+   "name": "rune",
+   "team": "CPC",
+   "agent": "brimstone",
+   "kills": 6,
+   "deaths": 15,
+   "assists": 10,
+   "headshots": 1,
+   "first_kills": 2,
+   "first_deaths": 2,
+   "fk_diff": 0,
+   "adr": 54,
+   "kast": 48,
+   "acs": 90
+  },
+  {
+   "id": "CPC-2",
+   "name": "sable",
+   "team": "CPC",
+   "agent": "omen",
+   "kills": 12,
+   "deaths": 14,
+   "assists": 5,
+   "headshots": 2,
+   "first_kills": 1,
+   "first_deaths": 2,
+   "fk_diff": -1,
+   "adr": 79,
+   "kast": 52,
+   "acs": 128
+  },
+  {
+   "id": "CPC-3",
+   "name": "nyx",
+   "team": "CPC",
+   "agent": "killjoy",
+   "kills": 16,
+   "deaths": 12,
+   "assists": 1,
+   "headshots": 6,
+   "first_kills": 4,
+   "first_deaths": 2,
+   "fk_diff": 2,
+   "adr": 89,
+   "kast": 52,
+   "acs": 153
+  },
+  {
+   "id": "CPC-4",
+   "name": "pixel",
+   "team": "CPC",
+   "agent": "sova",
+   "kills": 14,
+   "deaths": 12,
+   "assists": 8,
+   "headshots": 0,
+   "first_kills": 2,
+   "first_deaths": 5,
+   "fk_diff": -3,
+   "adr": 92,
+   "kast": 67,
+   "acs": 153
+  },
+  {
+   "id": "CPC-5",
+   "name": "dash",
+   "team": "CPC",
+   "agent": "viper",
+   "kills": 9,
+   "deaths": 13,
+   "assists": 4,
+   "headshots": 1,
+   "first_kills": 0,
+   "first_deaths": 1,
+   "fk_diff": -1,
+   "adr": 57,
+   "kast": 57,
+   "acs": 92
+  },
+  {
+   "id": "NSN-1",
+   "name": "vexa",
+   "team": "NSN",
+   "agent": "phoenix",
+   "kills": 10,
+   "deaths": 10,
+   "assists": 14,
+   "headshots": 3,
+   "first_kills": 1,
+   "first_deaths": 1,
+   "fk_diff": 0,
+   "adr": 84,
+   "kast": 57,
+   "acs": 136
+  },
+  {
+   "id": "NSN-2",
+   "name": "kairo",
+   "team": "NSN",
+   "agent": "sova",
+   "kills": 15,
+   "deaths": 12,
+   "assists": 5,
+   "headshots": 2,
+   "first_kills": 5,
+   "first_deaths": 1,
+   "fk_diff": 4,
+   "adr": 94,
+   "kast": 62,
+   "acs": 162
+  },
+  {
+   "id": "NSN-3",
+   "name": "milo",
+   "team": "NSN",
+   "agent": "cypher",
+   "kills": 13,
+   "deaths": 12,
+   "assists": 11,
+   "headshots": 1,
+   "first_kills": 2,
+   "first_deaths": 3,
+   "fk_diff": -1,
+   "adr": 95,
+   "kast": 57,
+   "acs": 156
+  },
+  {
+   "id": "NSN-4",
+   "name": "tz",
+   "team": "NSN",
+   "agent": "sage",
+   "kills": 13,
+   "deaths": 12,
+   "assists": 10,
+   "headshots": 0,
+   "first_kills": 3,
+   "first_deaths": 3,
+   "fk_diff": 0,
+   "adr": 94,
+   "kast": 71,
+   "acs": 157
+  },
+  {
+   "id": "NSN-5",
+   "name": "orbit",
+   "team": "NSN",
+   "agent": "jett",
+   "kills": 15,
+   "deaths": 11,
+   "assists": 15,
+   "headshots": 5,
+   "first_kills": 1,
+   "first_deaths": 1,
+   "fk_diff": 0,
+   "adr": 113,
+   "kast": 71,
+   "acs": 183
+  }
+ ],
+ "events": [
+  {
+   "id": "BTI26-V01-E0001",
+   "seq": 1,
+   "type": "half_start",
+   "half": 1
+  },
+  {
+   "id": "BTI26-V01-E0002",
+   "seq": 2,
+   "type": "kill",
+   "round": 1,
+   "time": 6,
+   "killer": "CPC-4",
+   "victim": "NSN-4",
+   "weapon": "Ghost",
+   "headshot": false,
+   "assists": [
+    "CPC-2"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0003",
+   "seq": 3,
+   "type": "kill",
+   "round": 1,
+   "time": 20,
+   "killer": "NSN-2",
+   "victim": "CPC-3",
+   "weapon": "Classic",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0004",
+   "seq": 4,
+   "type": "kill",
+   "round": 1,
+   "time": 33,
+   "killer": "NSN-2",
+   "victim": "CPC-1",
+   "weapon": "Sheriff",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0006",
+   "seq": 6,
+   "type": "kill",
+   "round": 1,
+   "time": 53,
+   "killer": "CPC-2",
+   "victim": "NSN-3",
+   "weapon": "Classic",
+   "headshot": false,
+   "assists": [
+    "CPC-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0005",
+   "seq": 5,
+   "type": "plant",
+   "round": 1,
+   "time": 37,
+   "planter": "CPC-5",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0007",
+   "seq": 7,
+   "type": "kill",
+   "round": 1,
+   "time": 56,
+   "killer": "CPC-4",
+   "victim": "NSN-1",
+   "weapon": "Classic",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0008",
+   "seq": 8,
+   "type": "kill",
+   "round": 1,
+   "time": 72,
+   "killer": "CPC-2",
+   "victim": "NSN-2",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "CPC-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0009",
+   "seq": 9,
+   "type": "kill",
+   "round": 1,
+   "time": 79,
+   "killer": "NSN-5",
+   "victim": "CPC-5",
+   "weapon": "Classic",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0010",
+   "seq": 10,
+   "type": "round",
+   "round": 1,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "spike-detonated",
+   "home_credits": 800,
+   "away_credits": 800,
+   "home_buy": "eco",
+   "away_buy": "eco",
+   "home_score": 0,
+   "away_score": 1,
+   "duration": 82
+  },
+  {
+   "id": "BTI26-V01-E0010",
+   "seq": 10,
+   "type": "round",
+   "round": 1,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "spike-detonated",
+   "home_credits": 800,
+   "away_credits": 800,
+   "home_buy": "eco",
+   "away_buy": "eco",
+   "home_score": 0,
+   "away_score": 1,
+   "duration": 82
+  },
+  {
+   "id": "BTI26-V01-E0011",
+   "seq": 11,
+   "type": "kill",
+   "round": 2,
+   "time": 6,
+   "killer": "NSN-2",
+   "victim": "CPC-3",
+   "weapon": "Spectre",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0012",
+   "seq": 12,
+   "type": "kill",
+   "round": 2,
+   "time": 17,
+   "killer": "NSN-4",
+   "victim": "CPC-1",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0013",
+   "seq": 13,
+   "type": "kill",
+   "round": 2,
+   "time": 20,
+   "killer": "NSN-5",
+   "victim": "CPC-2",
+   "weapon": "Spectre",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0014",
+   "seq": 14,
+   "type": "kill",
+   "round": 2,
+   "time": 28,
+   "killer": "CPC-4",
+   "victim": "NSN-1",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0015",
+   "seq": 15,
+   "type": "plant",
+   "round": 2,
+   "time": 31,
+   "planter": "CPC-4",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0016",
+   "seq": 16,
+   "type": "kill",
+   "round": 2,
+   "time": 36,
+   "killer": "NSN-5",
+   "victim": "CPC-4",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0017",
+   "seq": 17,
+   "type": "kill",
+   "round": 2,
+   "time": 42,
+   "killer": "CPC-5",
+   "victim": "NSN-2",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0018",
+   "seq": 18,
+   "type": "kill",
+   "round": 2,
+   "time": 53,
+   "killer": "NSN-3",
+   "victim": "CPC-5",
+   "weapon": "Spectre",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0019",
+   "seq": 19,
+   "type": "defuse",
+   "round": 2,
+   "time": 61,
+   "defuser": "NSN-4",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0020",
+   "seq": 20,
+   "type": "round",
+   "round": 2,
+   "attack": "CPC",
+   "winner": "NSN",
+   "win_condition": "spike-defused",
+   "home_credits": 2900,
+   "away_credits": 4500,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 1,
+   "away_score": 1,
+   "duration": 61
+  },
+  {
+   "id": "BTI26-V01-E0021",
+   "seq": 21,
+   "type": "kill",
+   "round": 3,
+   "time": 14,
+   "killer": "NSN-5",
+   "victim": "CPC-4",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0022",
+   "seq": 22,
+   "type": "kill",
+   "round": 3,
+   "time": 28,
+   "killer": "NSN-1",
+   "victim": "CPC-1",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-2",
+    "NSN-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0023",
+   "seq": 23,
+   "type": "plant",
+   "round": 3,
+   "time": 31,
+   "planter": "CPC-5",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0024",
+   "seq": 24,
+   "type": "kill",
+   "round": 3,
+   "time": 34,
+   "killer": "NSN-5",
+   "victim": "CPC-2",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-2",
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0025",
+   "seq": 25,
+   "type": "kill",
+   "round": 3,
+   "time": 49,
+   "killer": "NSN-3",
+   "victim": "CPC-3",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0026",
+   "seq": 26,
+   "type": "kill",
+   "round": 3,
+   "time": 57,
+   "killer": "NSN-3",
+   "victim": "CPC-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0027",
+   "seq": 27,
+   "type": "defuse",
+   "round": 3,
+   "time": 67,
+   "defuser": "NSN-1",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0028",
+   "seq": 28,
+   "type": "round",
+   "round": 3,
+   "attack": "CPC",
+   "winner": "NSN",
+   "win_condition": "spike-defused",
+   "home_credits": 4900,
+   "away_credits": 3200,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 2,
+   "away_score": 1,
+   "duration": 67
+  },
+  {
+   "id": "BTI26-V01-E0029",
+   "seq": 29,
+   "type": "kill",
+   "round": 4,
+   "time": 15,
+   "killer": "CPC-1",
+   "victim": "NSN-4",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "CPC-2",
+    "CPC-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0030",
+   "seq": 30,
+   "type": "kill",
+   "round": 4,
+   "time": 26,
+   "killer": "CPC-4",
+   "victim": "NSN-1",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "CPC-2"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0031",
+   "seq": 31,
+   "type": "kill",
+   "round": 4,
+   "time": 40,
+   "killer": "NSN-3",
+   "victim": "CPC-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0032",
+   "seq": 32,
+   "type": "kill",
+   "round": 4,
+   "time": 54,
+   "killer": "CPC-4",
+   "victim": "NSN-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "CPC-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0033",
+   "seq": 33,
+   "type": "kill",
+   "round": 4,
+   "time": 67,
+   "killer": "CPC-1",
+   "victim": "NSN-3",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0034",
+   "seq": 34,
+   "type": "kill",
+   "round": 4,
+   "time": 73,
+   "killer": "NSN-2",
+   "victim": "CPC-1",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0035",
+   "seq": 35,
+   "type": "plant",
+   "round": 4,
+   "time": 76,
+   "planter": "CPC-4",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0036",
+   "seq": 36,
+   "type": "kill",
+   "round": 4,
+   "time": 86,
+   "killer": "CPC-5",
+   "victim": "NSN-2",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0037",
+   "seq": 37,
+   "type": "round",
+   "round": 4,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "elimination",
+   "home_credits": 5000,
+   "away_credits": 3900,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 2,
+   "away_score": 2,
+   "duration": null
+  },
+  {
+   "id": "BTI26-V01-E0038",
+   "seq": 38,
+   "type": "kill",
+   "round": 5,
+   "time": 13,
+   "killer": "CPC-1",
+   "victim": "NSN-1",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0039",
+   "seq": 39,
+   "type": "kill",
+   "round": 5,
+   "time": 16,
+   "killer": "CPC-2",
+   "victim": "NSN-3",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0040",
+   "seq": 40,
+   "type": "kill",
+   "round": 5,
+   "time": 27,
+   "killer": "CPC-5",
+   "victim": "NSN-2",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "CPC-1",
+    "CPC-2"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0041",
+   "seq": 41,
+   "type": "plant",
+   "round": 5,
+   "time": 29,
+   "planter": "CPC-4",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0042",
+   "seq": 42,
+   "type": "kill",
+   "round": 5,
+   "time": 39,
+   "killer": "NSN-4",
+   "victim": "CPC-1",
+   "weapon": "Judge",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0043",
+   "seq": 43,
+   "type": "kill",
+   "round": 5,
+   "time": 45,
+   "killer": "CPC-3",
+   "victim": "NSN-4",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0044",
+   "seq": 44,
+   "type": "kill",
+   "round": 5,
+   "time": 53,
+   "killer": "CPC-2",
+   "victim": "NSN-5",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0045",
+   "seq": 45,
+   "type": "round",
+   "round": 5,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "elimination",
+   "home_credits": 3400,
+   "away_credits": 4300,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 2,
+   "away_score": 3,
+   "duration": 53
+  },
+  {
+   "id": "BTI26-V01-E0046",
+   "seq": 46,
+   "type": "kill",
+   "round": 6,
+   "time": 16,
+   "killer": "NSN-3",
+   "victim": "CPC-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0047",
+   "seq": 47,
+   "type": "kill",
+   "round": 6,
+   "time": 25,
+   "killer": "CPC-1",
+   "victim": "NSN-2",
+   "weapon": "Vandal",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0048",
+   "seq": 48,
+   "type": "plant",
+   "round": 6,
+   "time": 29,
+   "planter": "CPC-2",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0049",
+   "seq": 49,
+   "type": "kill",
+   "round": 6,
+   "time": 42,
+   "killer": "NSN-5",
+   "victim": "CPC-3",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-1",
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0050",
+   "seq": 50,
+   "type": "kill",
+   "round": 6,
+   "time": "48",
+   "killer": "CPC-1",
+   "victim": "NSN-3",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0051",
+   "seq": 51,
+   "type": "kill",
+   "round": 6,
+   "time": 55,
+   "killer": "NSN-4",
+   "victim": "CPC-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0052",
+   "seq": 52,
+   "type": "kill",
+   "round": 6,
+   "time": 69,
+   "killer": "CPC-2",
+   "victim": "NSN-5",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0053",
+   "seq": 53,
+   "type": "round",
+   "round": 6,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "SPIKE-DETONATED",
+   "home_credits": 4000,
+   "away_credits": 4700,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 2,
+   "away_score": 4,
+   "duration": 74
+  },
+  {
+   "id": "BTI26-V01-E0054",
+   "seq": 54,
+   "type": "kill",
+   "round": 7,
+   "time": 8,
+   "killer": "NSN-4",
+   "victim": "CPC-2",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0055",
+   "seq": 55,
+   "type": "kill",
+   "round": 7,
+   "time": 20,
+   "killer": "NSN-3",
+   "victim": "CPC-1",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "NSN-1",
+    "NSN-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0056",
+   "seq": 56,
+   "type": "kill",
+   "round": 7,
+   "time": 32,
+   "killer": "NSN-2",
+   "victim": "CPC-4",
+   "weapon": "Bulldog",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0057",
+   "seq": 57,
+   "type": "kill",
+   "round": 7,
+   "time": 38,
+   "killer": "NSN-4",
+   "victim": "CPC-3",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0058",
+   "seq": 58,
+   "type": "plant",
+   "round": 7,
+   "time": 41,
+   "planter": "CPC-5",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0059",
+   "seq": 59,
+   "type": "kill",
+   "round": 7,
+   "time": 55,
+   "killer": "NSN-2",
+   "victim": "CPC-5",
+   "weapon": "Spectre",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0060",
+   "seq": 60,
+   "type": "defuse",
+   "round": 7,
+   "time": 64,
+   "defuser": "NSN-2",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0061",
+   "seq": 61,
+   "type": "round",
+   "round": 7,
+   "attack": "CPC",
+   "winner": "NSN",
+   "win_condition": "spike-defused",
+   "home_credits": 3600,
+   "away_credits": 4700,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 3,
+   "away_score": 4,
+   "duration": 64
+  },
+  {
+   "id": "BTI26-V01-E0062",
+   "seq": 62,
+   "type": "kill",
+   "round": 8,
+   "time": 3,
+   "killer": "NSN-2",
+   "victim": "CPC-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-1"
+   ],
+   "comment": "entered late by the scorer"
+  },
+  {
+   "id": "BTI26-V01-E0063",
+   "seq": 63,
+   "type": "kill",
+   "round": 8,
+   "time": 17,
+   "killer": "NSN-3",
+   "victim": "CPC-2",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0064",
+   "seq": 64,
+   "type": "kill",
+   "round": 8,
+   "time": 20,
+   "killer": "NSN-1",
+   "victim": "CPC-3",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0065",
+   "seq": 65,
+   "type": "kill",
+   "round": 8,
+   "time": 26,
+   "killer": "NSN-1",
+   "victim": "CPC-1",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0066",
+   "seq": 66,
+   "type": "kill",
+   "round": 8,
+   "time": 40,
+   "killer": "NSN-5",
+   "victim": "CPC-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0067",
+   "seq": 67,
+   "type": "round",
+   "round": 8,
+   "attack": "CPC",
+   "winner": "NSN",
+   "win_condition": "elimination",
+   "home_credits": 5600,
+   "away_credits": 3000,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 4,
+   "away_score": 4,
+   "duration": 40
+  },
+  {
+   "id": "BTI26-V01-E0068",
+   "seq": 68,
+   "type": "kill",
+   "round": 9,
+   "time": 12,
+   "killer": "CPC-3",
+   "victim": "NSN-2",
+   "weapon": "Bulldog",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0069",
+   "seq": 69,
+   "type": "kill",
+   "round": 9,
+   "time": 17,
+   "killer": "CPC-2",
+   "victim": "NSN-1",
+   "weapon": "Bulldog",
+   "headshot": false,
+   "assists": [
+    "CPC-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0070",
+   "seq": 70,
+   "type": "kill",
+   "round": 9,
+   "time": 32,
+   "killer": "CPC-2",
+   "victim": "NSN-4",
+   "weapon": "Judge",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0071",
+   "seq": 71,
+   "type": "plant",
+   "round": 9,
+   "time": 34,
+   "planter": "CPC-5",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0072",
+   "seq": 72,
+   "type": "kill",
+   "round": 9,
+   "time": 38,
+   "killer": "CPC-2",
+   "victim": "NSN-3",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "CPC-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0073",
+   "seq": 73,
+   "type": "kill",
+   "round": 9,
+   "time": 46,
+   "killer": "CPC-2",
+   "victim": "NSN-5",
+   "weapon": "Sheriff",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0074",
+   "seq": 74,
+   "type": "round",
+   "round": 9,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "elimination",
+   "home_credits": 5700,
+   "away_credits": 3400,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 4,
+   "away_score": 5,
+   "duration": 46
+  },
+  {
+   "id": "BTI26-V01-E0075",
+   "seq": 75,
+   "type": "kill",
+   "round": 10,
+   "time": 5,
+   "killer": "NSN-1",
+   "victim": "CPC-1",
+   "weapon": "Bulldog",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0076",
+   "seq": 76,
+   "type": "kill",
+   "round": 10,
+   "time": 15,
+   "killer": "CPC-3",
+   "victim": "NSN-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0077",
+   "seq": 77,
+   "type": "kill",
+   "round": 10,
+   "time": 20,
+   "killer": "CPC-4",
+   "victim": "NSN-4",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0078",
+   "seq": 78,
+   "type": "kill",
+   "round": 10,
+   "time": 26,
+   "killer": "CPC-3",
+   "victim": "NSN-2",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0079",
+   "seq": 79,
+   "type": "kill",
+   "round": 10,
+   "time": 40,
+   "killer": "CPC-5",
+   "victim": "NSN-3",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0080",
+   "seq": 80,
+   "type": "kill",
+   "round": 10,
+   "time": 55,
+   "killer": "CPC-5",
+   "victim": "NSN-1",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0081",
+   "seq": 81,
+   "type": "round",
+   "round": 10,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "elimination",
+   "home_credits": 3700,
+   "away_credits": 5700,
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 4,
+   "away_score": 6,
+   "duration": 55
+  },
+  {
+   "id": "BTI26-V01-E0082",
+   "seq": 82,
+   "type": "kill",
+   "round": 11,
+   "time": 6,
+   "killer": "NSN-2",
+   "victim": "CPC-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0083",
+   "seq": 83,
+   "type": "kill",
+   "round": 11,
+   "time": 18,
+   "killer": "NSN-1",
+   "victim": "CPC-3",
+   "weapon": "Operator",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0084",
+   "seq": 84,
+   "type": "kill",
+   "round": 11,
+   "time": 24,
+   "killer": "NSN-5",
+   "victim": "CPC-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-1",
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0085",
+   "seq": 85,
+   "type": "kill",
+   "round": 11,
+   "time": 35,
+   "killer": "NSN-5",
+   "victim": "CPC-1",
+   "weapon": "Vandal",
+   "headshot": true,
+   "assists": [
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0086",
+   "seq": 86,
+   "type": "plant",
+   "round": 11,
+   "time": 37,
+   "planter": "CPC-2",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0087",
+   "seq": 87,
+   "type": "kill",
+   "round": 11,
+   "time": 53,
+   "killer": "NSN-5",
+   "victim": "CPC-2",
+   "weapon": "  Vandal ",
+   "headshot": true,
+   "assists": [
+    "NSN-1",
+    "NSN-2"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0089",
+   "seq": 89,
+   "type": "round",
+   "round": 11,
+   "attack": "CPC",
+   "winner": "NSN",
+   "win_condition": "spike-defused",
+   "home_credits": 4300,
+   "away_credits": 5800,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 5,
+   "away_score": 6,
+   "duration": 63
+  },
+  {
+   "id": "BTI26-V01-E0088",
+   "seq": 88,
+   "type": "defuse",
+   "round": 11,
+   "time": 63,
+   "defuser": "NSN-3",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0090",
+   "seq": 90,
+   "type": "kill",
+   "round": 12,
+   "time": 12,
+   "killer": "CPC-3",
+   "victim": "NSN-3",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "CPC-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0091",
+   "seq": 91,
+   "type": "kill",
+   "round": 12,
+   "time": 26,
+   "killer": "CPC-4",
+   "victim": "NSN-4",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0092",
+   "seq": 92,
+   "type": "kill",
+   "round": 12,
+   "time": 29,
+   "killer": "CPC-4",
+   "victim": "NSN-1",
+   "weapon": "Phantom",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0093",
+   "seq": 93,
+   "type": "plant",
+   "round": 12,
+   "time": 33,
+   "planter": "CPC-2",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0094",
+   "seq": 94,
+   "type": "kill",
+   "round": 12,
+   "time": 47,
+   "killer": "CPC-3",
+   "victim": "NSN-5",
+   "weapon": "Phantom",
+   "headshot": true,
+   "assists": [
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0095",
+   "seq": 95,
+   "type": "kill",
+   "round": 12,
+   "time": 51,
+   "killer": "CPC-2",
+   "victim": "NSN-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "CPC-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0096",
+   "seq": 96,
+   "type": "round",
+   "round": 12,
+   "attack": "CPC",
+   "winner": "CPC",
+   "win_condition": "elimination",
+   "home_credits": 4400,
+   "away_credits": 4100,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 5,
+   "away_score": 7,
+   "duration": 51
+  },
+  {
+   "id": "BTI26-V01-E0097",
+   "seq": 97,
+   "type": "half_end",
+   "half": 1,
+   "home_score": 5,
+   "away_score": 7
+  },
+  {
+   "id": "BTI26-V01-E0098",
+   "seq": 98,
+   "type": "half_start",
+   "half": 2
+  },
+  {
+   "id": "BTI26-V01-E0099",
+   "seq": 99,
+   "type": "kill",
+   "round": 13,
+   "time": 9,
+   "killer": "NSN-2",
+   "victim": "CPC-3",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "NSN-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0100",
+   "seq": 100,
+   "type": "kill",
+   "round": 13,
+   "time": 16,
+   "killer": "NSN-3",
+   "victim": "CPC-2",
+   "weapon": "Sheriff",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0101",
+   "seq": 101,
+   "type": "kill",
+   "round": 13,
+   "time": 19,
+   "killer": "CPC-4",
+   "victim": "NSN-4",
+   "weapon": "Shorty",
+   "headshot": false,
+   "assists": [
+    "CPC-1",
+    "CPC-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0102",
+   "seq": 102,
+   "type": "kill",
+   "round": 13,
+   "time": 29,
+   "killer": "NSN-2",
+   "victim": "CPC-5",
+   "weapon": "Classic",
+   "headshot": false,
+   "assists": [
+    "NSN-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0103",
+   "seq": 103,
+   "type": "plant",
+   "round": 13,
+   "time": 34,
+   "planter": "  NSN-5 ",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0104",
+   "seq": 104,
+   "type": "kill",
+   "round": 13,
+   "time": 50,
+   "killer": "NSN-5",
+   "victim": "CPC-4",
+   "weapon": "Classic",
+   "headshot": false,
+   "assists": [
+    "NSN-1",
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0105",
+   "seq": 105,
+   "type": "kill",
+   "round": 13,
+   "time": 63,
+   "killer": "NSN-2",
+   "victim": "CPC-1",
+   "weapon": "Shorty",
+   "headshot": true,
+   "assists": [
+    "NSN-1",
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0106",
+   "seq": 106,
+   "type": "round",
+   "round": 13,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "elimination",
+   "home_credits": 800,
+   "away_credits": 800,
+   "home_buy": "eco",
+   "away_buy": "eco",
+   "home_score": 6,
+   "away_score": 7,
+   "duration": 63
+  },
+  {
+   "id": "BTI26-V01-E0107",
+   "seq": 107,
+   "type": "kill",
+   "round": 14,
+   "time": 9,
+   "killer": "CPC-4",
+   "victim": "NSN-5",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0108",
+   "seq": 108,
+   "type": "kill",
+   "round": 14,
+   "time": 24,
+   "killer": "NSN-2",
+   "victim": "CPC-1",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0109",
+   "seq": 109,
+   "type": "kill",
+   "round": 14,
+   "time": 34,
+   "killer": "NSN-4",
+   "victim": "  CPC-5 ",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0110",
+   "seq": 110,
+   "type": "plant",
+   "round": 14,
+   "time": 38,
+   "planter": "NSN-1",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0111",
+   "seq": 111,
+   "type": "kill",
+   "round": 14,
+   "time": 50,
+   "killer": "NSN-4",
+   "victim": "CPC-2",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0112",
+   "seq": 112,
+   "type": "kill",
+   "round": 14,
+   "time": 65,
+   "killer": "NSN-4",
+   "victim": "CPC-4",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0113",
+   "seq": 113,
+   "type": "kill",
+   "round": 14,
+   "time": 74,
+   "killer": "CPC-3",
+   "victim": "NSN-4",
+   "weapon": "Sheriff",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0114",
+   "seq": 114,
+   "type": "kill",
+   "round": 14,
+   "time": 79,
+   "killer": "NSN-1",
+   "victim": "CPC-3",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-2",
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0115",
+   "seq": 115,
+   "type": "round",
+   "round": 14,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "elimination",
+   "home_credits": 4700,
+   "away_credits": 2500,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 7,
+   "away_score": 7,
+   "duration": 79
+  },
+  {
+   "id": "BTI26-V01-E0116",
+   "seq": 116,
+   "type": "kill",
+   "round": 15,
+   "time": 16,
+   "killer": "CPC-3",
+   "victim": "NSN-4",
+   "weapon": "Judge",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0117",
+   "seq": 117,
+   "type": "kill",
+   "round": 15,
+   "time": 21,
+   "killer": "CPC-4",
+   "victim": "NSN-1",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0118",
+   "seq": 118,
+   "type": "kill",
+   "round": 15,
+   "time": 33,
+   "killer": "CPC-5",
+   "victim": "NSN-2",
+   "weapon": "Spectre",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0119",
+   "seq": 119,
+   "type": "kill",
+   "round": 15,
+   "time": 48,
+   "killer": "CPC-4",
+   "victim": "NSN-5",
+   "weapon": "Judge",
+   "headshot": false,
+   "assists": [
+    "CPC-1"
+   ],
+   "comment": "entered late by the scorer"
+  },
+  {
+   "id": "BTI26-V01-E0120",
+   "seq": 120,
+   "type": "plant",
+   "round": 15,
+   "time": 50,
+   "planter": "NSN-3",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0121",
+   "seq": 121,
+   "type": "kill",
+   "round": 15,
+   "time": 61,
+   "killer": "CPC-3",
+   "victim": "NSN-3",
+   "weapon": "Judge",
+   "headshot": false,
+   "assists": [
+    "CPC-1",
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0122",
+   "seq": 122,
+   "type": "defuse",
+   "round": 15,
+   "time": 69,
+   "defuser": "CPC-1",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0123",
+   "seq": 123,
+   "type": "round",
+   "round": 15,
+   "attack": "NSN",
+   "winner": "CPC",
+   "win_condition": "spike-defused",
+   "home_credits": 5100,
+   "away_credits": 3300,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 7,
+   "away_score": 8,
+   "duration": 69
+  },
+  {
+   "id": "BTI26-V01-E0124",
+   "seq": 124,
+   "type": "kill",
+   "round": 16,
+   "time": 10,
+   "killer": "NSN-2",
+   "victim": "CPC-2",
+   "weapon": "Spectre",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0125",
+   "seq": 125,
+   "type": "kill",
+   "round": 16,
+   "time": 23,
+   "killer": "NSN-3",
+   "victim": "CPC-3",
+   "weapon": "Spectre",
+   "headshot": false,
+   "assists": [
+    "NSN-4",
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0126",
+   "seq": 126,
+   "type": "kill",
+   "round": 16,
+   "time": 38,
+   "killer": "NSN-2",
+   "victim": "CPC-1",
+   "weapon": "Sheriff",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0127",
+   "seq": 127,
+   "type": "kill",
+   "round": 16,
+   "time": 46,
+   "killer": "CPC-5",
+   "victim": "NSN-3",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0128",
+   "seq": 128,
+   "type": "plant",
+   "round": 16,
+   "time": 52,
+   "planter": "NSN-2",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0128",
+   "seq": 128,
+   "type": "plant",
+   "round": 16,
+   "time": 52,
+   "planter": "NSN-2",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0129",
+   "seq": 129,
+   "type": "kill",
+   "round": 16,
+   "time": 56,
+   "killer": "CPC-5",
+   "victim": "NSN-4",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0130",
+   "seq": 130,
+   "type": "kill",
+   "round": 16,
+   "time": 70,
+   "killer": "CPC-5",
+   "victim": "NSN-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0131",
+   "seq": 131,
+   "type": "kill",
+   "round": 16,
+   "time": 83,
+   "killer": "NSN-5",
+   "victim": "CPC-5",
+   "weapon": "Bulldog",
+   "headshot": false,
+   "assists": [
+    "NSN-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0132",
+   "seq": 132,
+   "type": "kill",
+   "round": 16,
+   "time": 86,
+   "killer": "NSN-5",
+   "victim": "CPC-4",
+   "weapon": "Marshal",
+   "headshot": false,
+   "assists": [
+    "NSN-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0133",
+   "seq": 133,
+   "type": "round",
+   "round": 16,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "elimination",
+   "home_credits": 3400,
+   "away_credits": "5300",
+   "home_buy": "half-buy",
+   "away_buy": "full-buy",
+   "home_score": 8,
+   "away_score": 8,
+   "duration": 86
+  },
+  {
+   "id": "BTI26-V01-E0134",
+   "seq": 134,
+   "type": "kill",
+   "round": 17,
+   "time": 10,
+   "killer": "NSN-3",
+   "victim": "CPC-4",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0135",
+   "seq": 135,
+   "type": "kill",
+   "round": 17,
+   "time": 16,
+   "killer": "CPC-3",
+   "victim": "NSN-5",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "CPC-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0136",
+   "seq": 136,
+   "type": "kill",
+   "round": 17,
+   "time": 27,
+   "killer": "CPC-1",
+   "victim": "NSN-2",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0137",
+   "seq": 137,
+   "type": "plant",
+   "round": 17,
+   "time": 29,
+   "planter": "NSN-1",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0138",
+   "seq": 138,
+   "type": "kill",
+   "round": 17,
+   "time": 40,
+   "killer": "NSN-4",
+   "victim": "CPC-3",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-1",
+    "NSN-3"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0139",
+   "seq": 139,
+   "type": "kill",
+   "round": 17,
+   "time": 53,
+   "killer": "NSN-4",
+   "victim": "CPC-1",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0140",
+   "seq": 140,
+   "type": "kill",
+   "round": 17,
+   "time": 67,
+   "killer": "NSN-3",
+   "victim": "CPC-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0141",
+   "seq": 141,
+   "type": "kill",
+   "round": 17,
+   "time": 70,
+   "killer": "NSN-3",
+   "victim": "CPC-2",
+   "weapon": "Phantom",
+   "headshot": true,
+   "assists": [
+    "NSN-1",
+    "NSN-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0142",
+   "seq": 142,
+   "type": "round",
+   "round": 17,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "elimination",
+   "home_credits": 5700,
+   "away_credits": 3900,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 9,
+   "away_score": 8,
+   "duration": 70
+  },
+  {
+   "id": "BTI26-V01-E0143",
+   "seq": 143,
+   "type": "kill",
+   "round": 18,
+   "time": 12,
+   "killer": "NSN-4",
+   "victim": "CPC-1",
+   "weapon": "Operator",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0144",
+   "seq": 144,
+   "type": "kill",
+   "round": 18,
+   "time": 16,
+   "killer": "NSN-1",
+   "victim": "CPC-3",
+   "weapon": "Phantom",
+   "headshot": true,
+   "assists": [
+    "NSN-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0145",
+   "seq": 145,
+   "type": "kill",
+   "round": 18,
+   "time": 22,
+   "killer": "NSN-3",
+   "victim": "CPC-2",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0146",
+   "seq": 146,
+   "type": "kill",
+   "round": 18,
+   "time": 28,
+   "killer": "NSN-1",
+   "victim": "CPC-5",
+   "weapon": "Operator",
+   "headshot": true,
+   "assists": [
+    "NSN-4",
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0147",
+   "seq": 147,
+   "type": "kill",
+   "round": 18,
+   "time": 34,
+   "killer": "NSN-1",
+   "victim": "CPC-4",
+   "weapon": "Phantom",
+   "headshot": false,
+   "assists": [
+    "NSN-2"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0148",
+   "seq": 148,
+   "type": "round",
+   "round": 18,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "elimination",
+   "home_credits": 6100,
+   "away_credits": 2800,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 10,
+   "away_score": 8,
+   "duration": 34
+  },
+  {
+   "id": "BTI26-V01-E0149",
+   "seq": 149,
+   "type": "kill",
+   "round": 19,
+   "time": 16,
+   "killer": "CPC-2",
+   "victim": "NSN-3",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0150",
+   "seq": 150,
+   "type": "kill",
+   "round": 19,
+   "time": 29,
+   "killer": "NSN-2",
+   "victim": "CPC-2",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "NSN-4",
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0151",
+   "seq": 151,
+   "type": "plant",
+   "round": 19,
+   "time": 35,
+   "planter": "NSN-2",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0152",
+   "seq": 152,
+   "type": "kill",
+   "round": 19,
+   "time": 43,
+   "killer": "CPC-4",
+   "victim": "NSN-1",
+   "weapon": "Marshal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0153",
+   "seq": 153,
+   "type": "kill",
+   "round": 19,
+   "time": 54,
+   "killer": "CPC-3",
+   "victim": "NSN-4",
+   "weapon": "Sheriff",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0154",
+   "seq": 154,
+   "type": "kill",
+   "round": 19,
+   "time": 69,
+   "killer": "CPC-3",
+   "victim": "NSN-5",
+   "weapon": "Bulldog",
+   "headshot": false,
+   "assists": [
+    "CPC-1"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0155",
+   "seq": 155,
+   "type": "round",
+   "round": 19,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "spike-detonated",
+   "home_credits": 6200,
+   "away_credits": 3700,
+   "home_buy": "full-buy",
+   "away_buy": "half-buy",
+   "home_score": 11,
+   "away_score": 8,
+   "duration": 80
+  },
+  {
+   "id": "BTI26-V01-E0156",
+   "seq": 156,
+   "type": "kill",
+   "round": 20,
+   "time": 12,
+   "killer": "NSN-4",
+   "victim": "CPC-5",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0157",
+   "seq": 157,
+   "type": "kill",
+   "round": 20,
+   "time": 28,
+   "killer": "CPC-3",
+   "victim": "NSN-3",
+   "weapon": "Vandal",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0158",
+   "seq": 158,
+   "type": "plant",
+   "round": 20,
+   "time": "30",
+   "planter": "NSN-1",
+   "site": "B"
+  },
+  {
+   "id": "BTI26-V01-E0159",
+   "seq": 159,
+   "type": "kill",
+   "round": 20,
+   "time": 44,
+   "killer": "NSN-5",
+   "victim": "CPC-2",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0160",
+   "seq": 160,
+   "type": "kill",
+   "round": 20,
+   "time": 47,
+   "killer": "CPC-4",
+   "victim": "NSN-5",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0161",
+   "seq": 161,
+   "type": "kill",
+   "round": 20,
+   "time": 63,
+   "killer": "CPC-3",
+   "victim": "NSN-4",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0162",
+   "seq": 162,
+   "type": "kill",
+   "round": 20,
+   "time": 74,
+   "killer": "NSN-1",
+   "victim": "CPC-4",
+   "weapon": "Vandal",
+   "headshot": false
+  },
+  {
+   "id": "BTI26-V01-E0163",
+   "seq": 163,
+   "type": "round",
+   "round": 20,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "spike-detonated",
+   "home_credits": 5800,
+   "away_credits": 5400,
+   "home_buy": "FULL-BUY",
+   "away_buy": "full-buy",
+   "home_score": 12,
+   "away_score": 8,
+   "duration": 75
+  },
+  {
+   "id": "BTI26-V01-E0164",
+   "seq": 164,
+   "type": "kill",
+   "round": 21,
+   "time": 13,
+   "killer": "CPC-3",
+   "victim": "NSN-3",
+   "weapon": "Phantom",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0165",
+   "seq": 165,
+   "type": "kill",
+   "round": 21,
+   "time": 26,
+   "killer": "CPC-3",
+   "victim": "NSN-2",
+   "weapon": "Phantom",
+   "headshot": true,
+   "assists": [
+    "CPC-2",
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0166",
+   "seq": 166,
+   "type": "plant",
+   "round": 21,
+   "time": 32,
+   "planter": "NSN-5",
+   "site": "A"
+  },
+  {
+   "id": "BTI26-V01-E0167",
+   "seq": 167,
+   "type": "kill",
+   "round": 21,
+   "time": 47,
+   "killer": "CPC-2",
+   "victim": "NSN-1",
+   "weapon": "Operator",
+   "headshot": false,
+   "assists": [
+    "CPC-4"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0168",
+   "seq": 168,
+   "type": "kill",
+   "round": 21,
+   "time": 53,
+   "killer": "NSN-5",
+   "victim": "CPC-2",
+   "weapon": "Operator",
+   "headshot": true
+  },
+  {
+   "id": "BTI26-V01-E0169",
+   "seq": 169,
+   "type": "kill",
+   "round": 21,
+   "time": 69,
+   "killer": "NSN-4",
+   "victim": "CPC-1",
+   "weapon": "Vandal",
+   "headshot": false,
+   "assists": [
+    "NSN-5"
+   ]
+  },
+  {
+   "id": "BTI26-V01-E0170",
+   "seq": 170,
+   "type": "round",
+   "round": 21,
+   "attack": "NSN",
+   "winner": "NSN",
+   "win_condition": "spike-detonated",
+   "home_credits": 5800,
+   "away_credits": 5000,
+   "home_buy": "full-buy",
+   "away_buy": "full-buy",
+   "home_score": 13,
+   "away_score": 8,
+   "duration": null
+  },
+  {
+   "id": "BTI26-V01-E0171",
+   "seq": 171,
+   "type": "half_end",
+   "half": 2,
+   "home_score": 13,
+   "away_score": 8
+  }
+ ],
+ "result": {
+  "scores": {
+   "NSN": 13,
+   "CPC": 8
+  },
+  "winner": "NSN"
+ }
+}

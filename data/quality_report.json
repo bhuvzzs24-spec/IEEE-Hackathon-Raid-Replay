@@ -1,0 +1,751 @@
+{
+ "sports": {
+  "badminton": {
+   "matches_in": 4,
+   "matches_published": 2,
+   "matches_held_back": [
+    {
+     "match": "KSO26-M02",
+     "violations": [
+      "Each side's sport:score must equal the number of games it won: CHP",
+      "Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0007",
+      "Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0016",
+      "Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0092",
+      "Score must rise by exactly 1 for the rally winner, and not at all for the loser: action/KSO26-M02-E0007",
+      "Score must rise by exactly 1 for the rally winner, and not at all for the loser: action/KSO26-M02-E0016",
+      "Score must rise by exactly 1 for the rally winner, and not at all for the loser: action/KSO26-M02-E0092",
+      "The server must be the previous rally's winner (rally 1: the first server in game 1, the previous game's winner after that): action/KSO26-M02-E0007",
+      "The server must be the previous rally's winner (rally 1: the first server in game 1, the previous game's winner after that): action/KSO26-M02-E0016",
+      "The server must be the previous rally's winner (rally 1: the first server in game 1, the previous game's winner after that): action/KSO26-M02-E0092"
+     ]
+    },
+    {
+     "match": "KSO26-M03",
+     "violations": [
+      "Best of 3: the winner wins exactly 2 games, the loser fewer than 2.",
+      "Each side's sport:score must equal the number of games it won: GHA"
+     ]
+    }
+   ],
+   "events_in": 453,
+   "events_clean": 189,
+   "events_auto_fixed": 28,
+   "events_quarantined": 264,
+   "accounted": true,
+   "fixes": {
+    "out-of-order event re-sorted": 16,
+    "whitespace trimmed": 12,
+    "numeric string -> integer": 12,
+    "wrong-case code value": 8,
+    "unknown key removed (value logged)": 8,
+    "exact duplicate removed": 8
+   },
+   "quarantine": {
+    "rule violation (SHACL) - match held back": 252,
+    "exact duplicate (first copy kept)": 8,
+    "missing required field": 2,
+    "non-numeric text in a number field": 1,
+    "unknown code-list value": 1
+   },
+   "fix_examples": {
+    "wrong-case code value": [
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0007",
+      "field": "shot",
+      "detail": "'LIFT' -> 'lift'"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0031",
+      "field": "fault",
+      "detail": "'SERVICE-FAULT' -> 'service-fault'"
+     },
+     {
+      "match": "KSO26-M01",
+      "record": "event KSO26-M01-E0032",
+      "field": "fault",
+      "detail": "'DOUBLE-HIT' -> 'double-hit'"
+     }
+    ],
+    "unknown key removed (value logged)": [
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0011",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0036",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     },
+     {
+      "match": "KSO26-M01",
+      "record": "event KSO26-M01-E0012",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     }
+    ],
+    "whitespace trimmed": [
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0016",
+      "field": "receiver",
+      "detail": "'  KLB-1 ' -> 'KLB-1'"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0067",
+      "field": "receiver",
+      "detail": "'  KLB-1 ' -> 'KLB-1'"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0103",
+      "field": "server",
+      "detail": "'  JYG-1 ' -> 'JYG-1'"
+     }
+    ],
+    "exact duplicate removed": [
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0058",
+      "field": null,
+      "detail": "same as the earlier copy of KSO26-F01-E0058"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0092",
+      "field": null,
+      "detail": "same as the earlier copy of KSO26-F01-E0092"
+     },
+     {
+      "match": "KSO26-M01",
+      "record": "event KSO26-M01-E0014",
+      "field": null,
+      "detail": "same as the earlier copy of KSO26-M01-E0014"
+     }
+    ],
+    "numeric string -> integer": [
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0068",
+      "field": "score_a",
+      "detail": "'3' -> 3"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0074",
+      "field": "rally",
+      "detail": "'11' -> 11"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0107",
+      "field": "score_a",
+      "detail": "'22' -> 22"
+     }
+    ],
+    "out-of-order event re-sorted": [
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0064",
+      "field": "seq",
+      "detail": "moved to its seq position 64"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0065",
+      "field": "seq",
+      "detail": "moved to its seq position 65"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0093",
+      "field": "seq",
+      "detail": "moved to its seq position 93"
+     }
+    ]
+   },
+   "quarantine_examples": {
+    "exact duplicate (first copy kept)": [
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0058",
+      "field": null,
+      "detail": "same as the earlier copy of KSO26-F01-E0058"
+     },
+     {
+      "match": "KSO26-F01",
+      "record": "event KSO26-F01-E0092",
+      "field": null,
+      "detail": "same as the earlier copy of KSO26-F01-E0092"
+     },
+     {
+      "match": "KSO26-M01",
+      "record": "event KSO26-M01-E0014",
+      "field": null,
+      "detail": "same as the earlier copy of KSO26-M01-E0014"
+     }
+    ],
+    "missing required field": [
+     {
+      "match": "KSO26-M02",
+      "record": "event KSO26-M02-E0006",
+      "field": "game",
+      "detail": "game is missing"
+     },
+     {
+      "match": "KSO26-M02",
+      "record": "event KSO26-M02-E0126",
+      "field": "winner",
+      "detail": "winner is null"
+     }
+    ],
+    "non-numeric text in a number field": [
+     {
+      "match": "KSO26-M02",
+      "record": "event KSO26-M02-E0015",
+      "field": "rally",
+      "detail": "'n/a' is not a number"
+     }
+    ],
+    "unknown code-list value": [
+     {
+      "match": "KSO26-M02",
+      "record": "event KSO26-M02-E0091",
+      "field": "shot",
+      "detail": "'banana' is not one of ['clear', 'drive', 'drop', 'lift', 'net-shot', 'smash']"
+     }
+    ],
+    "rule violation (SHACL) - match held back": [
+     {
+      "match": "KSO26-M02",
+      "record": "event KSO26-M02-E0001",
+      "field": null,
+      "detail": "Each side's sport:score must equal the number of games it won: CHP; Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0007; Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0016"
+     },
+     {
+      "match": "KSO26-M02",
+      "record": "event KSO26-M02-E0002",
+      "field": null,
+      "detail": "Each side's sport:score must equal the number of games it won: CHP; Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0007; Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0016"
+     },
+     {
+      "match": "KSO26-M02",
+      "record": "event KSO26-M02-E0003",
+      "field": null,
+      "detail": "Each side's sport:score must equal the number of games it won: CHP; Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0007; Rally numbers must run 1, 2, 3 ... in each game, without gaps, in sequence order: action/KSO26-M02-E0016"
+     }
+    ]
+   },
+   "roundtrip_diff": 0,
+   "published_valid": 2
+  },
+  "khokho": {
+   "matches_in": 3,
+   "matches_published": 1,
+   "matches_held_back": [
+    {
+     "match": "SKK26-M02",
+     "violations": [
+      "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E014",
+      "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E015",
+      "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E016",
+      "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E056",
+      "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E057",
+      "Turn totals don't add up: kk:turnPoints / kk:tagCount must equal the turn's tags: action/SKK26-M02-E018",
+      "Turn totals don't add up: kk:turnPoints / kk:tagCount must equal the turn's tags: action/SKK26-M02-E059"
+     ]
+    },
+    {
+     "match": "SKK26-M03",
+     "violations": [
+      "Each team's sport:score must equal the points it scored as chasers: AMB",
+      "Result must follow the scores: higher score wins, equal scores tie: AMB",
+      "Result must follow the scores: higher score wins, equal scores tie: MLV"
+     ]
+    }
+   ],
+   "events_in": 181,
+   "events_clean": 59,
+   "events_auto_fixed": 14,
+   "events_quarantined": 122,
+   "accounted": true,
+   "fixes": {
+    "out-of-order event re-sorted": 12,
+    "numeric string -> integer": 9,
+    "whitespace trimmed": 9,
+    "unknown key removed (value logged)": 6,
+    "wrong-case code value": 6,
+    "exact duplicate removed": 6
+   },
+   "quarantine": {
+    "rule violation (SHACL) - match held back": 112,
+    "exact duplicate (first copy kept)": 6,
+    "missing required field": 2,
+    "non-numeric text in a number field": 1,
+    "unknown code-list value": 1
+   },
+   "fix_examples": {
+    "unknown key removed (value logged)": [
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E001",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E046",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     },
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E034",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     }
+    ],
+    "numeric string -> integer": [
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E006",
+      "field": "time",
+      "detail": "'112' -> 112"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E008",
+      "field": "batch",
+      "detail": "'3' -> 3"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E029",
+      "field": "points",
+      "detail": "'2' -> 2"
+     }
+    ],
+    "wrong-case code value": [
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E007",
+      "field": "method",
+      "detail": "'SKY-DIVE' -> 'sky-dive'"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E010",
+      "field": "method",
+      "detail": "'SKY-DIVE' -> 'sky-dive'"
+     },
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E012",
+      "field": "method",
+      "detail": "'TOUCH' -> 'touch'"
+     }
+    ],
+    "whitespace trimmed": [
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E009",
+      "field": "method",
+      "detail": "'  touch ' -> 'touch'"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E025",
+      "field": "defender",
+      "detail": "'  AMB-07 ' -> 'AMB-07'"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E036",
+      "field": "defender",
+      "detail": "'  BHR-04 ' -> 'BHR-04'"
+     }
+    ],
+    "exact duplicate removed": [
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E011",
+      "field": null,
+      "detail": "same as the earlier copy of SKK26-M01-E011"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E039",
+      "field": null,
+      "detail": "same as the earlier copy of SKK26-M01-E039"
+     },
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E003",
+      "field": null,
+      "detail": "same as the earlier copy of SKK26-M02-E003"
+     }
+    ],
+    "out-of-order event re-sorted": [
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E003",
+      "field": "seq",
+      "detail": "moved to its seq position 3"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E004",
+      "field": "seq",
+      "detail": "moved to its seq position 4"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E048",
+      "field": "seq",
+      "detail": "moved to its seq position 48"
+     }
+    ]
+   },
+   "quarantine_examples": {
+    "exact duplicate (first copy kept)": [
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E011",
+      "field": null,
+      "detail": "same as the earlier copy of SKK26-M01-E011"
+     },
+     {
+      "match": "SKK26-M01",
+      "record": "event SKK26-M01-E039",
+      "field": null,
+      "detail": "same as the earlier copy of SKK26-M01-E039"
+     },
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E003",
+      "field": null,
+      "detail": "same as the earlier copy of SKK26-M02-E003"
+     }
+    ],
+    "non-numeric text in a number field": [
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E001",
+      "field": "turn",
+      "detail": "'n/a' is not a number"
+     }
+    ],
+    "missing required field": [
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E013",
+      "field": "method",
+      "detail": "method is null"
+     },
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E017",
+      "field": "turn",
+      "detail": "turn is missing"
+     }
+    ],
+    "unknown code-list value": [
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E055",
+      "field": "method",
+      "detail": "'banana' is not one of ['pole-dive', 'sky-dive', 'touch']"
+     }
+    ],
+    "rule violation (SHACL) - match held back": [
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E002",
+      "field": null,
+      "detail": "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E014; A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E015; A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E016"
+     },
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E003",
+      "field": null,
+      "detail": "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E014; A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E015; A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E016"
+     },
+     {
+      "match": "SKK26-M02",
+      "record": "event SKK26-M02-E004",
+      "field": null,
+      "detail": "A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E014; A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E015; A batch has 3 defenders: at most 3 tags per batch entry, and entry k starts only after entry k-1 lost all 3: action/SKK26-M02-E016"
+     }
+    ]
+   },
+   "roundtrip_diff": 0,
+   "published_valid": 1
+  },
+  "valorant": {
+   "matches_in": 4,
+   "matches_published": 2,
+   "matches_held_back": [
+    {
+     "match": "BTI26-V02",
+     "violations": [
+      "A team's score must equal the number of rounds it won: GLV",
+      "Round winner is not consistent with the win condition (detonated = attackers after a plant; defused = defenders after a defuse; time expired = defenders, no plant): action/BTI26-V02-E0162",
+      "spespstat:deaths does not match the number of Kill events with this player as the victim: GLV-5",
+      "spespstat:deaths does not match the number of Kill events with this player as the victim: TDL-4",
+      "spespstat:kills does not match the number of Kill events by this player: GLV-1",
+      "spespstat:kills does not match the number of Kill events by this player: TDL-1"
+     ]
+    },
+    {
+     "match": "BTI26-V03",
+     "violations": [
+      "A team's score must equal the number of rounds it won: CPC",
+      "First to 13 rounds; from 12-12 (overtime) a team must win by 2."
+     ]
+    }
+   ],
+   "events_in": 790,
+   "events_clean": 301,
+   "events_auto_fixed": 32,
+   "events_quarantined": 489,
+   "accounted": true,
+   "fixes": {
+    "out-of-order event re-sorted": 16,
+    "numeric string -> integer": 12,
+    "whitespace trimmed": 12,
+    "exact duplicate removed": 8,
+    "null in optional field removed": 8,
+    "wrong-case code value": 8,
+    "unknown key removed (value logged)": 8
+   },
+   "quarantine": {
+    "rule violation (SHACL) - match held back": 477,
+    "exact duplicate (first copy kept)": 8,
+    "missing required field": 2,
+    "non-numeric text in a number field": 1,
+    "unknown code-list value": 1
+   },
+   "fix_examples": {
+    "exact duplicate removed": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0010",
+      "field": null,
+      "detail": "same as the earlier copy of BTI26-V01-E0010"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0128",
+      "field": null,
+      "detail": "same as the earlier copy of BTI26-V01-E0128"
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0195",
+      "field": null,
+      "detail": "same as the earlier copy of BTI26-V02-E0195"
+     }
+    ],
+    "null in optional field removed": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0037",
+      "field": "duration",
+      "detail": "duration: null -> (no triple)"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0170",
+      "field": "duration",
+      "detail": "duration: null -> (no triple)"
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0066",
+      "field": "duration",
+      "detail": "duration: null -> (no triple)"
+     }
+    ],
+    "numeric string -> integer": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0050",
+      "field": "time",
+      "detail": "'48' -> 48"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0133",
+      "field": "away_credits",
+      "detail": "'5300' -> 5300"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0158",
+      "field": "time",
+      "detail": "'30' -> 30"
+     }
+    ],
+    "wrong-case code value": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0053",
+      "field": "win_condition",
+      "detail": "'SPIKE-DETONATED' -> 'spike-detonated'"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0163",
+      "field": "home_buy",
+      "detail": "'FULL-BUY' -> 'full-buy'"
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0026",
+      "field": "away_buy",
+      "detail": "'HALF-BUY' -> 'half-buy'"
+     }
+    ],
+    "unknown key removed (value logged)": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0062",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0119",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0056",
+      "field": "comment",
+      "detail": "comment=\"entered late by the scorer\""
+     }
+    ],
+    "whitespace trimmed": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0087",
+      "field": "weapon",
+      "detail": "'  Vandal ' -> 'Vandal'"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0103",
+      "field": "planter",
+      "detail": "'  NSN-5 ' -> 'NSN-5'"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0109",
+      "field": "victim",
+      "detail": "'  CPC-5 ' -> 'CPC-5'"
+     }
+    ],
+    "out-of-order event re-sorted": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0005",
+      "field": "seq",
+      "detail": "moved to its seq position 5"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0006",
+      "field": "seq",
+      "detail": "moved to its seq position 6"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0088",
+      "field": "seq",
+      "detail": "moved to its seq position 88"
+     }
+    ]
+   },
+   "quarantine_examples": {
+    "exact duplicate (first copy kept)": [
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0010",
+      "field": null,
+      "detail": "same as the earlier copy of BTI26-V01-E0010"
+     },
+     {
+      "match": "BTI26-V01",
+      "record": "event BTI26-V01-E0128",
+      "field": null,
+      "detail": "same as the earlier copy of BTI26-V01-E0128"
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0195",
+      "field": null,
+      "detail": "same as the earlier copy of BTI26-V02-E0195"
+     }
+    ],
+    "missing required field": [
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0149",
+      "field": "weapon",
+      "detail": "weapon is missing"
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0161",
+      "field": "round",
+      "detail": "round is null"
+     }
+    ],
+    "non-numeric text in a number field": [
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0174",
+      "field": "round",
+      "detail": "'n/a' is not a number"
+     }
+    ],
+    "unknown code-list value": [
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0214",
+      "field": "home_buy",
+      "detail": "'banana' is not one of ['eco', 'full-buy', 'half-buy']"
+     }
+    ],
+    "rule violation (SHACL) - match held back": [
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0001",
+      "field": null,
+      "detail": "A team's score must equal the number of rounds it won: GLV; Round winner is not consistent with the win condition (detonated = attackers after a plant; defused = defenders after a defuse; time expired = defenders, no plant): action/BTI26-V02-E0162; spespstat:deaths does not match the number of Kill events with this player as the victim: GLV-5"
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0002",
+      "field": null,
+      "detail": "A team's score must equal the number of rounds it won: GLV; Round winner is not consistent with the win condition (detonated = attackers after a plant; defused = defenders after a defuse; time expired = defenders, no plant): action/BTI26-V02-E0162; spespstat:deaths does not match the number of Kill events with this player as the victim: GLV-5"
+     },
+     {
+      "match": "BTI26-V02",
+      "record": "event BTI26-V02-E0003",
+      "field": null,
+      "detail": "A team's score must equal the number of rounds it won: GLV; Round winner is not consistent with the win condition (detonated = attackers after a plant; defused = defenders after a defuse; time expired = defenders, no plant): action/BTI26-V02-E0162; spespstat:deaths does not match the number of Kill events with this player as the victim: GLV-5"
+     }
+    ]
+   },
+   "roundtrip_diff": 0,
+   "published_valid": 2
+  }
+ }
+}

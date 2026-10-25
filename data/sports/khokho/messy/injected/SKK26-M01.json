@@ -1,0 +1,86 @@
+[
+ {
+  "kind": "numeric_string",
+  "record": "event SKK26-M01-E029",
+  "field": "points",
+  "detail": "2 -> '2'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event SKK26-M01-E008",
+  "field": "batch",
+  "detail": "3 -> '3'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event SKK26-M01-E006",
+  "field": "time",
+  "detail": "112 -> '112'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event SKK26-M01-E025",
+  "field": "defender",
+  "detail": "padded 'AMB-07'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event SKK26-M01-E036",
+  "field": "defender",
+  "detail": "padded 'BHR-04'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event SKK26-M01-E009",
+  "field": "method",
+  "detail": "padded 'touch'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event SKK26-M01-E010",
+  "field": "method",
+  "detail": "'sky-dive' -> 'SKY-DIVE'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event SKK26-M01-E007",
+  "field": "method",
+  "detail": "'sky-dive' -> 'SKY-DIVE'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event SKK26-M01-E046",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event SKK26-M01-E001",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event SKK26-M01-E039",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event SKK26-M01-E011",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "swap",
+  "record": "event SKK26-M01-E003",
+  "field": null,
+  "detail": "swapped with SKK26-M01-E004"
+ },
+ {
+  "kind": "swap",
+  "record": "event SKK26-M01-E048",
+  "field": null,
+  "detail": "swapped with SKK26-M01-E049"
+ }
+]

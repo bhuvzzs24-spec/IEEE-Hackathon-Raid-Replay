@@ -1,0 +1,86 @@
+[
+ {
+  "kind": "numeric_string",
+  "record": "event KSO26-M01-E0041",
+  "field": "length",
+  "detail": "1 -> '1'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event KSO26-M01-E0080",
+  "field": "game",
+  "detail": "2 -> '2'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event KSO26-M01-E0057",
+  "field": "game",
+  "detail": "2 -> '2'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event KSO26-M01-E0034",
+  "field": "receiver",
+  "detail": "padded 'ARN-1'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event KSO26-M01-E0008",
+  "field": "shot",
+  "detail": "padded 'smash'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event KSO26-M01-E0076",
+  "field": "server",
+  "detail": "padded 'ARN-1'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event KSO26-M01-E0044",
+  "field": "shot",
+  "detail": "'clear' -> 'CLEAR'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event KSO26-M01-E0032",
+  "field": "fault",
+  "detail": "'double-hit' -> 'DOUBLE-HIT'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event KSO26-M01-E0012",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event KSO26-M01-E0052",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event KSO26-M01-E0014",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event KSO26-M01-E0040",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "swap",
+  "record": "event KSO26-M01-E0059",
+  "field": null,
+  "detail": "swapped with KSO26-M01-E0060"
+ },
+ {
+  "kind": "swap",
+  "record": "event KSO26-M01-E0030",
+  "field": null,
+  "detail": "swapped with KSO26-M01-E0031"
+ }
+]

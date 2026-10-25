@@ -1,0 +1,110 @@
+[
+ {
+  "kind": "numeric_string",
+  "record": "event KSO26-M02-E0110",
+  "field": "game",
+  "detail": "3 -> '3'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event KSO26-M02-E0029",
+  "field": "length",
+  "detail": "5 -> '5'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event KSO26-M02-E0100",
+  "field": "score_b",
+  "detail": "7 -> '7'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event KSO26-M02-E0040",
+  "field": "shot",
+  "detail": "padded 'clear'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event KSO26-M02-E0039",
+  "field": "fault",
+  "detail": "padded 'net-touch'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event KSO26-M02-E0050",
+  "field": "fault_by",
+  "detail": "padded 'DPL-1'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event KSO26-M02-E0087",
+  "field": "shot",
+  "detail": "'smash' -> 'SMASH'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event KSO26-M02-E0020",
+  "field": "shot",
+  "detail": "'clear' -> 'CLEAR'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event KSO26-M02-E0044",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event KSO26-M02-E0078",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "missing_required",
+  "record": "event KSO26-M02-E0006",
+  "field": "game",
+  "detail": "removed game"
+ },
+ {
+  "kind": "unknown_code",
+  "record": "event KSO26-M02-E0091",
+  "field": "shot",
+  "detail": "'smash' -> 'banana'"
+ },
+ {
+  "kind": "non_numeric",
+  "record": "event KSO26-M02-E0015",
+  "field": "rally",
+  "detail": "14 -> 'n/a'"
+ },
+ {
+  "kind": "null_required",
+  "record": "event KSO26-M02-E0126",
+  "field": "winner",
+  "detail": "'CHP-1' -> null"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event KSO26-M02-E0102",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event KSO26-M02-E0088",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "swap",
+  "record": "event KSO26-M02-E0117",
+  "field": null,
+  "detail": "swapped with KSO26-M02-E0118"
+ },
+ {
+  "kind": "swap",
+  "record": "event KSO26-M02-E0034",
+  "field": null,
+  "detail": "swapped with KSO26-M02-E0035"
+ }
+]

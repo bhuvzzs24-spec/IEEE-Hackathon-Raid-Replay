@@ -1,0 +1,122 @@
+[
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V02-E0123",
+  "field": "round",
+  "detail": "14 -> '14'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V02-E0186",
+  "field": "time",
+  "detail": "38 -> '38'"
+ },
+ {
+  "kind": "numeric_string",
+  "record": "event BTI26-V02-E0015",
+  "field": "time",
+  "detail": "49 -> '49'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V02-E0203",
+  "field": "weapon",
+  "detail": "padded 'Phantom'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V02-E0074",
+  "field": "home_buy",
+  "detail": "padded 'full-buy'"
+ },
+ {
+  "kind": "whitespace",
+  "record": "event BTI26-V02-E0102",
+  "field": "killer",
+  "detail": "padded 'TDL-2'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V02-E0026",
+  "field": "away_buy",
+  "detail": "'half-buy' -> 'HALF-BUY'"
+ },
+ {
+  "kind": "wrong_case",
+  "record": "event BTI26-V02-E0187",
+  "field": "home_buy",
+  "detail": "'half-buy' -> 'HALF-BUY'"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V02-E0106",
+  "field": "duration",
+  "detail": "65 -> null"
+ },
+ {
+  "kind": "null_optional",
+  "record": "event BTI26-V02-E0066",
+  "field": "duration",
+  "detail": "65 -> null"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V02-E0062",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "unknown_key",
+  "record": "event BTI26-V02-E0056",
+  "field": "comment",
+  "detail": "added comment='entered late by the scorer'"
+ },
+ {
+  "kind": "missing_required",
+  "record": "event BTI26-V02-E0149",
+  "field": "weapon",
+  "detail": "removed weapon"
+ },
+ {
+  "kind": "unknown_code",
+  "record": "event BTI26-V02-E0214",
+  "field": "home_buy",
+  "detail": "'full-buy' -> 'banana'"
+ },
+ {
+  "kind": "non_numeric",
+  "record": "event BTI26-V02-E0174",
+  "field": "round",
+  "detail": "20 -> 'n/a'"
+ },
+ {
+  "kind": "null_required",
+  "record": "event BTI26-V02-E0161",
+  "field": "round",
+  "detail": "18 -> null"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V02-E0206",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "duplicate",
+  "record": "event BTI26-V02-E0195",
+  "field": null,
+  "detail": "exact copy inserted"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V02-E0001",
+  "field": null,
+  "detail": "swapped with BTI26-V02-E0002"
+ },
+ {
+  "kind": "swap",
+  "record": "event BTI26-V02-E0094",
+  "field": null,
+  "detail": "swapped with BTI26-V02-E0095"
+ }
+]
