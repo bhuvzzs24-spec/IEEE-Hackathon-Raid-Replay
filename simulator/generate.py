@@ -61,6 +61,7 @@ MATCHES = [
         "accept": lambda s, r: ("winner" in r and 1 <= abs(r["home_score"] - r["away_score"]) <= 4
                                 and _has(s, do_or_die=3, super_tackles=1, super_raids=2, all_outs=2,
                                          cards=1, reviews=1, bonus=5, substitutions=1)),
+        "need_yellow": True,
         "purpose": "Knockout final - the showcase match used by the live replay",
     },
     {
@@ -93,7 +94,8 @@ def build(spec: dict, max_tries: int = 5000) -> tuple[dict, dict]:
         sim = MatchSimulator(meta, TEAMS[spec["home"]], TEAMS[spec["away"]], seed, spec["profile"])
         m = sim.run()
         s = stats(m)
-        if spec["accept"](s, m["result"]):
+        yellow = any(e["type"] == "card" and e["colour"] == "yellow" for e in m["events"])
+        if spec["accept"](s, m["result"]) and (yellow or not spec.get("need_yellow")):
             return m, s
     raise RuntimeError(f"no seed satisfied {spec['file']}")
 
