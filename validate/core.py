@@ -21,7 +21,9 @@ PLUGIN = ROOT / "kabaddi_plugin"
 
 @lru_cache(maxsize=1)
 def kabaddi_ontology() -> Graph:
-    return Graph().parse(PLUGIN / "kabaddi-ontology.ttl", format="turtle")
+    g = Graph().parse(PLUGIN / "kabaddi-ontology.ttl", format="turtle")
+    g.parse(PLUGIN / "kabaddi-feed-ontology.ttl", format="turtle")     # terms for real PKL feeds
+    return g
 
 
 @lru_cache(maxsize=2)
@@ -30,6 +32,7 @@ def shapes(with_plugin: bool = True) -> Graph:
     g += loader.shapes()
     if with_plugin:
         g.parse(PLUGIN / "kabaddi-shapes.ttl", format="turtle")
+        g.parse(PLUGIN / "kabaddi-feed-shapes.ttl", format="turtle")  # real PKL feeds (kabaddipy/)
     return g
 
 
@@ -56,3 +59,30 @@ def validate_graph(data: Graph, with_plugin: bool = True) -> tuple[bool, str, in
 
 def validate_file(path: Path, with_plugin: bool = True) -> tuple[bool, str, int]:
     return validate_graph(parse_file(path), with_plugin)
+
+
+def validate_feed_graph(data: Graph, with_plugin: bool = True) -> dict:
+    """Validate a converted real PKL match. Warnings (data-quality rules) don't break conformance.
+
+    Returns {"conforms", "violations", "warnings", "warning_messages": {message: count}, "report"}.
+    """
+    from collections import Counter
+    from rdflib.namespace import SH
+    g = Graph()
+    g += loader.ontology()
+    g += loader.vocabularies()
+    if with_plugin:
+        g += kabaddi_ontology()
+    g += data
+    conforms, report, text = _shacl(
+        g, shacl_graph=shapes(with_plugin), inference="none", advanced=True, allow_warnings=True,
+    )
+    sev = Counter()
+    msgs = Counter()
+    for r in report.subjects(None, SH.ValidationResult):
+        level = report.value(r, SH.resultSeverity)
+        sev[level] += 1
+        if level == SH.Warning:
+            msgs[str(report.value(r, SH.resultMessage))] += 1
+    return {"conforms": bool(conforms), "violations": sev[SH.Violation], "warnings": sev[SH.Warning],
+            "warning_messages": dict(msgs.most_common()), "report": text}

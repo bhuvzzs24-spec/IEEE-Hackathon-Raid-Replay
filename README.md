@@ -16,6 +16,9 @@ Raid Replay is:
 5. **Proof** — round-trip tests with DeepDiff = 0, and negative tests showing it's not a fake pass (`tests/`).
 6. **A demo website** that replays the final raid by raid on an animated kabaddi mat, driven only by the
    converted Sport Schema data, with a full-screen mode for presenting (`site/index.html`).
+7. **Real data: the official Pro Kabaddi feed** — a second converter for the PKL match-centre feed as collected by
+   [kabaddiPy-data](https://github.com/kabaddiPy/kabaddiPy-data): **all 1,060 matches of seasons 1–10 go to Sport
+   Schema and back with 0 differences**, and the Season 10 knockouts replay on the mat (`kabaddipy/`, `site/real.html`).
 
 IEEE CS Confluence Buildathon · PES University · Sunday 25 October 2026 · Track: **Lossless – Bridging systems and formats** · Team **Byte Tackle**.
 
@@ -33,7 +36,7 @@ python -m simulator.generate             # 1. simulate the 5 matches  -> data/js
 python -m converter                      # 2. convert                 -> data/turtle/, data/jsonld/
 python -m validate                       # 3. SHACL: IPTC + kabaddi shapes (all PASS)
 python -m validate --no-plugin           # 4. SHACL: IPTC shapes only (all FAIL - proves strictness)
-python -m pytest                         # 5. 68 tests: round trip, validation, negative tests, simulator rules
+python -m pytest                         # 5. 90 tests: round trip, validation, negative tests, simulator rules, real feed
 python -m validate.proof                 # 6. recompute the numbers shown below -> data/results.json
 python site/build_site.py                # 7. rebuild the website (inlines all data)
 ```
@@ -42,6 +45,19 @@ Or everything at once: `./run_all.sh`
 
 **Open the website:** double-click `site/index.html` (or open it in any browser). It is a single
 self-contained file — no server, no internet, no build step needed.
+
+**Real Pro Kabaddi matches** (needs `git` and internet once):
+
+```bash
+python -m kabaddipy fetch                # 1. download kabaddiPy-data (1,060 match files) -> data/kabaddipy/raw/
+python -m kabaddipy convert              # 2. Season 10 semi-finals + final -> data/kabaddipy/{json,turtle,jsonld}
+python -m kabaddipy roundtrip            # 3. ALL 1,060 matches: JSON -> Turtle -> JSON and JSON -> JSON-LD -> JSON (~10 min)
+python -m kabaddipy validate             # 4. SHACL on the knockouts: PASS, plus the feed's data-quality warnings
+python -m kabaddipy query                # 5. SPARQL: every do-or-die raid, super raid and super tackle of the final
+python site/build_site.py                # 6. also writes site/real.html (the real-match replay)
+```
+
+Or: `python demo.py --real` (fetch, convert, build and open `site/real.html`).
 
 Other handy commands:
 
@@ -68,7 +84,7 @@ All numbers come from `python -m validate.proof` (`data/results.json`) and `pyte
 - **Round trip:** 5 matches × 2 serialisations, JSON → RDF → JSON, DeepDiff = 0 differences (also Turtle → JSON → JSON-LD → JSON).
 - **Validation:** all 10 files conform to IPTC's shapes + the kabaddi plugin (0 violations).
 - **Strictness:** without the plugin, IPTC's own shapes reject every file (1,751–1,841 violations each — "Node is closed. It cannot have value …").
-- **Tests:** 68 / 68 pytest tests pass.
+- **Tests:** 90 / 90 pytest tests pass (6 of them need the real data and are skipped until `python -m kabaddipy fetch`).
 
 ### Negative tests (proof it's not a fake pass)
 
@@ -94,6 +110,58 @@ Rejected by the validator (SHACL, with a specific message):
 | A 45-second raid | Value is not <= 30 |
 | A raid with no outcome | Raid outcome must be one of the kabaddi raid-outcome concepts. |
 | *Every* real file, with the plugin removed | Node is closed. It cannot have value … |
+
+## Real data: the official Pro Kabaddi feed (kabaddiPy)
+
+Our first converter bridges a format we designed. To show the bridge works on a format we did *not*
+design, `kabaddipy/` converts the **official PKL match-centre feed** (seasons 1–10, collected by
+[kabaddiPy-data](https://github.com/kabaddiPy/kabaddiPy-data)) to Sport Schema and back.
+
+| | Result |
+|---|---|
+| Real matches converted and back, Turtle and JSON-LD (`python -m kabaddipy roundtrip`) | **1,060 / 1,060, 0 differences** |
+| Play-by-play events / RDF triples | **103,176 / 4,285,194** |
+| Season 10 semi-finals + final: IPTC + kabaddi shapes | **3 / 3 conform** (0 violations) |
+| Same files, IPTC shapes only (no plugin) | rejected (3,557–3,626 violations each) |
+| In-browser check on `site/real.html` | 3,524–3,722 fields per match, **0 differences**; both scoreboards end on the official score (37–21, 27–31, 28–25) |
+| Tests | 22 (`tests/test_kabaddipy.py`): a made-up match in the exact feed format with every tricky case, plus the 3 real knockouts when fetched |
+
+**What "lossless" covers.** The match record: every field of `match_detail` (result, series, toss, venue, player
+of the match ...), both teams and their line-ups (id, name, jersey, role, captain, starter, cards ...) and every
+field of every play-by-play event, in order. Not converted, and listed in `kabaddipy.core.EXCLUDED`: summaries the
+feed derives from the events (team and player totals, zone heat maps) and the web-widget wrapper.
+
+**What the real feed forced us to add** (rules 5 and 6 in `kabaddipy/core.py`):
+
+- **Null is not missing.** The feed uses `null` on purpose (~150 per match: `defender_id`, `review.outcome` ...).
+  An explicit null becomes `kab:nullField "defender_id"` and comes back as `null`; a missing key still emits nothing.
+- **Order is data, even when ids disagree.** `event_no` goes *backwards* in 354 of 1,060 matches, so events keep the
+  array order (`sport:sequenceNumber`), and every other list is an `rdf:List`.
+- **Typed references.** Team ids are strings in the team list (`"7"`) and integers in events (`7`). Each reference
+  kind declares its type; anything else is an error.
+- New vocabulary (`kabaddi_plugin/kabaddi-feed-ontology.ttl`, generated from the field tables): `kab:FeedEvent`,
+  time-outs, technical points, `super_ten`, `high_five`, review details ... and shapes
+  (`kabaddi-feed-shapes.ttl`) that extend IPTC's closed shapes the same way as the core plugin.
+
+**What we found in the real feed** (reported, never "fixed": the converter is lossless, the validator warns):
+
+1. **`raid_points` means two different things.** When a raid also earns technical or all-out points, the feed
+   includes them in `raid_points` 742 times and leaves them out 1,276 times. Our SHACL rule flags each case as a
+   `sh:Warning` (1–3 per Season 10 knockout).
+2. **A substitution's `player_id` flips meaning between seasons.** In seasons 2–5 it is the player coming on; in
+   seasons 1 and 6–10 the player going off (checked against the feed's own text "X comes in for Y" on 7,000+
+   substitutions). The replay reads the direction from the text.
+3. **The running `score` resets at half-time** (20–11 then 17–10 = 37–21), and `defending_points` is 0 in two
+   thirds of unsuccessful raids (9,036 of 13,675) even though a capture point is recorded.
+4. Smaller: negative touch points (`-1`), "Timeout" and "TimeOut" as two event names, events with no half.
+
+**Licence.** kabaddiPy-data has no licence file, so (as planned in our proposal) real matches are **demo-only**:
+`fetch` downloads them locally, and `.gitignore` keeps the files and `site/real.html` out of this repository. Only
+the summary numbers (`data/kabaddipy/roundtrip_all.json`) are committed. The test fixture
+(`tests/fixtures/kabaddipy_sample.json`) is a made-up match written in the same format.
+
+**The replay is symbolic.** The feed records who raided and who touched or tackled whom, not positions or
+revivals, so revivals follow the rules (first out, first in; an all-out brings everyone back).
 
 ## How it works
 
@@ -215,19 +283,25 @@ Found in IPTC Sport Schema 1.1 (official GitHub repository). All patched in memo
 ```
 iptc/              official IPTC Sport Schema files (unmodified) + loader.py (in-memory patches)
 kabaddi_plugin/    kabaddi-ontology.ttl, kabaddi-shapes.ttl  <- the plugin
+                   kabaddi-feed-ontology.ttl, kabaddi-feed-shapes.ttl  <- terms + shapes for the real PKL feed
+kabaddipy/         core.py (real PKL feed <-> RDF), __main__.py (fetch, convert, roundtrip, validate, query)
 simulator/         engine.py (rules), generate.py (the 5 matches)
 converter/         core.py (JSON <-> RDF), __main__.py (CLI)
 validate/          core.py (pySHACL), mutations.py (negative cases), proof.py (numbers)
-tests/             pytest: round trip, validation, negative tests, simulator rules
-data/              json/, turtle/, jsonld/ (5 matches each), results.json, validation.json
-site/              index.html (built, self-contained), src/ (template, CSS, JS), build_site.py, check_site.py
+tests/             pytest: round trip, validation, negative tests, simulator rules, real feed (+ fixtures/)
+data/              json/, turtle/, jsonld/ (5 matches each), results.json, validation.json,
+                   kabaddipy/roundtrip_all.json (real-data summary; the real files themselves are not committed)
+site/              index.html (built, self-contained), real.html (built locally from real data, not committed),
+                   src/ (template, CSS, JS), build_site.py, check_site.py
 screenshots/       desktop and phone screenshots of the site, incl. the replay mid-animation
 SLIDES_CONTENT.md  presentation material: the gap, proof tables, IPTC bugs, users, team, slide order, demo script
-demo.py            one-command demo: simulate, convert, validate, build and open the site (--quick skips validation)
+demo.py            one-command demo: simulate, convert, validate, build and open the site
+                   (--quick skips validation, --real adds the real PKL knockouts and opens site/real.html)
 run_all.sh         regenerate everything and run every check
 ```
 
 
 
-All teams, players and matches are fictional, produced by our seeded simulator; no real match data is used.
+The simulated teams, players and matches are fictional, produced by our seeded simulator. Real matches come from
+the PKL match-centre feed via kabaddiPy-data, are used for the demo only, and are not redistributed here.
 IPTC Sport Schema and NewsCodes are standards of IPTC; this kabaddi plugin is an independent proposal.

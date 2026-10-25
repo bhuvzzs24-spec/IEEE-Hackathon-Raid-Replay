@@ -53,7 +53,8 @@ Numbers come from `data/results.json` (written by `python -m validate.proof`), `
 |---|---|
 | Round-trip differences (DeepDiff, 5 matches × 2 formats) | **0** |
 | Files that conform to IPTC + kabaddi shapes | **10 / 10** |
-| pytest tests passing | **68 / 68** |
+| pytest tests passing | **90 / 90** |
+| **Real PKL matches (seasons 1–10) round-tripped** | **1,060 / 1,060, 0 differences** |
 | Deliberate corruptions caught | **12 / 12** (5 by the diff + 7 by the validator) |
 
 Totals across the 5 matches: **433 events, 355 raids, 13,020 RDF triples.**
@@ -113,6 +114,35 @@ IPTC's shapes are closed, so remove the kabaddi plugin and every file fails with
 | 5 discipline | 1,770 | 0 |
 
 Range: **1,751–1,841 violations per file.**
+
+---
+
+## 2b. Real data: the official Pro Kabaddi feed
+
+**Not just our own format: 1,060 real PKL matches, there and back, 0 differences.**
+
+| | Result |
+|---|---|
+| Real matches (seasons 1–10, kabaddiPy-data) round-tripped, Turtle and JSON-LD | **1,060 / 1,060, 0 differences** |
+| Play-by-play events / RDF triples | **103,176 / 4.29 million** |
+| Season 10 semi-finals + final vs IPTC + kabaddi shapes | **3 / 3 conform** |
+| Same files with IPTC shapes only | rejected, 3,557–3,626 violations each |
+| Live replay of the real knockouts (in-browser diff) | 3,524–3,722 fields per match, **0 differences**, scoreboards end 37–21, 27–31, 28–25 |
+
+What the real feed forced us to add:
+- **Null ≠ missing**: ~150 deliberate nulls per match → `kab:nullField "defender_id"`
+- **Order is data**: `event_no` runs backwards in 354 of 1,060 matches → array order + `rdf:List`
+- **Typed references**: team id `"7"` in the team list, `7` in events — both come back as they were
+
+What our validator found in the official feed (warnings, never silently fixed):
+1. `raid_points` includes technical / all-out points 742 times and leaves them out 1,276 times
+2. A substitution's `player_id` is the player coming **on** in seasons 2–5 and going **off** in seasons 1, 6–10
+3. The running score resets at half-time; `defending_points` is 0 in 2/3 of tackles despite a capture point
+4. `-1` touch points, "Timeout" vs "TimeOut", events with no half
+
+Licence: kabaddiPy-data has no licence file → real matches are demo-only, not in our repository (as planned).
+
+Demo commands: `python -m kabaddipy validate`, `python -m kabaddipy query`, open `site/real.html`.
 
 ---
 
@@ -176,7 +206,7 @@ All teams, players and matches are fictional, produced by our seeded simulator.
 4. **The four rules that make it lossless**: unique IDs, explicit order, missing = no triple,
    typed literals (2 ≠ "2", false ≠ 0).
 5. **Live demo**: switch to the website (script below).
-6. **Proof**: the 4 headline numbers (0 · 10/10 · 68/68 · 12/12) and the per-match table.
+6. **Proof**: the headline numbers (0 · 10/10 · 90/90 · 12/12 · 1,060 real matches) and the per-match table.
 7. **Not a fake pass**: both negative-test tables plus the no-plugin violations (1,751–1,841 per file).
 8. **Bugs we found in the standard + who uses it**: the 6 bugs table, the 4 users, and a closing line.
 

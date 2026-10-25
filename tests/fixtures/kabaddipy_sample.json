@@ -1,0 +1,993 @@
+{
+ "title": "Saffron Strikers vs Indigo Titans (fictional)",
+ "clientId": "demo",
+ "gameData": {
+  "match_detail": {
+   "match_id": 990001,
+   "match_number": "Match 1",
+   "clock": {
+    "minutes": 40,
+    "seconds": 0
+   },
+   "date": "10/25/2026",
+   "start_time": "19:30",
+   "matchtime_iso": "2026-10-25T14:00:00Z",
+   "gmtoffset": "+05:30",
+   "result": {
+    "outcome": null,
+    "value": "Saffron Strikers Beat Indigo Titans (5-1)",
+    "winning_method": "W",
+    "winning_team": "Saffron Strikers",
+    "winning_team_id": 91
+   },
+   "player_of_the_match": [
+    {
+     "id": 9003,
+     "value": "3"
+    }
+   ],
+   "series": {
+    "id": 990,
+    "name": "Deccan Kabaddi League 2026 (fictional)",
+    "short_name": "DKL 2026",
+    "parent_series_id": 99,
+    "parent_series_name": "Deccan Kabaddi League (fictional)"
+   },
+   "status_id": 10,
+   "status": "Match Completed",
+   "toss": {
+    "winner": 92,
+    "selection": "court"
+   },
+   "win_by_coin_toss": {
+    "winner": null
+   },
+   "venue": {
+    "id": 990,
+    "name": "Lalbagh Indoor Arena, Bengaluru (fictional)"
+   },
+   "stage": "League",
+   "group": ""
+  },
+  "teams": {
+   "home_team_id": "91",
+   "home_team_name": "Saffron Strikers",
+   "team": [
+    {
+     "id": "91",
+     "name": "Saffron Strikers",
+     "short_name": "SAF",
+     "score": 5,
+     "extra_time": null,
+     "golden_raid": null,
+     "green_card_count": 1,
+     "yellow_card_count": 0,
+     "red_card_count": 0,
+     "squad": [
+      {
+       "id": 9000,
+       "name": "Darshan Rao",
+       "short_name": "",
+       "skill": "",
+       "role": "Raider",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 1,
+       "played": true,
+       "captain": true,
+       "on_court": true,
+       "starter": true,
+       "top_raider": true,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9001,
+       "name": "Dhruv Menon",
+       "short_name": "",
+       "skill": "",
+       "role": "Raider",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 2,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9002,
+       "name": "Gagan Hegde",
+       "short_name": "",
+       "skill": "",
+       "role": "All-rounder",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 3,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9003,
+       "name": "Jayanth Sandhu",
+       "short_name": "",
+       "skill": "",
+       "role": "All-rounder",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 4,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9004,
+       "name": "Uday Patil",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": true,
+       "green_card": false,
+       "jersey": 5,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9005,
+       "name": "Charan Nair",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 6,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": true,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9006,
+       "name": "Kiran Shetty",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 7,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9007,
+       "name": "Rahul Bhat",
+       "short_name": "",
+       "skill": "",
+       "role": "Raider",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 8,
+       "played": true,
+       "captain": false,
+       "on_court": false,
+       "starter": false,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9008,
+       "name": "Vivek Iyer",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 9,
+       "played": false,
+       "captain": false,
+       "on_court": false,
+       "starter": false,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      }
+     ],
+     "stats": {
+      "points": {
+       "total": 5
+      }
+     },
+     "state_of_play": null
+    },
+    {
+     "id": "92",
+     "name": "Indigo Titans",
+     "short_name": "IDG",
+     "score": 1,
+     "extra_time": {
+      "score": ""
+     },
+     "golden_raid": {
+      "score": ""
+     },
+     "green_card_count": 0,
+     "yellow_card_count": 0,
+     "red_card_count": 0,
+     "squad": [
+      {
+       "id": 9100,
+       "name": "Naveen Patil",
+       "short_name": "",
+       "skill": "",
+       "role": "Raider",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 1,
+       "played": true,
+       "captain": true,
+       "on_court": true,
+       "starter": true,
+       "top_raider": true,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9101,
+       "name": "Zubin Jadhav",
+       "short_name": "",
+       "skill": "",
+       "role": "Raider",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 2,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9102,
+       "name": "Arjun Pillai",
+       "short_name": "",
+       "skill": "",
+       "role": "All-rounder",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 3,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9103,
+       "name": "Mohan Das",
+       "short_name": "",
+       "skill": "",
+       "role": "All-rounder",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 4,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9104,
+       "name": "Ravi Kulkarni",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": true,
+       "green_card": false,
+       "jersey": 5,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9105,
+       "name": "Sanjay Gowda",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 6,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": true,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9106,
+       "name": "Tarun Reddy",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 7,
+       "played": true,
+       "captain": false,
+       "on_court": true,
+       "starter": true,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9107,
+       "name": "Ajay Kamath",
+       "short_name": "",
+       "skill": "",
+       "role": "Raider",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 8,
+       "played": true,
+       "captain": false,
+       "on_court": false,
+       "starter": false,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      },
+      {
+       "id": 9108,
+       "name": "Nikhil Rao",
+       "short_name": "",
+       "skill": "",
+       "role": "Defender",
+       "red_card": false,
+       "yellow_card": false,
+       "green_card": false,
+       "jersey": 9,
+       "played": false,
+       "captain": false,
+       "on_court": false,
+       "starter": false,
+       "top_raider": false,
+       "top_defender": false,
+       "points": {
+        "total": 3
+       },
+       "raids": {
+        "total": 4
+       },
+       "tackles": {
+        "total": 1
+       },
+       "strong_zones": {
+        "strong_zone": []
+       },
+       "weak_zones": {
+        "weak_zone": []
+       },
+       "events": [],
+       "substitute": null
+      }
+     ],
+     "stats": {
+      "points": {
+       "total": 1
+      }
+     },
+     "state_of_play": {
+      "is_raiding_now": false
+     }
+    }
+   ]
+  },
+  "events": {
+   "event": [
+    {
+     "event_no": 1,
+     "event_half": 1,
+     "event": "Successful Raid",
+     "event_id": 1,
+     "event_text": "Successful Raid by 9001",
+     "raider_id": 9001,
+     "raiding_team_id": 91,
+     "defender_id": null,
+     "defending_team_id": 92,
+     "raid_points": 1,
+     "raid_touch_points": 1,
+     "raid_bonus_points": 0,
+     "raid_technical_points": 0,
+     "raid_all_out_points": 0,
+     "defending_capture_points": 0,
+     "defending_bonus_points": 0,
+     "defending_technical_points": 0,
+     "defending_all_out_points": 0,
+     "super_raid": false,
+     "super_tackle": false,
+     "do_or_die": false,
+     "super_ten": false,
+     "high_five": false,
+     "review": {
+      "review_taken": false,
+      "team_id": 0,
+      "outcome": null,
+      "reason": null
+     },
+     "defending_points": 0,
+     "clock": "20:00",
+     "status_id": 0,
+     "score": [
+      1,
+      0
+     ],
+     "seq_no": 1,
+     "defenders": [
+      9104
+     ],
+     "created_date": "2026-10-25T19:30:41"
+    },
+    {
+     "event_no": 2,
+     "event_half": 1,
+     "event": "Unsuccessful Raid",
+     "event_id": 2,
+     "event_text": "Unsuccessful Raid by 9101",
+     "raider_id": 9101,
+     "raiding_team_id": 92,
+     "defender_id": 9005,
+     "defending_team_id": 91,
+     "raid_points": 0,
+     "raid_touch_points": 0,
+     "raid_bonus_points": 0,
+     "raid_technical_points": 0,
+     "raid_all_out_points": 0,
+     "defending_capture_points": 1,
+     "defending_bonus_points": 0,
+     "defending_technical_points": 0,
+     "defending_all_out_points": 0,
+     "super_raid": false,
+     "super_tackle": false,
+     "do_or_die": false,
+     "super_ten": false,
+     "high_five": false,
+     "review": {
+      "review_taken": false,
+      "team_id": 0,
+      "outcome": null,
+      "reason": null
+     },
+     "defending_points": 1,
+     "clock": "19:31",
+     "status_id": 0,
+     "score": [
+      2,
+      0
+     ],
+     "seq_no": 2,
+     "defenders": [
+      9005,
+      9006
+     ],
+     "created_date": null
+    },
+    {
+     "event_no": 3,
+     "event_half": 1,
+     "event": "Empty Raid",
+     "event_id": 3,
+     "event_text": "Empty Raid by 9002",
+     "raider_id": 9002,
+     "raiding_team_id": 91,
+     "defender_id": null,
+     "defending_team_id": 92,
+     "raid_points": 0,
+     "raid_touch_points": 0,
+     "raid_bonus_points": 0,
+     "raid_technical_points": 0,
+     "raid_all_out_points": 0,
+     "defending_capture_points": 0,
+     "defending_bonus_points": 0,
+     "defending_technical_points": 0,
+     "defending_all_out_points": 0,
+     "super_raid": false,
+     "super_tackle": false,
+     "do_or_die": false,
+     "super_ten": false,
+     "high_five": false,
+     "review": {
+      "review_taken": false,
+      "team_id": 0,
+      "outcome": null,
+      "reason": null
+     },
+     "defending_points": 0,
+     "clock": "19:02",
+     "status_id": 0,
+     "score": [
+      2,
+      0
+     ],
+     "seq_no": 3,
+     "defenders": [],
+     "created_date": null
+    },
+    {
+     "event_no": 4,
+     "event_half": 1,
+     "event": "Timeout",
+     "event_id": 4,
+     "event_text": null,
+     "team_id": 92,
+     "clock": "18:40",
+     "status_id": 0,
+     "score": null,
+     "seq_no": 4
+    },
+    {
+     "event_no": 6,
+     "event_half": 1,
+     "event": "Successful Raid",
+     "event_id": 1,
+     "event_text": "Successful Raid by 9102",
+     "raider_id": 9102,
+     "raiding_team_id": 92,
+     "defender_id": null,
+     "defending_team_id": 91,
+     "raid_points": 0,
+     "raid_touch_points": 0,
+     "raid_bonus_points": 0,
+     "raid_technical_points": 1,
+     "raid_all_out_points": 0,
+     "defending_capture_points": 0,
+     "defending_bonus_points": 0,
+     "defending_technical_points": 0,
+     "defending_all_out_points": 0,
+     "super_raid": false,
+     "super_tackle": false,
+     "do_or_die": false,
+     "super_ten": false,
+     "high_five": false,
+     "review": {
+      "review_taken": false,
+      "team_id": 0,
+      "outcome": null,
+      "reason": null
+     },
+     "defending_points": 0,
+     "clock": "18:10",
+     "status_id": 0,
+     "score": [
+      2,
+      1
+     ],
+     "seq_no": 5,
+     "defenders": [],
+     "created_date": null
+    },
+    {
+     "event_no": 5,
+     "event_half": 1,
+     "event": "Successful Raid",
+     "event_id": 1,
+     "event_text": "Successful Raid by 9003",
+     "raider_id": 9003,
+     "raiding_team_id": 91,
+     "defender_id": null,
+     "defending_team_id": 92,
+     "raid_points": 3,
+     "raid_touch_points": 2,
+     "raid_bonus_points": 1,
+     "raid_technical_points": 0,
+     "raid_all_out_points": 0,
+     "defending_capture_points": 0,
+     "defending_bonus_points": 0,
+     "defending_technical_points": 0,
+     "defending_all_out_points": 0,
+     "super_raid": true,
+     "super_tackle": false,
+     "do_or_die": false,
+     "super_ten": false,
+     "high_five": false,
+     "review": {
+      "review_taken": true,
+      "team_id": 92,
+      "outcome": {
+       "id": 2,
+       "outcome_value": "Unsuccessful"
+      },
+      "reason": null
+     },
+     "defending_points": 0,
+     "clock": "17:45",
+     "status_id": 0,
+     "score": [
+      5,
+      1
+     ],
+     "seq_no": 6,
+     "defenders": [
+      9105,
+      9106
+     ],
+     "created_date": null
+    },
+    {
+     "event_no": 7,
+     "event_half": 1,
+     "event": "Substitution",
+     "event_id": 5,
+     "event_text": "Rahul Bhat comes in for Dhruv Menon",
+     "team_id": 91,
+     "player_id": 9001,
+     "substituted_by": 9007,
+     "substitute_time": 2,
+     "clock": "17:00",
+     "status_id": 0,
+     "score": null,
+     "seq_no": 0
+    },
+    {
+     "event_no": 8,
+     "event_half": 1,
+     "event": "Green Card",
+     "event_id": 7,
+     "event_text": "Green card for Uday Patil",
+     "team_id": 91,
+     "player_id": 9004,
+     "reason": "Delay of game",
+     "clock": "16:30",
+     "status_id": 0,
+     "score": null
+    },
+    {
+     "event_no": 9,
+     "event_half": 2,
+     "event": "TimeOut",
+     "event_id": 4,
+     "event_text": "Time out",
+     "team_id": null,
+     "clock": "0:31",
+     "status_id": 0,
+     "score": [
+      5,
+      1
+     ]
+    }
+   ]
+  },
+  "zones": {
+   "zone": []
+  }
+ },
+ "selectedTab": "scorecard"
+}

@@ -96,11 +96,56 @@ def main() -> int:
                 problems.append(f"{name}: {m}")
             print(f"[{name}] console messages: {len(msgs)}, problems: {len(bad)}")
             ctx.close()
+        real = ROOT / "site" / "real.html"
+        if real.exists():
+            problems += check_real(browser, real)
+        else:
+            print("[real] site/real.html not built (real data not fetched) - skipped")
         browser.close()
     for pr in problems:
         print("PROBLEM:", pr)
     print("OK" if not problems else f"{len(problems)} problem(s)")
     return 0 if not problems else 1
+
+
+def check_real(browser, real: Path) -> list:
+    """Real PKL matches: no console errors, in-page diff 0, both scoreboards end on the official final
+    score, 1-7 players on each mat at every step, no horizontal overflow on a phone."""
+    problems = []
+    for name, w, h in (("desktop", 1440, 900), ("phone", 390, 844)):
+        ctx = browser.new_context(viewport={"width": w, "height": h})
+        for m in ("s10_semifinal1", "s10_semifinal2", "s10_final"):
+            page = ctx.new_page()
+            msgs = []
+            page.on("console", lambda x, msgs=msgs: msgs.append((x.type, x.text)))
+            page.on("pageerror", lambda e, msgs=msgs: msgs.append(("pageerror", str(e))))
+            page.goto(real.as_uri() + f"?m={m}")
+            page.wait_for_timeout(700)
+            if not page.evaluate("typeof RaidReplay !== 'undefined'"):
+                problems.append(f"real {m}: page did not start {msgs}")
+                page.close()
+                continue
+            info = page.evaluate("({diff: RaidReplay.diff, boards: RaidReplay.boards(), sw: document.documentElement.scrollWidth})")
+            sizes = page.evaluate("(()=>{const o=[];for(let k=0;k<=RaidReplay.events;k++){RaidReplay.seek(k);const s=RaidReplay.state();o.push([s.home,s.away]);}return o;})()")
+            b = info["boards"]
+            if info["diff"]["diffs"]:
+                problems.append(f"real {m}: in-page diff {info['diff']}")
+            if not (b["json"] == b["ld"] == b["final"]):
+                problems.append(f"real {m}: scoreboards {b}")
+            if any(not (1 <= x <= 7) for s in sizes for x in s):
+                problems.append(f"real {m}: mat sizes outside 1..7")
+            if info["sw"] > w:
+                problems.append(f"real {m} {name}: horizontal overflow ({info['sw']}px)")
+            bad = [x for x in msgs if x[0] in ("error", "pageerror", "warning")]
+            problems += [f"real {m}: {x}" for x in bad]
+            if name == "desktop" and m == "s10_semifinal1":
+                page.evaluate("window.scrollTo(0,0)")
+                page.wait_for_timeout(2200)
+                page.screenshot(path=str(OUT / "real-hero.png"))
+            print(f"[real {name}] {m}: diff={info['diff']} boards={b} max on mat={max(max(s) for s in sizes)}")
+            page.close()
+        ctx.close()
+    return problems
 
 
 if __name__ == "__main__":

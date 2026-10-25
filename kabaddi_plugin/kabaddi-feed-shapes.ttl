@@ -1,0 +1,212 @@
+# =============================================================================
+#  Kabaddi plugin - SHACL shapes for real Pro Kabaddi feed data
+#  Raid Replay / team Byte Tackle
+#
+#  Part 1  adds the feed properties to IPTC's closed shapes (same mechanism as
+#          kabaddi-shapes.ttl Part 1).
+#  Part 2  structure every real feed file must have (violations).
+#  Part 3  data-quality rules of the game, as sh:Warning. Real feeds break them,
+#          and we report that rather than hide it: a warning never blocks the
+#          lossless conversion, it tells the publisher which record to check.
+# =============================================================================
+
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix sport:   <https://sportschema.org/ontologies/main/> .
+@prefix kab:     <https://sportschema.org/ontologies/kabaddi/> .
+
+
+# =============================================================================
+#  PART 1 - extend IPTC's closed shapes
+# =============================================================================
+
+sport:ActionShape
+  sh:property [ sh:path kab:capturePoints ;          sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:clockText ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:createdDate ;            sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:defenceAllOutPoints ;    sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:defenceBonusPoints ;     sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:defenceTechnicalPoints ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:defender ;               sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:defenderList ;           sh:nodeKind sh:BlankNodeOrIRI ] ;
+  sh:property [ sh:path kab:defendingTeam ;          sh:class sport:Team ] ;
+  sh:property [ sh:path kab:emptyObject ;            sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:eventName ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:eventNumber ;            sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:eventTeamId ;            sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:eventText ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:eventTypeId ;            sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:feedSeqNo ;              sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:highFive ;               sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:nullField ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:raidBonusPoints ;        sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:raidTechnicalPoints ;    sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:raiderBonus ;            sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:raidingTeam ;            sh:class sport:Team ] ;
+  sh:property [ sh:path kab:reason ;                 sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:reasonId ;               sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:reviewOutcomeId ;        sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:reviewOutcomeValue ;     sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:reviewReason ;           ] ;
+  sh:property [ sh:path kab:reviewTaken ;            sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:reviewTeamId ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:runningScore ;           sh:nodeKind sh:BlankNodeOrIRI ] ;
+  sh:property [ sh:path kab:statusId ;               sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:substituteTime ;         sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:substitutedBy ;          sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:superTen ;               sh:datatype xsd:boolean ] .
+
+sport:EventShape
+  sh:property [ sh:path kab:coinTossWinner ;         sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:emptyObject ;            sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:gmtOffset ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:group ;                  sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:homeTeamId ;             sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:homeTeamName ;           sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:matchClockMinutes ;      sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:matchClockSeconds ;      sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:matchDate ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:matchId ;                sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:matchNumber ;            sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:matchTimeIso ;           sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:nullField ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:playerOfTheMatch ;       sh:nodeKind sh:BlankNodeOrIRI ] ;
+  sh:property [ sh:path kab:resultOutcome ;          sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:resultText ;             sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:startTime ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:statusId ;               sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:statusText ;             sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:tossSelection ;          sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:tossWinnerId ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:winningMethod ;          sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:winningTeamId ;          sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:winningTeamName ;        sh:datatype xsd:string ] .
+
+sport:TeamShape
+  sh:property [ sh:path kab:nullField ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:teamId ;                 sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:teamName ;               sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:teamShortName ;          sh:datatype xsd:string ] .
+
+sport:AthleteShape
+  sh:property [ sh:path kab:nullField ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:playerId ;               sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:playerName ;             sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:playerShortName ;        sh:datatype xsd:string ] .
+
+sport:SiteShape
+  sh:property [ sh:path kab:nullField ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:venueId ;                sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:venueName ;              sh:datatype xsd:string ] .
+
+sport:TeamParticipationShape
+  sh:property [ sh:path kab:emptyObject ;            sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:extraTimeScore ;         sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:goldenRaidScore ;        sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:greenCardCount ;         sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:listPosition ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:nullField ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:redCardCount ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:yellowCardCount ;        sh:datatype xsd:integer ] .
+
+sport:IndividualParticipationShape
+  sh:property [ sh:path kab:feedRole ;               sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:greenCard ;              sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:greenCardCount ;         sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:listPosition ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:nullField ;              sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:onCourt ;                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:played ;                 sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:redCard ;                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:redCardCount ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:skill ;                  sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:starter ;                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:topDefender ;            sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:topRaider ;              sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:yellowCard ;             sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:yellowCardCount ;        sh:datatype xsd:integer ] .
+
+
+# =============================================================================
+#  PART 2 - structure (violations)
+# =============================================================================
+
+kab:FeedEventShape
+  a sh:NodeShape ;
+  sh:targetClass kab:FeedEvent ;
+  sh:property [ sh:path sport:sequenceNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[1-9][0-9]*$" ] ;
+  sh:property [ sh:path sport:actionInEvent ;  sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:eventName ;        sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( "Successful Raid"^^xsd:string "Unsuccessful Raid"^^xsd:string "Empty Raid"^^xsd:string "Raider and Anti Out"^^xsd:string
+                        "Substitution"^^xsd:string "Timeout"^^xsd:string "TimeOut"^^xsd:string "Green Card"^^xsd:string "Yellow Card"^^xsd:string "Red Card"^^xsd:string
+                        "Non Raid Technical Points"^^xsd:string ) ;
+                sh:message "Unknown event type: the feed has a kind of event this plugin does not describe yet." ] ;
+  sh:property [ sh:path kab:clockText ;        sh:maxCount 1 ; sh:pattern "^[0-9]{1,2}:[0-9]{1,2}$" ;
+                sh:message "Clock must look like MM:SS." ] ;
+  sh:property [ sh:path kab:eventNumber ;      sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:raider ;           sh:maxCount 1 ] ;
+  sh:sparql [
+    sh:message "A raid must name its raider and the raiding and defending teams." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this kab:eventName ?n .
+        FILTER (STR(?n) IN ("Successful Raid", "Unsuccessful Raid", "Empty Raid"))
+        FILTER NOT EXISTS { $this kab:raider ?r ; kab:raidingTeam ?a ; kab:defendingTeam ?d }
+      }""" ] .
+
+kab:FeedMatchShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf kab:matchId ;
+  sh:property [ sh:path kab:matchId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:sport ; sh:hasValue <http://cv.iptc.org/newscodes/mediatopic/20000978> ;
+                sh:message "A kabaddi match must declare sport:sport medtop:20000978 (kabaddi)." ] ;
+  sh:property [ sh:path sport:participation ; sh:minCount 2 ; sh:maxCount 2 ] .
+
+# =============================================================================
+#  PART 3 - rules of the game, as warnings (data quality of the source feed)
+# =============================================================================
+
+kab:FeedQualityShape
+  a sh:NodeShape ;
+  sh:targetClass kab:FeedEvent ;
+  sh:severity sh:Warning ;
+  sh:sparql [
+    sh:message "Inconsistent raid_points: it leaves out this raid's technical or all-out points, which other raids in the feed include (touch + bonus + technical + all-out)." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this kab:raidPoints ?r ; kab:touchPoints ?t ; kab:raidBonusPoints ?b ;
+              kab:raidTechnicalPoints ?x ; kab:allOutPoints ?a .
+        FILTER (?r != ?t + ?b + ?x + ?a)
+      }""" ] ;
+  sh:sparql [
+    sh:message "Negative points: a points field is below zero." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this ?p ?v .
+        FILTER (?p IN (kab:raidPoints, kab:touchPoints, kab:raidBonusPoints, kab:raidTechnicalPoints, kab:allOutPoints,
+                       kab:capturePoints, kab:defenceBonusPoints, kab:defenceTechnicalPoints, kab:defenceAllOutPoints,
+                       kab:defencePoints) && ?v < 0)
+      }""" ] ;
+  sh:sparql [
+    sh:message "Super raid flag should be true exactly when touch + bonus points >= 3." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this kab:touchPoints ?t ; kab:raidBonusPoints ?b ; kab:superRaid ?s .
+        FILTER (?s != (?t + ?b >= 3))
+      }""" ] ;
+  sh:sparql [
+    sh:message "An empty raid should score no points for either side." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this kab:eventName ?n . FILTER (STR(?n) = "Empty Raid")
+        { $this kab:raidPoints ?r FILTER (?r != 0) } UNION { $this kab:defencePoints ?d FILTER (?d != 0) }
+      }""" ] .

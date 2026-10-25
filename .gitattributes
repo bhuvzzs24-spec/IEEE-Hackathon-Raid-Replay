@@ -1,0 +1,6 @@
+# Same line endings for everyone (Windows checkouts were showing every file as modified).
+* text=auto eol=lf
+*.png binary
+*.pptx binary
+*.pdf binary
+*.sh text eol=lf

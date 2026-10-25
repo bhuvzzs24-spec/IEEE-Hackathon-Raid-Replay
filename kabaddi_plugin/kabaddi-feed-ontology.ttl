@@ -1,0 +1,279 @@
+# =============================================================================
+#  Kabaddi plugin - feed vocabulary for real Pro Kabaddi match data
+#  Raid Replay / team Byte Tackle
+#
+#  The official PKL match-centre feed (as collected by kabaddiPy-data) says more
+#  than our core raid model: timeouts, technical points, explicit nulls, review
+#  details, the original event numbering and clock text. These terms let a real
+#  feed go to Sport Schema and back without losing a value.
+#  Generated from the field tables in kabaddipy/core.py; rdfs:comment gives the
+#  feed field each property carries.
+# =============================================================================
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix sport:   <https://sportschema.org/ontologies/main/> .
+@prefix kab:     <https://sportschema.org/ontologies/kabaddi/> .
+
+
+kab:FeedEvent a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "feed event"@en ;
+    rdfs:comment "One entry of a real play-by-play feed (raid, substitution, timeout, card, technical point). The feed's own event name is kept in kab:eventName; sport:class gives the IPTC action class."@en .
+
+kab:nullField a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "null field"@en ;
+    rdfs:comment "The source had this key with the value null. Null is not the same as missing, so it is recorded (value = the key path)."@en .
+
+kab:emptyObject a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "empty object"@en ;
+    rdfs:comment "The source had an empty object or list at this key path."@en .
+
+kab:listPosition a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "list position"@en ;
+    rdfs:comment "0-based position in the source list (teams, squads), because RDF itself has no order."@en .
+
+kab:capturePoints a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "capture points"@en ;
+    rdfs:comment "Feed field: events.event[].defending_capture_points"@en .
+
+kab:clockText a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "clock text"@en ;
+    rdfs:comment "Feed field: events.event[].clock"@en .
+
+kab:coinTossWinner a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "coin toss winner"@en ;
+    rdfs:comment "Feed field: match_detail.win_by_coin_toss.winner"@en .
+
+kab:createdDate a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "created date"@en ;
+    rdfs:comment "Feed field: events.event[].created_date"@en .
+
+kab:defenceAllOutPoints a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "defence all out points"@en ;
+    rdfs:comment "Feed field: events.event[].defending_all_out_points"@en .
+
+kab:defenceBonusPoints a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "defence bonus points"@en ;
+    rdfs:comment "Feed field: events.event[].defending_bonus_points"@en .
+
+kab:defenceTechnicalPoints a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "defence technical points"@en ;
+    rdfs:comment "Feed field: events.event[].defending_technical_points"@en .
+
+kab:defender a owl:ObjectProperty ; rdfs:range sport:Athlete ; rdfs:label "defender"@en ;
+    rdfs:comment "Feed field: events.event[].defender_id"@en .
+
+kab:defenderList a owl:ObjectProperty ; rdfs:range rdf:List ; rdfs:label "defender list"@en ;
+    rdfs:comment "Feed field: events.event[].defenders"@en .
+
+kab:defendingTeam a owl:ObjectProperty ; rdfs:range sport:Team ; rdfs:label "defending team"@en ;
+    rdfs:comment "Feed field: events.event[].defending_team_id"@en .
+
+kab:eventName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "event name"@en ;
+    rdfs:comment "Feed field: events.event[].event"@en .
+
+kab:eventNumber a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "event number"@en ;
+    rdfs:comment "Feed field: events.event[].event_no"@en .
+
+kab:eventTeamId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "event team id"@en ;
+    rdfs:comment "Feed field: events.event[].team_id"@en .
+
+kab:eventText a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "event text"@en ;
+    rdfs:comment "Feed field: events.event[].event_text"@en .
+
+kab:eventTypeId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "event type id"@en ;
+    rdfs:comment "Feed field: events.event[].event_id"@en .
+
+kab:extraTimeScore a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "extra time score"@en ;
+    rdfs:comment "Feed field: teams.team[].extra_time.score"@en .
+
+kab:feedRole a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "feed role"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].role"@en .
+
+kab:feedSeqNo a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "feed seq no"@en ;
+    rdfs:comment "Feed field: events.event[].seq_no"@en .
+
+kab:gmtOffset a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "gmt offset"@en ;
+    rdfs:comment "Feed field: match_detail.gmtoffset"@en .
+
+kab:goldenRaidScore a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "golden raid score"@en ;
+    rdfs:comment "Feed field: teams.team[].golden_raid.score"@en .
+
+kab:greenCard a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "green card"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].green_card"@en .
+
+kab:greenCardCount a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "green card count"@en ;
+    rdfs:comment "Feed field: teams.team[].green_card_count, teams.team[].squad[].green_card_count"@en .
+
+kab:group a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "group"@en ;
+    rdfs:comment "Feed field: match_detail.group"@en .
+
+kab:highFive a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "high five"@en ;
+    rdfs:comment "Feed field: events.event[].high_five"@en .
+
+kab:homeTeamId a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "home team id"@en ;
+    rdfs:comment "Feed field: teams.home_team_id"@en .
+
+kab:homeTeamName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "home team name"@en ;
+    rdfs:comment "Feed field: teams.home_team_name"@en .
+
+kab:matchClockMinutes a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "match clock minutes"@en ;
+    rdfs:comment "Feed field: match_detail.clock.minutes"@en .
+
+kab:matchClockSeconds a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "match clock seconds"@en ;
+    rdfs:comment "Feed field: match_detail.clock.seconds"@en .
+
+kab:matchDate a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "match date"@en ;
+    rdfs:comment "Feed field: match_detail.date"@en .
+
+kab:matchId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "match id"@en ;
+    rdfs:comment "Feed field: match_detail.match_id"@en .
+
+kab:matchNumber a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "match number"@en ;
+    rdfs:comment "Feed field: match_detail.match_number"@en .
+
+kab:matchTimeIso a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "match time iso"@en ;
+    rdfs:comment "Feed field: match_detail.matchtime_iso"@en .
+
+kab:onCourt a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "on court"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].on_court"@en .
+
+kab:parentSeriesId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "parent series id"@en ;
+    rdfs:comment "Feed field: match_detail.series.parent_series_id"@en .
+
+kab:parentSeriesName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "parent series name"@en ;
+    rdfs:comment "Feed field: match_detail.series.parent_series_name"@en .
+
+kab:played a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "played"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].played"@en .
+
+kab:playerId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "player id"@en ;
+    rdfs:comment "Feed field: match_detail.player_of_the_match[].id, teams.team[].squad[].id"@en .
+
+kab:playerName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "player name"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].name"@en .
+
+kab:playerOfTheMatch a owl:ObjectProperty ; rdfs:range rdf:List ; rdfs:label "player of the match"@en ;
+    rdfs:comment "Feed field: match_detail.player_of_the_match"@en .
+
+kab:playerShortName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "player short name"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].short_name"@en .
+
+kab:potmValue a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "potm value"@en ;
+    rdfs:comment "Feed field: match_detail.player_of_the_match[].value"@en .
+
+kab:raidBonusPoints a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "raid bonus points"@en ;
+    rdfs:comment "Feed field: events.event[].raid_bonus_points"@en .
+
+kab:raidTechnicalPoints a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "raid technical points"@en ;
+    rdfs:comment "Feed field: events.event[].raid_technical_points"@en .
+
+kab:raiderBonus a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "raider bonus"@en ;
+    rdfs:comment "Feed field: events.event[].raider_bonus"@en .
+
+kab:raidingTeam a owl:ObjectProperty ; rdfs:range sport:Team ; rdfs:label "raiding team"@en ;
+    rdfs:comment "Feed field: events.event[].raiding_team_id"@en .
+
+kab:reason a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "reason"@en ;
+    rdfs:comment "Feed field: events.event[].reason"@en .
+
+kab:reasonId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "reason id"@en ;
+    rdfs:comment "Feed field: events.event[].reason_id"@en .
+
+kab:redCard a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "red card"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].red_card"@en .
+
+kab:redCardCount a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "red card count"@en ;
+    rdfs:comment "Feed field: teams.team[].red_card_count, teams.team[].squad[].red_card_count"@en .
+
+kab:resultOutcome a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "result outcome"@en ;
+    rdfs:comment "Feed field: match_detail.result.outcome"@en .
+
+kab:resultText a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "result text"@en ;
+    rdfs:comment "Feed field: match_detail.result.value"@en .
+
+kab:reviewOutcomeId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "review outcome id"@en ;
+    rdfs:comment "Feed field: events.event[].review.outcome.id"@en .
+
+kab:reviewOutcomeValue a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "review outcome value"@en ;
+    rdfs:comment "Feed field: events.event[].review.outcome.outcome_value"@en .
+
+kab:reviewReason a owl:DatatypeProperty ; rdfs:label "review reason"@en ;
+    rdfs:comment "Feed field: events.event[].review.reason"@en .
+
+kab:reviewTaken a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "review taken"@en ;
+    rdfs:comment "Feed field: events.event[].review.review_taken"@en .
+
+kab:reviewTeamId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "review team id"@en ;
+    rdfs:comment "Feed field: events.event[].review.team_id"@en .
+
+kab:runningScore a owl:ObjectProperty ; rdfs:range rdf:List ; rdfs:label "running score"@en ;
+    rdfs:comment "Feed field: events.event[].score"@en .
+
+kab:seriesId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "series id"@en ;
+    rdfs:comment "Feed field: match_detail.series.id"@en .
+
+kab:seriesName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "series name"@en ;
+    rdfs:comment "Feed field: match_detail.series.name"@en .
+
+kab:seriesShortName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "series short name"@en ;
+    rdfs:comment "Feed field: match_detail.series.short_name"@en .
+
+kab:skill a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "skill"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].skill"@en .
+
+kab:startTime a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "start time"@en ;
+    rdfs:comment "Feed field: match_detail.start_time"@en .
+
+kab:starter a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "starter"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].starter"@en .
+
+kab:statusId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "status id"@en ;
+    rdfs:comment "Feed field: events.event[].status_id, match_detail.status_id"@en .
+
+kab:statusText a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "status text"@en ;
+    rdfs:comment "Feed field: match_detail.status"@en .
+
+kab:substituteTime a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "substitute time"@en ;
+    rdfs:comment "Feed field: events.event[].substitute_time"@en .
+
+kab:substitutedBy a owl:ObjectProperty ; rdfs:range sport:Athlete ; rdfs:label "substituted by"@en ;
+    rdfs:comment "Feed field: events.event[].substituted_by"@en .
+
+kab:superTen a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "super ten"@en ;
+    rdfs:comment "Feed field: events.event[].super_ten"@en .
+
+kab:teamId a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "team id"@en ;
+    rdfs:comment "Feed field: teams.team[].id"@en .
+
+kab:teamName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "team name"@en ;
+    rdfs:comment "Feed field: teams.team[].name"@en .
+
+kab:teamShortName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "team short name"@en ;
+    rdfs:comment "Feed field: teams.team[].short_name"@en .
+
+kab:topDefender a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "top defender"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].top_defender"@en .
+
+kab:topRaider a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "top raider"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].top_raider"@en .
+
+kab:tossSelection a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "toss selection"@en ;
+    rdfs:comment "Feed field: match_detail.toss.selection"@en .
+
+kab:tossWinnerId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "toss winner id"@en ;
+    rdfs:comment "Feed field: match_detail.toss.winner"@en .
+
+kab:venueId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "venue id"@en ;
+    rdfs:comment "Feed field: match_detail.venue.id"@en .
+
+kab:venueName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "venue name"@en ;
+    rdfs:comment "Feed field: match_detail.venue.name"@en .
+
+kab:winningMethod a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "winning method"@en ;
+    rdfs:comment "Feed field: match_detail.result.winning_method"@en .
+
+kab:winningTeamId a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "winning team id"@en ;
+    rdfs:comment "Feed field: match_detail.result.winning_team_id"@en .
+
+kab:winningTeamName a owl:DatatypeProperty ; rdfs:range xsd:string ; rdfs:label "winning team name"@en ;
+    rdfs:comment "Feed field: match_detail.result.winning_team"@en .
+
+kab:yellowCard a owl:DatatypeProperty ; rdfs:range xsd:boolean ; rdfs:label "yellow card"@en ;
+    rdfs:comment "Feed field: teams.team[].squad[].yellow_card"@en .
+
+kab:yellowCardCount a owl:DatatypeProperty ; rdfs:range xsd:integer ; rdfs:label "yellow card count"@en ;
+    rdfs:comment "Feed field: teams.team[].yellow_card_count, teams.team[].squad[].yellow_card_count"@en .

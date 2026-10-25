@@ -2,3 +2,12 @@ __pycache__/
 *.pyc
 .pytest_cache/
 *.zip
+
+# Real PKL data (kabaddiPy-data has no licence file): demo-only, never committed.
+# Only the summary numbers in data/kabaddipy/roundtrip_all.json are kept.
+data/kabaddipy/raw/
+data/kabaddipy/json/
+data/kabaddipy/turtle/
+data/kabaddipy/jsonld/
+site/real.html
+screenshots/real-*.png
