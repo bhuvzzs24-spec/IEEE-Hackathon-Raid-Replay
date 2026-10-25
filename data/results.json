@@ -1,0 +1,268 @@
+{
+  "matches": [
+    {
+      "file": "match1_normal",
+      "purpose": "Normal league match",
+      "title": "Magenta Mavericks vs Teal Tuskers",
+      "home": "Magenta Mavericks",
+      "away": "Teal Tuskers",
+      "seed": 106,
+      "events": 85,
+      "raids": 74,
+      "do_or_die": 3,
+      "super_tackles": 4,
+      "super_raids": 5,
+      "all_outs": 5,
+      "bonus": 8,
+      "empty": 16,
+      "cards": 2,
+      "reviews": 1,
+      "substitutions": 4,
+      "score": "51-45",
+      "triples": 2621,
+      "diff_turtle": 0,
+      "diff_jsonld": 0,
+      "valid_turtle": true,
+      "valid_jsonld": true,
+      "no_plugin_conforms": false,
+      "no_plugin_violations": 1826
+    },
+    {
+      "file": "match2_tied",
+      "purpose": "Tied league match (no winner)",
+      "title": "Crimson Cobras vs Golden Gaurs",
+      "home": "Crimson Cobras",
+      "away": "Golden Gaurs",
+      "seed": 320,
+      "events": 83,
+      "raids": 70,
+      "do_or_die": 3,
+      "super_tackles": 7,
+      "super_raids": 3,
+      "all_outs": 4,
+      "bonus": 5,
+      "empty": 14,
+      "cards": 1,
+      "reviews": 4,
+      "substitutions": 4,
+      "score": "44-44",
+      "triples": 2530,
+      "diff_turtle": 0,
+      "diff_jsonld": 0,
+      "valid_turtle": true,
+      "valid_jsonld": true,
+      "no_plugin_conforms": false,
+      "no_plugin_violations": 1751
+    },
+    {
+      "file": "match3_final",
+      "purpose": "Knockout final - the showcase match used by the live replay",
+      "title": "Saffron Strikers vs Indigo Titans - Final",
+      "home": "Saffron Strikers",
+      "away": "Indigo Titans",
+      "seed": 318,
+      "events": 89,
+      "raids": 73,
+      "do_or_die": 5,
+      "super_tackles": 2,
+      "super_raids": 5,
+      "all_outs": 4,
+      "bonus": 8,
+      "empty": 18,
+      "cards": 1,
+      "reviews": 4,
+      "substitutions": 7,
+      "score": "46-42",
+      "triples": 2662,
+      "diff_turtle": 0,
+      "diff_jsonld": 0,
+      "valid_turtle": true,
+      "valid_jsonld": true,
+      "no_plugin_conforms": false,
+      "no_plugin_violations": 1841
+    },
+    {
+      "file": "match4_dense",
+      "purpose": "Dense with super tackles, do-or-die raids and all-outs",
+      "title": "Teal Tuskers vs Crimson Cobras",
+      "home": "Teal Tuskers",
+      "away": "Crimson Cobras",
+      "seed": 650,
+      "events": 82,
+      "raids": 74,
+      "do_or_die": 9,
+      "super_tackles": 6,
+      "super_raids": 11,
+      "all_outs": 5,
+      "bonus": 5,
+      "empty": 28,
+      "cards": 0,
+      "reviews": 1,
+      "substitutions": 3,
+      "score": "50-42",
+      "triples": 2571,
+      "diff_turtle": 0,
+      "diff_jsonld": 0,
+      "valid_turtle": true,
+      "valid_jsonld": true,
+      "no_plugin_conforms": false,
+      "no_plugin_violations": 1801
+    },
+    {
+      "file": "match5_discipline",
+      "purpose": "Cards, reviews and substitutions",
+      "title": "Golden Gaurs vs Saffron Strikers",
+      "home": "Golden Gaurs",
+      "away": "Saffron Strikers",
+      "seed": 503,
+      "events": 94,
+      "raids": 64,
+      "do_or_die": 2,
+      "super_tackles": 2,
+      "super_raids": 3,
+      "all_outs": 4,
+      "bonus": 4,
+      "empty": 16,
+      "cards": 6,
+      "reviews": 10,
+      "substitutions": 10,
+      "score": "41-35",
+      "triples": 2636,
+      "diff_turtle": 0,
+      "diff_jsonld": 0,
+      "valid_turtle": true,
+      "valid_jsonld": true,
+      "no_plugin_conforms": false,
+      "no_plugin_violations": 1770
+    }
+  ],
+  "negative_diff": [
+    {
+      "name": "2 vs \"2\" (integer turned into string)",
+      "caught": true,
+      "diff": [
+        "type_changes"
+      ],
+      "detail": "{'type_changes': {\"root['events'][11]['touch_points']\": {'old_type': <class 'int'>, 'new_type': <class 'str'>, 'old_value': 2, 'new_value': '2'}}}"
+    },
+    {
+      "name": "False vs 0 (boolean turned into integer)",
+      "caught": true,
+      "diff": [
+        "type_changes"
+      ],
+      "detail": "{'type_changes': {\"root['events'][1]['do_or_die']\": {'old_type': <class 'bool'>, 'new_type': <class 'int'>, 'old_value': False, 'new_value': 0}}}"
+    },
+    {
+      "name": "Swapped raid order",
+      "caught": true,
+      "diff": [
+        "dictionary_item_added",
+        "dictionary_item_removed",
+        "values_changed"
+      ],
+      "detail": "{'dictionary_item_added': [\"root['events'][2]['tackled_by']\"], 'dictionary_item_removed': [\"root['events'][1]['tackled_by']\"], 'values_changed': {\"root['events'"
+    },
+    {
+      "name": "A removed value",
+      "caught": true,
+      "diff": [
+        "dictionary_item_removed"
+      ],
+      "detail": "{'dictionary_item_removed': [\"root['events'][1]['bonus']\"]}"
+    },
+    {
+      "name": "2 vs \"2\" edited inside the JSON-LD text",
+      "caught": true,
+      "diff": [
+        "type_changes"
+      ],
+      "detail": "{'type_changes': {\"root['events'][76]['touch_points']\": {'old_type': <class 'int'>, 'new_type': <class 'str'>, 'old_value': 2, 'new_value': '2'}}}"
+    }
+  ],
+  "negative_validator": [
+    {
+      "name": "Raid outcome \"banana\"",
+      "rejected": true,
+      "violations": 1,
+      "message": "Raid outcome must be one of the kabaddi raid-outcome concepts."
+    },
+    {
+      "name": "Points that don't add up",
+      "rejected": true,
+      "violations": 1,
+      "message": "Points do not add up: raidPoints + defencePoints must equal touch + bonus + tackle + all-out points."
+    },
+    {
+      "name": "touchPoints \"2\" as a string",
+      "rejected": true,
+      "violations": 4,
+      "message": "Value is not <= Literal(\"7\", datatype=xsd:integer)"
+    },
+    {
+      "name": "Super tackle with 4+ defenders",
+      "rejected": true,
+      "violations": 1,
+      "message": "A super tackle needs a tackled raider, 3 or fewer defenders on the mat, and is worth 2 points."
+    },
+    {
+      "name": "Card colour \"purple\"",
+      "rejected": true,
+      "violations": 1,
+      "message": "Card colour must be green, yellow or red."
+    },
+    {
+      "name": "45-second raid",
+      "rejected": true,
+      "violations": 1,
+      "message": "Value is not <= Literal(\"30\", datatype=xsd:integer)"
+    },
+    {
+      "name": "Raid with no outcome",
+      "rejected": true,
+      "violations": 1,
+      "message": "Raid outcome must be one of the kabaddi raid-outcome concepts."
+    }
+  ],
+  "iptc_bugs": {
+    "ignored_properties_on_open_shapes": [
+      "AgentShape",
+      "CompetitionShape",
+      "CompetitorParticipationShape",
+      "IndividualShape",
+      "MembershipShape",
+      "ParticipatableThingShape"
+    ],
+    "vocab_files": 17,
+    "vocab_files_unparseable": [
+      "spactionclass.ttl",
+      "spcompetitionscope.ttl",
+      "spct.ttl",
+      "speventoutcome.ttl",
+      "speventoutcometype.ttl",
+      "speventstatus.ttl",
+      "spgolholetype.ttl",
+      "sphorposition.ttl",
+      "spichposition.ttl",
+      "spplayerstatus.ttl",
+      "spresulteffect.ttl",
+      "spscoreunits.ttl",
+      "spsocposition.ttl",
+      "sptournamentform.ttl",
+      "sptournamentphase.ttl"
+    ],
+    "prefix_lines_fixed": 15,
+    "has_top_concept_miscased": 228,
+    "undefined_shapes": [
+      "NewsCodesSportActionTypeShape",
+      "NewsCodesSportEventStatusShape",
+      "NewsCodesSportGolfHoleTypeShape",
+      "SportConceptShape"
+    ],
+    "string_typed_numbers": [
+      "sport:sequenceNumber",
+      "sport:score",
+      "sport:uniformNumberEvent"
+    ]
+  }
+}
