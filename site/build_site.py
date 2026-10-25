@@ -187,7 +187,8 @@ def main():
 
     real_ready = build_real()
     text = dict(TEXT_SIM)
-    text["T_NAVLINK"] = '<a class="real" href="real.html">Real PKL match →</a>' if real_ready else ""
+    real_link = '<a class="real" href="real.html">Real PKL match →</a>' if real_ready else ""
+    text["T_NAVLINK"] = f'{real_link}<a href="analytics.html">Analytics &amp; Predictor</a>'
     text["T_TAB_NOTE"] = f"Raid #{snip['seq']} of the final — a super raid with a bonus"
     tpl = fill((SITE / "src" / "template.html").read_text(encoding="utf-8"), text)
     css = (SITE / "src" / "style.css").read_text(encoding="utf-8")
@@ -298,7 +299,7 @@ def build_real() -> bool:
     text.update({
         "T_TITLE": "Raid Replay · Real PKL match",
         "T_RULES": RULES_REAL,
-        "T_NAVLINK": '<a class="real" href="index.html">Simulated final</a>',
+        "T_NAVLINK": '<a class="real" href="index.html">Simulated final</a><a href="analytics.html">Analytics &amp; Predictor</a>',
         "T_SUB": "This is a <strong>real Pro Kabaddi match</strong>: the official match-centre feed (as collected by "
                  "kabaddiPy-data), converted to IPTC Sport Schema and back with no value lost, and replayed from the "
                  "Sport Schema JSON-LD alone. Pick a Season 10 knockout:",

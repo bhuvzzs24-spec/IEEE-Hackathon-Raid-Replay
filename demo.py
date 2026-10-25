@@ -21,11 +21,14 @@ def _real_files():
 def main() -> int:
     quick = "--quick" in sys.argv[1:]
     real = "--real" in sys.argv[1:]
+    analytics = "--analytics" in sys.argv[1:]
     steps = [
         ("simulate 5 matches", ["-m", "simulator.generate"]),
         ("convert to Sport Schema", ["-m", "converter"]),
         ("validate (IPTC + kabaddi shapes)", ["-m", "validate"]),
+        ("run IPTC AI analytics & prediction", ["-m", "analytics"]),
         ("build website", ["site/build_site.py"]),
+        ("build analytics dashboard", ["site/build_analytics.py"]),
     ]
     if quick:
         steps = [s for s in steps if s[1] != ["-m", "validate"]]
@@ -43,7 +46,10 @@ def main() -> int:
             return result.returncode
 
     print("\nALL PASS" + (" (validation skipped with --quick)" if quick else ""))
-    page = SITE.with_name("real.html") if real and SITE.with_name("real.html").exists() else SITE
+    if analytics:
+        page = SITE.with_name("analytics.html")
+    else:
+        page = SITE.with_name("real.html") if real and SITE.with_name("real.html").exists() else SITE
     webbrowser.open(page.as_uri())
     print(f"Opened {page}")
     return 0
