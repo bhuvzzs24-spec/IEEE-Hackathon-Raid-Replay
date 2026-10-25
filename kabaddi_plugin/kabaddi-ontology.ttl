@@ -1,0 +1,212 @@
+# =============================================================================
+#  Kabaddi plugin for IPTC Sport Schema - vocabulary (ontology + code lists)
+#  Raid Replay / team Byte Tackle
+#
+#  Sport Schema ships plugins for soccer, tennis, rugby, golf, esports, ...
+#  Kabaddi only appears in IPTC standards as Media Topic medtop:20000978.
+#  This file adds the words needed to describe a kabaddi match raid by raid.
+#
+#  Namespace https://sportschema.org/ontologies/kabaddi/ follows the pattern of
+#  the existing plugins (e.g. .../ontologies/golf/). It is a PROPOSED namespace
+#  for contribution to IPTC; it has not been endorsed by IPTC.
+# =============================================================================
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix sport:   <https://sportschema.org/ontologies/main/> .
+@prefix kab:     <https://sportschema.org/ontologies/kabaddi/> .
+@prefix kabro:   <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+@prefix kabcard: <https://sportschema.org/ontologies/kabaddi/cardcolour/> .
+@prefix kabrev:  <https://sportschema.org/ontologies/kabaddi/reviewresult/> .
+@prefix kabrole: <https://sportschema.org/ontologies/kabaddi/playingrole/> .
+
+<https://sportschema.org/ontologies/kabaddi>
+    a owl:Ontology ;
+    rdfs:label "IPTC Sport Schema - Kabaddi plugin (proposed)"@en ;
+    dcterms:creator "Byte Tackle" ;
+    owl:versionInfo "0.1" ;
+    owl:imports <https://sportschema.org/ontologies/main/> ;
+    rdfs:comment "Raid-by-raid vocabulary for kabaddi. Every kabaddi event is a sport:Action, so existing Sport Schema tools keep working."@en .
+
+# -----------------------------------------------------------------------------
+#  Classes - every kabaddi event is a sport:Action
+# -----------------------------------------------------------------------------
+
+kab:Raid a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Raid"@en ;
+    rdfs:comment "One raid: a single raider enters the opposing half for at most 30 seconds, tries to touch defenders and return."@en .
+
+kab:Card a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Card"@en ;
+    rdfs:comment "A green (warning), yellow (temporary suspension) or red (suspended for the rest of the match) card shown to a player."@en .
+
+kab:Review a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Review"@en ;
+    rdfs:comment "A team challenges the referee's call on a raid. The raid record holds the final, post-review decision."@en .
+
+kab:Substitution a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Substitution"@en .
+
+kab:PeriodStart a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "Start of half"@en .
+
+kab:PeriodEnd a owl:Class ; rdfs:subClassOf sport:Action ;
+    rdfs:label "End of half"@en .
+
+# -----------------------------------------------------------------------------
+#  Properties - identity and match context
+# -----------------------------------------------------------------------------
+
+kab:nativeId a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "native identifier"@en ;
+    rdfs:comment "The identifier the thing has in the source kabaddi feed. Unique per match/team/player/event."@en .
+
+kab:stage a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:string ;
+    rdfs:label "stage"@en ; rdfs:comment "e.g. league, semi-final, final."@en .
+kab:knockout a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:boolean ;
+    rdfs:label "knockout match"@en .
+kab:halfLengthMinutes a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ;
+    rdfs:label "half length (minutes)"@en .
+kab:tossWinner a owl:ObjectProperty ; rdfs:domain sport:Event ; rdfs:range sport:Team ;
+    rdfs:label "toss winner"@en .
+kab:firstRaidTeam a owl:ObjectProperty ; rdfs:domain sport:Event ; rdfs:range sport:Team ;
+    rdfs:label "team raiding first"@en .
+kab:simulatorSeed a owl:DatatypeProperty ; rdfs:domain sport:Event ; rdfs:range xsd:integer ;
+    rdfs:label "simulator seed"@en ; rdfs:comment "Random seed of the generator that produced this (synthetic) match."@en .
+
+kab:shortName a owl:DatatypeProperty ; rdfs:domain sport:Team ; rdfs:range xsd:string ;
+    rdfs:label "short name"@en .
+kab:colour a owl:DatatypeProperty ; rdfs:domain sport:Team ; rdfs:range xsd:string ;
+    rdfs:label "kit colour"@en ; rdfs:comment "Hex colour, e.g. #FF7A00."@en .
+
+kab:playingRole a owl:ObjectProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range skos:Concept ;
+    rdfs:label "playing role"@en .
+kab:captain a owl:DatatypeProperty ; rdfs:domain sport:IndividualParticipation ; rdfs:range xsd:boolean ;
+    rdfs:label "captain"@en .
+
+# -----------------------------------------------------------------------------
+#  Properties - common to every kabaddi action
+# -----------------------------------------------------------------------------
+
+kab:half a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "half"@en ; rdfs:comment "1 or 2."@en .
+kab:clockSeconds a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "clock (seconds into the half)"@en .
+kab:homeScore a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "home score after this action"@en .
+kab:awayScore a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "away score after this action"@en .
+kab:homeOnMat a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "home players on the mat after this action"@en .
+kab:awayOnMat a owl:DatatypeProperty ; rdfs:domain sport:Action ; rdfs:range xsd:integer ;
+    rdfs:label "away players on the mat after this action"@en .
+
+# -----------------------------------------------------------------------------
+#  Properties - raid
+# -----------------------------------------------------------------------------
+
+kab:raider a owl:ObjectProperty ; rdfs:domain kab:Raid ; rdfs:range sport:Athlete ; rdfs:label "raider"@en .
+kab:raidDurationSeconds a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:integer ;
+    rdfs:label "raid duration (s)"@en ; rdfs:comment "0-30 seconds."@en .
+kab:raidOutcome a owl:ObjectProperty ; rdfs:domain kab:Raid ; rdfs:range skos:Concept ;
+    rdfs:label "raid outcome"@en ; rdfs:comment "A concept from the kabaddi raid-outcome scheme."@en .
+kab:touchPoints a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:integer ;
+    rdfs:label "touch points"@en ; rdfs:comment "Defenders put out by the raider's touches."@en .
+kab:bonusPoint a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:boolean ;
+    rdfs:label "bonus point"@en ; rdfs:comment "Raider crossed the bonus line with 6+ defenders on the mat."@en .
+kab:tacklePoints a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:integer ;
+    rdfs:label "tackle points"@en ; rdfs:comment "1, or 2 for a super tackle."@en .
+kab:allOutPoints a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:integer ;
+    rdfs:label "all-out points"@en ; rdfs:comment "2 when this raid inflicted an all-out, else 0."@en .
+kab:allOutTeam a owl:ObjectProperty ; rdfs:domain kab:Raid ; rdfs:range sport:Team ;
+    rdfs:label "team that was all out"@en .
+kab:raidPoints a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:integer ;
+    rdfs:label "points to the raiding team"@en .
+kab:defencePoints a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:integer ;
+    rdfs:label "points to the defending team"@en .
+kab:doOrDie a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:boolean ;
+    rdfs:label "do-or-die raid"@en ; rdfs:comment "Third raid after two consecutive empty raids: the raider must score or is out."@en .
+kab:superRaid a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:boolean ;
+    rdfs:label "super raid"@en ; rdfs:comment "Raider earned 3 or more points (touches + bonus) in one raid."@en .
+kab:superTackle a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:boolean ;
+    rdfs:label "super tackle"@en ; rdfs:comment "Raider tackled while 3 or fewer defenders were on the mat; worth 2 points."@en .
+kab:defendersOnMat a owl:DatatypeProperty ; rdfs:domain kab:Raid ; rdfs:range xsd:integer ;
+    rdfs:label "defenders on the mat at the start of the raid"@en .
+kab:defenderOut a owl:ObjectProperty ; rdfs:domain kab:Raid ; rdfs:range sport:Athlete ;
+    rdfs:label "defender put out"@en .
+kab:tackledBy a owl:ObjectProperty ; rdfs:domain kab:Raid ; rdfs:range sport:Athlete ;
+    rdfs:label "tackled by"@en .
+kab:revived a owl:ObjectProperty ; rdfs:domain kab:Raid ; rdfs:range sport:Athlete ;
+    rdfs:label "player revived"@en .
+
+# -----------------------------------------------------------------------------
+#  Properties - cards, reviews, substitutions
+#  (cards reuse sport:infractionLevel for the colour and sport:infractionType
+#   for the reason, both already allowed on sport:Action by IPTC)
+# -----------------------------------------------------------------------------
+
+kab:player a owl:ObjectProperty ; rdfs:range sport:Athlete ; rdfs:label "player"@en .
+kab:suspensionSeconds a owl:DatatypeProperty ; rdfs:domain kab:Card ; rdfs:range xsd:integer ;
+    rdfs:label "suspension (s)"@en .
+kab:reviewOf a owl:ObjectProperty ; rdfs:domain kab:Review ; rdfs:range kab:Raid ; rdfs:label "review of"@en .
+kab:reviewResult a owl:ObjectProperty ; rdfs:domain kab:Review ; rdfs:range skos:Concept ; rdfs:label "review result"@en .
+kab:reviewsRemaining a owl:DatatypeProperty ; rdfs:domain kab:Review ; rdfs:range xsd:integer ;
+    rdfs:label "reviews remaining for the team"@en .
+kab:playerOut a owl:ObjectProperty ; rdfs:domain kab:Substitution ; rdfs:range sport:Athlete ; rdfs:label "player leaving"@en .
+kab:playerIn a owl:ObjectProperty ; rdfs:domain kab:Substitution ; rdfs:range sport:Athlete ; rdfs:label "player entering"@en .
+
+# -----------------------------------------------------------------------------
+#  Controlled vocabularies (SKOS, in the style of IPTC NewsCodes)
+# -----------------------------------------------------------------------------
+
+<https://sportschema.org/ontologies/kabaddi/raidoutcome/> a skos:ConceptScheme ;
+    skos:prefLabel "Kabaddi raid outcome"@en ;
+    skos:hasTopConcept kabro:successful, kabro:tackled, kabro:empty, kabro:do-or-die-out, kabro:self-out .
+
+kabro:successful a skos:Concept ; skos:prefLabel "successful"@en ;
+    skos:definition "Raider scored at least one point and returned safely to their half."@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+kabro:tackled a skos:Concept ; skos:prefLabel "tackled"@en ;
+    skos:definition "Raider was held by the defenders and could not return."@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+kabro:empty a skos:Concept ; skos:prefLabel "empty"@en ;
+    skos:definition "Raider returned with no points for either side."@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+kabro:do-or-die-out a skos:Concept ; skos:prefLabel "do-or-die out"@en ;
+    skos:definition "Raider failed to score on a do-or-die raid and is declared out."@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+kabro:self-out a skos:Concept ; skos:prefLabel "self out"@en ;
+    skos:definition "Raider stepped out of bounds and is declared out."@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+
+<https://sportschema.org/ontologies/kabaddi/cardcolour/> a skos:ConceptScheme ;
+    skos:prefLabel "Kabaddi card colour"@en ;
+    skos:hasTopConcept kabcard:green, kabcard:yellow, kabcard:red .
+kabcard:green a skos:Concept ; skos:prefLabel "green card"@en ;
+    skos:definition "Warning."@en ; skos:inScheme <https://sportschema.org/ontologies/kabaddi/cardcolour/> .
+kabcard:yellow a skos:Concept ; skos:prefLabel "yellow card"@en ;
+    skos:definition "Temporary suspension (2 minutes)."@en ; skos:inScheme <https://sportschema.org/ontologies/kabaddi/cardcolour/> .
+kabcard:red a skos:Concept ; skos:prefLabel "red card"@en ;
+    skos:definition "Suspended for the rest of the match."@en ; skos:inScheme <https://sportschema.org/ontologies/kabaddi/cardcolour/> .
+
+<https://sportschema.org/ontologies/kabaddi/reviewresult/> a skos:ConceptScheme ;
+    skos:prefLabel "Kabaddi review result"@en ;
+    skos:hasTopConcept kabrev:successful, kabrev:unsuccessful .
+kabrev:successful a skos:Concept ; skos:prefLabel "successful (call overturned)"@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/reviewresult/> .
+kabrev:unsuccessful a skos:Concept ; skos:prefLabel "unsuccessful (call upheld)"@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/reviewresult/> .
+
+<https://sportschema.org/ontologies/kabaddi/playingrole/> a skos:ConceptScheme ;
+    skos:prefLabel "Kabaddi playing role"@en ;
+    skos:hasTopConcept kabrole:raider, kabrole:all-rounder, kabrole:defender .
+kabrole:raider a skos:Concept ; skos:prefLabel "raider"@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/playingrole/> .
+kabrole:all-rounder a skos:Concept ; skos:prefLabel "all-rounder"@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/playingrole/> .
+kabrole:defender a skos:Concept ; skos:prefLabel "defender"@en ;
+    skos:inScheme <https://sportschema.org/ontologies/kabaddi/playingrole/> .

@@ -1,0 +1,211 @@
+# =============================================================================
+#  Kabaddi plugin for IPTC Sport Schema - SHACL shapes
+#  Raid Replay / team Byte Tackle
+#
+#  Part 1 extends IPTC's *closed* shapes. IPTC's sport:ActionShape (and the
+#  Event/Team/Athlete/... shapes) are sh:closed, so only pre-approved
+#  properties are accepted - golf got in by being added to that list. We add
+#  our kabaddi properties the same way: triples about the same shape nodes.
+#  Without this file, every kabaddi file is rejected by IPTC's own shapes.
+#
+#  Part 2 adds kabaddi-specific shapes: required fields, XSD datatypes,
+#  controlled vocabularies (sh:in) and a few rules of the game (SPARQL).
+# =============================================================================
+
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix sport:   <https://sportschema.org/ontologies/main/> .
+@prefix kab:     <https://sportschema.org/ontologies/kabaddi/> .
+@prefix kabro:   <https://sportschema.org/ontologies/kabaddi/raidoutcome/> .
+@prefix kabcard: <https://sportschema.org/ontologies/kabaddi/cardcolour/> .
+@prefix kabrev:  <https://sportschema.org/ontologies/kabaddi/reviewresult/> .
+@prefix kabrole: <https://sportschema.org/ontologies/kabaddi/playingrole/> .
+
+# =============================================================================
+#  PART 1 - extend IPTC's closed shapes (the "allowed properties" lists)
+# =============================================================================
+
+sport:ActionShape
+  sh:property [ sh:path kab:nativeId ;            sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:half ;                sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:clockSeconds ;        sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:homeScore ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:awayScore ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:homeOnMat ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:awayOnMat ;           sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:raider ;              sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:raidDurationSeconds ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:raidOutcome ;         sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path kab:touchPoints ;         sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:bonusPoint ;          sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:tacklePoints ;        sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:allOutPoints ;        sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:allOutTeam ;          sh:class sport:Team ] ;
+  sh:property [ sh:path kab:raidPoints ;          sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:defencePoints ;       sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:doOrDie ;             sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:superRaid ;           sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:superTackle ;         sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:defendersOnMat ;      sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:defenderOut ;         sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:tackledBy ;           sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:revived ;             sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:player ;              sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:suspensionSeconds ;   sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:reviewOf ;            sh:class kab:Raid ] ;
+  sh:property [ sh:path kab:reviewResult ;        sh:nodeKind sh:IRI ] ;
+  sh:property [ sh:path kab:reviewsRemaining ;    sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:playerOut ;           sh:class sport:Athlete ] ;
+  sh:property [ sh:path kab:playerIn ;            sh:class sport:Athlete ] .
+
+sport:EventShape
+  sh:property [ sh:path kab:nativeId ;          sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:stage ;             sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:knockout ;          sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path kab:halfLengthMinutes ; sh:datatype xsd:integer ] ;
+  sh:property [ sh:path kab:tossWinner ;        sh:class sport:Team ] ;
+  sh:property [ sh:path kab:firstRaidTeam ;     sh:class sport:Team ] ;
+  sh:property [ sh:path kab:simulatorSeed ;     sh:datatype xsd:integer ] .
+
+sport:TeamShape
+  sh:property [ sh:path kab:nativeId ;  sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:shortName ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path kab:colour ;    sh:datatype xsd:string ; sh:pattern "^#[0-9A-Fa-f]{6}$" ] .
+
+sport:AthleteShape
+  sh:property [ sh:path kab:nativeId ; sh:datatype xsd:string ] .
+
+sport:SiteShape
+  sh:property [ sh:path kab:nativeId ; sh:datatype xsd:string ] .
+
+sport:IndividualParticipationShape
+  sh:property [ sh:path kab:playingRole ; sh:in ( kabrole:raider kabrole:all-rounder kabrole:defender ) ] ;
+  sh:property [ sh:path kab:captain ;     sh:datatype xsd:boolean ] .
+
+# =============================================================================
+#  PART 2 - kabaddi shapes
+# =============================================================================
+
+kab:KabaddiActionShape
+  a sh:NodeShape ;
+  sh:targetClass kab:Raid, kab:Card, kab:Review, kab:Substitution, kab:PeriodStart, kab:PeriodEnd ;
+  sh:property [ sh:path kab:nativeId ;        sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:sequenceNumber ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[1-9][0-9]*$" ] ;
+  sh:property [ sh:path sport:actionInEvent ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:half ;            sh:minCount 1 ; sh:maxCount 1 ; sh:in ( 1 2 ) ] ;
+  sh:property [ sh:path kab:clockSeconds ;    sh:minCount 1 ; sh:maxCount 1 ;
+                sh:minInclusive 0 ; sh:maxInclusive 1200 ] .
+
+kab:RaidShape
+  a sh:NodeShape ;
+  sh:targetClass kab:Raid ;
+  sh:property [ sh:path sport:participation ;     sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:raider ;              sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:raidOutcome ;         sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( kabro:successful kabro:tackled kabro:empty kabro:do-or-die-out kabro:self-out ) ;
+                sh:message "Raid outcome must be one of the kabaddi raid-outcome concepts." ] ;
+  sh:property [ sh:path kab:raidDurationSeconds ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 30 ] ;
+  sh:property [ sh:path kab:touchPoints ;         sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 7 ] ;
+  sh:property [ sh:path kab:bonusPoint ;          sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:tacklePoints ;        sh:minCount 1 ; sh:maxCount 1 ; sh:in ( 0 1 2 ) ] ;
+  sh:property [ sh:path kab:allOutPoints ;        sh:minCount 1 ; sh:maxCount 1 ; sh:in ( 0 2 ) ] ;
+  sh:property [ sh:path kab:raidPoints ;          sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path kab:defencePoints ;       sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ] ;
+  sh:property [ sh:path kab:doOrDie ;             sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:superRaid ;           sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:superTackle ;         sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:defendersOnMat ;      sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 1 ; sh:maxInclusive 7 ] ;
+  sh:property [ sh:path kab:allOutTeam ;          sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:homeScore ;           sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:awayScore ;           sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:homeOnMat ;           sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 7 ] ;
+  sh:property [ sh:path kab:awayOnMat ;           sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ; sh:maxInclusive 7 ] ;
+  # --- rules of the game -----------------------------------------------------
+  sh:sparql [
+    sh:message "Points do not add up: raidPoints + defencePoints must equal touch + bonus + tackle + all-out points." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this kab:raidPoints ?r ; kab:defencePoints ?d ; kab:touchPoints ?t ;
+              kab:bonusPoint ?b ; kab:tacklePoints ?k ; kab:allOutPoints ?a .
+        FILTER (?r + ?d != ?t + IF(?b, 1, 0) + ?k + ?a)
+      }""" ] ;
+  sh:sparql [
+    sh:message "Super raid flag must be true exactly when touch points + bonus >= 3." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this kab:touchPoints ?t ; kab:bonusPoint ?b ; kab:superRaid ?s .
+        FILTER (?s != (?t + IF(?b, 1, 0) >= 3))
+      }""" ] ;
+  sh:sparql [
+    sh:message "A super tackle needs a tackled raider, 3 or fewer defenders on the mat, and is worth 2 points." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      PREFIX kabro: <https://sportschema.org/ontologies/kabaddi/raidoutcome/>
+      SELECT $this WHERE {
+        $this kab:superTackle true ; kab:raidOutcome ?o ; kab:defendersOnMat ?n ; kab:tacklePoints ?k .
+        FILTER (?o != kabro:tackled || ?n > 3 || ?k != 2)
+      }""" ] ;
+  sh:sparql [
+    sh:message "touchPoints must equal the number of kab:defenderOut players." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      SELECT $this WHERE {
+        $this kab:touchPoints ?t .
+        OPTIONAL { $this kab:defenderOut ?p }
+      } GROUP BY $this ?t HAVING (COUNT(?p) != ?t)""" ] ;
+  sh:sparql [
+    sh:message "A tackled raid must name at least one tackler." ;
+    sh:select """
+      PREFIX kab: <https://sportschema.org/ontologies/kabaddi/>
+      PREFIX kabro: <https://sportschema.org/ontologies/kabaddi/raidoutcome/>
+      SELECT $this WHERE {
+        $this kab:raidOutcome kabro:tackled .
+        FILTER NOT EXISTS { $this kab:tackledBy ?x }
+      }""" ] .
+
+kab:CardShape
+  a sh:NodeShape ;
+  sh:targetClass kab:Card ;
+  sh:property [ sh:path kab:player ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:participation ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path sport:infractionLevel ; sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( kabcard:green kabcard:yellow kabcard:red ) ;
+                sh:message "Card colour must be green, yellow or red." ] ;
+  sh:property [ sh:path sport:infractionType ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:suspensionSeconds ; sh:maxCount 1 ; sh:minInclusive 1 ] .
+
+kab:ReviewShape
+  a sh:NodeShape ;
+  sh:targetClass kab:Review ;
+  sh:property [ sh:path sport:participation ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:reviewOf ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:reviewResult ; sh:minCount 1 ; sh:maxCount 1 ;
+                sh:in ( kabrev:successful kabrev:unsuccessful ) ] ;
+  sh:property [ sh:path kab:reviewsRemaining ; sh:minCount 1 ; sh:maxCount 1 ; sh:minInclusive 0 ] .
+
+kab:SubstitutionShape
+  a sh:NodeShape ;
+  sh:targetClass kab:Substitution ;
+  sh:property [ sh:path sport:participation ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:playerOut ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:playerIn ;  sh:minCount 1 ; sh:maxCount 1 ] .
+
+kab:PeriodEndShape
+  a sh:NodeShape ;
+  sh:targetClass kab:PeriodEnd ;
+  sh:property [ sh:path kab:homeScore ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:awayScore ; sh:minCount 1 ; sh:maxCount 1 ] .
+
+kab:KabaddiEventShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf kab:halfLengthMinutes ;
+  sh:property [ sh:path sport:sport ; sh:hasValue <http://cv.iptc.org/newscodes/mediatopic/20000978> ;
+                sh:message "A kabaddi match must declare sport:sport medtop:20000978 (kabaddi)." ] ;
+  sh:property [ sh:path kab:nativeId ; sh:minCount 1 ; sh:maxCount 1 ] ;
+  sh:property [ sh:path kab:halfLengthMinutes ; sh:maxCount 1 ; sh:minInclusive 1 ] ;
+  sh:property [ sh:path sport:participation ; sh:minCount 2 ; sh:maxCount 2 ] .
